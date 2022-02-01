@@ -10,11 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_01_123856) do
+ActiveRecord::Schema.define(version: 2022_02_01_135936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
+
+  create_table "roasters", id: :string, force: :cascade do |t|
+    t.uuid "user_id", null: false
+    t.string "name"
+    t.text "description"
+    t.string "location"
+    t.decimal "lat", precision: 10, scale: 6
+    t.decimal "lng", precision: 10, scale: 6
+    t.string "website"
+    t.string "twitter"
+    t.string "instagram"
+    t.string "facebook"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_roasters_on_user_id"
+  end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -59,4 +75,5 @@ ActiveRecord::Schema.define(version: 2022_02_01_123856) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "roasters", "users"
 end

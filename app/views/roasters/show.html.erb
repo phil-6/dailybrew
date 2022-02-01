@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @roaster %>
+
+<div>
+  <%= link_to "Edit this roaster", edit_roaster_path(@roaster) %> |
+  <%= link_to "Back to roasters", roasters_path %>
+
+  <%= button_to "Destroy this roaster", @roaster, method: :delete %>
+</div>

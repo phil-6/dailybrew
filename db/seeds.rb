@@ -33,3 +33,6 @@ unless User.find_by_email('lawrence.archer@gmail.com').present?
   user.skip_confirmation!
   user.save!
 end
+
+Dir[File.join(Rails.root, 'db', 'seeds', '*.rb')].sort.each { |seed| load seed }
+

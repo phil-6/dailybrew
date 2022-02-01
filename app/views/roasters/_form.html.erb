@@ -1,0 +1,67 @@
+<%= form_with(model: roaster) do |form| %>
+  <% if roaster.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(roaster.errors.count, "error") %> prohibited this roaster from being saved:</h2>
+
+      <ul>
+        <% roaster.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.label :lat, style: "display: block" %>
+    <%= form.text_field :lat %>
+  </div>
+
+  <div>
+    <%= form.label :lng, style: "display: block" %>
+    <%= form.text_field :lng %>
+  </div>
+
+  <div>
+    <%= form.label :website, style: "display: block" %>
+    <%= form.text_field :website %>
+  </div>
+
+  <div>
+    <%= form.label :twitter, style: "display: block" %>
+    <%= form.text_field :twitter %>
+  </div>
+
+  <div>
+    <%= form.label :instagram, style: "display: block" %>
+    <%= form.text_field :instagram %>
+  </div>
+
+  <div>
+    <%= form.label :facebook, style: "display: block" %>
+    <%= form.text_field :facebook %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
