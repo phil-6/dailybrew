@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ridethewave</title>
+    <title>Ride the Wave</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,21 @@
   </head>
 
   <body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <%= link_to "Ride the Wave", root_path, class: "brand" %>
+
+      </div>
+      <div class="nav-left">
+
+      </div>
+      <div class="nav-right">
+
+      </div>
+    </nav>
+  </header>
+
     <%= yield %>
   </body>
 </html>
