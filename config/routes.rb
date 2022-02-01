@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :brews
   resources :coffees
   resources :roasters
   devise_for :users
