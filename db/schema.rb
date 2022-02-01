@@ -10,11 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_01_135936) do
+ActiveRecord::Schema.define(version: 2022_02_01_142158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
+
+  create_table "coffees", force: :cascade do |t|
+    t.string "roaster_id", null: false
+    t.string "name"
+    t.string "country"
+    t.string "region"
+    t.string "town"
+    t.decimal "lat", precision: 10, scale: 6
+    t.decimal "lng", precision: 10, scale: 6
+    t.string "process"
+    t.integer "altitude"
+    t.string "variety"
+    t.string "tasting_notes"
+    t.string "producer"
+    t.text "description"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["roaster_id"], name: "index_coffees_on_roaster_id"
+  end
 
   create_table "roasters", id: :string, force: :cascade do |t|
     t.uuid "user_id", null: false
@@ -75,5 +95,6 @@ ActiveRecord::Schema.define(version: 2022_02_01_135936) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "coffees", "roasters"
   add_foreign_key "roasters", "users"
 end

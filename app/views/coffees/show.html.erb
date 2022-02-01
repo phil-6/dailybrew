@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @coffee %>
+
+<div>
+  <%= link_to "Edit this coffee", edit_coffee_path(@coffee) %> |
+  <%= link_to "Back to coffees", coffees_path %>
+
+  <%= button_to "Destroy this coffee", @coffee, method: :delete %>
+</div>

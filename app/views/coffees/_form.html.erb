@@ -1,0 +1,87 @@
+<%= form_with(model: coffee) do |form| %>
+  <% if coffee.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(coffee.errors.count, "error") %> prohibited this coffee from being saved:</h2>
+
+      <ul>
+        <% coffee.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :roaster_id, style: "display: block" %>
+    <%= form.text_field :roaster_id %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :country, style: "display: block" %>
+    <%= form.text_field :country %>
+  </div>
+
+  <div>
+    <%= form.label :region, style: "display: block" %>
+    <%= form.text_field :region %>
+  </div>
+
+  <div>
+    <%= form.label :town, style: "display: block" %>
+    <%= form.text_field :town %>
+  </div>
+
+  <div>
+    <%= form.label :lat, style: "display: block" %>
+    <%= form.text_field :lat %>
+  </div>
+
+  <div>
+    <%= form.label :lng, style: "display: block" %>
+    <%= form.text_field :lng %>
+  </div>
+
+  <div>
+    <%= form.label :process, style: "display: block" %>
+    <%= form.text_field :process %>
+  </div>
+
+  <div>
+    <%= form.label :altitude, style: "display: block" %>
+    <%= form.number_field :altitude %>
+  </div>
+
+  <div>
+    <%= form.label :variety, style: "display: block" %>
+    <%= form.text_field :variety %>
+  </div>
+
+  <div>
+    <%= form.label :tasting_notes, style: "display: block" %>
+    <%= form.text_field :tasting_notes %>
+  </div>
+
+  <div>
+    <%= form.label :producer, style: "display: block" %>
+    <%= form.text_field :producer %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :url, style: "display: block" %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
