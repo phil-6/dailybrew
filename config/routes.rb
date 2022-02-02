@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#main'
-  get 'pages/about'
+  get 'about', to: 'pages#about'
+  get 'subscription', to: 'pages#subscription'
 
   devise_for :users
 

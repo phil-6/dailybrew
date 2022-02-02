@@ -1,14 +1,47 @@
-
 <nav class="navbar">
-    <div class="nav-left">
-
+  <div class="nav-left">
+    <div class="nav-link nav-link-large">
+      <i class="fas fa-mug-hot fa-3x"></i>
     </div>
+  </div>
+  <div class="nav-center">
     <div class="nav-brand">
-        <%= link_to "Ride the Wave", root_path, class: "brand" %>
-
+      <%= link_to "Ride the Wave", root_path, class: "brand" %>
     </div>
 
-    <div class="nav-right">
+    <div class="nav-links">
 
+      <% if current_user %>
+        <h2>Journal</h2>
+      <% else %>
+        <h2><%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %></h2>
+      <% end %>
+
+      <h2><%= link_to "Roasters", roasters_path, class: "nav-link" %></h2>
+      <h2><%= link_to "Subscription", subscription_path, class: "nav-link" %></h2>
+      <h2><%= link_to "About Us", about_path, class: "nav-link" %></h2>
     </div>
+  </div>
+
+  <div class="nav-right">
+    <% if current_user %>
+      <div class="nav-dropdown">
+        <span class="dropdown-button nav-link link-secondary">
+          <i class="fa-solid fa-circle-user fa-2x"></i><i class="fas fa-caret-down"></i>
+        </span>
+        <div class="dropdown-content">
+          <%= render 'shared/navbar_dropdown_links', mobile_only: false %>
+        </div>
+      </div>
+      <div class="nav-mobile-expand nav-link nav-link-large link link-secondary">
+        <i class="fas fa-bars"></i>
+      </div>
+    <% else %>
+      <%= link_to new_user_session_path, class: "nav-link" do %>
+        <i class="fa-solid fa-arrow-right-to-bracket fa-3x"></i>
+      <% end %>
+
+    <% end %>
+  </div>
 </nav>
+
