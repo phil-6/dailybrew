@@ -1,6 +1,165 @@
 @import "variables";
 
-h1 {
-  font-family: $heading-font;
-  font-size: 5rem;
+html, body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: $color-white;
+  font-family: $font;
+  color: $ink;
+
+  main {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    @media screen and (max-width: $screen-md) {
+      padding: 1rem 0.5rem;
+    }
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: $heading-font;
+    color: $color-brand-dark;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 4px;
+  }
+
+  h1 {
+    font-size: 3rem;
+
+    @media screen and (max-width: $screen-lg) {
+      font-size: 2.4rem;
+    }
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.75rem;
+
+    @media screen and (max-width: $screen-lg) {
+      font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 1.3rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 1.35rem;
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: 1.2rem;
+    }
+  }
+
+  h4 {
+    font-size: 1.25rem;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 1rem;
+    }
+  }
+
+  h5 {
+    font-size: 0.75rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  b {
+    color: $color-secondary-dark;
+    text-decoration: underline;
+  }
+
+  em {
+    font-style: unset;
+    font-weight: bold;
+    color: $color-primary;
+  }
+
+  .card {
+    background-color: $color-white;
+    box-shadow: $primary-box-shadow;
+    border-radius: 2rem;
+    padding: 2rem;
+
+    @media screen and (max-width: $screen-sm) {
+      width: 100%;
+      padding: 1.5rem;
+    }
+  }
+
+  .button-tabs {
+    display: flex;
+    border-bottom: $color-secondary-dark solid;
+
+    .btn {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+
+    @media screen and (max-width: $screen-md) {
+      gap: 0.5rem;
+    }
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @media screen and (max-width: $screen-md) {
+      gap: 0.5rem;
+    }
+  }
+
+  br {
+    display: block;
+    margin: 1rem;
+    content: "";
+  }
+
+  hr {
+    margin: 1rem 0;
+    opacity: 0.25;
+    border: 0;
+    height: 1.25px;
+    background: $color-secondary-dark; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(90deg, transparent 0%, $color-secondary-dark 25%, $color-secondary-dark 75%, transparent 100%); /*For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, transparent 0%, $color-secondary-dark 25%, $color-secondary-dark 75%, transparent 100%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, transparent 0%, $color-secondary-dark 25%, $color-secondary-dark 75%, transparent 100%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(90deg, transparent 0%, $color-secondary-dark 25%, $color-secondary-dark 75%, transparent 100%); /* Standard syntax */
+
+    width: 100%;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 }
