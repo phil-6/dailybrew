@@ -16,6 +16,15 @@
 
   <%= render 'shared/navbar' %>
 
+  <% flash.each do |type, msg| %>
+    <% if type != 'timedout' %>
+      <div class="alert <%= alert_class_for(type) %>" role="alert">
+        <%= msg %>
+        <span class="btn-close"><i class="fas fa-times"></i></span>
+      </div>
+    <% end %>
+  <% end %>
+
     <%= yield %>
   </body>
 </html>

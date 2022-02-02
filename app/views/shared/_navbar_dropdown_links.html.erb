@@ -1,8 +1,8 @@
-<%# if current_user.admin? %>
-  <%#= link_to admin_index_path, class: "nav-link link link-secondary #{mobile_only ? 'mobile-only' : ''}" do %>
-<!--    Admin <i class="fas fa-users-cog"></i>-->
-  <%# end %>
-<%# end %>
+<% if current_user.admin? %>
+  <%= link_to admin_dashboard_path, class: "nav-link link link-secondary #{mobile_only ? 'mobile-only' : ''}" do %>
+    Admin <i class="fas fa-users-cog"></i>
+  <% end %>
+<% end %>
 <%= link_to edit_user_registration_path, class: "nav-link link link-secondary #{mobile_only ? 'mobile-only' : ''}" do %>
   Settings <i class="fas fa-cog"></i>
 <% end %>

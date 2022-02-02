@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-unless User.find_by_email('philr@purpleriver.dev').present?
+unless User.find_by_email('phil@purpleriver.dev').present?
   user = User.new(
     first_name: 'Phil',
     last_name: 'Reynolds',
     username: 'Phil',
-    email: 'philr@purpleriver.dev',
+    email: 'phil@purpleriver.dev',
     admin: true,
     terms: true,
     password: 'test1234'
