@@ -15,6 +15,7 @@ class CreateCoffees < ActiveRecord::Migration[7.0]
       t.string :producer
       t.text :description
       t.string :url
+      t.boolean :available
 
       t.timestamps
     end

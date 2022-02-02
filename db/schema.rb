@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 6) do
     t.string "producer"
     t.text "description"
     t.string "url"
+    t.boolean "available"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["roaster_id"], name: "index_coffees_on_roaster_id"
