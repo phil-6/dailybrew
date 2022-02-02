@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_01_144809) do
+ActiveRecord::Schema.define(version: 6) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -122,6 +122,7 @@ ActiveRecord::Schema.define(version: 2022_02_01_144809) do
     t.string "last_name", default: "", null: false
     t.string "username", default: ""
     t.boolean "terms", default: false
+    t.boolean "subscription_interest", default: false
     t.boolean "admin", default: false
     t.string "address_ship_street"
     t.string "address_ship_area"
