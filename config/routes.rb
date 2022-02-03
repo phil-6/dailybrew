@@ -5,14 +5,13 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  scope module: 'admin' do
-    get '/admin/dashboard', to: 'admin#index'
-    resources :roasters, only: [:new, :create, :edit, :update]
+  namespace :admin do
+    get 'dashboard', to: 'index'
   end
 
   resources :brews
   resources :coffees
-  resources :roasters, only: [:index, :show]
+  resources :roasters
 
   get '/dashboard/', to: 'dashboard#index'
 

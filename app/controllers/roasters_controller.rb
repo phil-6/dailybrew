@@ -1,5 +1,6 @@
 class RoastersController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
+  before_action :authorize_admin, except: %i[ index show ]
   before_action :set_roaster, only: %i[ show edit update destroy ]
 
   # GET /roasters or /roasters.json

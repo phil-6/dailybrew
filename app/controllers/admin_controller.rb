@@ -11,7 +11,7 @@ class AdminController < ApplicationController
   private
 
   def users
-    @users = Users.all
+    @users = User.all
   end
 
 end

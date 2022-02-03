@@ -22,6 +22,11 @@
       color: $color-secondary;
     }
   }
+  button.nav-link {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
 
   .nav-left {
     display: flex;
