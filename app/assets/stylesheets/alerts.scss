@@ -1,0 +1,62 @@
+@import "variables";
+
+$width: calc(100% - 2rem);
+
+.alert {
+  position: fixed;
+  text-align: center;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 2rem 3rem;
+  border-radius: 0.25rem;
+  z-index: 2;
+  max-width: $width;
+
+  @media screen and (max-width: $screen-sm) {
+    padding: 1.5rem 2rem;
+    width: $width;
+  }
+
+  &.alert-success {
+    background-color: $color-brand-light;
+    box-shadow: 0 0.1rem 0.25rem $color-brand-dark;
+  }
+
+  &.alert-danger {
+    background-color: $danger-light;
+    box-shadow: 0 0.1rem 0.25rem $warning-dark;
+  }
+
+  &.alert-warning {
+    background-color: $warning-light;
+    box-shadow: 0 0.1rem 0.25rem $warning-dark;
+  }
+
+  &.alert-info {
+    background-color: $color-secondary-light;
+    box-shadow: 0 0.1rem 0.25rem $color-secondary;
+    color: $color-white;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem;
+    display: none;
+
+    @media screen and (max-width: $screen-sm) {
+      display: block;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    .btn-close {
+      display: block;
+    }
+  }
+}
