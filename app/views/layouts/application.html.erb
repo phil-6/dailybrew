@@ -9,22 +9,22 @@
     <script src="https://kit.fontawesome.com/30fa2950fc.js" crossorigin="anonymous"></script>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
-
   <%= render 'shared/navbar' %>
 
   <% flash.each do |type, msg| %>
     <% if type != 'timedout' %>
-      <div class="alert <%= alert_class_for(type) %>" role="alert">
+      <div data-controller="alerts" class="alert <%= alert_class_for(type) %>" role="alert">
         <%= msg %>
-        <span class="btn-close"><i class="fas fa-times"></i></span>
+        <span data-action="click->alerts#dismiss" class="btn-close"><i class="fas fa-times"></i></span>
       </div>
     <% end %>
   <% end %>
 
-    <%= yield %>
+  <%= yield %>
+
   </body>
 </html>

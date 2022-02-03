@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav data-controller="navbar" class="navbar">
   <div class="nav-left">
     <div class="nav-link nav-link-large">
       <i class="fas fa-mug-hot fa-3x"></i>
@@ -10,7 +10,6 @@
     </div>
 
     <div class="nav-links">
-
       <% if current_user %>
         <h2>Journal</h2>
       <% else %>
@@ -33,7 +32,7 @@
           <%= render 'shared/navbar_dropdown_links', mobile_only: false %>
         </div>
       </div>
-      <div class="nav-mobile-expand nav-link nav-link-large link link-secondary">
+      <div data-action="click->navbar#expand" class="nav-mobile-expand nav-link nav-link-large link link-secondary">
         <i class="fas fa-bars"></i>
       </div>
     <% else %>
@@ -44,4 +43,3 @@
     <% end %>
   </div>
 </nav>
-

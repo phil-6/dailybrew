@@ -42,4 +42,8 @@ rails g model Favourite user:belongs_to coffee:belongs_to -t rspec --no-jbuilder
 
 # from here on, everything is a bit more manual!
 
+
+## Late addition
+# At some point quite early in this process we should have run:
+rails importmap:install
 ```
