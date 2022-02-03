@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   resources :coffees
   resources :roasters, only: [:index, :show]
 
+  get '/dashboard/', to: 'dashboard#index'
+
 end
