@@ -6,6 +6,7 @@ module FetchCoffees
     require 'nokogiri'
 
     # call this and get response with
+    # Object.const_get "FetchCoffees::" +  Coffee.first.roaster.reference.classify
     # scraper = FetchCoffees::CliftonCoffee.new
     # coffees = scraper.scrape
 
