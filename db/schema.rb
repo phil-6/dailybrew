@@ -48,11 +48,13 @@ ActiveRecord::Schema.define(version: 6) do
     t.string "tasting_notes"
     t.string "producer"
     t.text "description"
-    t.string "url"
+    t.string "url", null: false
     t.boolean "available"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["roaster_id", "name"], name: "index_coffees_on_roaster_id_and_name", unique: true
     t.index ["roaster_id"], name: "index_coffees_on_roaster_id"
+    t.index ["url"], name: "index_coffees_on_url", unique: true
   end
 
   create_table "favourites", force: :cascade do |t|
