@@ -3,5 +3,5 @@ class Roaster < ApplicationRecord
 
   validates_presence_of :reference, :name, :website
   validates :website, uniqueness: { case_sensitive: false }
-  validates :reference , :uniqueness
+  validates :reference , uniqueness: true
 end
