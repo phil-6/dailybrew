@@ -1,8 +1,11 @@
 @import "variables";
 
-.btn {
+.btn, .link {
   cursor: pointer;
   font-family: $font;
+}
+
+.btn {
   font-weight: 300;
 
   &-primary {
@@ -11,6 +14,26 @@
 
     &:hover {
       background-color: $color-primary-1;
+    }
+
+    &:focus-visible {
+      outline-color: $color-complementary-0;
+      outline-offset: 4px;
+    }
+  }
+}
+
+.link {
+  &-primary {
+    color: $color-primary-0;
+
+    &:hover {
+      color: $color-primary-1;
+    }
+
+    &:focus-visible {
+      outline-color: $color-complementary-0;
+      outline-offset: 4px;
     }
   }
 }

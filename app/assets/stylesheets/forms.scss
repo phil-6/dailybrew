@@ -2,10 +2,7 @@
 
 .field {
   position: relative;
-
-  &:not(:last-child) {
-    margin-bottom: 1rem;
-  }
+  margin-bottom: 1rem;
 
   .form-input {
     display: block;
@@ -20,7 +17,7 @@
 
     &:focus {
       outline: 0;
-      box-shadow: 0 0 0 2px $color-secondary-dark;
+      box-shadow: 0 0 0 2px $color-complementary-0;
     }
 
     &:target, &:not(:placeholder-shown) {
@@ -46,13 +43,23 @@
     opacity: 0.65;
     transition: transform 0.1s ease-in-out;
   }
+}
 
-  .form-input, .form-submit {
-    width: 100%;
-    height: calc(3.5rem + 2px);
-    border-radius: 2rem;
-    font-family: $font;
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
+.form-link {
+  justify-content: flex-end;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}
+
+.action {
+  margin-top: 1.5rem;
+}
+
+.form-input, .form-submit {
+  width: 100%;
+  height: calc(3.5rem + 2px);
+  border-radius: 2rem;
+  font-family: $font;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
