@@ -11,7 +11,7 @@ class AdminController < ApplicationController
   private
 
   def users
-    @users = User.all
+    @users = User.first(10)
   end
 
 end

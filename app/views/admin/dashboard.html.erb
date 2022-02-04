@@ -1,1 +1,8 @@
 <h1>Admin Dashboard</h1>
+<h2>New Users</h2>
+
+<div id="users">
+  <% @users.each do |user| %>
+  <p> <%= user.first_name %></p>
+  <% end %>
+</div>
