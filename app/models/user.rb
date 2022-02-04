@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  self.implicit_order_column = "created_at"
   # Include default devise modules. Others available are:
   # :omniauthable
   devise :database_authenticatable, :registerable,
@@ -14,5 +15,6 @@ class User < ApplicationRecord
   validates_presence_of :first_name, :last_name, :terms
   validates :email, uniqueness: { case_sensitive: false }
   validates :terms, acceptance: true
+
 
 end
