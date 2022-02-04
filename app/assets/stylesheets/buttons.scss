@@ -2,6 +2,8 @@
 
 .btn {
   cursor: pointer;
+  font-family: $font;
+  font-weight: 300;
 
   &-primary {
     background-color: $color-primary-0;
