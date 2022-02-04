@@ -1,0 +1,56 @@
+@import "variables";
+
+.devise {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-mid-1;
+
+  .devise-container {
+    max-width: 1200px;
+    min-height: 800px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 1rem;
+    
+    @media screen and (max-width: $screen-lg) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      padding: 0.5rem;
+    }
+
+    .column {
+      padding: 4rem;
+
+      @media screen and (max-width: $screen-lg) {
+        padding: 2rem;
+      }
+
+      @media screen and (max-width: $screen-sm) {
+        padding: 1rem;
+      }
+
+      &:first-child {
+        background-color: #FFFFFF;
+        flex-basis: 60%;
+
+        @media screen and (max-width: $screen-lg) {
+          order: 1;
+        }
+      }
+
+      &:last-child {
+        background-color: $color-secondary-dark;
+        flex-basis: 40%;
+
+        @media screen and (max-width: $screen-lg) {
+          order: 0;
+        }
+      }
+    }
+  }
+}
