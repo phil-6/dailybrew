@@ -1,5 +1,7 @@
+roaster = Roaster.find_by reference: 'workshop_coffee'
+
 Coffee.create!(
-  roaster_id: 'workshop-coffee',
+  roaster: roaster,
   name: "La Serrania Decaffeinated Filter",
   country: "Colombia",
   region: "Pitalito, Huila",
@@ -19,7 +21,7 @@ The actual solvent doing the work of decaffeinating the green coffee at Descafec
   available: true)
 
 Coffee.create!(
-  roaster_id: 'workshop-coffee',
+  roaster: roaster,
   name: "La Serrania Decaffeinated Espresso",
   country: "Colombia",
   region: "Pitalito, Huila",
@@ -39,7 +41,7 @@ The actual solvent doing the work of decaffeinating the green coffee at Descafec
   available: true)
 
 Coffee.create!(
-  roaster_id: 'workshop-coffee',
+  roaster: roaster,
   name: "El Mural",
   country: "El Salvador",
   region: "La Palma, Chalatenango",
@@ -64,7 +66,7 @@ Directly feeding back at the farm level will arm the producers with more informa
   available: true)
 
 Coffee.create!(
-  roaster_id: 'workshop-coffee',
+  roaster: roaster,
   name: "Muchagara AB",
   country: "Kenya",
   region: "Kariru, Kirinyaga County",
@@ -89,7 +91,7 @@ As well as investing in producing high grade, specialty coffee the membership of
   available: true)
 
 Coffee.create!(
-  roaster_id: 'workshop-coffee',
+  roaster: roaster,
   name: "Caballero Espresso",
   country: "Honduras",
   region: "Chinacla, Marcala, La Paz",
@@ -115,7 +117,7 @@ Once the cherries are harvested, they depulp using a Pinhalense Eco-Pulper befor
   available: true)
 
 Coffee.create!(
-  roaster_id: 'workshop-coffee',
+  roaster: roaster,
   name: "Dely Suyapa",
   country: "Honduras",
   region: "Masaguara, Pozo Negro, Intibucá",
@@ -141,7 +143,7 @@ We’re thrilled to share this Bourbon selection from Finca Las Manzanas with yo
   available: true)
 
 Coffee.create!(
-  roaster_id: 'workshop-coffee',
+  roaster: roaster,
   name: "Yabitu Espresso",
   country: "Ethiopia",
   region: "Yabitu Koba, Uraga, Guji Zone, Oromia",
@@ -161,7 +163,7 @@ The results of the propagation and process of this coffee are a very fruity, com
   available: true)
 
 Coffee.create!(
-  roaster_id: 'workshop-coffee',
+  roaster: roaster,
   name: "Raro Boda",
   country: "Ethiopia",
   region: "Uraga, Guji Zone, Oromia",

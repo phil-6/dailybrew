@@ -1,5 +1,7 @@
+roaster = Roaster.find_by reference: 'clifton_coffee'
+
 Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+  roaster: roaster,
   name: "Banko Gotiti (Washed)",
   country: "Ethiopia",
   region: "Gotiti Kebele, Kochere District",
@@ -14,7 +16,7 @@ Coffee.create!(
   available: true)
 
 Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+  roaster: roaster,
   name: "El Fuego (Anaerobic)",
   country: "Costa Rica",
   region: "Piedades Sur, San Ramón, Alajuela (West Valley)",
@@ -29,7 +31,7 @@ Coffee.create!(
   available: true)
 
 Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+  roaster: roaster,
   name: "Sin Limites",
   country: "Costa Rica",
   region: "West Valley",
@@ -44,7 +46,7 @@ Coffee.create!(
   available: true)
 
 Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+  roaster: roaster,
   name: "CAFEX",
   country: "Burundi",
   region: "Gashoho",
@@ -59,7 +61,7 @@ Coffee.create!(
   available: true)
 
 Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+  roaster: roaster,
   name: "Las Peñas",
   country: "Guatemala",
   region: "Huehuetenango",
@@ -74,7 +76,7 @@ Coffee.create!(
   available: true)
 
 Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+  roaster: roaster,
   name: "Huila – SUGARCANE DECAF E.A",
   country: "Colombia Decaf",
   region: "Elias, Huila",
@@ -90,7 +92,7 @@ The resulting cup has notes of dried red fruits, cashews, panela, chocolate and 
   available: true)
 
 Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+  roaster: roaster,
   name: "Las Alturas",
   country: "Honduras",
   region: "San José de Los Andes, Las Vegas, Santa Barbara",
@@ -105,7 +107,7 @@ Coffee.create!(
   available: true)
 
 Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+  roaster: roaster,
   name: "Seasonal Blend",
   country: "EQ Espresso",
   region: "San José de Los Andes, Las Vegas, Santa Barbara",
@@ -120,7 +122,7 @@ Coffee.create!(
   available: true)
 
 Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+  roaster: roaster,
   name: "Ethiopia – Werka Wuri",
   country: "House Filter",
   region: "Gedeb, Gedeo Zone",
@@ -135,7 +137,7 @@ Coffee.create!(
   available: true)
 
 Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+  roaster: roaster,
   name: "Brazil",
   country: "Suspension Espresso",
   region: "France, Mogiana",
@@ -150,7 +152,7 @@ Coffee.create!(
   available: true)
 
 Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+  roaster: roaster,
   name: "Finca Buena Vista",
   country: "E1 Project Espresso",
   region: "El Anonal, Atiquizaya - Ahuachapán",
@@ -165,7 +167,7 @@ Coffee.create!(
   available: true)
 
 Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+  roaster: roaster,
   name: "House Espresso Blend",
   country: "Village Espresso",
   region: "El Anonal, Atiquizaya - Ahuachapán",

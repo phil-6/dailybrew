@@ -1,7 +1,7 @@
 class CreateRoasters < ActiveRecord::Migration[7.0]
   def change
-    create_table :roasters, id: :string do |t|
-      t.belongs_to :user, null: false, foreign_key: true, type: :uuid
+    create_table :roasters, id: :uuid do |t|
+      t.string :reference
       t.string :name
       t.text :description
       t.string :location
@@ -14,5 +14,8 @@ class CreateRoasters < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    add_index :roasters, :website, unique: true
+    add_index :roasters, :reference, unique: true
   end
 end

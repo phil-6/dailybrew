@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 6) do
   end
 
   create_table "coffees", force: :cascade do |t|
-    t.string "roaster_id", null: false
+    t.uuid "roaster_id", null: false
     t.string "name"
     t.string "country"
     t.string "region"
@@ -87,8 +87,8 @@ ActiveRecord::Schema.define(version: 6) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
-  create_table "roasters", id: :string, force: :cascade do |t|
-    t.uuid "user_id", null: false
+  create_table "roasters", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "reference"
     t.string "name"
     t.text "description"
     t.string "location"
@@ -100,7 +100,8 @@ ActiveRecord::Schema.define(version: 6) do
     t.string "facebook"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_roasters_on_user_id"
+    t.index ["reference"], name: "index_roasters_on_reference", unique: true
+    t.index ["website"], name: "index_roasters_on_website", unique: true
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -156,5 +157,4 @@ ActiveRecord::Schema.define(version: 6) do
   add_foreign_key "inventories", "users"
   add_foreign_key "reviews", "coffees"
   add_foreign_key "reviews", "users"
-  add_foreign_key "roasters", "users"
 end
