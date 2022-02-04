@@ -1,31 +1,18 @@
 @import "variables";
 
-$label-transform: scale(0.7) translateY(-0.4rem) translateX(0.9rem);
-
-@mixin label-above-input {
-  & + .form-label {
-    transform: $label-transform;
-  }
-}
-
 .field {
   position: relative;
 
   &:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .form-input {
     font-family: $font;
     display: block;
-    width: 100%;
-    height: calc(3.5rem + 2px);
     padding: 1rem 2rem;
-    font-size: 1rem;
-    line-height: 1.5;
     background-clip: padding-box;
     border: 1px solid $color-mid-1;
-    border-radius: 2rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
     &::placeholder {
@@ -33,7 +20,6 @@ $label-transform: scale(0.7) translateY(-0.4rem) translateX(0.9rem);
     }
 
     &:focus {
-      // border-color: $color-secondary-dark;
       outline: 0;
       box-shadow: 0 0 0 2px $color-secondary-dark;
     }
@@ -42,7 +28,9 @@ $label-transform: scale(0.7) translateY(-0.4rem) translateX(0.9rem);
       padding-top: 1.65rem;
       padding-bottom: 0.75rem;
 
-      @include label-above-input();
+      & + .form-label {
+        transform: scale(0.7) translateY(-0.4rem) translateX(0.9rem);
+      }
     }
   }
 
@@ -58,5 +46,13 @@ $label-transform: scale(0.7) translateY(-0.4rem) translateX(0.9rem);
     transform-origin: 0 0;
     opacity: 0.65;
     transition: transform 0.1s ease-in-out;
+  }
+
+  .form-input, .form-submit {
+    width: 100%;
+    height: calc(3.5rem + 2px);
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
   }
 }
