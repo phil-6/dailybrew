@@ -34,7 +34,7 @@ module FetchCoffees
           if detail.css("h2").text.downcase.include?"region"
             coffee["region"] = detail.css("p").text
           elsif detail.css("h2").text.downcase.include?"altitude"
-            coffee["altitude"] = detail.css("p").text.gsub(/\s.+/, '')
+            coffee["altitude"] = detail.css("p").text.gsub(/\s.+/, '').gsub(/-.+/, '').gsub(',', '')
           elsif detail.css("h2").text.downcase.include?"producer"
             coffee["producer"] = detail.css("p").text
           elsif detail.css("h2").text.downcase.include?"process"
@@ -49,6 +49,7 @@ module FetchCoffees
         @coffees << coffee
       end
 
+      @coffees
     end
 
   end
