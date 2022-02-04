@@ -1433,7 +1433,7 @@ Roaster.create!(
 
 Roaster.create!(
   user: user,
-  id: "coaltown-coffee-roasters",
+  id: "coaltown-coffee",
   name: "Coaltown Coffee Roasters",
   description: "Coaltown Coffee only roasts speciality grade Arabica coffee which is an area which is booming in the coffee industry and one that promotes quality and ethics. We would like to raise the bar in Wales and to embrace this change in the coffee industry with our Roastery which is proud to be a member of the Specialty Coffee Association of Europe",
   location: "The Roastery, Glynhir Rd, Llandybie, Ammanford, SA18 2TB, Wales",
@@ -1957,8 +1957,8 @@ Roaster.create!(
 
 Roaster.create!(
   user: user,
-  id: "workshop-coffee-co",
-  name: "Workshop Coffee Co.",
+  id: "workshop-coffee",
+  name: "Workshop Coffee",
   description: "Dedicated to sourcing, roasting and serving the best coffee possible.",
   location: "27 Clerkenwell Road, Clerkenwell, London EC1M 5RN",
   website: "www.workshopcoffee.com",
