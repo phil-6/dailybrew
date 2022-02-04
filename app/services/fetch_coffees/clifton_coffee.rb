@@ -5,6 +5,10 @@ module FetchCoffees
     require 'json'
     require 'nokogiri'
 
+    # call this and get response with
+    # scraper = FetchCoffees::CliftonCoffee.new
+    # coffees = scraper.scrape
+
     def scrape
       @coffees = []
       roaster_reference = "clifton_coffee"
