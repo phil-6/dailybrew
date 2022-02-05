@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 6) do
   end
 
   create_table "coffees", force: :cascade do |t|
-    t.uuid "roaster_id", null: false
+    t.bigint "roaster_id", null: false
     t.string "name"
     t.string "country"
     t.string "region"
@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 6) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
-  create_table "roasters", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "roasters", force: :cascade do |t|
     t.string "reference"
     t.string "name"
     t.text "description"

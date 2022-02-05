@@ -1,6 +1,6 @@
 class CreateRoasters < ActiveRecord::Migration[7.0]
   def change
-    create_table :roasters, id: :uuid do |t|
+    create_table :roasters do |t|
       t.string :reference
       t.string :name
       t.text :description
