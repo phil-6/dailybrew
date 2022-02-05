@@ -5,11 +5,6 @@ module FetchCoffees
     require 'json'
     require 'nokogiri'
 
-    # call this and get response with
-    # Object.const_get "FetchCoffees::" +  Coffee.first.roaster.reference.classify
-    # scraper = FetchCoffees::CliftonCoffee.new
-    # coffees = scraper.scrape
-
     def scrape
       @coffees = []
       roaster_reference = "clifton_coffee"
@@ -33,7 +28,7 @@ module FetchCoffees
         coffee["country"] = coffee_page.css(".prod-name h1").text
         coffee["name"] = coffee_page.css(".prod-name h4").text
         coffee["tasting_notes"] = coffee_page.css(".tasting-nav-notes h3").text.gsub(" / ", ", ")
-        coffee["description"] = coffee_page.css(".prod-description p").to_s
+        coffee["description"] = coffee_page.css(".prod-description p").text
 
         coffee_page.css(".detail").each do |detail|
           if detail.css("h2").text.downcase.include?"region"
@@ -52,6 +47,7 @@ module FetchCoffees
         end
 
         @coffees << coffee
+        break
       end
 
       @coffees

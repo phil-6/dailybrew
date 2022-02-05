@@ -1,7 +1,7 @@
 class RoastersController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   before_action :authorize_admin, except: %i[ index show ]
-  before_action :set_roaster, only: %i[ show edit update destroy ]
+  before_action :set_roaster, only: %i[ show edit update destroy update_coffees ]
 
   # GET /roasters or /roasters.json
   def index
@@ -57,6 +57,11 @@ class RoastersController < ApplicationController
       format.html { redirect_to roasters_url, notice: "Roaster was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  # POST /roasters/1/update_coffees
+  def update_coffees
+    @roaster.update_coffees
   end
 
   private
