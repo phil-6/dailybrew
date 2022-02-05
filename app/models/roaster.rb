@@ -6,7 +6,7 @@ class Roaster < ApplicationRecord
   validates :reference , uniqueness: true
 
   def update_coffees
-    FetchCoffeesJob.perform_later(reference)
+    UpdateCoffeesJob.perform_later(reference)
   end
 
 end

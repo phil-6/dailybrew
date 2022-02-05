@@ -1,4 +1,4 @@
-class FetchCoffeesJob < ApplicationJob
+class UpdateCoffeesJob < ApplicationJob
   queue_as :default
 
   def perform(reference)
