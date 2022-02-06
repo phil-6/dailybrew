@@ -3,11 +3,9 @@ class UpdateCoffeesJob < ApplicationJob
 
   def perform(reference)
     # TODO Catch error when scraper doesnt exist
-    scraper_class = Object.const_get "FetchCoffees::" + reference.classify
+    scraper = Object.const_get "FetchCoffees::" + reference.classify
 
-    scraper = scraper_class.new
-    coffees = scraper.scrape
-
+    coffees = scraper.new.scrape
     roaster = Roaster.find_by reference: reference
 
     coffees.each do |coffee|
