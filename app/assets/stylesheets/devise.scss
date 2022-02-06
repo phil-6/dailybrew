@@ -3,6 +3,7 @@
 .devise {
   min-height: 100vh;
   background-color: #ecf0f2;
+  padding: 1rem;
 
   .devise-container {
     max-width: 1200px;
@@ -14,32 +15,27 @@
     
     @media screen and (max-width: $screen-lg) {
       flex-direction: column;
-    }
-
-    @media screen and (max-width: $screen-sm) {
-      padding: 0.5rem;
+      min-height: fit-content;
     }
 
     .column {
+      justify-content: center;
+      align-items: center;
       padding: 4rem;
 
       @media screen and (max-width: $screen-lg) {
         padding: 2rem;
       }
 
-      @media screen and (max-width: $screen-sm) {
-        padding: 1rem;
-      }
-
       &:first-child {
         flex-basis: 60%;
         background-color: #FFFFFF;
-        justify-content: center;
-        align-items: center;
         border-top-left-radius: 2rem;
         border-bottom-left-radius: 2rem;
 
         @media screen and (max-width: $screen-lg) {
+          border-top-left-radius: 0;
+          border-bottom-right-radius: 2rem;
           order: 1;
         }
       }
@@ -52,6 +48,8 @@
 
         @media screen and (max-width: $screen-lg) {
           order: 0;
+          border-top-left-radius: 2rem;
+          border-bottom-right-radius: 0;
         }
       }
 
@@ -67,6 +65,30 @@
 
         @media screen and (max-width: $screen-sm) {
           width: 100%;
+        }
+      }
+
+      h1 {
+        font-family: $heading-font;
+        color: $color-brand;
+        text-align: left;
+        line-height: 0.6;
+        font-size: 12rem;
+
+        @media screen and (max-width: $screen-lg) {
+          text-align: center;
+          line-height: 1;
+          font-size: 10rem;
+        }
+
+        @media screen and (max-width: $screen-lg) {
+          line-height: 1;
+          font-size: 7rem;
+        }
+
+        @media screen and (max-width: $screen-sm) {
+          line-height: 1;
+          font-size: 4rem;
         }
       }
     }
