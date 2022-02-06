@@ -1,8 +1,9 @@
 @import "variables";
 
 .btn, .link {
-  cursor: pointer;
   font-family: $font;
+
+  &:hover { cursor: pointer; }
 }
 
 .btn {

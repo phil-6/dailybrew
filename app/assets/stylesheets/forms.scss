@@ -2,7 +2,7 @@
 
 .field {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 
   .form-input {
     display: block;
@@ -20,12 +20,22 @@
       box-shadow: 0 0 0 2px $color-complementary-0;
     }
 
-    &:target, &:not(:placeholder-shown) {
-      padding-top: 1.65rem;
-      padding-bottom: 0.75rem;
+    &:-webkit-autofill::first-line,
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus, 
+    &:-webkit-autofill:active{
+      font-family: $font;
+      box-shadow: 0 0 0 30px white inset !important;
+      -webkit-box-shadow: 0 0 0 30px white inset !important;
+    }
 
+
+    &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
       & + .form-label {
-        transform: scale(0.7) translateY(-0.4rem) translateX(0.9rem);
+        transform: scale(0.85) translateY(-1.9rem) translateX(0rem);
+        color: rgba(6,71,99,0.65);
+        opacity: 1;
       }
     }
   }
@@ -33,26 +43,40 @@
   .form-label {
     display: inline-block;
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1rem 2rem;
+    top: 1rem;
+    left: 1.75rem;
+    padding: 0 0.25rem;
+    background-color: white;
     pointer-events: none;
     border: 1px solid transparent;
     line-height: 1.5;
     transform-origin: 0 0;
-    opacity: 0.65;
     transition: transform 0.1s ease-in-out;
+    color: $color-primary-0;
+    opacity: 0.65;
   }
 }
 
-.form-link {
-  justify-content: flex-end;
+.form-links {
+  justify-content: space-between;
   font-size: 0.9rem;
-  margin-top: -0.5rem;
+}
+
+.form-check {
+  align-items: baseline;
+  gap: 0.25rem;
+
+  input {
+    margin: 0;
+  }
+
+  &:active {
+    outline-color: $color-primary-0;
+  }
 }
 
 .action {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .form-input, .form-submit {
