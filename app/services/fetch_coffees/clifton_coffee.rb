@@ -47,7 +47,6 @@ module FetchCoffees
         end
 
         @coffees << coffee
-        break
       end
 
       @coffees
