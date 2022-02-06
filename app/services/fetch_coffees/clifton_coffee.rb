@@ -39,7 +39,7 @@ module FetchCoffees
             coffee["producer"] = detail.css("p").text
           elsif detail.css("h2").text.downcase.include?"process"
             coffee["process"] = detail.css("p").text
-          elsif detail.css("h2").text.downcase.include?"variety"
+          elsif %w[variety varietal].any? { |s| detail.css("h2").text.downcase.include? s }
             coffee["variety"] = detail.css("p").text
           elsif detail.css("h2").text.downcase.include?"farm"
             coffee["town"] = detail.css("p").text
