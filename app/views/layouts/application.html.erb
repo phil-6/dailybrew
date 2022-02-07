@@ -23,23 +23,7 @@
     <% end %>
 
     <% if devise_controller? %>
-      <div class="devise container centered">
-        <div class="devise-container row">
-          <div class="column">
-            <div class="form">
-              <%= yield %>
-            </div>
-          </div>
-          <div class="column brand">
-            <div class="subheading">
-              <h4>Discover the wave.</h4>
-              <h4>Share the wave.</h4>
-            </div>
-            <h1 class="heading">Ride the Wave.</h1>
-            <span class="tag-line">Your coffee journey starts here.</span>
-          </div>
-        </div>
-      </div>
+      <%= yield %>
     <% else %>
       <%= render 'shared/navbar' %>
       <%= yield %>

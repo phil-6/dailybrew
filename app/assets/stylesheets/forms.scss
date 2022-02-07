@@ -1,5 +1,10 @@
 @import "variables";
 
+.form-title {
+  margin-bottom: 2rem;
+  color: $color-primary-0;
+}
+
 .field {
   position: relative;
   margin-bottom: 0.75rem;
@@ -71,7 +76,7 @@
 }
 
 .action {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .form-input, .form-submit {
@@ -86,4 +91,8 @@
 :focus-visible {
   outline-color: $color-complementary-0;
   outline-offset: 0.125rem;
+}
+
+input[type="submit" i] {
+  border: none;
 }

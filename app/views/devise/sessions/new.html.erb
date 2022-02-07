@@ -1,22 +1,26 @@
-<h2 class="form-title">Login</h2>
+<div class="devise">
+  <div class="form">
+    <h2 class="form-title">Login</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |form| %>
-  <div class="field">
-    <%= form.email_field :email, class: 'form-input', autofocus: true, autocomplete: 'email', placeholder: 'Email', required: true %>
-    <%= form.label :email, class: 'form-label' %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |form| %>
+      <div class="field">
+        <%= form.email_field :email, class: 'form-input', autofocus: true, autocomplete: 'email', placeholder: 'Email', required: true %>
+        <%= form.label :email, class: 'form-label' %>
+      </div>
+      <div class="field">
+        <%= form.password_field :password, class: 'form-input', autocomplete: 'current-password', placeholder: 'Password', required: true %>
+        <%= form.label :password, class: 'form-label' %>
+      </div>
+      <div class="form-links row">
+        <div class="form-check row">
+          <%= form.check_box :remember_me %>
+          <%= form.label :remember_me, class: 'link link-primary' %>
+        </div>
+        <%= link_to 'Forgot password?', new_user_password_path, class: 'link-primary' %>
+      </div>
+      <div class="action">
+        <%= form.submit 'Login', class: 'form-submit btn btn-primary' %>
+      </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= form.password_field :password, class: 'form-input', autocomplete: 'current-password', placeholder: 'Password', required: true %>
-    <%= form.label :password, class: 'form-label' %>
-  </div>
-  <div class="form-links row">
-    <div class="form-check row">
-      <%= form.check_box :remember_me %>
-      <%= form.label :remember_me, class: 'link link-primary' %>
-    </div>
-    <%= link_to 'Forgot password?', new_user_password_path, class: 'link-primary' %>
-  </div>
-  <div class="action">
-    <%= form.submit 'Login', class: 'form-submit btn btn-primary' %>
-  </div>
-<% end %>
+</div>

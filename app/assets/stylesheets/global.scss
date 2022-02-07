@@ -98,14 +98,15 @@ body {
   }
 
   .card {
-    background-color: $color-white;
+    background-color: white;
     box-shadow: $primary-box-shadow;
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 4rem;
+    box-shadow: 0px 0px 10px 0 $color-primary-0;
 
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-lg) {
       width: 100%;
-      padding: 1.5rem;
+      padding: 2rem;
     }
   }
 

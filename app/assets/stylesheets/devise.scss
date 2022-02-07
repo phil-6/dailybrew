@@ -1,109 +1,94 @@
 @import "variables";
 
 .devise {
-  min-height: 100vh;
-  background-color: #ecf0f2;
-  padding: 1rem;
+  .form {
+    width: 380px;
 
-  .devise-container {
-    max-width: 1200px;
-    min-height: 800px;
-    width: 100%;
-    height: 100%;
-    border-radius: 2rem;
-    box-shadow: 0px 0px 10px 0 $color-primary-0;
-    
-    @media screen and (max-width: $screen-lg) {
-      flex-direction: column;
-      min-height: fit-content;
+    @media screen and (max-width: $screen-sm) {
+      width: 100%;
     }
+  }
 
-    .column {
-      justify-content: center;
-      padding: 4rem;
+  &.registration {
+    min-height: 100vh;
+    background-color: #ecf0f2;
+    padding: 1rem;
+
+    .registration-container {
+      max-width: 1200px;
+      min-height: 800px;
+      width: 100%;
+      height: 100%;
 
       @media screen and (max-width: $screen-lg) {
-        padding: 2rem;
+        flex-direction: column;
+        min-height: fit-content;
       }
 
-      &:first-child {
-        flex-basis: 60%;
-        align-items: center;
-        background-color: #FFFFFF;
-        border-top-left-radius: 2rem;
-        border-bottom-left-radius: 2rem;
+      .column {
+        justify-content: center;
 
         @media screen and (max-width: $screen-lg) {
-          border-top-left-radius: 0;
-          border-bottom-right-radius: 2rem;
-          order: 1;
+          padding-top: 4rem;
+          padding-bottom: 4rem;
         }
-      }
 
-      &:last-child {
-        flex-basis: 40%;
-        background-color: $color-primary-0;
-        border-top-right-radius: 2rem;
-        border-bottom-right-radius: 2rem;
-
-        @media screen and (max-width: $screen-lg) {
-          order: 0;
-          border-top-left-radius: 2rem;
+        &:first-child {
+          flex-basis: 60%;
+          align-items: center;
+          background-color: #FFFFFF;
+          border-top-right-radius: 0;
           border-bottom-right-radius: 0;
-        }
-      }
-
-      .form-title {
-        
-        margin-bottom: 2rem;
-        color: $color-primary-0;
-      }
-
-      .form {
-        width: 380px;
-
-        @media screen and (max-width: $screen-sm) {
-          width: 100%;
-        }
-      }
-
-      &.brand {
-        justify-content: space-between;
-        gap: 1rem;
-
-        .subheading {
-          h4 {
-            color: white;
-            opacity: 0.5;
-            text-align: right;
-          }
-        }
-
-        .heading {
-          font-family: $heading-font;
-          color: $color-brand;
-          text-align: left;
-          line-height: 0.7;
-          font-size: 10rem;
 
           @media screen and (max-width: $screen-lg) {
-            text-align: center;
-            font-size: 10rem;
-          }
-
-          @media screen and (max-width: $screen-md) {
-            font-size: 7.5rem;
-          }
-
-          @media screen and (max-width: $screen-sm) {
-            font-size: 5rem;
+            border-top-left-radius: 0;
+            border-bottom-right-radius: 2rem;
+            order: 1;
           }
         }
 
-        .tag-line {
-          color: white;
-          opacity: 0.5;
-          font-size: 0.9rem;
+        &:last-child {
+          flex-basis: 40%;
+          background-color: $color-primary-0;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+
+          @media screen and (max-width: $screen-lg) {
+            order: 0;
+            border-top-left-radius: 2rem;
+            border-bottom-right-radius: 0;
+          }
+        }
+
+        &.brand {
+          gap: 1rem;
+
+          .heading {
+            font-family: $heading-font;
+            color: $color-brand;
+            text-align: left;
+            line-height: 0.7;
+            font-size: 10rem;
+
+            @media screen and (max-width: $screen-lg) {
+              text-align: center;
+              font-size: 10rem;
+            }
+
+            @media screen and (max-width: $screen-md) {
+              font-size: 7.5rem;
+            }
+
+            @media screen and (max-width: $screen-sm) {
+              font-size: 5rem;
+            }
+          }
+
+          .tag-line {
+            color: white;
+            opacity: 0.5;
+            font-size: 0.9rem;
+          }
         }
       }
     }
