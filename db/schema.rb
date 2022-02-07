@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(version: 6) do
     t.string "twitter"
     t.string "instagram"
     t.string "facebook"
+    t.datetime "last_coffee_fetch", precision: 6
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["reference"], name: "index_roasters_on_reference", unique: true

@@ -11,6 +11,7 @@ class CreateRoasters < ActiveRecord::Migration[7.0]
       t.string :twitter
       t.string :instagram
       t.string :facebook
+      t.datetime :last_coffee_fetch
 
       t.timestamps
     end

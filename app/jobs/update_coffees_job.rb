@@ -18,5 +18,9 @@ class UpdateCoffeesJob < ApplicationJob
       this_coffee.update!(coffee)
     end
 
+    # not sure if this is the best place for this.
+    # could be in an after_perform callback and could reach out to a method on the model
+    # but its here for now.
+    roaster.update!(last_coffee_fetch: DateTime.now)
   end
 end
