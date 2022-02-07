@@ -1,7 +1,6 @@
 roaster = Roaster.find_by reference: 'workshop_coffee'
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "La Serrania Decaffeinated Filter",
   country: "Colombia",
   region: "Pitalito, Huila",
@@ -20,8 +19,7 @@ The actual solvent doing the work of decaffeinating the green coffee at Descafec
   url: "https://workshopcoffee.com/collections/coffee/products/la-serrania-decaffeinated-filter",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "La Serrania Decaffeinated Espresso",
   country: "Colombia",
   region: "Pitalito, Huila",
@@ -40,8 +38,7 @@ The actual solvent doing the work of decaffeinating the green coffee at Descafec
   url: "https://workshopcoffee.com/collections/coffee/products/la-serrania-decaffeinated-espresso",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "El Mural",
   country: "El Salvador",
   region: "La Palma, Chalatenango",
@@ -65,8 +62,7 @@ Directly feeding back at the farm level will arm the producers with more informa
   url: "https://workshopcoffee.com/collections/coffee/products/el-mural",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Muchagara AB",
   country: "Kenya",
   region: "Kariru, Kirinyaga County",
@@ -78,7 +74,7 @@ Coffee.create!(
   description: "2021 marks our third year working with the sweet, tart & complex coffees from Muchagara washing station, in Kenya’s Kirinyaga region, which is produced by over a thousand coffee farmers.
 The Farmers
 Between 1,500 and 1,700 smallholders grow, harvest and deliver their coffee cherries to Muchagara factory to be processed. They live in the surrounding area in Kariru, and whilst a range of coffee varieties are being grown the overwhelming majority at 90% is SL34. There are pockets of SL28 as well as more recently introduced, rust-resistant varieties like Ruiru 11 and Batian. 
-The agricultural conditions for growing coffee are particularly good, being located between 1,700 and 1,800m on the volcanic, southern slopes of Mount Kenya in Kirinyaga County. Coffee cherries take a long time to slowly mature and ripen, and this particular selection we’ve bought comes from the peak of the harvest, when cherries are in their prime. This contributes to more sweetness and complexity in the cup. 
+The agricultural conditions for growing coffee are particularly good, being located between 1,700 and 1,800m on the volcanic, southern slopes of Mount Kenya in Kirinyaga County. roaster.coffees.cherries take a long time to slowly mature and ripen, and this particular selection we’ve bought comes from the peak of the harvest, when cherries are in their prime. This contributes to more sweetness and complexity in the cup. 
 Most of the smallholder farmers delivering coffee cherries have between 200 and 500 coffee trees, provided under the Baragwi F.C.S with Rainforest Alliance and 4C certificates. The collected fruit is sorted on tarps before processing, to refine the quality by removing under and over ripe cherries, and then pooled together at the mill.
 The Washing Station/Factory
 Established in 1959, Muchagara was the first coffee processing factory in Kenya’s Kirinyaga County. Whilst the mill itself is the oldest in Kirinyaga, the manager David Shege is relatively new and has been running operations for the last four years. His primary goals are to renovate and improve the factory’s infrastructure in order to increase the quality of their coffee. They are typically producing up to 200 tonnes of coffee per year, which puts a strain on everything from their depulping equipment, fermentation tanks and drying beds.
@@ -90,8 +86,7 @@ As well as investing in producing high grade, specialty coffee the membership of
   url: "https://workshopcoffee.com/collections/coffee/products/muchagara-ab-2021",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Caballero Espresso",
   country: "Honduras",
   region: "Chinacla, Marcala, La Paz",
@@ -116,8 +111,7 @@ Once the cherries are harvested, they depulp using a Pinhalense Eco-Pulper befor
   url: "https://workshopcoffee.com/collections/coffee/products/caballero-espresso-2021",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Dely Suyapa",
   country: "Honduras",
   region: "Masaguara, Pozo Negro, Intibucá",
@@ -142,8 +136,7 @@ We’re thrilled to share this Bourbon selection from Finca Las Manzanas with yo
   url: "https://workshopcoffee.com/collections/coffee/products/dely-suyapa-2021",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Yabitu Espresso",
   country: "Ethiopia",
   region: "Yabitu Koba, Uraga, Guji Zone, Oromia",
@@ -162,8 +155,7 @@ The results of the propagation and process of this coffee are a very fruity, com
   url: "https://workshopcoffee.com/collections/coffee/products/yabitu-espresso",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Raro Boda",
   country: "Ethiopia",
   region: "Uraga, Guji Zone, Oromia",
@@ -173,7 +165,7 @@ Coffee.create!(
   tasting_notes: "Beautifully composed with a ripe, integrated acidity. A sweetness of lemon shortbread & white chocolate underpins complex floral aromas of violets, lychees & lemongrass. ",
   producer: "257 smallholders in Uraga",
   description: "We’re excited to welcome back for the second year a vibrant washed coffee sourced from the Raro Boda wet mill in Ethiopia’s Guji Zone.
-Having thoroughly enjoyed several coffees from washing stations owned and operated by Snap Coffee last year, including Raro Boda, Refisa and Danche, we have been pursuing further lots from them this year to strengthen our relationship with them whilst continuing to showcase the best coffees we can possibly find. 
+Having thoroughly enjoyed several coffees from washing stations owned and operated by Snap roaster.coffees.last year, including Raro Boda, Refisa and Danche, we have been pursuing further lots from them this year to strengthen our relationship with them whilst continuing to showcase the best coffees we can possibly find. 
 The Farmers
 Around 257 farmers delivered their coffee cherries to the Raro Boda washing station, located in Guji Zone’s Uraga woreda. Amidst natural forest and vegetation they are working completely organically, tending to a range of varieties, some of which are improved landrace selections such as Wolisho, Dega & Kurume.
 There are also pockets of JARC (Jimma Agricultural Research Center) identified and released varieties, dubbed 74110 and 74112 after having been initially catalogued in 1974, which are being promoted due to their resistance to coffee berry disease. Each farmer tends to between 2,000 and 4,000 coffee trees.
@@ -182,7 +174,7 @@ Named after the kebele (small town), Raro Boda washing station has been recently
 They traditionally process the coffee by depulping and fermenting under water for 48 hours before the parchment coffee is graded, initially in washing channels and then by hand during the time it spends drying in the sun on raised beds. To ensure uniform drying the layers are spread around 2cm deep and spend 10 days or so before they are consolidated, and samples are sent to the cupping lab. 
 Raro Boda wet mill has a new QC manager, Medhin Tamiru, an experienced cupper with over a decade of experience in the industry, and who was a judge for the last Ethiopian Cup of Excellence competition. He will continue to oversee operations ensuring the coffee produced at Raro Boda is squeaky clean and of the highest quality. 
 The Exporter
-Snap Coffee was established in 2008 by Negusse Debela Weldyes, and are responsible for the running and operation of several coffee washing stations including Raro Boda and Riripa, both of which will feature in our coffee range this year. Abenezer Asfaw oversees logistics and supply chain mapping, and is the liaison for Tropiq, which is Nordic Approach’s sister company with a team on the ground in Ethiopia year-round.
+Snap roaster.coffees.was established in 2008 by Negusse Debela Weldyes, and are responsible for the running and operation of several coffee washing stations including Raro Boda and Riripa, both of which will feature in our coffee range this year. Abenezer Asfaw oversees logistics and supply chain mapping, and is the liaison for Tropiq, which is Nordic Approach’s sister company with a team on the ground in Ethiopia year-round.
 Abenezer and his team oversee the processing facilities but also take on the task of dispensing agricultural knowledge to their contributing farmers. They are committed to recycling waste by-products from coffee processing at each of their stations where they have also built schools and provided them with computing equipment from the other arm of their business which is in electronics. They intend to improve the roads to streamline access to the washing stations as well as build health clinics to provide access to better healthcare for their contributing farmers. 
 Lots from the most recent pickings will be dry milled at Snap’s new processing and warehousing facility, which has just been fitted out. This means they will have even more control over the final exportable product that we get to work with, hopefully leading to improved consistency and uniformity. 
 ",

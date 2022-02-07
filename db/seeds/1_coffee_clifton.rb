@@ -1,7 +1,6 @@
 roaster = Roaster.find_by reference: 'clifton_coffee'
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Banko Gotiti (Washed)",
   country: "Ethiopia",
   region: "Gotiti Kebele, Kochere District",
@@ -15,8 +14,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/ethiopia-banko-gotti-washed/",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "El Fuego (Anaerobic)",
   country: "Costa Rica",
   region: "Piedades Sur, San Ramón, Alajuela (West Valley)",
@@ -30,8 +28,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/costa-rica-el-fuego-anaerobic/",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Sin Limites",
   country: "Costa Rica",
   region: "West Valley",
@@ -45,8 +42,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/costa-rica-sin-limites/",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "CAFEX",
   country: "Burundi",
   region: "Gashoho",
@@ -60,8 +56,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/burundi-cafex-washed/",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Las Peñas",
   country: "Guatemala",
   region: "Huehuetenango",
@@ -75,8 +70,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/guatemala-las-penas/",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Huila – SUGARCANE DECAF E.A",
   country: "Colombia Decaf",
   region: "Elias, Huila",
@@ -91,8 +85,7 @@ The resulting cup has notes of dried red fruits, cashews, panela, chocolate and 
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/colombia-decaf/",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Las Alturas",
   country: "Honduras",
   region: "San José de Los Andes, Las Vegas, Santa Barbara",
@@ -106,8 +99,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/honduras-las-alturas/",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Seasonal Blend",
   country: "EQ Espresso",
   region: "San José de Los Andes, Las Vegas, Santa Barbara",
@@ -121,8 +113,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/blends/eq-espresso/",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Ethiopia – Werka Wuri",
   country: "House Filter",
   region: "Gedeb, Gedeo Zone",
@@ -132,12 +123,11 @@ Coffee.create!(
   variety: "Heirloom",
   tasting_notes: "Vanilla, Black Tea, Plum",
   producer: "Werka Wuri Washing Station",
-  description: "<p>For our current House Filter we’ve put one of our most popular Single Origins in the spotlight, Werka Wuri.</p><p>Located in the Southern Nations of Ethiopia, Werka Wuri is a BNT owned washing station that processes cherry from over 750 smallholder farmers that surround the village of Werka Sakaro, a few kilometres east of Gedeb town.</p><p>BNT are one of the most prestigious Ethiopian exporters and are well recognised for their pre and post harvest premiums, which stand well above the local market rate in driving quality in their offering.</p><p>Clifton Coffee is working with BNT and the Ethiopian government to add 5 classrooms to the school at Werka Sakaro, providing secondary school education to over 1000 Children.</p><p> </p>",
+  description: "<p>For our current House Filter we’ve put one of our most popular Single Origins in the spotlight, Werka Wuri.</p><p>Located in the Southern Nations of Ethiopia, Werka Wuri is a BNT owned washing station that processes cherry from over 750 smallholder farmers that surround the village of Werka Sakaro, a few kilometres east of Gedeb town.</p><p>BNT are one of the most prestigious Ethiopian exporters and are well recognised for their pre and post harvest premiums, which stand well above the local market rate in driving quality in their offering.</p><p>Clifton roaster.coffees is working with BNT and the Ethiopian government to add 5 classrooms to the school at Werka Sakaro, providing secondary school education to over 1000 Children.</p><p> </p>",
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/house-filter/",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Brazil",
   country: "Suspension Espresso",
   region: "France, Mogiana",
@@ -151,8 +141,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/suspension-espresso/",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Finca Buena Vista",
   country: "E1 Project Espresso",
   region: "El Anonal, Atiquizaya - Ahuachapán",
@@ -166,8 +155,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/e1-project-espresso/",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "House Espresso Blend",
   country: "Village Espresso",
   region: "El Anonal, Atiquizaya - Ahuachapán",

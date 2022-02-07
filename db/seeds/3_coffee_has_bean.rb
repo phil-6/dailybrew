@@ -1,7 +1,6 @@
 roaster = Roaster.find_by reference: 'hasbean'
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Bolivia Las Alasitas Washed Caturra",
   country: "Bolivia",
   region: "Yungas",
@@ -62,8 +61,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/bol-las-alasitas-w-caturra",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Bolivia Vincent Paye",
   country: "Bolivia",
   region: "Yungas",
@@ -121,8 +119,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/bol-vincent-paye",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Brazil Carmo Estate",
   country: "Brazil",
   region: "Minas Gerais",
@@ -188,8 +185,7 @@ For more information about delivery, please visit our Help Centre.",
   url: "https://www.hasbean.co.uk//collections/coffee/products/bra-carmo-estate",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Brazil Fazenda Cachoeira da Grama Pulped Natural Yellow Bourbon",
   country: "Brazil",
   region: "Minas Gerais",
@@ -237,8 +233,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/bra-cachoeira-pn-yb",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Costa Rica Finca Licho Natural Bourbon",
   country: "Costa Rica",
   region: "Western Valley",
@@ -295,8 +290,7 @@ For more information please visit https://www.hasbean.co.uk/pages/shipping",
   url: "https://www.hasbean.co.uk//collections/coffee/products/cri-licho-n-bourbon",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Costa Rica Finca Licho Red Honey Pacamara - 125g",
   country: "Costa Rica",
   region: "Western Valley",
@@ -358,8 +352,7 @@ For more information about delivery, please visit our Help Centre.",
   url: "https://www.hasbean.co.uk//collections/coffee/products/cri-licho-rh-pacamara",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Costa Rica Puente Tarrazú Finca El Potrero Yellow Honey Geisha - 125g",
   country: "Costa Rica",
   region: "Micro region: Santa Cruz de León Cortés",
@@ -419,8 +412,7 @@ For more information about delivery, please visit our Help Centre.",
   url: "https://www.hasbean.co.uk//collections/coffee/products/cri-potrero-yh-geisha",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Decaf",
   country: "Colombia",
   region: "Micro region: Santa Cruz de León Cortés",
@@ -460,8 +452,7 @@ Roast InformationMedium - through first crack and slow it down to drop it just b
   url: "https://www.hasbean.co.uk//collections/coffee/products/decaf",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "El Salvador Finca Argentina Los Mangos Natural Bourbon",
   country: "El Salvador",
   region: "Micro region: Santa Cruz de León Cortés",
@@ -535,8 +526,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/slv-finca-argentina-los-mangos-n-bourbon",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "El Salvador Finca Argentina Los Mangos Washed Bourbon",
   country: "El Salvador",
   region: "Micro region: Santa Cruz de León Cortés",
@@ -611,8 +601,7 @@ For more information about delivery, please visit our Help Centre.",
   url: "https://www.hasbean.co.uk//collections/coffee/products/slv-argentina-los-mangos",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "El Salvador Finca Argentina Washed Bourbon",
   country: "El Salvador",
   region: "Micro region: Santa Cruz de León Cortés",
@@ -685,8 +674,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/slv-argentina-w-bourbon",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "El Salvador Finca La Fany Washed Bourbon",
   country: "El Salvador",
   region: "Micro region: Santa Cruz de León Cortés",
@@ -752,8 +740,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/slv-la-fany-w-bourbon",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "El Salvador Finca Nejapa Roma Washed Red Caturra",
   country: "El Salvador",
   region: "Ahuachapán ",
@@ -816,8 +803,7 @@ For more information about delivery, please visit our Help Centre.",
   url: "https://www.hasbean.co.uk//collections/coffee/products/slv-nejapa-roma-w-red-caturra",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "El Salvador Finca San José Washed Elefante",
   country: "El Salvador",
   region: "Ahuachapán ",
@@ -883,8 +869,7 @@ For more information please visit https://www.hasbean.co.uk/pages/shipping",
   url: "https://www.hasbean.co.uk//collections/coffee/products/slv-san-jose-w-elefante",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "El Salvador Finca San José Washed Red Bourbon",
   country: "El Salvador",
   region: "Ahuachapán ",
@@ -946,8 +931,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/slv-san-jose-w-red-bourbon",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "El Salvador Finca Siberia Washed Bourbon",
   country: "El Salvador",
   region: "Santa Ana",
@@ -1019,8 +1003,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/slv-siberia-w-bourbon",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Ethiopia Ana Sora Washed",
   country: "Ethiopia",
   region: "Santa Ana",
@@ -1079,8 +1062,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/eth-ana-sora-w",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Guatemala El Bosque Washed Bourbon",
   country: "Guatemala",
   region: "Santa Ana",
@@ -1137,8 +1119,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/gtm-el-bosque-w-bourbon",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Guatemala San Patricio El Limon Washed Caturra",
   country: "Guatemala",
   region: "Palencia",
@@ -1196,8 +1177,7 @@ For more information please visit https://www.hasbean.co.uk/pages/shipping",
   url: "https://www.hasbean.co.uk//collections/coffee/products/gtm-san-patricio-el-limon-w-caturra",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Guatemala San Patricio El Limon Washed Pacamara",
   country: "Guatemala",
   region: "Palencia",
@@ -1246,8 +1226,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/gtm-san-patricio-el-limon-w-pacamara",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Guatemala San Patricio El Limon Washed Pache",
   country: "Guatemala",
   region: "Palencia",
@@ -1305,8 +1284,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/gtm-san-patricio-el-limon-w-pache",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Guatemala San Patricio El Limon Washed San Ramon",
   country: "Guatemala",
   region: "Palencia",
@@ -1354,8 +1332,7 @@ For more information please visit https://www.hasbean.co.uk/pages/shipping",
   url: "https://www.hasbean.co.uk//collections/coffee/products/gtm-san-patricio-el-limon-san-ramon-w",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Nicaragua Finca La Escondida Washed Red Catuai",
   country: "Nicaragua",
   region: "Palencia",
@@ -1410,8 +1387,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/nic-escondida-w-red-catuai",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Nicaragua Finca Limoncillo Natural Red Bourbon",
   country: "Nicaragua",
   region: " Matagalpa ",
@@ -1478,8 +1454,7 @@ For more information about delivery, please visit our Help Centre.",
   url: "https://www.hasbean.co.uk//collections/coffee/products/nic-limoncillo-n-bourbon",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Nicaragua Finca Limoncillo Natural Red Pacamara",
   country: "Nicaragua",
   region: " Matagalpa ",
@@ -1545,8 +1520,7 @@ For more information about delivery, please visit our Help Centre.",
   url: "https://www.hasbean.co.uk//collections/coffee/products/nic-limoncillo-n-red-pacamara",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Nicaragua Finca Limoncillo Washed Red Pacamara",
   country: "Nicaragua",
   region: " Matagalpa ",
@@ -1622,8 +1596,7 @@ For more information please visit https://www.hasbean.co.uk/pages/shipping",
   url: "https://www.hasbean.co.uk//collections/coffee/products/nic-limoncillo-w-red-pacamara",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Nicaragua Finca Limoncillo Washed Red Pacamara Peaberry",
   country: "Nicaragua",
   region: " Matagalpa ",
@@ -1704,8 +1677,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/nic-limoncillo-w-red-pacamara-pb",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Nicaragua Las Delicias Washed Longberry",
   country: "Nicaragua",
   region: "Jinotega",
@@ -1764,8 +1736,7 @@ For more information about delivery, please visit our Help Centre.",
   url: "https://www.hasbean.co.uk//collections/coffee/products/nic-las-delicias-w",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Thailand Doi Pangkhon Natural",
   country: "Thailand",
   region: "Doi Pangkhong, Chiang Rai",
@@ -1818,8 +1789,7 @@ VIDEO REVIEW",
   url: "https://www.hasbean.co.uk//collections/coffee/products/tha-doi-pangkhon-n",
   available: true)
 
-Coffee.create!(
-  roaster: roaster,
+roaster.coffees.create!(
   name: "Thailand Nui & Aoy's Sparkling Natural - 125g",
   country: "Thailand",
   region: "Doi Saket",
