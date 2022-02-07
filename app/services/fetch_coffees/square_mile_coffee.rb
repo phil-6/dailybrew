@@ -25,6 +25,7 @@ module FetchCoffees
 
         coffee["name"] = coffee_section['data-product-title']
         coffee["tasting_notes"] = coffee_page.css(".sqm-product-tasting-notes-pp").text.gsub('/ ', ', ').titleize
+        coffee["tasting_notes"] = "Try it and find out!" if coffee["tasting_notes"] == ""
 
         coffee_page.css(".sqmile-single-product-column.sqmile-single-product-details p").each do |detail|
           if detail.text.downcase.include? "country"
