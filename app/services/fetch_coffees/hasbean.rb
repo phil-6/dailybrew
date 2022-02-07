@@ -7,7 +7,6 @@ module FetchCoffees
 
     def scrape
       @coffees = []
-      roaster_reference ="hasbean"
       coffee_index_url = "https://www.hasbean.co.uk/collections/coffee"
       coffee_css_on_index = ".grid-link"
       exclude_types = %w(blend)
@@ -17,7 +16,6 @@ module FetchCoffees
 
       coffee_index_page.css(coffee_css_on_index).each do |coffee_section|
         coffee = {}
-        coffee["roaster_reference"] = roaster_reference
         coffee["url"] = "https://www.hasbean.co.uk/" + coffee_section[:href]
         next if exclude_types.any? { |s| coffee["url"].include? s }
 
@@ -31,7 +29,6 @@ module FetchCoffees
         coffee["country"] = coffee_json["vendor"]
         coffee["name"] = coffee_json["title"]
         coffee["tasting_notes"] = coffee_page.css('.section-header p.h2').text
-        coffee["description"] = coffee_page.css(".prod-description p").text
 
         coffee_page.css('#full-product-description ul li').each do |detail|
           if detail.css("h2").text.downcase.include?"region"
@@ -48,6 +45,8 @@ module FetchCoffees
             coffee["town"] = detail.text.gsub('Micro region: ', '')
           end
         end
+
+        coffee["description"] = coffee_page.css(".prod-description p").text
 
         @coffees << coffee
       end

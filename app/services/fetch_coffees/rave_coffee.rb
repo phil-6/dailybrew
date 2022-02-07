@@ -7,7 +7,6 @@ module FetchCoffees
 
     def scrape
       @coffees = []
-      roaster_reference = "rave_coffee"
       coffee_index_url = "https://ravecoffee.co.uk/collections/single-origin-coffee"
       coffee_css_on_index = ".grid-item .cl-product-card-name a"
       exclude_types = %w(sacks bags)
@@ -17,7 +16,6 @@ module FetchCoffees
 
       coffee_index_page.css(coffee_css_on_index).uniq.each do |coffee_section|
         coffee = {}
-        coffee["roaster_reference"] = roaster_reference
         coffee["url"] = "https://ravecoffee.co.uk" + coffee_section[:href]
         next if exclude_types.any? { |s| coffee["url"].include? s }
 

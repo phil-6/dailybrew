@@ -15,20 +15,7 @@ class UpdateCoffeesJob < ApplicationJob
         new_coffee.tasting_notes = coffee["tasting_notes"]
       end
 
-      this_coffee.update(
-        country: coffee["country"],
-        tasting_notes: coffee["tasting_notes"],
-        region: coffee["region"],
-        town: coffee["town"],
-        lat: coffee["lat"],
-        lng: coffee["lng"],
-        process: coffee["process"],
-        altitude: coffee["altitude"],
-        variety: coffee["variety"],
-        producer: coffee["producer"],
-        available: coffee["available"],
-        description: coffee["description"]
-      )
+      this_coffee.update!(coffee)
     end
 
   end
