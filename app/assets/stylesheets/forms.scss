@@ -33,7 +33,7 @@
 
     &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
       & + .form-label {
-        transform: scale(0.85) translateY(-1.9rem) translateX(0rem);
+        transform: scale(0.85) translateY(-1.9rem) translateX(0.1rem);
         color: rgba(6,71,99,0.65);
         opacity: 1;
       }
@@ -68,10 +68,6 @@
   input {
     margin-top: 4px;
   }
-
-  &:active {
-    outline-color: $color-primary-0;
-  }
 }
 
 .action {
@@ -85,4 +81,9 @@
   font-family: $font;
   font-size: 1.1rem;
   line-height: 1.5;
+}
+
+:focus-visible {
+  outline-color: $color-complementary-0;
+  outline-offset: 0.125rem;
 }

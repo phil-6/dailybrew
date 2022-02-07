@@ -16,11 +16,6 @@
     &:hover {
       background-color: $color-primary-1;
     }
-
-    &:focus-visible {
-      outline-color: $color-complementary-0;
-      outline-offset: 4px;
-    }
   }
 }
 
@@ -30,11 +25,6 @@
 
     &:hover {
       color: $color-primary-1;
-    }
-
-    &:focus-visible {
-      outline-color: $color-complementary-0;
-      outline-offset: 4px;
     }
   }
 }
