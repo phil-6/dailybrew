@@ -5,6 +5,10 @@ html, body {
   overflow-x: hidden;
 }
 
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
   background-color: $color-white;
@@ -20,10 +24,14 @@ body {
     }
   }
 
-  h1, h2, h3, h4, h5 {
-    color: $color-brand-dark;
+  h1 {
     font-weight: 100;
-    margin: 0;
+  }
+
+  h2, h3, h4, h5 {
+    color: $color-brand-dark;
+    font-weight: 600;
+    letter-spacing: -1px;
   }
 
   h1 {

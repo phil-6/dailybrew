@@ -20,7 +20,6 @@
 
     .column {
       justify-content: center;
-      align-items: center;
       padding: 4rem;
 
       @media screen and (max-width: $screen-lg) {
@@ -29,6 +28,7 @@
 
       &:first-child {
         flex-basis: 60%;
+        align-items: center;
         background-color: #FFFFFF;
         border-top-left-radius: 2rem;
         border-bottom-left-radius: 2rem;
@@ -53,9 +53,8 @@
         }
       }
 
-      h2 {
-        font-weight: 600;
-        letter-spacing: -1px;
+      .form-title {
+        
         margin-bottom: 2rem;
         color: $color-primary-0;
       }
@@ -68,27 +67,43 @@
         }
       }
 
-      h1 {
-        font-family: $heading-font;
-        color: $color-brand;
-        text-align: left;
-        line-height: 0.6;
-        font-size: 12rem;
+      &.brand {
+        justify-content: space-between;
+        gap: 1rem;
 
-        @media screen and (max-width: $screen-lg) {
-          text-align: center;
-          line-height: 1;
+        .subheading {
+          h4 {
+            color: white;
+            opacity: 0.5;
+            text-align: right;
+          }
+        }
+
+        .heading {
+          font-family: $heading-font;
+          color: $color-brand;
+          text-align: left;
+          line-height: 0.7;
           font-size: 10rem;
+
+          @media screen and (max-width: $screen-lg) {
+            text-align: center;
+            font-size: 10rem;
+          }
+
+          @media screen and (max-width: $screen-md) {
+            font-size: 7.5rem;
+          }
+
+          @media screen and (max-width: $screen-sm) {
+            font-size: 5rem;
+          }
         }
 
-        @media screen and (max-width: $screen-lg) {
-          line-height: 1;
-          font-size: 7rem;
-        }
-
-        @media screen and (max-width: $screen-sm) {
-          line-height: 1;
-          font-size: 4rem;
+        .tag-line {
+          color: white;
+          opacity: 0.5;
+          font-size: 0.9rem;
         }
       }
     }
