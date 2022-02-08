@@ -1,6 +1,9 @@
 @import "variables";
 
 .devise {
+  min-height: 100vh;
+  padding: 1rem;
+
   .form {
     width: 380px;
 
@@ -10,15 +13,12 @@
   }
 
   &.registration {
-    min-height: 100vh;
     background-color: #ecf0f2;
-    padding: 1rem;
 
-    .registration-container {
+    .row {
       max-width: 1200px;
       min-height: 800px;
       width: 100%;
-      height: 100%;
 
       @media screen and (max-width: $screen-lg) {
         flex-direction: column;
@@ -63,11 +63,8 @@
         &.brand {
           gap: 1rem;
 
-          .heading {
-            font-family: $heading-font;
-            color: $color-brand;
+          .logo {
             text-align: left;
-            line-height: 0.7;
             font-size: 10rem;
 
             @media screen and (max-width: $screen-lg) {
@@ -90,6 +87,23 @@
             font-size: 0.9rem;
           }
         }
+      }
+    }
+  }
+
+  &.login {
+    .container {
+      gap: 2rem;
+      max-width: 720px;
+      width: 100%;
+      padding-bottom: 6rem;
+
+      @media screen and (max-width: $screen-lg) {
+        padding-bottom: 4rem;
+      }
+
+      .logo {
+        color: $color-primary-0;
       }
     }
   }

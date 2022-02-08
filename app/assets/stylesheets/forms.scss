@@ -89,8 +89,9 @@
 }
 
 :focus-visible {
+  box-shadow: 0 0 0 2px $color-complementary-0;
   outline-color: $color-complementary-0;
-  outline-offset: 0.125rem;
+  outline-style: solid;
 }
 
 input[type="submit" i] {

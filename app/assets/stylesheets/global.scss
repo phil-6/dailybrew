@@ -35,14 +35,14 @@ body {
   }
 
   h1 {
-    font-size: 3rem;
-
-    @media screen and (max-width: $screen-lg) {
-      font-size: 2.4rem;
-    }
+    font-size: 6rem;
 
     @media screen and (max-width: $screen-md) {
-      font-size: 2rem;
+      font-size: 5rem;
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: 4rem;
     }
   }
 
@@ -80,6 +80,12 @@ body {
 
   h5 {
     font-size: 0.75rem;
+  }
+
+  .logo {
+    font-family: $heading-font;
+    color: $color-brand;
+    line-height: 0.7;
   }
 
   a {
