@@ -1,15 +1,15 @@
 roaster = Roaster.find_by reference: 'hasbean'
 
 roaster.coffees.create!(
-  name: "Bolivia Las Alasitas Washed Caturra",
-  country: "Bolivia",
-  region: "Yungas",
-  town: "",
-  process: " Washed",
+  name: 'Bolivia Las Alasitas Washed Caturra',
+  country: 'Bolivia',
+  region: 'Yungas',
+  town: '',
+  process: ' Washed',
   altitude: 1550,
-  variety: " Caturra",
-  tasting_notes: "Speculoos biscuit, cashew nut, milk chocolate",
-  producer: "",
+  variety: ' Caturra',
+  tasting_notes: 'Speculoos biscuit, cashew nut, milk chocolate',
+  producer: '',
   description: "DETAILS
 Las Alasitas is the biggest farm of Fincas Buena Vista in Caranavi where, every year, a festival is held in honour of Ekeko (iqiqu), the god of abundance. It has everything in miniature – but in abundance, just like him!
 'Buy me!' said Alasitas. And well, we did! It's all in the name...
@@ -58,19 +58,20 @@ We offer free UK mainland delivery on all orders over £50.00. One bag sent with
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/bol-las-alasitas-w-caturra",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/bol-las-alasitas-w-caturra',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Bolivia Vincent Paye",
-  country: "Bolivia",
-  region: "Yungas",
-  town: "",
-  process: "Washed",
+  name: 'Bolivia Vincent Paye',
+  country: 'Bolivia',
+  region: 'Yungas',
+  town: '',
+  process: 'Washed',
   altitude: 1550,
-  variety: " Red and Yellow Caturra",
-  tasting_notes: "Satsuma, passionfruit, toffee, raisin",
-  producer: "Vincent Paye",
+  variety: ' Red and Yellow Caturra',
+  tasting_notes: 'Satsuma, passionfruit, toffee, raisin',
+  producer: 'Vincent Paye',
   description: "DETAILS
 A few years back we had a lot that was produced by various smallholder farmers from the small town of Copacabana, which lies about 180 kilometres from La Paz in the heart of the Caranavi coffee-producing region. Then in 2016 things changed a little, and the lot came from just one producer in the area. His name is Vincent Paye. That year we described him as a beacon of hope in a tough growing region, and that beacon has continued to shine brightly.
 Caranavi is a lush and fertile region. It has steep slopes and valleys that provide excellent conditions for growing high-quality coffee, and they also support a diverse range of native flora and fauna. The area has rich volcanic soils and regular rainfall. Coffee growing heaven!
@@ -116,19 +117,20 @@ If you would like to enjoy free delivery on orders under £50.00, make sure to c
 For more information about delivery, please visit our Help Centre.
 
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/bol-vincent-paye",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/bol-vincent-paye',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Brazil Carmo Estate",
-  country: "Brazil",
-  region: "Minas Gerais",
-  town: "",
-  process: "Pulped Natural",
+  name: 'Brazil Carmo Estate',
+  country: 'Brazil',
+  region: 'Minas Gerais',
+  town: '',
+  process: 'Pulped Natural',
   altitude: 950,
-  variety: " Bourbon",
-  tasting_notes: "Chocolate, roasted hazelnut, almond",
-  producer: "Túlio Henrique Rennó Junqueira",
+  variety: ' Bourbon',
+  tasting_notes: 'Chocolate, roasted hazelnut, almond',
+  producer: 'Túlio Henrique Rennó Junqueira',
   description: "DETAILS
 The Junqueira family started growing coffee on the highlands of southern Minas Gerais 150 years ago. The current owner is Tulio Junquiera. He's from the fifth generation of the family, and he's combined tradition with innovation to make Carmo Estate a sustainable farm dedicated to the production of specialty coffees. Tulio is also a former president of the Brazil Specialty Coffee Association (BSCA).
 Carmo Estate’s mission is to produce exceptional coffees while providing its employees with a good quality of life and respecting the environment. The farm is located near the town of Heliodora in the southern state of Minas Gerais, which is a stunning region with mountainous terrain, mineral water springs, and ideal conditions to grow specialty coffees.
@@ -182,19 +184,20 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/bra-carmo-estate",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/bra-carmo-estate',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Brazil Fazenda Cachoeira da Grama Pulped Natural Yellow Bourbon",
-  country: "Brazil",
-  region: "Minas Gerais",
-  town: "",
-  process: "Pulped Natural",
+  name: 'Brazil Fazenda Cachoeira da Grama Pulped Natural Yellow Bourbon',
+  country: 'Brazil',
+  region: 'Minas Gerais',
+  town: '',
+  process: 'Pulped Natural',
   altitude: 1100,
-  variety: " Yellow Bourbon ",
-  tasting_notes: "Milk chocolate, hazelnut, red apple, toffee",
-  producer: "Túlio Henrique Rennó Junqueira",
+  variety: ' Yellow Bourbon ',
+  tasting_notes: 'Milk chocolate, hazelnut, red apple, toffee',
+  producer: 'Túlio Henrique Rennó Junqueira',
   description: "DETAILS
 This farm and its coffee sparked a massive change in what we thought we knew about coffee. We remember the first time we ever cupped this coffee: time stood still as the cup opened our minds to what great coffee is and can be. Gabriel de Carvalho Dias, the farmer, continues to produce great coffee year on year, and this coffee still holds a very special place in our hearts.
 Gabriel is one of Brazil’s leading agronomists. His family owns several farms, all of which border one another. Fazenda Cachoeira da Grama is 417 hectares in size – that’s 4 square kilometres! That sounds huge, but it’s not uncommon for farms to be more than 1,000 hectares.
@@ -216,7 +219,7 @@ Owner: Lidolpho de Carvalho Dias and family
 Altitude: 1,100–1,250 m.a.s.l.
 Processing: Pulped Natural
 
-Varietal: Yellow Bourbon 
+Varietal: Yellow Bourbon
 
 
 CUPPING NOTES
@@ -230,19 +233,20 @@ We offer free UK mainland delivery on all orders over £50.00. One bag sent with
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/bra-cachoeira-pn-yb",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/bra-cachoeira-pn-yb',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Costa Rica Finca Licho Natural Bourbon",
-  country: "Costa Rica",
-  region: "Western Valley",
-  town: "",
-  process: " Natural",
+  name: 'Costa Rica Finca Licho Natural Bourbon',
+  country: 'Costa Rica',
+  region: 'Western Valley',
+  town: '',
+  process: ' Natural',
   altitude: 1500,
-  variety: " Bourbon",
-  tasting_notes: "Dark brown sugar, lime, dried currant",
-  producer: "Producers: Aguilera family",
+  variety: ' Bourbon',
+  tasting_notes: 'Dark brown sugar, lime, dried currant',
+  producer: 'Producers: Aguilera family',
   description: "DETAILS
 Here at Hasbean we love to celebrate the awesome things that happen when strong relationships are built between roasters and producers, and Finca Licho is a shining example of that ethos. We first bought from this farm way back in 2007 when it was awarded 4th place in the Cup of Excellence. Fast forward fourteen years (gosh, feeling old now), and Licho has become a firm favourite – both with customers and our little Hasbean team. The arrival of coffees from Finca Licho is greatly anticipated every year.
 The farm is owned and run by Los Hermanos Aguilera. It's often translated as 'The Aguilera Brothers', but everyone is involved, not just the boys! The family of twelve brothers and sisters inherited the business from their parents, who started their coffee-growing career over 50 years ago.
@@ -287,19 +291,20 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards via the red bubble in the bottom right-hand corner of your screen.
 For more information please visit https://www.hasbean.co.uk/pages/shipping",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/cri-licho-n-bourbon",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/cri-licho-n-bourbon',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Costa Rica Finca Licho Red Honey Pacamara - 125g",
-  country: "Costa Rica",
-  region: "Western Valley",
-  town: "",
-  process: " Red Honey ",
+  name: 'Costa Rica Finca Licho Red Honey Pacamara - 125g',
+  country: 'Costa Rica',
+  region: 'Western Valley',
+  town: '',
+  process: ' Red Honey ',
   altitude: 1500,
-  variety: " Pacamara",
-  tasting_notes: "Lime, pineapple, lemongrass, white sugar",
-  producer: "Producers: Los Hermanos Aguilera",
+  variety: ' Pacamara',
+  tasting_notes: 'Lime, pineapple, lemongrass, white sugar',
+  producer: 'Producers: Los Hermanos Aguilera',
   description: "DETAILS
 *Please note that this coffee is sold in 125g bags, not in our regular 250g*
 Buying coffee is simple, right? A farmer has coffee, you have money...easy! Well, not so much. One of the realities of coffee farming is unscrupulous coffee buyers turning up, promising the world and then not honouring their promises. For this reason, we never ask too much of the producers we work with for the first few years - you have to earn trust. Eventually, they trust us to be reliable and keep coming back. In the case of the Aguileras...well, it took them a number of years to warm to us. That’s just how it goes sometimes.
@@ -324,7 +329,7 @@ Coffee growing area: 9.10 hectares
 Altitude: 1,500 m.a.s.l.
 Varietal: Pacamara
 
-Processing system: Red Honey 
+Processing system: Red Honey
 
 
 CUPPING NOTES
@@ -349,19 +354,20 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/cri-licho-rh-pacamara",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/cri-licho-rh-pacamara',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Costa Rica Puente Tarrazú Finca El Potrero Yellow Honey Geisha - 125g",
-  country: "Costa Rica",
-  region: "Micro region: Santa Cruz de León Cortés",
-  town: "",
-  process: " Yellow Honey ",
+  name: 'Costa Rica Puente Tarrazú Finca El Potrero Yellow Honey Geisha - 125g',
+  country: 'Costa Rica',
+  region: 'Micro region: Santa Cruz de León Cortés',
+  town: '',
+  process: ' Yellow Honey ',
   altitude: 1600,
-  variety: " Geisha",
-  tasting_notes: "Floral, lavender, orange, white sugar",
-  producer: "Rodolfo Rivera",
+  variety: ' Geisha',
+  tasting_notes: 'Floral, lavender, orange, white sugar',
+  producer: 'Rodolfo Rivera',
   description: "DETAILS
 *Please note - this coffee is sold in 125g bags, not our regular 250g*
 This coffee comes from the Tarrazú region of Costa Rica, which is a really rather famous region because of its coffee-growing - as well as being a favourite scenic location among Costa Ricans. A little cooler and wetter than the Western Valley, Tarrazu is steep and lush, with farms and tiny villages dotted among the rolling hills around the small towns of San Marcos, Santa Maria de Dota and Leon Cortes (which the mill is near to).
@@ -386,7 +392,7 @@ Coffee growing area: 20 hectares
 Altitude: 1,600 m.a.s.l.
 Varietal: Geisha
 
-Processing system: Yellow Honey 
+Processing system: Yellow Honey
 
 
 CUPPING NOTES
@@ -409,19 +415,20 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/cri-potrero-yh-geisha",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/cri-potrero-yh-geisha',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Decaf",
-  country: "Colombia",
-  region: "Micro region: Santa Cruz de León Cortés",
-  town: "",
-  process: " Washed in micro-mills at each farm",
+  name: 'Decaf',
+  country: 'Colombia',
+  region: 'Micro region: Santa Cruz de León Cortés',
+  town: '',
+  process: ' Washed in micro-mills at each farm',
   altitude: 1500,
-  variety: "Varietals grown: Caturra",
-  tasting_notes: "Treacle, orange zest, milk chocolate",
-  producer: "Independent producers: 24",
+  variety: 'Varietals grown: Caturra',
+  tasting_notes: 'Treacle, orange zest, milk chocolate',
+  producer: 'Independent producers: 24',
   description: "DETAILS
 Colombia El Yalcon
 Here at Hasbean, we're always on the lookout for tasty and delicious decaf. It can sometimes be a little tricky to get our hands on, but we aim to always have at least 1 decaffeinated coffee available at all times.
@@ -449,19 +456,20 @@ Treacle, orange zest, milk chocolate
 Clean cup: (1–8): 6Sweetness: (1–8): 6.5Acidity: (1–8): 6Mouthfeel: (1–8): 6.5Flavour: (1–8): 6Aftertaste: (1–8): 6Balance: (1–8): 6.5Overall: (1–8): 6.5Correction: (+36): +36
 Total: (max. 100): 86
 Roast InformationMedium - through first crack and slow it down to drop it just before second begins. Because this is a decaf, it'll look darker and more oily than you'd expect for this roast level, so it's important to follow other cues when judging it.",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/decaf",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/decaf',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "El Salvador Finca Argentina Los Mangos Natural Bourbon",
-  country: "El Salvador",
-  region: "Micro region: Santa Cruz de León Cortés",
-  town: "",
-  process: " Natural",
+  name: 'El Salvador Finca Argentina Los Mangos Natural Bourbon',
+  country: 'El Salvador',
+  region: 'Micro region: Santa Cruz de León Cortés',
+  town: '',
+  process: ' Natural',
   altitude: 1300,
-  variety: " Bourbon",
-  tasting_notes: "Mango, yellow plum, cream",
-  producer: "Alejandro Martinez",
+  variety: ' Bourbon',
+  tasting_notes: 'Mango, yellow plum, cream',
+  producer: 'Alejandro Martinez',
   description: "DETAILS
 Finca Argentina is based in the Apaneca-Ilamtepec mountain range, near the town of Turin in the Ahuachapán department. The beautiful 35-hectare farm has natural hot springs dotted all over, and is situated at an altitude of 1300 metres above sea level. Our very dear friend Alejandro Martinez owns the farm along with his father Mauricio, who inherited the land along with a handful of other coffee farms in the region from Guillermo Martinez, MD (Ale's grandfather) back in 2008.
 The family currently have 2 farms locally, the other being called Finca Manuella, that they run with the help of a farm manager and approximately 25-30 staff during the non-picking season. Argentina have taken a supportive approach with their labour: this team have been with the farm for 6 years now and work on maintaining and tending to the plants year-round. The number of workers goes up to 50 during the busy harvest period, including the staff members' families who also participate in the harvest cycle to help them complement their income. Furthermore, Ale and Mauricio host a yearly lunch with the crew to thank them for their hard work, and plant corn on the land for their employees and each staff member gets about 50 lbs annually to help support their families. They have also been contributing labour and materials to support the necessary improvements to the access road for the community. This is a joint effort with the municipality, community leaders and a few other local farmers.
@@ -523,19 +531,20 @@ We offer free UK mainland delivery on all orders over £50.00. One bag sent with
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/slv-finca-argentina-los-mangos-n-bourbon",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/slv-finca-argentina-los-mangos-n-bourbon',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "El Salvador Finca Argentina Los Mangos Washed Bourbon",
-  country: "El Salvador",
-  region: "Micro region: Santa Cruz de León Cortés",
-  town: "",
-  process: " Washed",
+  name: 'El Salvador Finca Argentina Los Mangos Washed Bourbon',
+  country: 'El Salvador',
+  region: 'Micro region: Santa Cruz de León Cortés',
+  town: '',
+  process: ' Washed',
   altitude: 1300,
-  variety: " Bourbon",
-  tasting_notes: "Toffee pennies, milk chocolate, currants, red apple",
-  producer: "Alejandro Martinez",
+  variety: ' Bourbon',
+  tasting_notes: 'Toffee pennies, milk chocolate, currants, red apple',
+  producer: 'Alejandro Martinez',
   description: "DETAILS
 Finca Argentina is based in the Apaneca-Ilamtepec mountain range, near the town of Turin in the Ahuachapán department. The beautiful 35-hectare farm has natural hot springs dotted all over, and is situated at an altitude of 1300 metres above sea level. Our very dear friend Alejandro Martinez owns the farm along with his father Mauricio, who inherited the land along with a handful of other coffee farms in the region from Guillermo Martinez, MD (Ale's grandfather) back in 2008.
 The family currently have 2 farms locally, the other being called Finca Manuella, that they run with the help of a farm manager and approximately 25-30 staff during the non-picking season. Argentina have taken a supportive approach with their labour: this team have been with the farm for 6 years now and work on maintaining and tending to the plants year-round. The number of workers goes up to 50 during the busy harvest period, including the staff members' families who also participate in the harvest cycle to help them complement their income. Furthermore, Ale and Mauricio host a yearly lunch with the crew to thank them for their hard work, and plant corn on the land for their employees and each staff member gets about 50 lbs annually to help support their families. They have also been contributing labour and materials to support the necessary improvements to the access road for the community. This is a joint effort with the municipality, community leaders and a few other local farmers.
@@ -598,19 +607,20 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/slv-argentina-los-mangos",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/slv-argentina-los-mangos',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "El Salvador Finca Argentina Washed Bourbon",
-  country: "El Salvador",
-  region: "Micro region: Santa Cruz de León Cortés",
-  town: "",
-  process: " Washed",
+  name: 'El Salvador Finca Argentina Washed Bourbon',
+  country: 'El Salvador',
+  region: 'Micro region: Santa Cruz de León Cortés',
+  town: '',
+  process: ' Washed',
   altitude: 1300,
-  variety: " Bourbon",
-  tasting_notes: "Milk chocolate, red apple, caramel",
-  producer: "Alejandro Martinez",
+  variety: ' Bourbon',
+  tasting_notes: 'Milk chocolate, red apple, caramel',
+  producer: 'Alejandro Martinez',
   description: "DETAILS
 Finca Argentina is based in the Apaneca-Ilamtepec mountain range, near the town of Turin in the Ahuachapán department. The beautiful 35-hectare farm has natural hot springs dotted all over, and is situated at an altitude of 1300 metres above sea level. Our very dear friend Alejandro Martinez owns the farm along with his father Mauricio, who inherited the land along with a handful of other coffee farms in the region from Guillermo Martinez, MD (Ale's grandfather) back in 2008.
 The family currently have 2 farms locally, the other being called Finca Manuella, that they run with the help of a farm manager and approximately 25-30 staff during the non-picking season. Argentina have taken a supportive approach with their labour: this team have been with the farm for 6 years now and work on maintaining and tending to the plants year-round. The number of workers goes up to 50 during the busy harvest period, including the staff members' families who also participate in the harvest cycle to help them complement their income. Furthermore, Ale and Mauricio host a yearly lunch with the crew to thank them for their hard work, and plant corn on the land for their employees and each staff member gets about 50 lbs annually to help support their families. They have also been contributing labour and materials to support the necessary improvements to the access road for the community. This is a joint effort with the municipality, community leaders and a few other local farmers.
@@ -671,19 +681,20 @@ We offer free UK mainland delivery on all orders over £50.00. One bag sent with
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/slv-argentina-w-bourbon",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/slv-argentina-w-bourbon',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "El Salvador Finca La Fany Washed Bourbon",
-  country: "El Salvador",
-  region: "Micro region: Santa Cruz de León Cortés",
-  town: "",
-  process: " Washed",
+  name: 'El Salvador Finca La Fany Washed Bourbon',
+  country: 'El Salvador',
+  region: 'Micro region: Santa Cruz de León Cortés',
+  town: '',
+  process: ' Washed',
   altitude: 1450,
-  variety: " Bourbon ",
-  tasting_notes: "Milk chocolate, green apple, white grape",
-  producer: "Alejandro Martinez",
+  variety: " Bourbon\u2028",
+  tasting_notes: 'Milk chocolate, green apple, white grape',
+  producer: 'Alejandro Martinez',
   description: "DETAILS
 Rafael and Carmen De Silva were the first producers we ever met in El Salvador, and Finca La Fany was the first farm Hasbean ever visited in El Salvador. This is a relationship that goes all the way back to 2003, and we consider to be a real foundation stone coffee for Hasbean.
 Finca La Fany has been producing coffee in El Salvador since 1870, and it's belonged to the same family from generation to generation. Situated on the Santa Ana volcano, the farm provides work for 24 families in the community. It's in a biological corridor that stretches for 27 hectares from Mexico to Panama. It grows mostly Bourbon, but also has a small amount of Pacamara.
@@ -737,19 +748,20 @@ We offer free UK mainland delivery on all orders over £50.00. One bag sent with
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/slv-la-fany-w-bourbon",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/slv-la-fany-w-bourbon',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "El Salvador Finca Nejapa Roma Washed Red Caturra",
-  country: "El Salvador",
-  region: "Ahuachapán ",
-  town: "",
-  process: " Washed",
+  name: 'El Salvador Finca Nejapa Roma Washed Red Caturra',
+  country: 'El Salvador',
+  region: "Ahuachapán\u2028",
+  town: '',
+  process: ' Washed',
   altitude: 1470,
-  variety: " Red Caturra",
-  tasting_notes: "Milk chocolate, orange, raspberry",
-  producer: "Gloria Rodriguez",
+  variety: ' Red Caturra',
+  tasting_notes: 'Milk chocolate, orange, raspberry',
+  producer: 'Gloria Rodriguez',
   description: "DETAILS
 Gloria Mercedes Rodríguez Fontan is a name you will probably recognise from a coffee we've had every year for many years, the always awesome Finca San José, check out this year's crop here. She's a fourth-generation coffee grower and owns + personally supervises six small farms located in the Apaneca-Ilamatepec mountain range: San José, Mamatita, El Porvenir, Nejapa, Nueva Granada and La Lagunita. This coffee comes from the specific Roma tablón of Nejapa, we last had coffee this farm way back in 2015 and are really excited to see it back in 2021.
 Finca Nejapa was inherited by Gloria’s father, José María Rodríguez Herrera, in the 50s. At that time the property was only devoted to cattle for milking purposes, and it was José Maria who started growing coffee of the Bourbon variety. Little by little, he noticed coffee was extremely productive in that area.
@@ -800,19 +812,20 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/slv-nejapa-roma-w-red-caturra",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/slv-nejapa-roma-w-red-caturra',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "El Salvador Finca San José Washed Elefante",
-  country: "El Salvador",
-  region: "Ahuachapán ",
-  town: "",
-  process: " Washed",
+  name: 'El Salvador Finca San José Washed Elefante',
+  country: 'El Salvador',
+  region: "Ahuachapán\u2028",
+  town: '',
+  process: ' Washed',
   altitude: 1500,
-  variety: " Elefante",
-  tasting_notes: "White grape, lime zest, mango, orange, dark chocolate",
-  producer: "Gloria Rodriguez",
+  variety: ' Elefante',
+  tasting_notes: 'White grape, lime zest, mango, orange, dark chocolate',
+  producer: 'Gloria Rodriguez',
   description: "DETAILS
 Finca San José is very much the pride and joy of the Rodríguez family, and it's now in the hands of a fourth and fifth generation of coffee producers. The story begins in 1815 when José María Rodriguez and Josefina Rodriguez (great-grandparents) planted the first coffee trees with their own hands.
 Through the generations, the farm has passed through the hands of many committed farmers; farmers like José's son, Israel Rodriguez. He was then followed by Jose Maria Rodriguez. Jose Maria took care of the farm until it came to Gloria Mercedes Rodriguez Fontán. Gloria is the most recent owner.
@@ -866,19 +879,20 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards via the red bubble in the bottom right-hand corner of your screen.
 For more information please visit https://www.hasbean.co.uk/pages/shipping",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/slv-san-jose-w-elefante",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/slv-san-jose-w-elefante',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "El Salvador Finca San José Washed Red Bourbon",
-  country: "El Salvador",
-  region: "Ahuachapán ",
-  town: "",
-  process: " Washed",
+  name: 'El Salvador Finca San José Washed Red Bourbon',
+  country: 'El Salvador',
+  region: "Ahuachapán\u2028",
+  town: '',
+  process: ' Washed',
   altitude: 1500,
-  variety: " Red Bourbon",
-  tasting_notes: "Cherry, cola, caramel, sweet spice",
-  producer: "Gloria Rodriguez",
+  variety: ' Red Bourbon',
+  tasting_notes: 'Cherry, cola, caramel, sweet spice',
+  producer: 'Gloria Rodriguez',
   description: "DETAILS
 Finca San José is very much the pride and joy of the Rodríguez family, and it's now in the hands of a fourth and fifth generation of coffee producers. The story begins in 1815 when José María Rodriguez and Josefina Rodriguez (great-grandparents) planted the first coffee trees with their own hands.
 Through the generations, the farm has passed through the hands of many committed farmers; farmers like José's son, Israel Rodriguez. He was then followed by Jose Maria Rodriguez. Jose Maria took care of the farm until it came to Gloria Mercedes Rodriguez Fontán. Gloria is the most recent owner.
@@ -928,19 +942,20 @@ We offer free UK mainland delivery on all orders over £50.00. One bag sent with
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards via the red bubble in the bottom right-hand corner of your screen.
 For more information please visit https://www.hasbean.co.uk/pages/shipping
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/slv-san-jose-w-red-bourbon",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/slv-san-jose-w-red-bourbon',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "El Salvador Finca Siberia Washed Bourbon",
-  country: "El Salvador",
-  region: "Santa Ana",
-  town: "",
-  process: " Washed",
+  name: 'El Salvador Finca Siberia Washed Bourbon',
+  country: 'El Salvador',
+  region: 'Santa Ana',
+  town: '',
+  process: ' Washed',
   altitude: 1450,
-  variety: " Bourbon",
-  tasting_notes: "Pecan nut, caramel, currant, orange zest",
-  producer: "Gloria Rodriguez",
+  variety: ' Bourbon',
+  tasting_notes: 'Pecan nut, caramel, currant, orange zest',
+  producer: 'Gloria Rodriguez',
   description: "DETAILS
 Fabio Morán and Etifanio Silva decided to conquer this hostile territory back in 1870, sowing coffee trees on one of the highest summits of the Apaneca-Ilamatepec mountain range. They named the 28 hectares of land 'Siberia' for its chaotic weather conditions and its difficult accessibility. The name was very apt really.
 One century later, Rafael Silva inherited the property.
@@ -1000,19 +1015,20 @@ We offer free UK mainland delivery on all orders over £50.00. One bag sent with
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/slv-siberia-w-bourbon",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/slv-siberia-w-bourbon',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Ethiopia Ana Sora Washed",
-  country: "Ethiopia",
-  region: "Santa Ana",
-  town: "",
-  process: "Processing: Washed",
+  name: 'Ethiopia Ana Sora Washed',
+  country: 'Ethiopia',
+  region: 'Santa Ana',
+  town: '',
+  process: 'Processing: Washed',
   altitude: 1900,
-  variety: " Indigenous wild varietals",
-  tasting_notes: "Floral, lemon, white sugar, black tea",
-  producer: "Gloria Rodriguez",
+  variety: ' Indigenous wild varietals',
+  tasting_notes: 'Floral, lemon, white sugar, black tea',
+  producer: 'Gloria Rodriguez',
   description: "DETAILS
 We first came across this coffee all the way back in 2016 after being introduced by the importers that we worked with in Ethiopia at the time. We have been buying from Ana Sora consistently ever since and it's safe to say that this is one of our most popular coffees – when it goes out of season we're flooded with emails asking when it's going to come back... well, happy days are here again! We see a lot of consistency from this coffee and year-on-year it always delivers with those clean blueberry/floral flavours and a little bit of seasonal variation. We always blind cup pre-shipment samples and when we come to this bowl we often say “Ooooh I hope this is the new Ana Sora!” and lo and behold it is, it's a super distinctive coffee. It's our sixth year of roasting this coffee and Ana Sora is now the Ethiopian farm that we buy the most volume from as, for good reason, it's just so popular with everyone!
 Ana Sora is a private farm owned by second-generation coffee farmer Israel Degfa. He grew up immersed in various aspects of the coffee industry as his father was a mill manager and his mum sold coffee to commuters in the local bus station. Because he grew up in a coffee producing area, he shows great respect for the farmers, both as business partners and as people. As coffee farms go, Ana Sora is a very new farm: it was only formed in 2013. Coffee trees take an average 2-3 years to produce a crop of cherries that's big enough to sell, so we started buying soon after it first went on the market. It's located at a whopping altitude of between 1,900 and 2,350 metres above sea level. It's a gorgeous but somewhat tiring walk to get there - it's not all just holiday snaps, this coffee buying malarkey!
@@ -1059,19 +1075,20 @@ We offer free UK mainland delivery on all orders over £50.00. One bag sent with
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards via the red bubble in the bottom right-hand corner of your screen.
 For more information please visit https://www.hasbean.co.uk/pages/shipping
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/eth-ana-sora-w",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/eth-ana-sora-w',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Guatemala El Bosque Washed Bourbon",
-  country: "Guatemala",
-  region: "Santa Ana",
-  town: "",
-  process: " Washed",
+  name: 'Guatemala El Bosque Washed Bourbon',
+  country: 'Guatemala',
+  region: 'Santa Ana',
+  town: '',
+  process: ' Washed',
   altitude: 1400,
-  variety: " Indigenous wild varietals",
-  tasting_notes: "Malted milk biscuit, milk chocolate, roasted hazelnut, green apple",
-  producer: "Producers: Flores family",
+  variety: ' Indigenous wild varietals',
+  tasting_notes: 'Malted milk biscuit, milk chocolate, roasted hazelnut, green apple',
+  producer: 'Producers: Flores family',
   description: "DETAILS
 El Bosque sits on a hillside that runs parallel to the main road to Guatemala City. Due to its proximity to the capital, it faces threats from ever-expanding urban development. However, during the time we have been working with El Bosque, prices and returns for the farm have made it a much higher concern for the brothers, and they are very motivated.
 Before we'd tried this coffee at El Bosque, it was love at first taste, we were absolutely blown away by how good it was! However, our first visit to the farm in January 2007 really cemented this, because we got to learn more about the awesome people behind the coffee.
@@ -1109,26 +1126,27 @@ Overall (1–8): 6
 Correction (+36): +36
 Total: (max. 100): 86
 
-Roasting InformationMedium-dark - through first crack and make sure you get a reasonable amount of development on this, pushing it through to the edge of second. 
+Roasting InformationMedium-dark - through first crack and make sure you get a reasonable amount of development on this, pushing it through to the edge of second.
 SHIPPING INFO
 If you place an order before 07:30, it will be roasted and dispatched that day. If you order after 07:30, it will carry over to the following working day for roasting.
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards via the red bubble in the bottom right-hand corner of your screen.
 For more information please visit https://www.hasbean.co.uk/pages/shipping
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/gtm-el-bosque-w-bourbon",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/gtm-el-bosque-w-bourbon',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Guatemala San Patricio El Limon Washed Caturra",
-  country: "Guatemala",
-  region: "Palencia",
-  town: "",
-  process: " Washed",
+  name: 'Guatemala San Patricio El Limon Washed Caturra',
+  country: 'Guatemala',
+  region: 'Palencia',
+  town: '',
+  process: ' Washed',
   altitude: 1350,
-  variety: " Caturra",
-  tasting_notes: "Orange, almond, frangipane, milk chocolate, raisin",
-  producer: "Producers: Flores family",
+  variety: ' Caturra',
+  tasting_notes: 'Orange, almond, frangipane, milk chocolate, raisin',
+  producer: 'Producers: Flores family',
   description: "DETAILS
 A desire to experiment is one of the big reasons that we love buying from San Patricio El Limon; we've been getting coffee from them since first introduced seven years ago by our mutual friend Raul Rodas (2012 World Barista Champion), and they're just getting more and more awesome each year.
 The experimentation is thanks to the motivation of Guadalupe Alberto Reyes (known as Beto to his friends), he's been the owner of the farm for 21 years now, and in recent years has really focussed on the farm and on continually striving to improve. He aims to take more care in every step they take on the farm, from picking, to processing, to shipping. Beto's son, Saul, has been studying agronomy at the local college for the past seven years, and he uses his knowledge to benefit practices on the farm.
@@ -1174,18 +1192,19 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards via the red bubble in the bottom right-hand corner of your screen.
 For more information please visit https://www.hasbean.co.uk/pages/shipping",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/gtm-san-patricio-el-limon-w-caturra",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/gtm-san-patricio-el-limon-w-caturra',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Guatemala San Patricio El Limon Washed Pacamara",
-  country: "Guatemala",
-  region: "Palencia",
-  town: "",
-  process: " Washed",
+  name: 'Guatemala San Patricio El Limon Washed Pacamara',
+  country: 'Guatemala',
+  region: 'Palencia',
+  town: '',
+  process: ' Washed',
   altitude: 1350,
-  variety: " Pacamara",
-  tasting_notes: "Caramel, lime zest, floral, creamy",
+  variety: ' Pacamara',
+  tasting_notes: 'Caramel, lime zest, floral, creamy',
   producer: "Guadalupe Alberto 'Beto' Reyes Aguilar",
   description: "DETAILS
 A desire to experiment is one of the big reasons that we love buying from San Patricio El Limon; we've been getting coffee from them since first introduced seven years ago by our mutual friend Raul Rodas (2012 World Barista Champion), and they're just getting more and more awesome each year.
@@ -1223,18 +1242,19 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10 KG. If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards via the red bubble in the bottom right-hand corner of your screen.
 For more information please visit https://www.hasbean.co.uk/pages/shipping
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/gtm-san-patricio-el-limon-w-pacamara",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/gtm-san-patricio-el-limon-w-pacamara',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Guatemala San Patricio El Limon Washed Pache",
-  country: "Guatemala",
-  region: "Palencia",
-  town: "",
-  process: " Washed",
+  name: 'Guatemala San Patricio El Limon Washed Pache',
+  country: 'Guatemala',
+  region: 'Palencia',
+  town: '',
+  process: ' Washed',
   altitude: 1350,
-  variety: " Pache",
-  tasting_notes: "Bourbon biscuit, brown sugar, green apple, walnut",
+  variety: ' Pache',
+  tasting_notes: 'Bourbon biscuit, brown sugar, green apple, walnut',
   producer: "Guadalupe Alberto 'Beto' Reyes Aguilar",
   description: "DETAILS
 A desire to experiment is one of the big reasons that we love buying from San Patricio El Limon; we've been getting coffee from them since first introduced seven years ago by our mutual friend Raul Rodas (2012 World Barista Champion), and they're just getting more and more awesome each year.
@@ -1281,18 +1301,19 @@ We offer free UK mainland delivery on all orders over £50.00. One bag sent with
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards via the red bubble in the bottom right-hand corner of your screen.
 For more information please visit https://www.hasbean.co.uk/pages/shipping
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/gtm-san-patricio-el-limon-w-pache",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/gtm-san-patricio-el-limon-w-pache',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Guatemala San Patricio El Limon Washed San Ramon",
-  country: "Guatemala",
-  region: "Palencia",
-  town: "",
-  process: " Washed",
+  name: 'Guatemala San Patricio El Limon Washed San Ramon',
+  country: 'Guatemala',
+  region: 'Palencia',
+  town: '',
+  process: ' Washed',
   altitude: 1350,
-  variety: " San Ramon",
-  tasting_notes: "Sponge cake, hazelnut, sultana",
+  variety: ' San Ramon',
+  tasting_notes: 'Sponge cake, hazelnut, sultana',
   producer: "Guadalupe Alberto 'Beto' Reyes Aguilar",
   description: "DETAILS
 A desire to experiment is one of the big reasons that we love buying from San Patricio El Limon; we've been getting coffee from them since first introduced seven years ago by our mutual friend Raul Rodas (2012 World Barista Champion), and they're just getting more and more awesome each year.
@@ -1329,18 +1350,19 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards via the red bubble in the bottom right-hand corner of your screen.
 For more information please visit https://www.hasbean.co.uk/pages/shipping",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/gtm-san-patricio-el-limon-san-ramon-w",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/gtm-san-patricio-el-limon-san-ramon-w',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Nicaragua Finca La Escondida Washed Red Catuai",
-  country: "Nicaragua",
-  region: "Palencia",
-  town: "",
-  process: " Washed",
+  name: 'Nicaragua Finca La Escondida Washed Red Catuai',
+  country: 'Nicaragua',
+  region: 'Palencia',
+  town: '',
+  process: ' Washed',
   altitude: 975,
-  variety: " Red Catuai",
-  tasting_notes: "Red apple, caramel, cocoa",
+  variety: ' Red Catuai',
+  tasting_notes: 'Red apple, caramel, cocoa',
   producer: "Guadalupe Alberto 'Beto' Reyes Aguilar",
   description: "DETAILS
 Finca La Escondida is close to Lake Apanas near the city of Jinotega, which is the capital of the department of Jinotega in the north-central region of Nicaragua. The straight translation from Spanish to English of 'escondida' is ‘hidden’. Escondida is called 'Escondida' because the farm is 'hidden' from the road by forest and trees, which makes it appear to blend right into the side of the mountain.
@@ -1384,19 +1406,20 @@ We offer free UK mainland delivery on all orders over £50.00. One bag sent with
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards via the red bubble in the bottom right-hand corner of your screen.
 For more information please visit https://www.hasbean.co.uk/pages/shipping
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/nic-escondida-w-red-catuai",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/nic-escondida-w-red-catuai',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Nicaragua Finca Limoncillo Natural Red Bourbon",
-  country: "Nicaragua",
-  region: " Matagalpa ",
-  town: "",
-  process: " Natural",
+  name: 'Nicaragua Finca Limoncillo Natural Red Bourbon',
+  country: 'Nicaragua',
+  region: "\u2028Matagalpa\u2028",
+  town: '',
+  process: ' Natural',
   altitude: 1200,
-  variety: " Red Bourbon",
-  tasting_notes: "Yellow plum, orange, black grape",
-  producer: "Producers: The Mierisch family",
+  variety: ' Red Bourbon',
+  tasting_notes: 'Yellow plum, orange, black grape',
+  producer: 'Producers: The Mierisch family',
   description: "DETAILS
 The story of Hasbean and Finca Limoncillo is a long and exciting one - we've been working together for 13 years now! A bakers' dozen of coffee harvests shared between Matagalpa and Stafford make us very happy customers. We've been telling the story of this relationship for many years now and we don't intend to stop any time soon because it's such a big, big, big relationship for us! So much of where we are today has come from this relationship. We're super proud of everything that's happened in the past, and super excited for where we can go in the future.
 Limoncillo (and a handful of other fantastic farms) are owned by Dr. Erwin Mierich. Having previously lived and worked in the USA, he returned to Nicaragua in the mid-1990s. He explained, \"While I was living in the United States, I worked as a gynaecologist, but then I had to come back to Nicaragua and lead this farm. Coffee has been my passion since I was a little boy\".
@@ -1451,19 +1474,20 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/nic-limoncillo-n-bourbon",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/nic-limoncillo-n-bourbon',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Nicaragua Finca Limoncillo Natural Red Pacamara",
-  country: "Nicaragua",
-  region: " Matagalpa ",
-  town: "",
-  process: " Natural",
+  name: 'Nicaragua Finca Limoncillo Natural Red Pacamara',
+  country: 'Nicaragua',
+  region: "\u2028Matagalpa\u2028",
+  town: '',
+  process: ' Natural',
   altitude: 1200,
-  variety: " Red Pacamara",
-  tasting_notes: "Strawberry, red cherry, bruised plums",
-  producer: "Producers: The Mierisch family",
+  variety: ' Red Pacamara',
+  tasting_notes: 'Strawberry, red cherry, bruised plums',
+  producer: 'Producers: The Mierisch family',
   description: "DETAILS
 The story of Hasbean and Finca Limoncillo is a long and exciting one - we've been working together for 13 years now! A bakers' dozen of coffee harvests shared between Matagalpa and Stafford make us very happy customers. We've been telling the story of this relationship for many years now and we don't intend to stop any time soon because it's such a big, big, big relationship for us! So much of where we are today has come from this relationship. We're super proud of everything that's happened in the past, and super excited for where we can go in the future.
 Limoncillo (and a handful of other fantastic farms) are owned by Dr. Erwin Mierich. Having previously lived and worked in the USA, he returned to Nicaragua in the mid-1990s. He explained, \"While I was living in the United States, I worked as a gynaecologist, but then I had to come back to Nicaragua and lead this farm. Coffee has been my passion since I was a little boy\".
@@ -1517,19 +1541,20 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/nic-limoncillo-n-red-pacamara",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/nic-limoncillo-n-red-pacamara',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Nicaragua Finca Limoncillo Washed Red Pacamara",
-  country: "Nicaragua",
-  region: " Matagalpa ",
-  town: "",
-  process: " Washed",
+  name: 'Nicaragua Finca Limoncillo Washed Red Pacamara',
+  country: 'Nicaragua',
+  region: "\u2028Matagalpa\u2028",
+  town: '',
+  process: ' Washed',
   altitude: 1200,
-  variety: " Red Pacamara",
-  tasting_notes: "Satsuma, lemon, brown sugar, hops",
-  producer: "Producers: The Mierisch family",
+  variety: ' Red Pacamara',
+  tasting_notes: 'Satsuma, lemon, brown sugar, hops',
+  producer: 'Producers: The Mierisch family',
   description: "DETAILS
 The story of Hasbean and Finca Limoncillo is a long and exciting one - we've been working together for 13 years now! A bakers' dozen of coffee harvests shared between Matagalpa and Stafford make us very happy customers. We've been telling the story of this relationship for many years now and we don't intend to stop any time soon because it's such a big, big, big relationship for us! So much of where we are today has come from this relationship. We're super proud of everything that's happened in the past, and super excited for where we can go in the future.
 Limoncillo (and a handful of other fantastic farms) are owned by Dr. Erwin Mierich. Having previously lived and worked in the USA, he returned to Nicaragua in the mid-1990s. He explained, \"While I was living in the United States, I worked as a gynaecologist, but then I had to come back to Nicaragua and lead this farm. Coffee has been my passion since I was a little boy\".
@@ -1593,19 +1618,20 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards via the red bubble in the bottom right-hand corner of your screen.
 For more information please visit https://www.hasbean.co.uk/pages/shipping",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/nic-limoncillo-w-red-pacamara",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/nic-limoncillo-w-red-pacamara',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Nicaragua Finca Limoncillo Washed Red Pacamara Peaberry",
-  country: "Nicaragua",
-  region: " Matagalpa ",
-  town: "",
-  process: " Washed",
+  name: 'Nicaragua Finca Limoncillo Washed Red Pacamara Peaberry',
+  country: 'Nicaragua',
+  region: "\u2028Matagalpa\u2028",
+  town: '',
+  process: ' Washed',
   altitude: 1200,
-  variety: " Red Pacamara Peaberry",
-  tasting_notes: "Melon, brown sugar, raisin, lime zest",
-  producer: "Producers: The Mierisch family",
+  variety: ' Red Pacamara Peaberry',
+  tasting_notes: 'Melon, brown sugar, raisin, lime zest',
+  producer: 'Producers: The Mierisch family',
   description: "DETAILS
 The story of Hasbean and Finca Limoncillo is a long and exciting one - we've been working together for 13 years now! A bakers' dozen of coffee harvests shared between Matagalpa and Stafford make us very happy customers. We've been telling the story of this relationship for many years now and we don't intend to stop any time soon because it's such a big, big, big relationship for us! So much of where we are today has come from this relationship. We're super proud of everything that's happened in the past, and super excited for where we can go in the future.
 Limoncillo (and a handful of other fantastic farms) are owned by Dr. Erwin Mierich. Having previously lived and worked in the USA, he returned to Nicaragua in the mid-1990s. He explained, \"While I was living in the United States, I worked as a gynaecologist, but then I had to come back to Nicaragua and lead this farm. Coffee has been my passion since I was a little boy\".
@@ -1674,19 +1700,20 @@ We offer free UK mainland delivery on all orders over £50.00. One bag sent with
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards via the red bubble in the bottom right-hand corner of your screen.
 For more information please visit https://www.hasbean.co.uk/pages/shipping
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/nic-limoncillo-w-red-pacamara-pb",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/nic-limoncillo-w-red-pacamara-pb',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Nicaragua Las Delicias Washed Longberry",
-  country: "Nicaragua",
-  region: "Jinotega",
-  town: "",
-  process: " Washed",
+  name: 'Nicaragua Las Delicias Washed Longberry',
+  country: 'Nicaragua',
+  region: 'Jinotega',
+  town: '',
+  process: ' Washed',
   altitude: 1450,
-  variety: "  Longberry",
-  tasting_notes: "Brown sugar, peach, floral",
-  producer: "Eleane Mierisch",
+  variety: "\u2028 Longberry",
+  tasting_notes: 'Brown sugar, peach, floral',
+  producer: 'Eleane Mierisch',
   description: "DETAILS
 This farm was brand new to us not all that long ago but has now become a regular favourite, it's always been a pleasure to get coffee from Las Delicias year after year. 
 The Mierisch family (whom you may remember from such farms as Limoncillo, Mama Mina, Escondida and Cerro Azul) have worked with us for over 10 years to bring us delicious coffee.
@@ -1733,19 +1760,20 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/nic-las-delicias-w",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/nic-las-delicias-w',
+  available: true
+)
 
 roaster.coffees.create!(
-  name: "Thailand Doi Pangkhon Natural",
-  country: "Thailand",
-  region: "Doi Pangkhong, Chiang Rai",
-  town: "",
-  process: " Natural",
+  name: 'Thailand Doi Pangkhon Natural',
+  country: 'Thailand',
+  region: 'Doi Pangkhong, Chiang Rai',
+  town: '',
+  process: ' Natural',
   altitude: 1250,
-  variety: "Varietals: Catuai, Typica, Chiang Mai & SJ133",
-  tasting_notes: "Raisin, brown sugar, cream",
-  producer: "Producers: Merlaeku Family x Beanspire",
+  variety: 'Varietals: Catuai, Typica, Chiang Mai & SJ133',
+  tasting_notes: 'Raisin, brown sugar, cream',
+  producer: 'Producers: Merlaeku Family x Beanspire',
   description: "DETAILS
 Our sourcing partners Beanspire have been working in Doi Pangkhon for 7 years now. Doi Pangkhon, in Chiang Rai, has 300 households, each typically producing about 1-2 tons of parchment. In the past years, Beanspire worked with each house individually on their wet processing and bought their parchment before hulling and grading at their mill
 During the 2017-2018 season, there was substantial investment in a new wet mill and is currently being operated by a few trusted partner producers and allows for more control of the coffee processing. In 2018-2019 season, the mill was improved with the addition of a new roof, new pulpers and improved workflows. Only last harvest season, the mill received a new electricity generator, a cupping lab was built for the farmers, and new concrete flooring was put down too.
@@ -1786,19 +1814,20 @@ We offer free UK mainland delivery on all orders over £50.00. One bag sent with
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.
 VIDEO REVIEW",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/tha-doi-pangkhon-n",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/tha-doi-pangkhon-n',
+  available: true
+)
 
 roaster.coffees.create!(
   name: "Thailand Nui & Aoy's Sparkling Natural - 125g",
-  country: "Thailand",
-  region: "Doi Saket",
-  town: "",
-  process: " Natural Controlled Yeast Fermentation “Sparkling Natural”",
+  country: 'Thailand',
+  region: 'Doi Saket',
+  town: '',
+  process: ' Natural Controlled Yeast Fermentation “Sparkling Natural”',
   altitude: 1350,
-  variety: " Typica",
-  tasting_notes: "Chocolate, dark sugar, cherry jam, nashi pear",
-  producer: "Producers: Nui Intakad & Aoy Jaisooksern x Beanspire",
+  variety: ' Typica',
+  tasting_notes: 'Chocolate, dark sugar, cherry jam, nashi pear',
+  producer: 'Producers: Nui Intakad & Aoy Jaisooksern x Beanspire',
   description: "DETAILS
 *Please note that this coffee is sold in 125g bags, not in our regular 250g*
 This is an experimental lot from Doi Saket in Chiang Mai that Beanspire worked with Nui Intakad & Aoy Jaisooksern to produce. They're a young couple who quit their day jobs in the city to return to their parents' coffee farm 5 years ago. Nui is 34 and an engineer by trade, while Aoy is 32 and an accountant by trade.
@@ -1843,5 +1872,6 @@ If you place an order before 07:30, it will be roasted and dispatched that day. 
 We offer free UK mainland delivery on all orders over £50.00. One bag sent with First Class postage will cost £1.95, and one bag sent with Second Class postage will cost £1.00. DPD next working day delivery is available for a flat rate of £5.00 for all orders up to 10kg.
 If you would like to enjoy free delivery on orders under £50.00, make sure to check out My Hasbean Rewards.
 For more information about delivery, please visit our Help Centre.",
-  url: "https://www.hasbean.co.uk//collections/coffee/products/tha-sparkling-natural",
-  available: true)
+  url: 'https://www.hasbean.co.uk//collections/coffee/products/tha-sparkling-natural',
+  available: true
+)

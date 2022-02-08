@@ -21,6 +21,6 @@ class CreateCoffees < ActiveRecord::Migration[7.0]
     end
 
     add_index :coffees, :url, unique: true
-    add_index :coffees, [:roaster_id, :name], unique: true
+    add_index :coffees, %i[roaster_id name], unique: true
   end
 end

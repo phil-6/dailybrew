@@ -16,5 +16,4 @@ Rails.application.routes.draw do
   end
   resources :coffees, only: :index
   resources :brews
-
 end
