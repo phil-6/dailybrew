@@ -123,7 +123,7 @@ roaster.coffees.create!(
   variety: "Heirloom",
   tasting_notes: "Vanilla, Black Tea, Plum",
   producer: "Werka Wuri Washing Station",
-  description: "<p>For our current House Filter we’ve put one of our most popular Single Origins in the spotlight, Werka Wuri.</p><p>Located in the Southern Nations of Ethiopia, Werka Wuri is a BNT owned washing station that processes cherry from over 750 smallholder farmers that surround the village of Werka Sakaro, a few kilometres east of Gedeb town.</p><p>BNT are one of the most prestigious Ethiopian exporters and are well recognised for their pre and post harvest premiums, which stand well above the local market rate in driving quality in their offering.</p><p>Clifton roaster.coffees is working with BNT and the Ethiopian government to add 5 classrooms to the school at Werka Sakaro, providing secondary school education to over 1000 Children.</p><p> </p>",
+  description: "<p>For our current House Filter we’ve put one of our most popular Single Origins in the spotlight, Werka Wuri.</p><p>Located in the Southern Nations of Ethiopia, Werka Wuri is a BNT owned washing station that processes cherry from over 750 smallholder farmers that surround the village of Werka Sakaro, a few kilometres east of Gedeb town.</p><p>BNT are one of the most prestigious Ethiopian exporters and are well recognised for their pre and post harvest premiums, which stand well above the local market rate in driving quality in their offering.</p><p>Clifton Coffee is working with BNT and the Ethiopian government to add 5 classrooms to the school at Werka Sakaro, providing secondary school education to over 1000 Children.</p><p> </p>",
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/house-filter/",
   available: true)
 
