@@ -1,9 +1,10 @@
 class UpdateCoffeesJob < ApplicationJob
   queue_as :default
 
+  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def perform(reference)
     # TODO: Catch error when scraper doesnt exist
-    scraper = Object.const_get 'FetchCoffees::' + reference.classify
+    scraper = Object.const_get "FetchCoffees::#{reference.classify}"
 
     coffees = scraper.new.scrape
     roaster = Roaster.find_by reference: reference
@@ -23,4 +24,5 @@ class UpdateCoffeesJob < ApplicationJob
     # but its here for now.
     roaster.update!(last_coffee_fetch: DateTime.now)
   end
+  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 end
