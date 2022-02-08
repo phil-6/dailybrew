@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :inventories, dependent: :destroy
   has_many :favourites, dependent: :destroy
 
-  validates_presence_of :first_name, :last_name, :terms
+  validates_presence_of :email, :username, :password, :password_confirmation, :terms
   validates :email, uniqueness: { case_sensitive: false }
   validates :terms, acceptance: true
 end
