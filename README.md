@@ -1,6 +1,6 @@
-# Ride The Wave Coffee
+# Daily Brew Coffee
 
-Ride the Wave is an upcoming coffee app which will allow you to record your brews, and discover interesting coffees. It is very early in its development!
+Daily Brew is an upcoming coffee app which will allow you to record your brews, and discover interesting coffees. It is very early in its development!
 
 We're building this in public, because that's fun and we want to build something which people will use! Suggestions welcome.
 
