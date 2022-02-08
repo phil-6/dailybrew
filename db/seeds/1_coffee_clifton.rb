@@ -1,5 +1,6 @@
-Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+roaster = Roaster.find_by reference: 'clifton_coffee'
+
+roaster.coffees.create!(
   name: "Banko Gotiti (Washed)",
   country: "Ethiopia",
   region: "Gotiti Kebele, Kochere District",
@@ -13,8 +14,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/ethiopia-banko-gotti-washed/",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+roaster.coffees.create!(
   name: "El Fuego (Anaerobic)",
   country: "Costa Rica",
   region: "Piedades Sur, San Ramón, Alajuela (West Valley)",
@@ -28,8 +28,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/costa-rica-el-fuego-anaerobic/",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+roaster.coffees.create!(
   name: "Sin Limites",
   country: "Costa Rica",
   region: "West Valley",
@@ -43,8 +42,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/costa-rica-sin-limites/",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+roaster.coffees.create!(
   name: "CAFEX",
   country: "Burundi",
   region: "Gashoho",
@@ -58,8 +56,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/burundi-cafex-washed/",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+roaster.coffees.create!(
   name: "Las Peñas",
   country: "Guatemala",
   region: "Huehuetenango",
@@ -73,8 +70,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/guatemala-las-penas/",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+roaster.coffees.create!(
   name: "Huila – SUGARCANE DECAF E.A",
   country: "Colombia Decaf",
   region: "Elias, Huila",
@@ -89,8 +85,7 @@ The resulting cup has notes of dried red fruits, cashews, panela, chocolate and 
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/colombia-decaf/",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+roaster.coffees.create!(
   name: "Las Alturas",
   country: "Honduras",
   region: "San José de Los Andes, Las Vegas, Santa Barbara",
@@ -104,8 +99,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/honduras-las-alturas/",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+roaster.coffees.create!(
   name: "Seasonal Blend",
   country: "EQ Espresso",
   region: "San José de Los Andes, Las Vegas, Santa Barbara",
@@ -119,8 +113,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/blends/eq-espresso/",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+roaster.coffees.create!(
   name: "Ethiopia – Werka Wuri",
   country: "House Filter",
   region: "Gedeb, Gedeo Zone",
@@ -134,8 +127,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/house-filter/",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+roaster.coffees.create!(
   name: "Brazil",
   country: "Suspension Espresso",
   region: "France, Mogiana",
@@ -149,8 +141,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/suspension-espresso/",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+roaster.coffees.create!(
   name: "Finca Buena Vista",
   country: "E1 Project Espresso",
   region: "El Anonal, Atiquizaya - Ahuachapán",
@@ -164,8 +155,7 @@ Coffee.create!(
   url: "https://cliftoncoffee.co.uk/shop/coffee/single-origin/e1-project-espresso/",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'clifton-coffee-bristol',
+roaster.coffees.create!(
   name: "House Espresso Blend",
   country: "Village Espresso",
   region: "El Anonal, Atiquizaya - Ahuachapán",

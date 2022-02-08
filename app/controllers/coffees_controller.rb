@@ -1,9 +1,10 @@
 class CoffeesController < ApplicationController
   before_action :set_coffee, only: %i[ show edit update destroy ]
+  before_action :set_roaster, only: :index
 
   # GET /coffees or /coffees.json
   def index
-    @coffees = Coffee.all
+    @coffees = @roaster.present? ? @roaster.coffees : Coffee.all
   end
 
   # GET /coffees/1 or /coffees/1.json
@@ -58,13 +59,20 @@ class CoffeesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_coffee
-      @coffee = Coffee.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def coffee_params
-      params.require(:coffee).permit(:roaster_id, :name, :country, :region, :town, :lat, :lng, :process, :altitude, :variety, :tasting_notes, :producer, :description, :url)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_coffee
+    @coffee = Coffee.find(params[:id])
+  end
+
+  def set_roaster
+    return unless params[:roaster_id]
+
+    @roaster = Roaster.find(params[:roaster_id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def coffee_params
+    params.require(:coffee).permit(:roaster_id, :name, :country, :region, :town, :lat, :lng, :process, :altitude, :variety, :tasting_notes, :producer, :description, :url)
+  end
 end

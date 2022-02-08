@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable, :timeoutable, :trackable,
          :lockable
-  has_many :roasters
   has_many :brews
   has_many :reviews
   has_many :inventories, dependent: :destroy

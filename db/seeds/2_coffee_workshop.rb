@@ -1,5 +1,6 @@
-Coffee.create!(
-  roaster_id: 'workshop-coffee',
+roaster = Roaster.find_by reference: 'workshop_coffee'
+
+roaster.coffees.create!(
   name: "La Serrania Decaffeinated Filter",
   country: "Colombia",
   region: "Pitalito, Huila",
@@ -18,8 +19,7 @@ The actual solvent doing the work of decaffeinating the green coffee at Descafec
   url: "https://workshopcoffee.com/collections/coffee/products/la-serrania-decaffeinated-filter",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'workshop-coffee',
+roaster.coffees.create!(
   name: "La Serrania Decaffeinated Espresso",
   country: "Colombia",
   region: "Pitalito, Huila",
@@ -38,8 +38,7 @@ The actual solvent doing the work of decaffeinating the green coffee at Descafec
   url: "https://workshopcoffee.com/collections/coffee/products/la-serrania-decaffeinated-espresso",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'workshop-coffee',
+roaster.coffees.create!(
   name: "El Mural",
   country: "El Salvador",
   region: "La Palma, Chalatenango",
@@ -63,8 +62,7 @@ Directly feeding back at the farm level will arm the producers with more informa
   url: "https://workshopcoffee.com/collections/coffee/products/el-mural",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'workshop-coffee',
+roaster.coffees.create!(
   name: "Muchagara AB",
   country: "Kenya",
   region: "Kariru, Kirinyaga County",
@@ -88,8 +86,7 @@ As well as investing in producing high grade, specialty coffee the membership of
   url: "https://workshopcoffee.com/collections/coffee/products/muchagara-ab-2021",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'workshop-coffee',
+roaster.coffees.create!(
   name: "Caballero Espresso",
   country: "Honduras",
   region: "Chinacla, Marcala, La Paz",
@@ -114,8 +111,7 @@ Once the cherries are harvested, they depulp using a Pinhalense Eco-Pulper befor
   url: "https://workshopcoffee.com/collections/coffee/products/caballero-espresso-2021",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'workshop-coffee',
+roaster.coffees.create!(
   name: "Dely Suyapa",
   country: "Honduras",
   region: "Masaguara, Pozo Negro, Intibucá",
@@ -140,8 +136,7 @@ We’re thrilled to share this Bourbon selection from Finca Las Manzanas with yo
   url: "https://workshopcoffee.com/collections/coffee/products/dely-suyapa-2021",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'workshop-coffee',
+roaster.coffees.create!(
   name: "Yabitu Espresso",
   country: "Ethiopia",
   region: "Yabitu Koba, Uraga, Guji Zone, Oromia",
@@ -160,8 +155,7 @@ The results of the propagation and process of this coffee are a very fruity, com
   url: "https://workshopcoffee.com/collections/coffee/products/yabitu-espresso",
   available: true)
 
-Coffee.create!(
-  roaster_id: 'workshop-coffee',
+roaster.coffees.create!(
   name: "Raro Boda",
   country: "Ethiopia",
   region: "Uraga, Guji Zone, Oromia",
