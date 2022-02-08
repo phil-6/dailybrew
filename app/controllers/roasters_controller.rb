@@ -1,7 +1,7 @@
 class RoastersController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
-  before_action :authorize_admin, except: %i[ index show ]
-  before_action :set_roaster, only: %i[ show edit update destroy ]
+  before_action :authorize_admin, except: %i[index show]
+  before_action :set_roaster, only: %i[show edit update destroy update_coffees]
 
   # GET /roasters or /roasters.json
   def index
@@ -9,8 +9,7 @@ class RoastersController < ApplicationController
   end
 
   # GET /roasters/1 or /roasters/1.json
-  def show
-  end
+  def show; end
 
   # GET /roasters/new
   def new
@@ -18,8 +17,7 @@ class RoastersController < ApplicationController
   end
 
   # GET /roasters/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /roasters or /roasters.json
   def create
@@ -27,7 +25,7 @@ class RoastersController < ApplicationController
 
     respond_to do |format|
       if @roaster.save
-        format.html { redirect_to roaster_url(@roaster), notice: "Roaster was successfully created." }
+        format.html { redirect_to roaster_url(@roaster), notice: 'Roaster was successfully created.' }
         format.json { render :show, status: :created, location: @roaster }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +38,7 @@ class RoastersController < ApplicationController
   def update
     respond_to do |format|
       if @roaster.update(roaster_params)
-        format.html { redirect_to roaster_url(@roaster), notice: "Roaster was successfully updated." }
+        format.html { redirect_to roaster_url(@roaster), notice: 'Roaster was successfully updated.' }
         format.json { render :show, status: :ok, location: @roaster }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,19 +52,26 @@ class RoastersController < ApplicationController
     @roaster.destroy
 
     respond_to do |format|
-      format.html { redirect_to roasters_url, notice: "Roaster was successfully destroyed." }
+      format.html { redirect_to roasters_url, notice: 'Roaster was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_roaster
-      @roaster = Roaster.find(params[:id])
-    end
+  # POST /roasters/1/update_coffees
+  def update_coffees
+    @roaster.update_coffees
+  end
 
-    # Only allow a list of trusted parameters through.
-    def roaster_params
-      params.require(:roaster).permit(:user_id, :name, :description, :location, :lat, :lng, :website, :twitter, :instagram, :facebook)
-    end
+  private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_roaster
+    @roaster = Roaster.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def roaster_params
+    params.require(:roaster).permit(:user_id, :name, :description, :location, :lat, :lng, :website, :twitter,
+                                    :instagram, :facebook)
+  end
 end

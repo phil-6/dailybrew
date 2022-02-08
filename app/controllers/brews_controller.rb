@@ -1,5 +1,5 @@
 class BrewsController < ApplicationController
-  before_action :set_brew, only: %i[ show edit update destroy ]
+  before_action :set_brew, only: %i[show edit update destroy]
 
   # GET /brews or /brews.json
   def index
@@ -7,8 +7,7 @@ class BrewsController < ApplicationController
   end
 
   # GET /brews/1 or /brews/1.json
-  def show
-  end
+  def show; end
 
   # GET /brews/new
   def new
@@ -16,8 +15,7 @@ class BrewsController < ApplicationController
   end
 
   # GET /brews/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /brews or /brews.json
   def create
@@ -25,7 +23,7 @@ class BrewsController < ApplicationController
 
     respond_to do |format|
       if @brew.save
-        format.html { redirect_to brew_url(@brew), notice: "Brew was successfully created." }
+        format.html { redirect_to brew_url(@brew), notice: 'Brew was successfully created.' }
         format.json { render :show, status: :created, location: @brew }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class BrewsController < ApplicationController
   def update
     respond_to do |format|
       if @brew.update(brew_params)
-        format.html { redirect_to brew_url(@brew), notice: "Brew was successfully updated." }
+        format.html { redirect_to brew_url(@brew), notice: 'Brew was successfully updated.' }
         format.json { render :show, status: :ok, location: @brew }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +50,21 @@ class BrewsController < ApplicationController
     @brew.destroy
 
     respond_to do |format|
-      format.html { redirect_to brews_url, notice: "Brew was successfully destroyed." }
+      format.html { redirect_to brews_url, notice: 'Brew was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_brew
-      @brew = Brew.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def brew_params
-      params.require(:brew).permit(:user_id, :coffee_id, :equipment, :method, :coffee_weight, :water_weight, :grinder, :grinder_setting, :time, :notes, :rating)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_brew
+    @brew = Brew.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def brew_params
+    params.require(:brew).permit(:user_id, :coffee_id, :equipment, :method, :coffee_weight, :water_weight, :grinder,
+                                 :grinder_setting, :time, :notes, :rating)
+  end
 end

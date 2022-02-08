@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable, :timeoutable, :trackable,
          :lockable
-  has_many :roasters
   has_many :brews
   has_many :reviews
   has_many :inventories, dependent: :destroy
@@ -14,5 +13,4 @@ class User < ApplicationRecord
   validates_presence_of :first_name, :last_name, :terms
   validates :email, uniqueness: { case_sensitive: false }
   validates :terms, acceptance: true
-
 end

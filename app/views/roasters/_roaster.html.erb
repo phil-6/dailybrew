@@ -1,12 +1,17 @@
 <div id="<%= dom_id roaster %>">
   <p>
-    <strong>User:</strong>
-    <%= roaster.user_id %>
+    <strong>Reference:</strong>
+    <%= roaster.reference %>
   </p>
 
   <p>
     <strong>Name:</strong>
     <%= roaster.name %>
+  </p>
+
+  <p>
+    <strong>Number of Coffees:</strong>
+    <%= roaster.coffees.size %>
   </p>
 
   <p>

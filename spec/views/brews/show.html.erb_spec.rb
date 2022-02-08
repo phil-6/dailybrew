@@ -1,23 +1,23 @@
 require 'rails_helper'
 
-RSpec.describe "brews/show", type: :view do
+RSpec.describe 'brews/show', type: :view do
   before(:each) do
     @brew = assign(:brew, Brew.create!(
-      user: nil,
-      coffee: nil,
-      equipment: "Equipment",
-      method: "Method",
-      coffee_weight: 2,
-      water_weight: 3,
-      grinder: "Grinder",
-      grinder_setting: "Grinder Setting",
-      time: 4,
-      notes: "MyText",
-      rating: 5
-    ))
+                            user: nil,
+                            coffee: nil,
+                            equipment: 'Equipment',
+                            method: 'Method',
+                            coffee_weight: 2,
+                            water_weight: 3,
+                            grinder: 'Grinder',
+                            grinder_setting: 'Grinder Setting',
+                            time: 4,
+                            notes: 'MyText',
+                            rating: 5
+                          ))
   end
 
-  it "renders attributes in <p>" do
+  it 'renders attributes in <p>' do
     render
     expect(rendered).to match(//)
     expect(rendered).to match(//)

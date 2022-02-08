@@ -48,4 +48,3 @@ unless User.find_by_email('rtw_not_admin@purpleriver.dev').present?
 end
 
 Dir[File.join(Rails.root, 'db', 'seeds', '*.rb')].sort.each { |seed| load seed }
-

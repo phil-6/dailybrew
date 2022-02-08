@@ -1,1 +1,1 @@
-json.partial! "roasters/roaster", roaster: @roaster
+json.partial! 'roasters/roaster', roaster: @roaster

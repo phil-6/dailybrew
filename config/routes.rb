@@ -8,11 +8,12 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'dashboard', to: 'index'
   end
-
-  resources :brews
-  resources :coffees
-  resources :roasters
-
   get '/dashboard/', to: 'dashboard#index'
 
+  resources :roasters do
+    resources :coffees, shallow: true
+    post 'update_coffees', on: :member
+  end
+  resources :coffees, only: :index
+  resources :brews
 end
