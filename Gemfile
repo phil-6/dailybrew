@@ -68,7 +68,6 @@ group :development do
 
   # Rubocop for style guide
   gem 'rubocop'
-  gem 'rename'
 end
 
 group :test do
