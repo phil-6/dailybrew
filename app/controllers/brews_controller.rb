@@ -3,7 +3,7 @@ class BrewsController < ApplicationController
 
   # GET /brews or /brews.json
   def index
-    @brews = Brew.all
+    @brews = current_user.brews.all
   end
 
   # GET /brews/1 or /brews/1.json
