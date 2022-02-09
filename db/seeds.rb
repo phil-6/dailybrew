@@ -87,6 +87,7 @@ User.all.each do |user|
 end
 
 puts "Create between brews for each of the user's favourites and inventory"
+clifton_house = Coffee.find(9)
 User.all.each do |user|
   notes = ["Draw down was a bit fast", "This one was pretty great, managed to get the technique spot on", "I think something wasn't quite right with this one", "Took ages to filter"].sample
   if user.id == 1
@@ -142,5 +143,23 @@ User.all.each do |user|
         created_at: Faker::Time.between_dates(from: 1.months.ago.to_date , to: Date.today, period: :morning)
       )
     end
+  end
+
+  puts "create brews for Clifton House Filter"
+  rand(2..5).times do
+    puts "Create Brew"
+    user.brews.create!(
+      coffee: clifton_house,
+      equipment: "V60",
+      method: "Hoffman",
+      coffee_weight: 15,
+      water_weight: 250,
+      grinder: "Roaster",
+      grinder_setting: "filter",
+      time: 120,
+      notes: "Staple, can't go wrong with this",
+      rating: 8,
+      created_at: Faker::Time.between_dates(from: 6.months.ago.to_date , to: 1.month.ago.to_date, period: :morning)
+    )
   end
 end
