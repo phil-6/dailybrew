@@ -63,3 +63,84 @@ end
 
 # seed Roasters and Coffees from /seeds/*
 Dir[File.join(Rails.root, 'db', 'seeds', '*.rb')].sort.each { |seed| load seed }
+
+puts "Add between 1 and 10 random coffees to the user's favourites"
+User.all.each do |user|
+  puts "User: #{user.id}"
+  rand(1..10).times do
+    puts "Create Favourite"
+    user.inventories.create!(
+      coffee: Coffee.all.sample
+    )
+  end
+end
+
+puts "Add between 1 and 6 random coffees to the user's inventory"
+User.all.each do |user|
+  puts "User: #{user.id}"
+  rand(1..6).times do
+    puts "Create Inventory"
+    user.inventories.create!(
+      coffee: Coffee.all.sample
+    )
+  end
+end
+
+puts "Create between brews for each of the user's favourites and inventory"
+User.all.each do |user|
+  notes = ["Draw down was a bit fast", "This one was pretty great, managed to get the technique spot on", "I think something wasn't quite right with this one", "Took ages to filter"].sample
+  if user.id == 1
+    equipment = "V60"
+    grinder = "Fellow Ode"
+    grind_setting = "3.1"
+    method = "Hoffman"
+    time = 180
+  else
+    equipment = ["V60", "Chemex", "French Press", "Aeropress"].sample
+    grinder = "Roaster"
+    grind_setting = "Filter"
+    method = ""
+    time = rand(120..600)
+  end
+
+  puts "User: #{user.id}"
+  user.favourites.each do |favourite|
+    puts "Favourite: #{favourite.id}"
+    rand(2..20).times do
+      puts "Create Brew"
+      user.brews.create!(
+        coffee: favourite.coffee,
+        equipment: equipment,
+        method: method,
+        coffee_weight: 15,
+        water_weight: 250,
+        grinder: grinder,
+        grinder_setting: grind_setting,
+        time: time,
+        notes: notes,
+        rating: rand(0..10),
+        created_at: Faker::Time.between_dates(from: 6.months.ago.to_date , to: 1.month.ago.to_date, period: :morning)
+      )
+    end
+  end
+
+  user.inventories.each do |inventory|
+    puts "Inventory: #{inventory.id}"
+    rand(2..20).times do
+      puts "Create Brew"
+      user.brews.create!(
+        coffee: inventory.coffee,
+        equipment: equipment,
+        method: method,
+        coffee_weight: 15,
+        water_weight: 250,
+        grinder: grinder,
+        grinder_setting: grind_setting,
+        time: time,
+        notes: notes,
+        rating: rand(0..10),
+        created_at: Faker::Time.between_dates(from: 1.months.ago.to_date , to: Date.today, period: :morning)
+      )
+    end
+  end
+end
