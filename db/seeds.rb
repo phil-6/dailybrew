@@ -34,7 +34,21 @@ unless User.find_by_email('lawrence.archer@gmail.com').present?
   user.save!
 end
 
-unless User.find_by_email('rtw_not_admin@purpleriver.dev').present?
+unless User.find_by_email('garethdandrews@gmail.com').present?
+  user = User.new(
+    first_name: 'Gareth',
+    last_name: 'Andrews',
+    username: 'Gary',
+    email: 'garethdandrews@gmail.com',
+    admin: true,
+    terms: true,
+    password: 'test1234'
+  )
+  user.skip_confirmation!
+  user.save!
+end
+
+unless User.find_by_email('db_not_admin@purpleriver.dev').present?
   user = User.new(
     first_name: 'Test',
     last_name: 'Test Not Admin',
@@ -47,4 +61,5 @@ unless User.find_by_email('rtw_not_admin@purpleriver.dev').present?
   user.save!
 end
 
+# seed Roasters and Coffees from /seeds/*
 Dir[File.join(Rails.root, 'db', 'seeds', '*.rb')].sort.each { |seed| load seed }
