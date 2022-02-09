@@ -1,11 +1,11 @@
 <% if current_user.admin? %>
   <%= link_to admin_dashboard_path, class: "nav-link link link-secondary #{mobile_only ? 'mobile-only' : ''}" do %>
-    Admin <i class="fas fa-users-cog"></i>
+    Admin <i class="las la-users-cog"></i>
   <% end %>
 <% end %>
 <%= link_to edit_user_registration_path, class: "nav-link link link-secondary #{mobile_only ? 'mobile-only' : ''}" do %>
-  Settings <i class="fas fa-cog"></i>
+  Settings <i class="las la-user-cog"></i>
 <% end %>
 <%= button_to destroy_user_session_path, method: :delete, class: "nav-link link link-secondary #{mobile_only ? 'mobile-only' : ''}" do %>
-  Sign Out <i class="fas fa-sign-out-alt"></i>
+  Sign Out <i class="las la-sign-out-alt"></i>
 <% end %>
