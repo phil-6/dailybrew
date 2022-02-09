@@ -51,6 +51,9 @@ gem 'sassc-rails'
 # Use Devise for authentication [https://github.com/heartcombo/devise]
 gem 'devise'
 
+# Use Pagy for pagination [https://github.com/ddnexus/pagy]
+gem 'pagy', '~> 5.10'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
