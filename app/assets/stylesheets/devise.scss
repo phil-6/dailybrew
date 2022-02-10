@@ -4,6 +4,10 @@
   min-height: 100vh;
   padding: 1rem;
 
+  @media screen and (max-width: $screen-lg) {
+    justify-content: flex-start !important;
+  }
+
   .form {
     width: 380px;
 
@@ -29,8 +33,13 @@
         justify-content: center;
 
         @media screen and (max-width: $screen-lg) {
-          padding-top: 4rem;
-          padding-bottom: 4rem;
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
+
+        @media screen and (max-width: $screen-sm) {
+          padding-left: 1rem;
+          padding-right: 1rem;
         }
 
         &:first-child {
@@ -63,6 +72,15 @@
         &.brand {
           gap: 1rem;
 
+          @media screen and (max-width: $screen-lg) {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+          }
+
+          @media screen and (max-width: $screen-sm) {
+            gap: 0.5rem;
+          }
+
           .logo {
             margin-left: 1rem;
             text-align: left;
@@ -71,15 +89,15 @@
 
             @media screen and (max-width: $screen-lg) {
               text-align: center;
-              font-size: 10rem;
+              font-size: 6rem;
             }
 
             @media screen and (max-width: $screen-md) {
-              font-size: 7.5rem;
+              font-size: 4.5rem;
             }
 
             @media screen and (max-width: $screen-sm) {
-              font-size: 5rem;
+              font-size: 3rem;
             }
           }
 
@@ -88,6 +106,19 @@
             opacity: 0.5;
             font-size: 1rem;
             text-align: right;
+
+            @media screen and (max-width: $screen-lg) {
+              text-align: center;
+              font-size: 0.9rem;
+            }
+
+            @media screen and (max-width: $screen-md) {
+              font-size: 0.8rem;
+            }
+
+            @media screen and (max-width: $screen-sm){
+              font-size: 0.7rem;
+            }
           }
         }
       }
