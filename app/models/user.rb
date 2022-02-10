@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  self.implicit_order_column = "created_at"
   # Include default devise modules. Others available are:
   # :omniauthable
   devise :database_authenticatable, :registerable,
