@@ -37,7 +37,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       t.string    :first_name, null: false, default: ''
       t.string    :last_name, null: false, default: ''
       t.string    :username, default: ''
-      t.boolean   :terms, default: false
       t.boolean   :subscription_interest, default: false
 
       t.boolean   :admin, default: false

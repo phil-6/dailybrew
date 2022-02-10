@@ -11,9 +11,8 @@ class User < ApplicationRecord
   has_many :inventories, dependent: :destroy
   has_many :favourites, dependent: :destroy
 
-  validates_presence_of :email, :username, :password, :terms
+  validates_presence_of :email, :username, :password
   validates :email, uniqueness: { case_sensitive: false }
-  validates :terms, acceptance: true
 
   def display_name
     username ? username : first_name
