@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
-    get 'dashboard', to: 'index'
+    get 'dashboard'
   end
-  get '/dashboard/', to: 'dashboard#index'
+  get 'dashboard', to: 'dashboard#index'
 
   resources :roasters do
     resources :coffees, shallow: true
@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   end
   resources :coffees, only: :index
   resources :brews
+  resources :inventories
+  resources :favourites
 end

@@ -3,6 +3,7 @@
 <h1>Roasters</h1>
 
 <div id="roasters">
+  <%== pagy_nav(@pagy) %>
   <% @roasters.each do |roaster| %>
     <%= render roaster %>
     <p>

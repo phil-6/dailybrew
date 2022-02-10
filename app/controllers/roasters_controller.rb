@@ -5,7 +5,7 @@ class RoastersController < ApplicationController
 
   # GET /roasters or /roasters.json
   def index
-    @roasters = Roaster.all
+    @pagy, @roasters = pagy(Roaster.all, items: 5)
   end
 
   # GET /roasters/1 or /roasters/1.json

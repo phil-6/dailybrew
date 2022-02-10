@@ -3,8 +3,8 @@ class AdminController < ApplicationController
   before_action :authorize_admin
   before_action :users
 
-  # GET /admin/index/
-  def index
+  # GET /admin/dashboard/
+  def dashboard
     render 'dashboard'
   end
 
