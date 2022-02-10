@@ -13,4 +13,8 @@ class User < ApplicationRecord
   validates_presence_of :email, :username, :password, :password_confirmation, :terms
   validates :email, uniqueness: { case_sensitive: false }
   validates :terms, acceptance: true
+
+  def display_name
+    username ? username : first_name
+  end
 end
