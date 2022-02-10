@@ -64,7 +64,9 @@
           gap: 1rem;
 
           .logo {
+            margin-left: 1rem;
             text-align: left;
+            text-indent: -1rem;
             font-size: 10rem;
 
             @media screen and (max-width: $screen-lg) {
@@ -84,7 +86,8 @@
           .tag-line {
             color: white;
             opacity: 0.5;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            text-align: right;
           }
         }
       }

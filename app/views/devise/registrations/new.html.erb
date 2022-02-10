@@ -2,7 +2,7 @@
   <div class="registration-row row">
     <div class="column card">
       <div class="form">
-        <h2 class="form-title">Create an account</h2>
+        <h2 class="form-title">Sign Up</h2>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |form| %>
           <div class="field">
             <%= form.email_field :email, class: 'form-input', autofocus: true, autocomplete: 'email', placeholder: 'Email', required: true %>
@@ -30,20 +30,18 @@
             <%= form.password_field :password_confirmation, class: 'form-input', autocomplete: 'new-password', placeholder: 'Confirm Password', required: true %>
             <%= form.label :password_confirmation, 'Password again', class: 'form-label' %>
           </div>
-          <%
-=begin%>
- TODO: Add Terms 
-<%
-=end%>
+          <div class="terms">
+            By clicking Sign Up, you agree to our <%= link_to 'Terms', terms_path, class: 'link link-primary' %>.
+          </div>
           <div class="action">
-            <%= form.submit 'Submit', class: 'form-submit btn btn-primary' %>
+            <%= form.submit 'Sign Up', class: 'form-submit btn btn-primary' %>
           </div>
         <% end %>
       </div>
     </div>
     <div class="column card brand">
-      <h1 class="logo">Ride the Wave.</h1>
-      <span class="tag-line">Your coffee journey starts here.</span>
+      <h1 class="logo">Daily Brew</h1>
+      <span class="tag-line">Your journey to your perfect brew.</span>
     </div>
   </div>
 </div>

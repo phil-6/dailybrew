@@ -21,10 +21,10 @@
 
 .link {
   &-primary {
-    color: $color-primary-0;
+    color: $color-brand;
 
     &:hover {
-      color: $color-primary-1;
+      color: $color-brand-light;
     }
   }
 }
