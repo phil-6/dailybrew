@@ -111,8 +111,11 @@
 :focus-visible {
   box-shadow: 0 0 0 2px $color-complementary-0;
   outline-color: $color-complementary-0;
-  border: 1px solid $color-complementary-0 !important;
   outline-style: solid;
+
+  &:not(a) {
+    border: 1px solid $color-complementary-0 !important;
+  }
 }
 
 input[type="submit" i] {
