@@ -4,8 +4,12 @@
 
 <div>
   <% if current_user.admin? %>
-    <p>Coffees Last Updated: <%= time_ago_in_words(@roaster.last_coffee_fetch.to_date)%> ago</p>
-    <% if @roaster.last_coffee_fetch < 1.week.ago %>
+    <% if @roaster.last_coffee_fetch.nil? %>
+      <p> Coffees Never Updated </p>
+    <% else %>
+      <p>Coffees Last Updated: <%= time_ago_in_words(@roaster.last_coffee_fetch) %> ago</p>
+    <% end %>
+    <% if @roaster.last_coffee_fetch.nil? || @roaster.last_coffee_fetch < 1.week.ago %>
       <%= button_to "Update Coffees", update_coffees_roaster_path(@roaster), method: :post %>
     <% end %>
     <%= link_to "Edit this roaster", edit_roaster_path(@roaster) %>
