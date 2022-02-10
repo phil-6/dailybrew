@@ -58,11 +58,17 @@
     background-color: white;
     pointer-events: none;
     border: 1px solid transparent;
+    font-size: 1rem;
     line-height: 1.5;
     transform-origin: 0 0;
     transition: transform 0.1s ease-in-out;
     color: $color-primary-0;
     opacity: 0.65;
+
+    @media screen and (max-width: $screen-md) {
+      top: 1.1rem;
+      font-size: 0.9rem;
+    }
   }
 }
 
@@ -96,11 +102,16 @@
   font-family: $font;
   font-size: 1.1rem;
   line-height: 1.5;
+
+  @media screen and (max-width: $screen-md) {
+    font-size: 1rem;
+  }
 }
 
 :focus-visible {
   box-shadow: 0 0 0 2px $color-complementary-0;
   outline-color: $color-complementary-0;
+  border: 1px solid $color-complementary-0 !important;
   outline-style: solid;
 }
 
