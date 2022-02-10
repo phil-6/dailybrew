@@ -19,6 +19,10 @@
   &.registration {
     background-color: #ecf0f2;
 
+    @media screen and (max-width: $screen-sm) {
+      padding: 0;
+    }
+
     .registration-row {
       max-width: 1200px;
       min-height: 800px;
@@ -40,6 +44,7 @@
         @media screen and (max-width: $screen-sm) {
           padding-left: 1rem;
           padding-right: 1rem;
+          border-radius: 0 !important;
         }
 
         &:first-child {
