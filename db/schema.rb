@@ -125,7 +125,6 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.string "first_name", default: "", null: false
     t.string "last_name", default: "", null: false
     t.string "username", default: ""
-    t.boolean "terms", default: false
     t.boolean "subscription_interest", default: false
     t.boolean "admin", default: false
     t.string "address_ship_street"
