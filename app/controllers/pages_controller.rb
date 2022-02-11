@@ -2,14 +2,6 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!
   before_action :render_content
 
-  def main; end
-
-  def about; end
-
-  def subscription; end
-
-  def terms; end
-
   private
 
   def render_content
