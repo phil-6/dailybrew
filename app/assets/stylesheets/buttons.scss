@@ -2,13 +2,13 @@
 
 .btn, .link {
   font-family: $font;
+  transition: background-color 0.25s, color 0.25s;
 
   &:hover { cursor: pointer; }
 }
 
 .btn {
   font-weight: 600;
-  transition: background-color 0.25s ease-in;
 
   &-primary {
     background-color: $color-primary-0;

@@ -30,7 +30,7 @@
     padding: 1rem 2rem;
     background-clip: padding-box;
     border: 1px solid $color-mid-1;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.25s, box-shadow 0.25s;
 
     &::placeholder {
       color: transparent;
@@ -60,7 +60,7 @@
     }
 
     &:required + .form-label::after {
-      content: "*";
+      content: '*';
     }
 
     &.invalid {

@@ -19,20 +19,27 @@
             <%= form.check_box :remember_me %>
             <%= form.label :remember_me, class: 'link link-primary' %>
           </div>
-          <%= link_to 'Forgot password', new_user_password_path, class: 'link-primary' %>
+          <%= link_to 'Forgot password', new_user_password_path, class: 'link link-primary' %>
         </div>
         <div class="action">
           <%= form.submit 'Login', class: 'form-submit btn btn-primary' %>
         </div>
         <div class="form-links">
-          Not a member? <%= link_to 'Sign up', new_user_registration_path, class: 'link-complementary' %> now
+          Not a member? <%= link_to 'Sign up', new_user_registration_path, class: 'link link-complementary' %> now
         </div>
 
         <%# Find a better way of checking if the user is trying to sign in using an unconfirmed email %>
         <% if alert == 'You have to confirm your email address before continuing.' %>
           <hr />
           <div class="form-links">
-            <%= link_to 'Didn\'t receive confirmation instructions?', new_user_confirmation_path, class: 'link-primary' %>
+            <%= link_to 'Resend confirmation instructions', new_user_confirmation_path, class: 'link link-primary' %>
+          </div>
+        <% end %>
+        <%# Find a better way of checking if the user is trying to sign in using a locked account %>
+        <% if alert == 'Your account is locked.' %>
+          <hr />
+          <div class="form-links">
+            <%= link_to 'Resend unlock instructions', new_user_unlock_path, class: 'link link-primary' %>
           </div>
         <% end %>
       <% end %>
