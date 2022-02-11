@@ -13,7 +13,6 @@ unless User.find_by_email('phil@purpleriver.dev').present?
     username: 'Phil',
     email: 'phil@purpleriver.dev',
     admin: true,
-    terms: true,
     password: 'test1234'
   )
   user.skip_confirmation!
@@ -27,7 +26,6 @@ unless User.find_by_email('lawrence.archer@gmail.com').present?
     username: 'Archer',
     email: 'lawrence.archer@gmail.com',
     admin: true,
-    terms: true,
     password: 'test1234'
   )
   user.skip_confirmation!
@@ -41,7 +39,6 @@ unless User.find_by_email('garethdandrews@gmail.com').present?
     username: 'Gary',
     email: 'garethdandrews@gmail.com',
     admin: true,
-    terms: true,
     password: 'test1234'
   )
   user.skip_confirmation!
@@ -54,7 +51,6 @@ unless User.find_by_email('db_not_admin@purpleriver.dev').present?
     last_name: 'Test Not Admin',
     username: 'Not Admin',
     email: 'rtw_not_admin@purpleriver.dev',
-    terms: true,
     password: 'test1234'
   )
   user.skip_confirmation!

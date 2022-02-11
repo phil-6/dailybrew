@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  self.implicit_order_column = 'created_at'
   # Include default devise modules. Others available are:
   # :omniauthable
   devise :database_authenticatable, :registerable,
@@ -10,7 +11,10 @@ class User < ApplicationRecord
   has_many :inventories, dependent: :destroy
   has_many :favourites, dependent: :destroy
 
-  validates_presence_of :first_name, :last_name, :terms
+  validates_presence_of :email, :username, :password
   validates :email, uniqueness: { case_sensitive: false }
-  validates :terms, acceptance: true
+
+  def display_name
+    username ? username : first_name
+  end
 end

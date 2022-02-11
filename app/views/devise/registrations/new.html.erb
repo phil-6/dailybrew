@@ -1,0 +1,54 @@
+<div class="devise container centered">
+  <div class="registration row">
+    <div class="column card">
+      <div class="form">
+        <div class="form-title">
+          <h2>Sign Up</h2>
+        </div>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |form| %>
+          <div class="field">
+            <%= form.email_field :email, class: 'form-input', autofocus: true, autocomplete: 'email', placeholder: 'Email', required: true %>
+            <%= form.label :email, class: 'form-label' %>
+          </div>
+          <div class="field">
+            <%= form.text_field :username, class: 'form-input', autocomplete: 'username', placeholder: 'Username', required: true %>
+            <%= form.label :username, class: 'form-label' %>
+          </div>
+          <div class="multi-field row">
+            <div class="field">
+              <%= form.text_field :first_name, class: 'form-input', autocomplete: 'first-name', placeholder: 'First name' %>
+              <%= form.label :first_name, class: 'form-label' %>
+            </div>
+            <div class="field">
+              <%= form.text_field :last_name, class: 'form-input', autocomplete: 'last-name', placeholder: 'Last name' %>
+              <%= form.label :last_name, class: 'form-label' %>
+            </div>
+          </div>
+          <div class="field">
+            <%= form.password_field :password, class: 'form-input', autocomplete: 'new-password', placeholder: 'Password', required: true %>
+            <%= form.label :password, class: 'form-label' %>
+          </div>
+          <div class="field">
+            <%= form.password_field :password_confirmation, class: 'form-input', autocomplete: 'new-password', placeholder: 'Confirm Password', required: true %>
+            <%= form.label :password_confirmation, 'Password again', class: 'form-label' %>
+          </div>
+          <div class="form-links">
+            By clicking Sign Up, you agree to our <%= link_to 'Terms', terms_path, class: 'link link-complementary' %>.
+          </div>
+          <div class="action">
+            <%= form.submit 'Sign Up', class: 'form-submit btn btn-primary' %>
+          </div>
+          <div class="form-links">
+          Already a member? <%= link_to 'Login', new_user_session_path, class: 'link link-complementary' %> now
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="column card brand">
+      <h1 class="logo">Daily Brew</h1>
+      <span class="tag-line">Your journey to your perfect brew.</span>
+    </div>
+  </div>
+</div>
+
+

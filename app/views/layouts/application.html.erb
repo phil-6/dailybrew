@@ -13,18 +13,18 @@
   </head>
 
   <body>
-  <%= render 'shared/navbar' %>
-
-  <% flash.each do |type, msg| %>
-    <% if type != 'timedout' %>
-      <div data-controller="alerts" class="alert <%= alert_class_for(type) %>" role="alert">
-        <%= msg %>
-        <span data-action="click->alerts#dismiss" class="btn-close"><i class="las la-times"></i></span>
-      </div>
+    <% flash.each do |type, msg| %>
+      <% if type != 'timedout' %>
+        <div data-controller="alerts" class="alert <%= alert_class_for(type) %>" role="alert">
+          <%= msg %>
+          <span data-action="click->alerts#dismiss" class="btn-close"><i class="las la-times"></i></span>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <%= yield %>
-
+    <% unless devise_controller? %>
+      <%= render 'shared/navbar' %>
+    <% end %>
+    <%= yield %>
   </body>
 </html>

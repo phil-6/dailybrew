@@ -1,0 +1,19 @@
+<div class="devise container centered">
+  <div class="column card">
+    <div class="form">
+      <h1 class="logo">Daily Brew</h1>
+      <div class="form-title">
+        <h2>Unlock Account</h2>
+      </div>
+      <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |form| %>
+        <div class="field">
+          <%= form.email_field :email, class: 'form-input', autocomplete: 'email', placeholder: 'Email', required: true %>
+          <%= form.label :email, class: 'form-label' %>
+        </div>
+        <div class="action">
+          <%= form.submit 'Send Instructions', class: 'form-submit btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

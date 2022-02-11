@@ -1,0 +1,43 @@
+@import "variables";
+
+.btn, .link {
+  font-family: $font;
+  transition: background-color 0.25s, color 0.25s;
+
+  &:hover { cursor: pointer; }
+}
+
+.btn {
+  font-weight: 600;
+
+  &-primary {
+    background-color: $color-primary-0;
+    color: white;
+
+    &:hover, &:focus {
+      background-color: $color-primary-1;
+    }
+  }
+}
+
+.link {
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-primary {
+    color: $color-primary-0;
+
+    &:hover {
+      color: $color-primary-1;
+    }
+  }
+
+  &-complementary {
+    color: $color-complementary-0;
+
+    &:hover {
+      color: $color-complementary-2;
+    }
+  }
+}
