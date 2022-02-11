@@ -38,6 +38,9 @@
           <div class="action">
             <%= form.submit 'Sign Up', class: 'form-submit btn btn-primary' %>
           </div>
+          <div class="form-links">
+          Already a member? <%= link_to 'Login', new_user_session_path, class: 'link-complementary' %> now
+        </div>
         <% end %>
       </div>
     </div>
