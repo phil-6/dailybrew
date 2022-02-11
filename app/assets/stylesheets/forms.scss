@@ -118,10 +118,8 @@
 
 .form-check {
   gap: 0.25rem;
-
-  input {
-    margin-top: 4px;
-  }
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .form-input, .form-submit {
