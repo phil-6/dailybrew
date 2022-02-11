@@ -15,6 +15,6 @@ class User < ApplicationRecord
   validates :email, uniqueness: { case_sensitive: false }
 
   def display_name
-    username ? username : first_name
+    username || first_name
   end
 end
