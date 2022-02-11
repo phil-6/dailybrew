@@ -1,5 +1,5 @@
-<div class="devise registration container centered">
-  <div class="registration-row row">
+<div class="devise container centered">
+  <div class="registration row">
     <div class="column card">
       <div class="form">
         <div class="form-title">
@@ -32,8 +32,8 @@
             <%= form.password_field :password_confirmation, class: 'form-input', autocomplete: 'new-password', placeholder: 'Confirm Password', required: true %>
             <%= form.label :password_confirmation, 'Password again', class: 'form-label' %>
           </div>
-          <div class="terms">
-            By clicking Sign Up, you agree to our <%= link_to 'Terms', terms_path, class: 'link link-primary' %>.
+          <div class="form-links">
+            By clicking Sign Up, you agree to our <%= link_to 'Terms', terms_path, class: 'link-complementary' %>.
           </div>
           <div class="action">
             <%= form.submit 'Sign Up', class: 'form-submit btn btn-primary' %>

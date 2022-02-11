@@ -1,9 +1,10 @@
 <div class="devise login container centered">
-  <div class="container centered card">
-  <h1 class="logo">Ride the Wave.</h1>
+  <div class="column card">
     <div class="form">
-      <h2 class="form-title">Login</h2>
-
+      <h1 class="logo">Daily Brew</h1>
+      <div class="form-title">
+        <h2>Login</h2>
+      </div>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |form| %>
         <div class="field">
           <%= form.email_field :email, class: 'form-input', autofocus: true, autocomplete: 'email', placeholder: 'Email', required: true %>
@@ -22,6 +23,9 @@
         </div>
         <div class="action">
           <%= form.submit 'Login', class: 'form-submit btn btn-primary' %>
+        </div>
+        <div class="form-links">
+          Not a member? <%= link_to 'Sign up', new_user_session_path, class: 'link-complementary' %> now
         </div>
       <% end %>
     </div>
