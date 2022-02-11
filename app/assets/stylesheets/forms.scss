@@ -12,14 +12,12 @@
     padding: 0 0.5rem;
   }
   
-  &::before, &::after {
+  &::after {
     content: "";
     height: 1px;
     background: $color-complementary-0;
-  }
-
-  &::after {
     flex: 1 1 auto;
+    margin-right: 0.5rem;
   }
 }
 

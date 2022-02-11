@@ -8,12 +8,13 @@
 
 .btn {
   font-weight: 600;
+  transition: background-color 0.25s ease-in;
 
   &-primary {
     background-color: $color-primary-0;
     color: white;
 
-    &:hover {
+    &:hover, &:focus {
       background-color: $color-primary-1;
     }
   }
