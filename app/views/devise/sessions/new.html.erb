@@ -28,6 +28,7 @@
           Not a member? <%= link_to 'Sign up', new_user_registration_path, class: 'link-complementary' %> now
         </div>
 
+        <%# Find a better way of checking if the user is trying to sign in using an unconfirmed email %>
         <% if alert == 'You have to confirm your email address before continuing.' %>
           <hr />
           <div class="form-links">
