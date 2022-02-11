@@ -33,13 +33,13 @@
             <%= form.label :password_confirmation, 'Password again', class: 'form-label' %>
           </div>
           <div class="form-links">
-            By clicking Sign Up, you agree to our <%= link_to 'Terms', terms_path, class: 'link-complementary' %>.
+            By clicking Sign Up, you agree to our <%= link_to 'Terms', terms_path, class: 'link link-complementary' %>.
           </div>
           <div class="action">
             <%= form.submit 'Sign Up', class: 'form-submit btn btn-primary' %>
           </div>
           <div class="form-links">
-          Already a member? <%= link_to 'Login', new_user_session_path, class: 'link-complementary' %> now
+          Already a member? <%= link_to 'Login', new_user_session_path, class: 'link link-complementary' %> now
         </div>
         <% end %>
       </div>

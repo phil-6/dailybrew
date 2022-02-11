@@ -12,19 +12,12 @@
     padding: 0 0.5rem;
   }
   
-  &::before, &::after {
+  &::after {
     content: "";
     height: 1px;
-    width: 4rem;
-    background: $color-brand;
-  }
-
-  &::before {
-    flex: 0 0 20px;
-  }
-
-  &::after {
+    background: $color-complementary-0;
     flex: 1 1 auto;
+    margin-right: 0.5rem;
   }
 }
 
@@ -37,7 +30,7 @@
     padding: 1rem 2rem;
     background-clip: padding-box;
     border: 1px solid $color-mid-1;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.25s, box-shadow 0.25s;
 
     &::placeholder {
       color: transparent;
@@ -58,9 +51,8 @@
       -webkit-box-shadow: 0 0 0 30px white inset !important;
     }
 
-
     &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
-      & + .form-label {
+      & ~ .form-label {
         transform: scale(0.85) translateY(-1.9rem) translateX(0.1rem);
         color: rgba(6,71,99,0.65);
         opacity: 1;
@@ -68,8 +60,19 @@
     }
 
     &:required + .form-label::after {
-      content: "*";
+      content: '*';
     }
+
+    &.invalid {
+      border-color: $danger;
+    }
+  }
+
+  .error-message {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 0 2rem;
+    color: $danger;
   }
 
   .form-label {
@@ -108,10 +111,8 @@
 
 .form-check {
   gap: 0.25rem;
-
-  input {
-    margin-top: 4px;
-  }
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .form-input, .form-submit {
@@ -119,7 +120,7 @@
   height: calc(3.5rem + 2px);
   border-radius: 2rem;
   font-family: $font;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
 
   @media screen and (max-width: $screen-md) {

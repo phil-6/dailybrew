@@ -22,11 +22,9 @@
       <% end %>
     <% end %>
 
-    <% if devise_controller? %>
-      <%= yield %>
-    <% else %>
+    <% unless devise_controller? %>
       <%= render 'shared/navbar' %>
-      <%= yield %>
     <% end %>
+    <%= yield %>
   </body>
 </html>
