@@ -15,12 +15,7 @@
   &::before, &::after {
     content: "";
     height: 1px;
-    width: 4rem;
     background: $color-complementary-0;
-  }
-
-  &::before {
-    flex: 0 0 20px;
   }
 
   &::after {
