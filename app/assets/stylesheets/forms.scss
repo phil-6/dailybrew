@@ -101,7 +101,9 @@
 
 .form-links {
   justify-content: space-between;
-  font-size: 0.9rem;
+  margin: 1rem 0 2rem;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 .form-check {
@@ -110,12 +112,6 @@
   input {
     margin-top: 4px;
   }
-}
-
-.terms {
-  margin: 1rem 0 2rem;
-  font-size: 0.85rem;
-  text-align: center;
 }
 
 .form-input, .form-submit {

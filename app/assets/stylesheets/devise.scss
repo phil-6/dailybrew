@@ -8,6 +8,10 @@
     justify-content: flex-start !important;
   }
 
+  @media screen and (max-width: $screen-sm) {
+    padding: 0;
+  }
+
   .form {
     width: 380px;
 
@@ -16,114 +20,108 @@
     }
   }
 
-  &.registration {
-    background-color: #ecf0f2;
-
-    @media screen and (max-width: $screen-sm) {
-      padding: 0;
+  .card {
+    @media screen and (max-width: $screen-lg) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
 
-    .registration-row {
-      max-width: 1200px;
-      min-height: 800px;
-      width: 100%;
+    @media screen and (max-width: $screen-sm) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border-radius: 0 !important;
+    }
+  }
 
-      @media screen and (max-width: $screen-lg) {
-        flex-direction: column;
-        min-height: fit-content;
-      }
+  .registration {
+    max-width: 1200px;
+    min-height: 800px;
+    width: 100%;
 
-      .column {
-        justify-content: center;
+    @media screen and (max-width: $screen-lg) {
+      flex-direction: column;
+      min-height: fit-content;
+    }
+
+    .column {
+      justify-content: center;
+
+      &:first-child {
+        flex-basis: 60%;
+        align-items: center;
+        background-color: #FFFFFF;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
 
         @media screen and (max-width: $screen-lg) {
-          padding-top: 2rem;
-          padding-bottom: 2rem;
+          border-top-left-radius: 0;
+          border-bottom-right-radius: 2rem;
+          order: 1;
+        }
+      }
+
+      &:last-child {
+        flex-basis: 40%;
+        background-color: $color-primary-0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        @media screen and (max-width: $screen-lg) {
+          order: 0;
+          border-top-left-radius: 2rem;
+          border-bottom-right-radius: 0;
+        }
+      }
+
+      &.brand {
+        gap: 1rem;
+
+        @media screen and (max-width: $screen-lg) {
+          padding-top: 3rem;
+          padding-bottom: 3rem;
         }
 
         @media screen and (max-width: $screen-sm) {
-          padding-left: 1rem;
-          padding-right: 1rem;
-          border-radius: 0 !important;
+          gap: 0.5rem;
         }
 
-        &:first-child {
-          flex-basis: 60%;
-          align-items: center;
-          background-color: #FFFFFF;
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
+        .logo {
+          margin-left: 1rem;
+          text-align: left;
+          text-indent: -1rem;
+          font-size: 10rem;
 
           @media screen and (max-width: $screen-lg) {
-            border-top-left-radius: 0;
-            border-bottom-right-radius: 2rem;
-            order: 1;
+            text-align: center;
+            font-size: 6rem;
           }
-        }
 
-        &:last-child {
-          flex-basis: 40%;
-          background-color: $color-primary-0;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-
-          @media screen and (max-width: $screen-lg) {
-            order: 0;
-            border-top-left-radius: 2rem;
-            border-bottom-right-radius: 0;
-          }
-        }
-
-        &.brand {
-          gap: 1rem;
-
-          @media screen and (max-width: $screen-lg) {
-            padding-top: 3rem;
-            padding-bottom: 3rem;
+          @media screen and (max-width: $screen-md) {
+            font-size: 4.5rem;
           }
 
           @media screen and (max-width: $screen-sm) {
-            gap: 0.5rem;
+            font-size: 3rem;
+          }
+        }
+
+        .tag-line {
+          color: white;
+          opacity: 0.5;
+          font-size: 1rem;
+          text-align: right;
+
+          @media screen and (max-width: $screen-lg) {
+            text-align: center;
+            font-size: 0.9rem;
           }
 
-          .logo {
-            margin-left: 1rem;
-            text-align: left;
-            text-indent: -1rem;
-            font-size: 10rem;
-
-            @media screen and (max-width: $screen-lg) {
-              text-align: center;
-              font-size: 6rem;
-            }
-
-            @media screen and (max-width: $screen-md) {
-              font-size: 4.5rem;
-            }
-
-            @media screen and (max-width: $screen-sm) {
-              font-size: 3rem;
-            }
+          @media screen and (max-width: $screen-md) {
+            font-size: 0.8rem;
           }
 
-          .tag-line {
-            color: white;
-            opacity: 0.5;
-            font-size: 1rem;
-            text-align: right;
-
-            @media screen and (max-width: $screen-lg) {
-              text-align: center;
-              font-size: 0.9rem;
-            }
-
-            @media screen and (max-width: $screen-md) {
-              font-size: 0.8rem;
-            }
-
-            @media screen and (max-width: $screen-sm){
-              font-size: 0.7rem;
-            }
+          @media screen and (max-width: $screen-sm){
+            font-size: 0.7rem;
           }
         }
       }
@@ -131,19 +129,22 @@
   }
 
   &.login {
-    .container {
-      gap: 2rem;
+    
+
+    .column {
+      align-items: center;
       max-width: 720px;
       width: 100%;
-      padding-bottom: 6rem;
-
-      @media screen and (max-width: $screen-lg) {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-      }
 
       .logo {
         color: $color-primary-0;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .form-links:last-child {
+        margin-bottom: 0;
       }
     }
   }
