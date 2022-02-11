@@ -20,11 +20,23 @@
 }
 
 .link {
+  &:hover {
+    cursor: pointer;
+  }
+
   &-primary {
-    color: $color-brand;
+    color: $color-primary-0;
 
     &:hover {
-      color: $color-brand-light;
+      color: $color-primary-1;
+    }
+  }
+
+  &-complementary {
+    color: $color-complementary-0;
+
+    &:hover {
+      color: $color-complementary-2;
     }
   }
 }
