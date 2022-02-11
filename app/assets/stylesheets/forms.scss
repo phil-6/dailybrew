@@ -58,9 +58,8 @@
       -webkit-box-shadow: 0 0 0 30px white inset !important;
     }
 
-
     &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
-      & + .form-label {
+      & ~ .form-label {
         transform: scale(0.85) translateY(-1.9rem) translateX(0.1rem);
         color: rgba(6,71,99,0.65);
         opacity: 1;
@@ -70,6 +69,17 @@
     &:required + .form-label::after {
       content: "*";
     }
+
+    &.invalid {
+      border-color: $danger;
+    }
+  }
+
+  .error-message {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 0 2rem;
+    color: $danger;
   }
 
   .form-label {
@@ -119,7 +129,7 @@
   height: calc(3.5rem + 2px);
   border-radius: 2rem;
   font-family: $font;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
 
   @media screen and (max-width: $screen-md) {

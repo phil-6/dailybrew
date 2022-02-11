@@ -1,5 +1,4 @@
 ActionView::Base.field_error_proc = proc do |html_tag, instance|
-  debugger
   fragment = Nokogiri::HTML.fragment(html_tag)
   field = fragment.at('input,select,textarea')
   error_messages = instance.object.errors.messages
