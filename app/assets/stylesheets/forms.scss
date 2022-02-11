@@ -2,7 +2,30 @@
 
 .form-title {
   margin-bottom: 2rem;
-  color: $color-primary-0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  h2 {
+    color: $color-primary-0;
+    padding: 0 0.5rem;
+  }
+  
+  &::before, &::after {
+    content: "";
+    height: 1px;
+    width: 4rem;
+    background: $color-brand;
+  }
+
+  &::before {
+    flex: 0 0 20px;
+  }
+
+  &::after {
+    flex: 1 1 auto;
+  }
 }
 
 .field {
@@ -120,4 +143,5 @@
 
 input[type="submit" i] {
   border: none;
+  padding: 0;
 }
