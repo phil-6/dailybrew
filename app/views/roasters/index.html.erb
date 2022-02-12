@@ -1,17 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
 <main class="roasters">
-<h1>Roasters</h1>
+  <h1>Roasters</h1>
 
-<div id="roasters">
-  <%== pagy_nav(@pagy) %>
-  <% @roasters.each do |roaster| %>
-    <%= render roaster %>
-    <p>
-      <%= link_to "Show this roaster", roaster %>
-    </p>
-  <% end %>
-</div>
+  <div id="roasters">
+    <%== pagy_nav(@pagy) %>
+    <% @roasters.each do |roaster| %>
+      <%= render roaster %>
+      <p>
+        <%= link_to "Show this roaster", roaster %>
+      </p>
+    <% end %>
+  </div>
 
-<%= link_to "New roaster", new_roaster_path %>
+  <%= link_to "New roaster", new_roaster_path %>
 </main>
