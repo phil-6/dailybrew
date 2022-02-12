@@ -1,8 +1,6 @@
 <nav data-controller="navbar" class="navbar">
   <div class="nav-left">
-    <div class="nav-link nav-link-large">
-      <i class="las la-coffee"></i>
-    </div>
+
   </div>
   <div class="nav-center">
     <div class="nav-brand">
@@ -32,7 +30,7 @@
           <%= render 'shared/navbar_dropdown_links', mobile_only: false %>
         </div>
       </div>
-      <div data-action="click->navbar#expand" class="nav-mobile-expand nav-link nav-link-large link link-secondary">
+      <div data-action="click->navbar#expand" class="nav-mobile-expand nav-link link-secondary">
         <i class="las la-bars"></i>
       </div>
     <% else %>
