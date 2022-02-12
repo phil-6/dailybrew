@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.integer "time"
     t.text "notes"
     t.integer "rating"
+    t.boolean "public", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["coffee_id"], name: "index_brews_on_coffee_id"
@@ -49,6 +50,12 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.text "description"
     t.string "url", null: false
     t.boolean "available"
+    t.integer "favourites_count", default: 0, null: false
+    t.integer "inventories_count", default: 0, null: false
+    t.integer "brews_count", default: 0, null: false
+    t.integer "public_brews_count", default: 0, null: false
+    t.integer "reviews_count", default: 0, null: false
+    t.integer "public_reviews_count", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["roaster_id", "name"], name: "index_coffees_on_roaster_id_and_name", unique: true
@@ -79,7 +86,7 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.bigint "coffee_id", null: false
     t.integer "rating"
     t.text "content"
-    t.boolean "public"
+    t.boolean "public", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["coffee_id"], name: "index_reviews_on_coffee_id"
@@ -97,6 +104,8 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.string "twitter"
     t.string "instagram"
     t.string "facebook"
+    t.integer "coffees_count", default: 0, null: false
+    t.integer "available_coffees_count", default: 0, null: false
     t.datetime "last_coffee_fetch"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -126,6 +135,7 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.string "last_name", default: "", null: false
     t.string "username", default: ""
     t.boolean "subscription_interest", default: false
+    t.boolean "public_profile"
     t.boolean "admin", default: false
     t.string "address_ship_street"
     t.string "address_ship_area"
