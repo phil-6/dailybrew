@@ -1,6 +1,6 @@
 <div id="<%= dom_id coffee %>">
 
-<!--  We can do something really cool and conditional with these.-->
+  <!--  We can do something really cool and conditional with these.-->
   <%#= controller_name %>
   <%#= action_name %>
 
@@ -9,43 +9,16 @@
   </div>
 
   <div class="tasting-notes">
-    <strong>Tasting notes:</strong>
-    <%= coffee.tasting_notes %>
+    <h2>
+      <strong>Tasting notes:</strong>
+      <%= coffee.tasting_notes %>
+    </h2>
   </div>
 
-  <div class="region-details">
-    <div class="country">
-      <strong>Country:</strong>
-      <%= coffee.country %>
-    </div>
-    <div class="region">
-      <strong>Region:</strong>
-      <%= coffee.region %>
-    </div>
-    <div class="town">
-      <strong>Town:</strong>
-      <%= coffee.town %>
-    </div>
-    <div class="altitude">
-      <strong>Altitude:</strong>
-      <%= coffee.altitude %> masl
-    </div>
+  <div class="website">
+    <a href="<%= coffee.url %>" target=_blank>View on <%= coffee.roaster.name %>'s website <i class="las la-external-link-alt"></i></a>
   </div>
 
-  <div class="production-details">
-    <div class="process">
-      <strong>Process:</strong>
-      <%= coffee.process %>
-    </div>
-    <div class="variety">
-      <strong>Variety:</strong>
-      <%= coffee.variety %>
-    </div>
-    <div class="producer">
-      <strong>Producer:</strong>
-      <%= coffee.producer %>
-    </div>
-  </div>
 
   <div class="stats">
     <div class="brews">
@@ -62,15 +35,43 @@
     </div>
   </div>
 
+  <div class="details-container">
+    <div class="details">
+      <h2>Details</h2>
+      <div class="country">
+        <strong>Country:</strong>
+        <%= coffee.country %>
+      </div>
+      <div class="region">
+        <strong>Region:</strong>
+        <%= coffee.region %>
+      </div>
+      <div class="town">
+        <strong>Town:</strong>
+        <%= coffee.town %>
+      </div>
+      <div class="altitude">
+        <strong>Altitude:</strong>
+        <%= coffee.altitude %> masl
+      </div>
+      <div class="process">
+        <strong>Process:</strong>
+        <%= coffee.process %>
+      </div>
+      <div class="variety">
+        <strong>Variety:</strong>
+        <%= coffee.variety %>
+      </div>
+      <div class="producer">
+        <strong>Producer:</strong>
+        <%= coffee.producer %>
+      </div>
+    </div>
+  </div>
 
-  <!--  <p>-->
-  <!--    <strong>Description:</strong>-->
-  <%#= coffee.description %>
-  <!--  </p>-->
 
-  <p>
-    <strong>Url:</strong>
-    <%= coffee.url %>
-  </p>
+  <div class="description">
+    <%= coffee.description.html_safe %>
+  </div>
 
 </div>
