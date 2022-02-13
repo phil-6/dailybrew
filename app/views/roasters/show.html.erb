@@ -22,12 +22,13 @@
 
   <div class="coffees">
     <div class="available">
-    <% @roaster.coffees.available.order('brews_count DESC').each do |coffee| %>
-      <div class="roaster-card">
-        <%= render coffee %>
-        <%= link_to "Show this coffee", coffee %>
-      </div>
-    <% end %>
+      <%= @roaster.name %> has <%= @roaster.available_coffees_count %> coffees available at the moment
+      <% @roaster.coffees.available.order('brews_count DESC').each do |coffee| %>
+        <div class="roaster-card">
+          <%= render coffee %>
+          <%= link_to "Show this coffee", coffee %>
+        </div>
+      <% end %>
     </div>
     <%= link_to "New coffee", new_roaster_coffee_path(@roaster) %>
     <div class="unavailable">
