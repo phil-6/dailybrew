@@ -12,6 +12,7 @@ class CreateBrews < ActiveRecord::Migration[7.0]
       t.integer :time
       t.text :notes
       t.integer :rating
+      t.boolean :public, null: false, default: true
 
       t.timestamps
     end

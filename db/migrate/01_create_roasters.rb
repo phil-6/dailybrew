@@ -11,6 +11,8 @@ class CreateRoasters < ActiveRecord::Migration[7.0]
       t.string :twitter
       t.string :instagram
       t.string :facebook
+      t.integer :coffees_count, null: false, default: 0
+      t.integer :available_coffees_count, null: false, default: 0
       t.datetime :last_coffee_fetch
 
       t.timestamps

@@ -50,7 +50,7 @@ unless User.find_by_email('db_not_admin@purpleriver.dev').present?
     first_name: 'Test',
     last_name: 'Test Not Admin',
     username: 'Not Admin',
-    email: 'rtw_not_admin@purpleriver.dev',
+    email: 'db_not_admin@purpleriver.dev',
     password: 'test1234'
   )
   user.skip_confirmation!

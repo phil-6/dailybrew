@@ -58,13 +58,25 @@
   .nav-right {
     flex: 1;
 
+    .nav-link {
+      font-size: 3rem;
+      padding: 1.6rem 0 1.4rem;
+      margin: 0 0.75rem;
+
+      .la-angle-down {
+        font-size: 1.5rem;
+        margin-left: 0.25rem;
+      }
+
+      &.mobile-only {
+        display: none;
+      }
+    }
+
     .nav-dropdown {
       .dropdown-button {
-        font-size: 1.5rem;
-
         & i:first-child {
-          margin-right: 0.25rem;
-          font-size: 3rem;
+          margin-left: 0.25rem;
         }
       }
 
@@ -81,6 +93,7 @@
           display: block;
           margin: 0 1rem;
           color: $ink;
+          font-size: 1rem;
 
           i {
             font-size: 1.5rem;
@@ -108,15 +121,6 @@
       font-size: 1.5rem;
     }
 
-    .nav-link {
-      font-size: 1rem;
-      padding: 1.6rem 0 1.4rem;
-      margin: 0 0.75rem;
-
-      &.mobile-only {
-        display: none;
-      }
-    }
   }
 }
 
