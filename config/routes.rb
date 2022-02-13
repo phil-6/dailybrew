@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'terms', to: 'pages#terms'
 
   devise_for :users
+  resources :users, only: :show
 
   namespace :admin do
     get 'dashboard'

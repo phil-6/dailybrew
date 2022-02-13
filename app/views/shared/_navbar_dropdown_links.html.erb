@@ -6,6 +6,9 @@
 <%= link_to edit_user_registration_path, class: "nav-link link link-secondary #{mobile_only ? 'mobile-only' : ''}" do %>
   Settings <i class="las la-user-cog"></i>
 <% end %>
+<%= link_to user_path(current_user), class: "nav-link link link-secondary #{mobile_only ? 'mobile-only' : ''}" do %>
+  Profile <i class="las la-id-badge"></i>
+<% end %>
 <%= button_to destroy_user_session_path, method: :delete, class: "nav-link link link-secondary #{mobile_only ? 'mobile-only' : ''}" do %>
   Sign Out <i class="las la-sign-out-alt"></i>
 <% end %>

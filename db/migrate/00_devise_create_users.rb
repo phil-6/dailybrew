@@ -38,7 +38,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       t.string    :last_name, null: false, default: ''
       t.string    :username, default: ''
       t.boolean   :subscription_interest, default: false
-      t.boolean   :public_profile
+      t.boolean   :public_profile, default: false
 
       t.boolean   :admin, default: false
 
@@ -54,6 +54,13 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       t.string    :address_bill_county
       t.string    :address_bill_postcode
       t.string    :address_bill_phone
+
+      t.integer :favourites_count, null: false, default: 0
+      t.integer :inventories_count, null: false, default: 0
+      t.integer :brews_count, null: false, default: 0
+      t.integer :public_brews_count, null: false, default: 0
+      t.integer :reviews_count, null: false, default: 0
+      t.integer :public_reviews_count, null: false, default: 0
 
       t.timestamps null: false
     end

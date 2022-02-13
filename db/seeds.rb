@@ -13,6 +13,7 @@ unless User.find_by_email('phil@purpleriver.dev').present?
     username: 'Phil',
     email: 'phil@purpleriver.dev',
     admin: true,
+    public_profile: true,
     password: 'test1234'
   )
   user.skip_confirmation!
@@ -39,6 +40,7 @@ unless User.find_by_email('garethdandrews@gmail.com').present?
     username: 'Gary',
     email: 'garethdandrews@gmail.com',
     admin: true,
+    public_profile: true,
     password: 'test1234'
   )
   user.skip_confirmation!

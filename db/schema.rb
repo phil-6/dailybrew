@@ -135,7 +135,7 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.string "last_name", default: "", null: false
     t.string "username", default: ""
     t.boolean "subscription_interest", default: false
-    t.boolean "public_profile"
+    t.boolean "public_profile", default: false
     t.boolean "admin", default: false
     t.string "address_ship_street"
     t.string "address_ship_area"
@@ -149,6 +149,12 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.string "address_bill_county"
     t.string "address_bill_postcode"
     t.string "address_bill_phone"
+    t.integer "favourites_count", default: 0, null: false
+    t.integer "inventories_count", default: 0, null: false
+    t.integer "brews_count", default: 0, null: false
+    t.integer "public_brews_count", default: 0, null: false
+    t.integer "reviews_count", default: 0, null: false
+    t.integer "public_reviews_count", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

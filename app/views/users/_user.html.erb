@@ -1,0 +1,31 @@
+<div id="<%= dom_id user %>">
+  <% if user.public_profile %>
+
+    <div class="name">
+      <h1><%= user.display_name %></h1>
+    </div>
+
+    <div class="brews">
+      <h2><%= user.public_brews_count %> brews</h2>
+    </div>
+
+    <div class="reviews">
+      <h2><%= user.public_reviews_count %> reviews</h2>
+    </div>
+
+    <div class="favourites">
+      <h2><%= user.favourites_count %> coffee favourites</h2>
+    </div>
+
+    <div class="inventories">
+      <h2><%= user.inventories_count %> coffee's at home</h2>
+    </div>
+
+
+<% else %>
+
+    <h1> Private Profile </h1>
+  <% end %>
+
+
+</div>
