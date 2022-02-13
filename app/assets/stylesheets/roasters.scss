@@ -86,4 +86,27 @@
       }
     }
   }
+
+  .show-card {
+    max-width: 1000px;
+    margin: 1rem auto;
+    text-align: center;
+
+    .socials {
+      text-align: center;
+
+      a i {
+        font-size: 2rem;
+        color: $ink;
+
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+    }
+
+    .available_coffees, .location {
+      display: none;
+    }
+  }
 }

@@ -1,7 +1,8 @@
 class RoastersController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   before_action :authorize_admin, except: %i[index show]
-  before_action :set_roaster, only: %i[show edit update destroy update_coffees]
+  before_action :set_roaster_with_coffees, only: :show
+  before_action :set_roaster, only: %i[edit update destroy update_coffees]
 
   # GET /roasters or /roasters.json
   def index
@@ -68,6 +69,10 @@ class RoastersController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_roaster
     @roaster = Roaster.find(params[:id])
+  end
+
+  def set_roaster_with_coffees
+    @roaster = Roaster.includes(:coffees).find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.

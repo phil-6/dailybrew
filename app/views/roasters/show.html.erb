@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
 <main class="roasters">
-  <%= render @roaster %>
+  <div class="show-card">
+    <%= render @roaster %>
+  </div>
 
   <div class="controls">
     <% if current_user.admin? %>
@@ -16,8 +18,14 @@
       <%= button_to "Destroy this roaster", @roaster, method: :delete %>
     <% end %>
 
-    <%= link_to "New coffee", new_roaster_coffee_path(@roaster) %>
-
-    <%= link_to "Back to roasters", roasters_path %>
   </div>
+
+  <div class="coffees">
+    <% @roaster.coffees.available.each do |coffee| %>
+      <%= render coffee %>
+      <%= link_to "Show this coffee", coffee %>
+    <% end %>
+    <%= link_to "New coffee", new_roaster_coffee_path(@roaster) %>
+  </div>
+
 </main>
