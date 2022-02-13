@@ -1,5 +1,14 @@
 <div id="<%= dom_id user %>">
-  <% if user.public_profile %>
+
+  <% if user.public_profile || user == current_user %>
+
+    <% if user == current_user %>
+      <div class="admin-controls-container">
+        <div class="admin-controls">
+          <h3>This is your public profile. You can set it to public or private in your user settings.</h3>
+        </div>
+      </div>
+    <% end %>
 
     <div class="name">
       <h1><%= user.display_name %></h1>
@@ -21,11 +30,8 @@
       <h2><%= user.inventories_count %> coffee's at home</h2>
     </div>
 
-
-<% else %>
-
+  <% else %>
     <h1> Private Profile </h1>
   <% end %>
-
 
 </div>
