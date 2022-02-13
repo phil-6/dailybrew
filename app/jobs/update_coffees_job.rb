@@ -2,7 +2,7 @@ class UpdateCoffeesJob < ApplicationJob
   queue_as :default
 
   rescue_from NameError do
-    puts "Scraper not found for this roaster"
+    puts 'Scraper not found for this roaster'
   end
 
   # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
