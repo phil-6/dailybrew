@@ -5,7 +5,17 @@
   <div class="intro">
     <p class="lead">This is a list of <%= @roasters_count %> roasters in the UK. There are more, but we think this is a
       pretty good list! </p>
-    <p>If there is a roaster not on this list, please let us know and we'll get them added!</p>
+    <p>If there is a roaster not on this list, please let us know, and we'll get them added!</p>
+    <% if current_user&.admin %>
+      <div class="admin-controls-container">
+        <div class="admin-controls">
+          <h1>Admin Controls</h1>
+          <%= link_to "New roaster", new_roaster_path %>
+        </div>
+      </div>
+    <% end %>
+    <p>At the moment, we don't have any search functionality. How do you find new roasters to try? Let us know and we'll
+      add that functionality!</p>
   </div>
 
   <div id="roasters">
@@ -20,7 +30,5 @@
     <% end %>
   </div>
 
-  <% if current_user&.admin %>
-    <%= link_to "New roaster", new_roaster_path %>
-  <% end %>
+
 </main>
