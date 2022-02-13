@@ -80,10 +80,19 @@
     .location {
     }
 
-    .website {
+    .website, .roaster-link {
       a {
-        color: $ink;
+        color: $color-secondary;
+
+        &:hover {
+          color: $color-secondary-light;
+        }
       }
+    }
+
+    .roaster-link {
+      font-size: 1.5rem;
+      font-weight: 200;
     }
   }
 

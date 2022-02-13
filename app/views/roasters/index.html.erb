@@ -13,7 +13,9 @@
     <% @roasters.each do |roaster| %>
       <div class="index-card">
         <%= render roaster %>
-        <%= link_to 'Show This Roaster', roaster %>
+        <div class="roaster-link">
+          <%= link_to 'Show This Roaster', roaster %>
+        </div>
       </div>
     <% end %>
   </div>
