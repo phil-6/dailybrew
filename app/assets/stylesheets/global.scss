@@ -171,14 +171,16 @@ body {
   }
 
   .admin-controls-container {
-    display:flex;
+    display: flex;
     justify-content: center;
+
     .admin-controls {
       padding: 2rem 4rem;
       background: repeating-linear-gradient(-40deg, #FE787C15, #FFB47915 10px, #FFB47915 10px, #FE787C15 40px);
       border: 0.2rem dashed #FFB47955;
       border-radius: 1rem;
       text-align: center;
+
       h1 {
         font-size: 1.5rem;
       }

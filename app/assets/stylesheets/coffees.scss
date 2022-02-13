@@ -1,9 +1,11 @@
 @import "variables";
+
 .coffees {
   .summary {
     text-align: center;
     font-weight: 300;
   }
+
   .available {
     display: flex;
     flex-wrap: wrap;
@@ -20,30 +22,37 @@
   background: #9ca8e015;
   box-shadow: 0 0 10px 0 #064763;
   padding: 1rem 2rem 4rem;
-  position:relative;
+  position: relative;
+
   h1 {
     font-size: 2.5rem;
     text-align: center;
   }
+
   h2 {
     font-size: 1.5rem;
     font-weight: 200;
     text-align: center;
   }
+
   a {
     color: $color-secondary;
+
     &:hover {
       color: $color-secondary-light;
     }
   }
+
   .website {
     text-align: center;
   }
-  .details-container{
+
+  .details-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .details{
+
+    .details {
       margin: 1rem auto;
     }
   }
@@ -51,6 +60,7 @@
   .description {
     display: none;
   }
+
   .coffee-link {
     position: absolute;
     bottom: 1rem;

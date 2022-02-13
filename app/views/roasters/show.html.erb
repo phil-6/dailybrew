@@ -23,7 +23,9 @@
   </div>
 
   <div class="coffees">
-    <h2 class="summary"><%= @roaster.name %> has <%= @roaster.available_coffees_count %> coffees available at the moment</h2>
+    <h2 class="summary">
+      <%= @roaster.name %> has <%= @roaster.available_coffees_count %> coffees available at the moment
+    </h2>
     <div class="available">
       <% @roaster.coffees.available.order('brews_count DESC').each do |coffee| %>
         <div class="roaster-card">
