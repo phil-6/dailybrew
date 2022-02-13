@@ -2,16 +2,24 @@
 
 <main class="roasters">
   <h1>Roasters</h1>
+  <div class="intro">
+    <p class="lead">This is a list of <%= @roasters_count %> roasters in the UK. There are more, but we think this is a
+      pretty good list! </p>
+    <p>If there is a roaster not on this list, please let us know and we'll get them added!</p>
+  </div>
 
   <div id="roasters">
     <%== pagy_nav(@pagy) %>
     <% @roasters.each do |roaster| %>
-      <%= render roaster %>
-      <p>
-        <%= link_to "Show this roaster", roaster %>
-      </p>
+      <%= link_to roaster do %>
+        <div class="index-card">
+          <%= render roaster %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 
-  <%= link_to "New roaster", new_roaster_path %>
+  <% if current_user&.admin %>
+    <%= link_to "New roaster", new_roaster_path %>
+  <% end %>
 </main>

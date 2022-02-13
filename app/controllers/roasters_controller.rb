@@ -5,7 +5,8 @@ class RoastersController < ApplicationController
 
   # GET /roasters or /roasters.json
   def index
-    @pagy, @roasters = pagy(Roaster.all.order('available_coffees_count DESC'), items: 5)
+    @roasters_count = Roaster.all.count
+    @pagy, @roasters = pagy(Roaster.all.order('available_coffees_count DESC'), items: 10)
   end
 
   # GET /roasters/1 or /roasters/1.json

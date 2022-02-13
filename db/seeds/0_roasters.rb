@@ -372,8 +372,11 @@ Roaster.create!(
   name: 'Clifton Coffee',
   description: 'Roasters, Green Bean Hunters, La Marzocco & La Spaziale Sales, Skilled Engineers, Trainers, Barista Competition Winners & Coffee Geeks here.',
   location: 'C2, Island Trade Park, Bristow Broadway, Avonmouth, England',
+  lat: 51.50010575104638,
+  lng: -2.690432138440193,
   website: 'www.cliftoncoffee.co.uk',
-  twitter: '@cliftoncoffee'
+  facebook: 'cliftoncoffeeroasters',
+  instagram: 'cliftoncoffee'
 )
 
 Roaster.create!(
@@ -1957,9 +1960,11 @@ Roaster.create!(
   reference: 'workshop_coffee',
   name: 'Workshop Coffee',
   description: 'Dedicated to sourcing, roasting and serving the best coffee possible.',
-  location: '27 Clerkenwell Road, Clerkenwell, London EC1M 5RN',
+  location: '1 Old Street Yard, London, EC1Y 8AF',
   website: 'www.workshopcoffee.com',
-  twitter: '@WorkshopEC1'
+  twitter: '@workshopcoffee',
+  instagram: 'workshopcoffee',
+  facebook: 'workshopcoffeeco'
 )
 
 Roaster.create!(
