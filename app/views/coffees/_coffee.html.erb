@@ -1,68 +1,72 @@
 <div id="<%= dom_id coffee %>">
-  <p>
-    <strong>Roaster:</strong>
-    <%= coffee.roaster_id %>
-  </p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= coffee.name %>
-  </p>
+<!--  We can do something really cool and conditional with these.-->
+  <%#= controller_name %>
+  <%#= action_name %>
 
-  <p>
-    <strong>Country:</strong>
-    <%= coffee.country %>
-  </p>
+  <div class="name">
+    <h1><%= coffee.name %></h1>
+  </div>
 
-  <p>
-    <strong>Region:</strong>
-    <%= coffee.region %>
-  </p>
-
-  <p>
-    <strong>Town:</strong>
-    <%= coffee.town %>
-  </p>
-
-  <p>
-    <strong>Lat:</strong>
-    <%= coffee.lat %>
-  </p>
-
-  <p>
-    <strong>Lng:</strong>
-    <%= coffee.lng %>
-  </p>
-
-  <p>
-    <strong>Process:</strong>
-    <%= coffee.process %>
-  </p>
-
-  <p>
-    <strong>Altitude:</strong>
-    <%= coffee.altitude %>
-  </p>
-
-  <p>
-    <strong>Variety:</strong>
-    <%= coffee.variety %>
-  </p>
-
-  <p>
+  <div class="tasting-notes">
     <strong>Tasting notes:</strong>
     <%= coffee.tasting_notes %>
-  </p>
+  </div>
 
-  <p>
-    <strong>Producer:</strong>
-    <%= coffee.producer %>
-  </p>
+  <div class="region-details">
+    <div class="country">
+      <strong>Country:</strong>
+      <%= coffee.country %>
+    </div>
+    <div class="region">
+      <strong>Region:</strong>
+      <%= coffee.region %>
+    </div>
+    <div class="town">
+      <strong>Town:</strong>
+      <%= coffee.town %>
+    </div>
+    <div class="altitude">
+      <strong>Altitude:</strong>
+      <%= coffee.altitude %> masl
+    </div>
+  </div>
 
-  <p>
-    <strong>Description:</strong>
-    <%= coffee.description %>
-  </p>
+  <div class="production-details">
+    <div class="process">
+      <strong>Process:</strong>
+      <%= coffee.process %>
+    </div>
+    <div class="variety">
+      <strong>Variety:</strong>
+      <%= coffee.variety %>
+    </div>
+    <div class="producer">
+      <strong>Producer:</strong>
+      <%= coffee.producer %>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="brews">
+      <%= coffee.brews_count %> brews logged
+    </div>
+    <div class="inventories">
+      <%= coffee.inventories_count %> people currently have this coffee
+    </div>
+    <div class="favourites">
+      <%= coffee.favourites_count %> people have this saved as one of their favourites
+    </div>
+    <div class="reviews">
+      There are <%= coffee.reviews_count %> reviews of this coffee.
+    </div>
+  </div>
+
+
+  <!--  <p>-->
+  <!--    <strong>Description:</strong>-->
+  <%#= coffee.description %>
+  <!--  </p>-->
 
   <p>
     <strong>Url:</strong>

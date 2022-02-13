@@ -12,4 +12,5 @@ class Coffee < ApplicationRecord
   validates :name, uniqueness: { scope: [:roaster] }
 
   scope :available, -> { where(available: true) }
+  scope :unavailable, -> { where(available: false) }
 end
