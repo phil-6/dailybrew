@@ -71,8 +71,6 @@
     .reference {
     }
 
-    .description {
-    }
 
     .available_coffees {
     }
@@ -101,6 +99,11 @@
         font-size: 2.2rem;
         padding: 0 1rem;
       }
+    }
+
+    .description {
+      font-size: 1.7rem;
+      font-weight: 200;
     }
 
     .available_coffees, .location {
