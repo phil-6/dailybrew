@@ -6,5 +6,7 @@ class CreateInventories < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    add_index :inventories, %i[user coffee], unique: true
   end
 end

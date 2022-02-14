@@ -9,7 +9,7 @@ class Coffee < ApplicationRecord
 
   validates_presence_of :roaster, :name, :country, :tasting_notes, :url
   validates :url, uniqueness: { case_sensitive: false }
-  validates :name, uniqueness: { scope: [:roaster] }
+  validates :name, uniqueness: { scope: :roaster }
 
   scope :available, -> { where(available: true) }
   scope :unavailable, -> { where(available: false) }
