@@ -1,6 +1,8 @@
 <div id="<%= dom_id roaster %>">
 
-  <%#= action_name %>
+  <% if action_name == "index" %>
+    <div class="index-card">
+  <% end %>
 
   <div class="name">
     <h1><%= roaster.name %></h1>
@@ -48,4 +50,10 @@
     <a href="https://<%= roaster.website %>" target=_blank><%= roaster.website %></a>
   </div>
 
+  <% if action_name == "index" %>
+    <div class="roaster-link">
+      <%= link_to 'Show This Roaster', roaster %>
+    </div>
+    </div> <!-- end index-card -->
+  <% end %>
 </div>
