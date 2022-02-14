@@ -10,13 +10,6 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: 200;
-    a {
-      color: $color-secondary;
-
-      &:hover {
-        color: $color-secondary-light;
-      }
-    }
   }
 
   .available {
@@ -46,14 +39,6 @@
     font-size: 1.5rem;
     font-weight: 200;
     text-align: center;
-  }
-
-  a {
-    color: $color-secondary;
-
-    &:hover {
-      color: $color-secondary-light;
-    }
   }
 
   .website {

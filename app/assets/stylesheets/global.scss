@@ -90,6 +90,11 @@ body {
 
   a {
     text-decoration: none;
+    color: $color-secondary;
+
+    &:hover {
+      color: $color-secondary-light;
+    }
   }
 
   b {

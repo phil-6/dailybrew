@@ -81,13 +81,6 @@
     }
 
     .website, .roaster-link {
-      a {
-        color: $color-secondary;
-
-        &:hover {
-          color: $color-secondary-light;
-        }
-      }
     }
 
     .roaster-link {
@@ -105,12 +98,8 @@
       text-align: center;
 
       a i {
-        font-size: 2rem;
-        color: $ink;
-
-        &:hover {
-          color: $color-secondary;
-        }
+        font-size: 2.2rem;
+        padding: 0 1rem;
       }
     }
 
