@@ -1,59 +1,57 @@
 <div id="<%= dom_id roaster %>">
+  <div class="<%= action_name %>-card">
 
-  <% if action_name == "index" %>
-    <div class="index-card">
-  <% end %>
-
-  <div class="name">
-    <h1><%= roaster.name %></h1>
-  </div>
-  <div class="socials">
-    <a href="https://www.google.com/maps/?q=<%= roaster.name %>, <%= roaster.location %>" target=_blank><i class="las la-map-marked-alt"></i></a>
-
-    <a href="https://<%= roaster.website %>"><i class="las la-link"></i></a>
-
-    <% if roaster.twitter %>
-      <a href="https://twitter.com/<%= roaster.twitter %>" target=_blank><i class="lab la-twitter"></i></a>
-    <% end %>
-
-    <% if roaster.instagram %>
-      <a href="https://instagram.com/<%= roaster.instagram %>" target=_blank><i class="lab la-instagram"></i></a>
-    <% end %>
-
-    <% if roaster.facebook %>
-      <a href="https://facebook.com/<%= roaster.facebook %>" target=_blank><i class="lab la-facebook-square"></i></a>
-    <% end %>
-  </div>
-
-  <% if current_user&.admin %>
-    <div class="reference">
-      <strong>Reference:</strong>
-      <%= roaster.reference %>
+    <div class="name">
+      <h1><%= roaster.name %></h1>
     </div>
-  <% end %>
+    <div class="socials">
+      <a href="https://www.google.com/maps/?q=<%= roaster.name %>, <%= roaster.location %>" target=_blank><i class="las la-map-marked-alt"></i></a>
 
-  <div class="description">
-    <%= roaster.description %>
-  </div>
+      <a href="https://<%= roaster.website %>"><i class="las la-link"></i></a>
 
-  <div class="available_coffees">
-    <strong>Number of Coffees:</strong>
-    <%= roaster.available_coffees_count %>
-  </div>
+      <% if roaster.twitter %>
+        <a href="https://twitter.com/<%= roaster.twitter %>" target=_blank><i class="lab la-twitter"></i></a>
+      <% end %>
 
-  <div class="location">
-    <strong>Location:</strong>
-    <%= roaster.location %>
-  </div>
+      <% if roaster.instagram %>
+        <a href="https://instagram.com/<%= roaster.instagram %>" target=_blank><i class="lab la-instagram"></i></a>
+      <% end %>
 
-  <div class="website">
-    <a href="https://<%= roaster.website %>" target=_blank><%= roaster.website %></a>
-  </div>
-
-  <% if action_name == "index" %>
-    <div class="roaster-link">
-      <%= link_to 'Show This Roaster', roaster %>
+      <% if roaster.facebook %>
+        <a href="https://facebook.com/<%= roaster.facebook %>" target=_blank><i class="lab la-facebook-square"></i></a>
+      <% end %>
     </div>
-    </div> <!-- end index-card -->
-  <% end %>
+
+    <% if current_user&.admin %>
+      <div class="reference">
+        <strong>Reference:</strong>
+        <%= roaster.reference %>
+      </div>
+    <% end %>
+
+    <div class="description">
+      <%= roaster.description %>
+    </div>
+
+    <div class="available_coffees">
+      <strong>Number of Coffees:</strong>
+      <%= roaster.available_coffees_count %>
+    </div>
+
+    <div class="location">
+      <strong>Location:</strong>
+      <%= roaster.location %>
+    </div>
+
+    <div class="website">
+      <a href="https://<%= roaster.website %>" target=_blank><%= roaster.website %></a>
+    </div>
+
+    <% if action_name == "index" %>
+      <div class="roaster-link">
+        <%= link_to 'Show This Roaster', roaster %>
+      </div>
+    <% end %>
+
+  </div> <!-- end #{action-name}-card -->
 </div>

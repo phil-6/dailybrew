@@ -6,6 +6,19 @@
     font-weight: 300;
   }
 
+  .add-coffee {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 200;
+    a {
+      color: $color-secondary;
+
+      &:hover {
+        color: $color-secondary-light;
+      }
+    }
+  }
+
   .available {
     display: flex;
     flex-wrap: wrap;
