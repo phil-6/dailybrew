@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <div class="coffees">
+  <div class="roaster-coffees">
     <h2 class="summary">
       <%= @roaster.name %> has <%= @roaster.available_coffees_count %> coffees available at the moment
     </h2>
@@ -35,7 +35,7 @@
 
     <div class="unavailable">
       <% @unavailable_coffees.each do |coffee| %>
-        <div class="roaster-card" style="border:1px dashed rebeccapurple">
+        <div class="card" style="border:1px dashed rebeccapurple">
           <%= render coffee %>
         </div>
       <% end %>
