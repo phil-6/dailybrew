@@ -1,0 +1,17 @@
+@import "variables";
+
+.coffees-show {
+  .name {
+    margin: auto;
+    max-width: 1000px;
+    text-align: center;
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-family: $heading-font;
+    }
+  }
+
+}
