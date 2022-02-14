@@ -72,7 +72,9 @@ class RoastersController < ApplicationController
   end
 
   def set_roaster_with_coffees
-    @roaster = Roaster.includes(:coffees).find(params[:id])
+    @roaster = Roaster.find(params[:id])
+    @available_coffees = @roaster.coffees.available.order('brews_count DESC')
+    @unavailable_coffees = @roaster.coffees.unavailable.order('brews_count DESC')
   end
 
   # Only allow a list of trusted parameters through.

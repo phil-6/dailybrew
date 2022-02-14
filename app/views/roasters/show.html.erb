@@ -27,18 +27,13 @@
       <%= @roaster.name %> has <%= @roaster.available_coffees_count %> coffees available at the moment
     </h2>
     <div class="available">
-      <% @roaster.coffees.available.order('brews_count DESC').each do |coffee| %>
-        <div class="roaster-card">
-          <%= render coffee %>
-          <div class="coffee-link">
-            <%= link_to "Show this coffee", coffee %>
-          </div>
-        </div>
-      <% end %>
+
+      <%= render partial: "coffees/roaster_coffee_card", collection: @available_coffees , as: :coffee %>
+
     </div>
     <%= link_to "New coffee", new_roaster_coffee_path(@roaster) %>
     <div class="unavailable">
-      <% @roaster.coffees.unavailable.each do |coffee| %>
+      <% @unavailable_coffees.each do |coffee| %>
         <div class="roaster-card" style="border:1px dashed rebeccapurple">
           <%= render coffee %>
         </div>
