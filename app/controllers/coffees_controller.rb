@@ -8,9 +8,7 @@ class CoffeesController < ApplicationController
   end
 
   # GET /coffees/1 or /coffees/1.json
-  def show
-    @average_brew_rating = @coffee.brews.visible.average(:rating).round
-  end
+  def show; end
 
   # GET /coffees/new
   def new

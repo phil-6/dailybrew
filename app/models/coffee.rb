@@ -24,4 +24,8 @@ class Coffee < ApplicationRecord
   def unique_brewers_count
     unique_brewers.count
   end
+
+  def average_brew_rating
+    brews.average(:rating).round
+  end
 end

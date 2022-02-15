@@ -7,6 +7,4 @@ class Brew < ApplicationRecord
   counter_culture :coffee, column_name: proc { |model| model.public? ? 'public_brews_count' : nil }
 
   scope :visible, -> { where(public: true) }
-
-  def
 end
