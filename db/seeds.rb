@@ -136,7 +136,8 @@ User.all.each do |user|
 
   user.shelf_items.each do |shelf|
     puts "Shelf Item: #{shelf.id}"
-    rand(2..20).times do
+    rand(2..30).times do
+      public = [true, true, true, false].sample
       puts "Create Brew"
       user.brews.create!(
         coffee: shelf.coffee,
@@ -149,6 +150,7 @@ User.all.each do |user|
         time: time,
         notes: Faker::Hipster.paragraph,
         rating: rand(0..10),
+        public: public,
         created_at: Faker::Time.between_dates(from: 1.months.ago.to_date , to: Date.today, period: :morning)
       )
     end
