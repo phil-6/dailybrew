@@ -59,6 +59,18 @@ unless User.find_by_email('db_not_admin@purpleriver.dev').present?
   user.save!
 end
 
+10.times do
+  user = User.new(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    username: Faker::Coffee.blend_name,
+    email: Faker::Internet.email,
+    password: 'test1234'
+  )
+  user.skip_confirmation!
+  user.save!
+end
+
 # seed Roasters and Coffees from /seeds/*
 Dir[File.join(Rails.root, 'db', 'seeds', '*.rb')].sort.each { |seed| load seed }
 
@@ -67,27 +79,26 @@ User.all.each do |user|
   puts "User: #{user.id}"
   rand(1..10).times do
     puts "Create Favourite"
-    user.inventories.create!(
+    user.favourites.create(
       coffee: Coffee.all.sample
     )
   end
 end
 
-puts "Add between 1 and 6 random coffees to the user's inventory"
+puts "Add between 2 and 7 random coffees to the user's shelf"
 User.all.each do |user|
   puts "User: #{user.id}"
-  rand(1..6).times do
-    puts "Create Inventory"
-    user.inventories.create!(
+  rand(2..7).times do
+    puts "Create Shelf Items"
+    user.shelf_items.create(
       coffee: Coffee.all.sample
     )
   end
 end
 
-puts "Create between brews for each of the user's favourites and inventory"
+puts "Create some brews for each of the user's favourites and shelf"
 clifton_house = Coffee.find(9)
 User.all.each do |user|
-  notes = ["Draw down was a bit fast", "This one was pretty great, managed to get the technique spot on", "I think something wasn't quite right with this one", "Took ages to filter"].sample
   if user.id == 1
     equipment = "V60"
     grinder = "Fellow Ode"
@@ -105,7 +116,7 @@ User.all.each do |user|
   puts "User: #{user.id}"
   user.favourites.each do |favourite|
     puts "Favourite: #{favourite.id}"
-    rand(2..20).times do
+    rand(5..20).times do
       puts "Create Brew"
       user.brews.create!(
         coffee: favourite.coffee,
@@ -116,19 +127,19 @@ User.all.each do |user|
         grinder: grinder,
         grinder_setting: grind_setting,
         time: time,
-        notes: notes,
-        rating: rand(0..10),
+        notes: Faker::Hipster.paragraph,
+        rating: rand(4..10),
         created_at: Faker::Time.between_dates(from: 6.months.ago.to_date , to: 1.month.ago.to_date, period: :morning)
       )
     end
   end
 
-  user.inventories.each do |inventory|
-    puts "Inventory: #{inventory.id}"
+  user.shelf_items.each do |shelf|
+    puts "Shelf Item: #{shelf.id}"
     rand(2..20).times do
       puts "Create Brew"
       user.brews.create!(
-        coffee: inventory.coffee,
+        coffee: shelf.coffee,
         equipment: equipment,
         method: method,
         coffee_weight: 15,
@@ -136,14 +147,14 @@ User.all.each do |user|
         grinder: grinder,
         grinder_setting: grind_setting,
         time: time,
-        notes: notes,
+        notes: Faker::Hipster.paragraph,
         rating: rand(0..10),
         created_at: Faker::Time.between_dates(from: 1.months.ago.to_date , to: Date.today, period: :morning)
       )
     end
   end
 
-  puts "create brews for Clifton House Filter"
+  puts "Create Brews for Clifton House Filter"
   rand(2..5).times do
     puts "Create Brew"
     user.brews.create!(
@@ -157,7 +168,7 @@ User.all.each do |user|
       time: 120,
       notes: "Staple, can't go wrong with this",
       rating: 8,
-      created_at: Faker::Time.between_dates(from: 6.months.ago.to_date , to: 1.month.ago.to_date, period: :morning)
+      created_at: Faker::Time.between_dates(from: 6.months.ago.to_date , to: Date.today, period: :morning)
     )
   end
 end

@@ -7,14 +7,14 @@
   <h3>Do Something Else</h3>
 </div>
 
-<div class="inventory">
-  <h1><%= link_to "Your Inventory", inventories_path %></h1>
-  <% @inventories.each do |item| %>
-  <div class="inventory-item">
-    <h3><%= item.coffee.name %></h3>
-    <h3>By <%= item.coffee.roaster.name %></h3>
+<div class="shelf">
+  <h1><%= link_to "Your Shelf", shelf_items_path %></h1>
+  <% @shelf_items.each do |coffee| %>
+  <div class="shelf-item">
+    <h3><%= coffee.name %></h3>
+    <h3>By <%= coffee.roaster.name %></h3>
     <hr>
-    <p><%= current_user.brews.where(coffee: item.coffee).count %> brews logged</p>
+    <p><%= current_user.brews.where(coffee: coffee).count %> brews logged</p>
     <p><% link_to new_brew_path do %><i class="las la-coffee"></i> Make a Brew<% end %></p>
     <p><i class="las la-history"></i>View Brews</p>
   </div>
@@ -35,13 +35,13 @@
 
 <div class="favourites">
   <h1><%= link_to "Your Favourites", favourites_path %></h1>
-  <% @favourites.each do |item| %>
+  <% @favourites.each do |coffee| %>
     <div class="favourite-item">
-      <h3><%= item.coffee.name %></h3>
-      <h3>By <%= item.coffee.roaster.name %></h3>
+      <h3><%= coffee.name %></h3>
+      <h3>By <%= coffee.roaster.name %></h3>
       <hr>
-      <p><%= current_user.brews.where(coffee: item.coffee).count %> brews logged</p>
-      <p><%= current_user.brews.where(coffee: item.coffee).average_rating.round %>/10 Average</p>
+      <p><%= current_user.brews.where(coffee: coffee).count %> brews logged</p>
+      <p><%= current_user.brews.where(coffee: coffee).average(:rating).round %>/10 Average</p>
     </div>
   <% end %>
 </div>

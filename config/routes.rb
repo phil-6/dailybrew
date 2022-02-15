@@ -18,6 +18,6 @@ Rails.application.routes.draw do
   end
   resources :coffees, only: :index
   resources :brews
-  resources :inventories
+  resources :shelf_items
   resources :favourites
 end

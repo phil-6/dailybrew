@@ -36,7 +36,7 @@ rails g scaffold Brew user:belongs_to coffee:belongs_to equipment:string method:
 
 rails g model Review user:belongs_to coffee:belongs_to rating:integer content:text public:boolean -t rspec --no-jbuilder; rails g controller Reviews -t rspec
 
-rails g model Inventory user:belongs_to coffee:belongs_to -t rspec --no-jbuilder; rails g controller Inventories -t rspec
+rails g model Shelf user:belongs_to coffee:belongs_to -t rspec --no-jbuilder; rails g controller shelf_items -t rspec
 
 rails g model Favourite user:belongs_to coffee:belongs_to -t rspec --no-jbuilder; rails g controller Favourites -t rspec
 

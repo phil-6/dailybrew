@@ -17,7 +17,7 @@ class CreateCoffees < ActiveRecord::Migration[7.0]
       t.string :url, null: false
       t.boolean :available
       t.integer :favourites_count, null: false, default: 0
-      t.integer :inventories_count, null: false, default: 0
+      t.integer :shelf_items_count, null: false, default: 0
       t.integer :brews_count, null: false, default: 0
       t.integer :public_brews_count, null: false, default: 0
       t.integer :reviews_count, null: false, default: 0

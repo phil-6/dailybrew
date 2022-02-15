@@ -51,7 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.string "url", null: false
     t.boolean "available"
     t.integer "favourites_count", default: 0, null: false
-    t.integer "inventories_count", default: 0, null: false
+    t.integer "shelf_items_count", default: 0, null: false
     t.integer "brews_count", default: 0, null: false
     t.integer "public_brews_count", default: 0, null: false
     t.integer "reviews_count", default: 0, null: false
@@ -69,16 +69,8 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["coffee_id"], name: "index_favourites_on_coffee_id"
+    t.index ["user_id", "coffee_id"], name: "index_favourites_on_user_id_and_coffee_id", unique: true
     t.index ["user_id"], name: "index_favourites_on_user_id"
-  end
-
-  create_table "inventories", force: :cascade do |t|
-    t.uuid "user_id", null: false
-    t.bigint "coffee_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["coffee_id"], name: "index_inventories_on_coffee_id"
-    t.index ["user_id"], name: "index_inventories_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -111,6 +103,16 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.datetime "updated_at", null: false
     t.index ["reference"], name: "index_roasters_on_reference", unique: true
     t.index ["website"], name: "index_roasters_on_website", unique: true
+  end
+
+  create_table "shelf_items", force: :cascade do |t|
+    t.uuid "user_id", null: false
+    t.bigint "coffee_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["coffee_id"], name: "index_shelf_items_on_coffee_id"
+    t.index ["user_id", "coffee_id"], name: "index_shelf_items_on_user_id_and_coffee_id", unique: true
+    t.index ["user_id"], name: "index_shelf_items_on_user_id"
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -150,7 +152,7 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.string "address_bill_postcode"
     t.string "address_bill_phone"
     t.integer "favourites_count", default: 0, null: false
-    t.integer "inventories_count", default: 0, null: false
+    t.integer "shelf_items_count", default: 0, null: false
     t.integer "brews_count", default: 0, null: false
     t.integer "public_brews_count", default: 0, null: false
     t.integer "reviews_count", default: 0, null: false
@@ -168,8 +170,8 @@ ActiveRecord::Schema[7.0].define(version: 6) do
   add_foreign_key "coffees", "roasters"
   add_foreign_key "favourites", "coffees"
   add_foreign_key "favourites", "users"
-  add_foreign_key "inventories", "coffees"
-  add_foreign_key "inventories", "users"
   add_foreign_key "reviews", "coffees"
   add_foreign_key "reviews", "users"
+  add_foreign_key "shelf_items", "coffees"
+  add_foreign_key "shelf_items", "users"
 end

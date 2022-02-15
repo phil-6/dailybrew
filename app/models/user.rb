@@ -8,8 +8,10 @@ class User < ApplicationRecord
          :lockable
   has_many :brews
   has_many :reviews
-  has_many :inventories, dependent: :destroy
+  has_many :shelf_items, dependent: :destroy
+  has_many :shelf_coffees, through: :shelf_items, source: :coffee
   has_many :favourites, dependent: :destroy
+  has_many :favourite_coffees, through: :favourites, source: :coffee
 
   validates_presence_of :email, :username, :password
   validates :email, uniqueness: { case_sensitive: false }
