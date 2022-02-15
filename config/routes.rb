@@ -19,5 +19,8 @@ Rails.application.routes.draw do
   resources :coffees, only: :index
   resources :brews
   resources :shelf_items
-  resources :favourites
+
+  post 'favourites/:coffee_id', to: 'favourites#create', as: 'create_favourite'
+  delete 'favourites/:coffee_id', to: 'favourites#destroy', as: 'delete_favourite'
+
 end

@@ -1,0 +1,4 @@
+<%= turbo_stream.replace(
+      "favourite_#{dom_id(@coffee)}",
+      partial: "favourite",
+      locals: {coffee: @coffee, favourite: true}) %>

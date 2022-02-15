@@ -1,0 +1,11 @@
+<div id="favourite_<%= dom_id(@coffee) %>">
+  <% if current_user&.favourites.find_by(coffee: @coffee) %>
+    <%= button_to delete_favourite_path(@coffee), method: :delete do %>
+      <i class="las la-heart"></i> Remove Favourite
+    <% end %>
+  <% else %>
+    <%= button_to create_favourite_path(@coffee), method: :post do %>
+      <i class="lar la-heart"></i> Add Favourite
+    <% end %>
+  <% end %>
+</div>

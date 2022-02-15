@@ -9,6 +9,10 @@
     <h2>by <%= link_to coffee.roaster.name, roaster_path(coffee.roaster) %></h2>
   </div>
 
+  <div class="controls">
+    <%= render 'favourites/favourite'%>
+  </div>
+
   <div class="details-container" style="display:none;">
     <div class="details card">
       <h2>Details</h2>
