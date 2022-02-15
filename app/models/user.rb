@@ -7,6 +7,7 @@ class User < ApplicationRecord
          :confirmable, :timeoutable, :trackable,
          :lockable
   has_many :brews
+  has_many :brewed_coffees, through: :brews, source: :coffee
   has_many :reviews
   has_many :shelf_items, dependent: :destroy
   has_many :shelf_coffees, through: :shelf_items, source: :coffee

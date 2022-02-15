@@ -3,6 +3,7 @@ class Coffee < ApplicationRecord
   counter_culture :roaster
   counter_culture :roaster, column_name: proc { |model| model.available? ? 'available_coffees_count' : nil }
   has_many :brews
+  has_many :brewers, through: :brews, source: :user
   has_many :reviews
   has_many :shelf_items
   has_many :current_users, through: :shelf_items, source: :user
