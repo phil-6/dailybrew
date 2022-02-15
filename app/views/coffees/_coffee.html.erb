@@ -58,7 +58,7 @@
       This has been brewed <%= coffee.brews_count %> times by <%= coffee.unique_brewers_count %> people
     </div>
     <div class="brew_rating">
-      The average rating is <%= coffee.brews.visible.average(:rating).round %>/10
+      The average rating is <%= @average_brew_rating %>/10
     </div>
   </div>
 
@@ -67,7 +67,7 @@
       You have brewed this coffee <%= current_user.brews.where(coffee: coffee).count %> times
     </div>
     <div class="brew_rating">
-      Your average rating is <%= current_user.brews.where(coffee: coffee).average(:rating).round %>/10
+      Your average rating is <%= current_user.average_brew_rating(coffee) %>/10
     </div>
   </div>
 

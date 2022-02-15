@@ -28,4 +28,8 @@ class User < ApplicationRecord
   def unique_brewed_coffees_count
     unique_brewed_coffees.count
   end
+
+  def average_brew_rating(coffee)
+    brews.where(coffee: coffee).average(:rating).round
+  end
 end
