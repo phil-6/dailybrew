@@ -60,10 +60,23 @@
   </div>
 
   <div class="user-stats">
-
+    <div class="brews">
+      You have brewed this coffee <%= current_user.brews.where(coffee: coffee).count %> times
+    </div>
   </div>
 
+  <div class="recent_brews">
+    <h3>Recent Brews</h3>
+    <% coffee.brews.visible.last(10).each do |brew| %>
+      <!-- consider moving this to a partial, this should be live updating -->
+      <div class="brew card">
+        <% brew.attributes.each do |a| %>
+          <p><%= a[0] %>: <%= a[1] %></p>
+        <% end %>
+      </div>
+    <% end %>
 
+  </div>
 
   <hr>
 
