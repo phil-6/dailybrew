@@ -16,4 +16,12 @@ class Coffee < ApplicationRecord
 
   scope :available, -> { where(available: true) }
   scope :unavailable, -> { where(available: false) }
+
+  def unique_brewers
+    brewers.distinct
+  end
+
+  def unique_brewers_count
+    unique_brewers.count
+  end
 end

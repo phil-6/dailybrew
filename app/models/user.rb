@@ -20,4 +20,12 @@ class User < ApplicationRecord
   def display_name
     username || first_name
   end
+
+  def unique_brewed_coffees
+    brewed_coffees.distinct
+  end
+
+  def unique_brewed_coffees_count
+    unique_brewed_coffees.count
+  end
 end
