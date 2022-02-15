@@ -67,13 +67,15 @@
 
   <div class="recent_brews">
     <h3>Recent Brews</h3>
+    <hr>
     <% coffee.brews.visible.last(10).each do |brew| %>
       <!-- consider moving this to a partial, this should be live updating -->
-      <div class="brew card">
+      <div class="brew">
         <% brew.attributes.each do |a| %>
           <p><%= a[0] %>: <%= a[1] %></p>
         <% end %>
       </div>
+      <hr>
     <% end %>
 
   </div>
