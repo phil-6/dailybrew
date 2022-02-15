@@ -9,11 +9,66 @@
     <h2>by <%= link_to coffee.roaster.name, roaster_path(coffee.roaster) %></h2>
   </div>
 
+  <div class="details-container" style="display:none;">
+    <div class="details card">
+      <h2>Details</h2>
+      <div class="country">
+        <strong>Country:</strong>
+        <%= coffee.country %>
+      </div>
+      <div class="region">
+        <strong>Region:</strong>
+        <%= coffee.region %>
+      </div>
+      <div class="town">
+        <strong>Town:</strong>
+        <%= coffee.town %>
+      </div>
+      <div class="altitude">
+        <strong>Altitude:</strong>
+        <%= coffee.altitude %> masl
+      </div>
+      <div class="process">
+        <strong>Process:</strong>
+        <%= coffee.process %>
+      </div>
+      <div class="variety">
+        <strong>Variety:</strong>
+        <%= coffee.variety %>
+      </div>
+      <div class="producer">
+        <strong>Producer:</strong>
+        <%= coffee.producer %>
+      </div>
+      <div class="description">
+        <strong>Description:</strong>
+        <%= coffee.description.html_safe %>
+      </div>
+    </div>
+  </div>
+
+  <div class="global-stats">
+    <div class="favourites">
+      <%= coffee.favourites_count %> users have this as a favourite
+    </div>
+    <div class="current_users">
+      <%= coffee.shelf_items_count %> users currently have this on their shelf
+    </div>
+    <div class="brews">
+      This has been brewed<%= coffee.brews_count %> times
+    </div>
+  </div>
+
+  <div class="user-stats">
+
+  </div>
+
+
 
   <hr>
 
-  <%# coffee.attributes.each do |a| %>
-<!--    <p><%#= a[0] %>: <%#= a[1] %></p>-->
-  <%# end %>
+  <% coffee.attributes.each do |a| %>
+    <p><%= a[0] %>: <%= a[1] %></p>
+  <% end %>
 
 </div>
