@@ -138,7 +138,7 @@ User.all.each do |user|
     puts "Shelf Item: #{shelf.id}"
     rand(2..30).times do
       public = [true, true, true, false].sample
-      puts "Create Brew"
+      puts "Create Brew // Public:#{public}"
       user.brews.create!(
         coffee: shelf.coffee,
         equipment: equipment,
