@@ -1,4 +1,4 @@
-<div id="favourite_<%= dom_id(@coffee) %>">
+<div id="favourite_toggle_<%= dom_id(@coffee) %>">
   <% if current_user&.favourites.find_by(coffee: @coffee) %>
     <%= button_to delete_favourite_path(@coffee), method: :delete do %>
       <i class="las la-heart"></i> Remove Favourite
