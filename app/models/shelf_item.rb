@@ -4,5 +4,15 @@ class ShelfItem < ApplicationRecord
   counter_culture :user
   counter_culture :coffee
 
-  validates :coffee, uniqueness: {scope: :user_id}
+  validates :coffee, uniqueness: { scope: :user_id }
+
+  after_commit do
+    broadcast_update_to(
+      'shelf_items',
+      partial: 'shelf_items/shelf_items_count',
+      target: "shelf_items_count_coffee_#{coffee.id}",
+      plain: ShelfItem.where(coffee: coffee).count,
+      locals: { coffee: coffee }
+    )
+  end
 end

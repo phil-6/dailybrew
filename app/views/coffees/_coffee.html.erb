@@ -11,6 +11,7 @@
 
   <div class="controls">
     <%= render 'favourites/favourite_toggle', coffee: coffee %>
+    <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
   </div>
 
   <div class="details-container" style="display:none;">
@@ -57,7 +58,8 @@
       users have this as a favourite
     </div>
     <div class="current_users">
-      <%= coffee.shelf_items_count %> users currently have this on their shelf
+      <%= render 'shelf_items/shelf_items_count', coffee: coffee %>
+      users currently have this on their shelf
     </div>
     <div class="brews">
       This has been brewed <%= coffee.brews_count %> times by <%= coffee.unique_brewers_count %> people
