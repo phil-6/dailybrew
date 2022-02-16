@@ -4,7 +4,7 @@ class ShelfItemsController < ApplicationController
     @coffee = @shelf_item.coffee
 
     respond_to do |format|
-      format.turbo_stream
+      format.turbo_stream { render 'toggle' }
     end
   end
 
@@ -14,7 +14,7 @@ class ShelfItemsController < ApplicationController
     @shelf_item.destroy
 
     respond_to do |format|
-      format.turbo_stream
+      format.turbo_stream { render 'toggle' }
     end
   end
 end
