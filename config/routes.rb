@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   get 'subscription', to: 'pages#subscription'
   get 'terms', to: 'pages#terms'
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations' }
   resources :users, only: :show
+
+  devise_scope :user do
+    patch '/update_subscription_interest', to: 'registrations#update_subscription_interest', as: 'update_subscription_interest'
+  end
 
   namespace :admin do
     get 'dashboard'

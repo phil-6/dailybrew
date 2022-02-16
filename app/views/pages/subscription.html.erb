@@ -5,7 +5,7 @@
 
   <section class="sub-switch">
     <% if current_user %>
-      <h2>TODO: Add a form to update user.subscription_interest</h2>
+      <%= render 'subscription_interest_toggle' %>
     <% else %>
       <h3>You need to <%= link_to "sign up", new_user_registration_path %>
         or <%= link_to "sign in", new_user_session_path %> before you can register your interest.</h3>

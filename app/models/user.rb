@@ -14,7 +14,7 @@ class User < ApplicationRecord
   has_many :favourites, dependent: :destroy
   has_many :favourite_coffees, through: :favourites, source: :coffee
 
-  validates_presence_of :email, :username, :password
+  validates_presence_of :email
   validates :email, uniqueness: { case_sensitive: false }
 
   def display_name
