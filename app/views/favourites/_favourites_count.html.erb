@@ -1,0 +1,5 @@
+<%= turbo_stream_from "favourites" %>
+<span id="favourites_count_<%= dom_id(coffee) %>">
+        <%= coffee.favourites.count %>
+</span>
+

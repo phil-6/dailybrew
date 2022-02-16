@@ -10,7 +10,7 @@
   </div>
 
   <div class="controls">
-    <%= render 'favourites/favourite'%>
+    <%= render 'favourites/favourite_toggle', coffee: coffee %>
   </div>
 
   <div class="details-container" style="display:none;">
@@ -53,7 +53,8 @@
 
   <div class="global-stats">
     <div class="favourites">
-      <%= coffee.favourites_count %> users have this as a favourite
+      <%= render 'favourites/favourites_count', coffee: coffee %>
+      users have this as a favourite
     </div>
     <div class="current_users">
       <%= coffee.shelf_items_count %> users currently have this on their shelf
