@@ -8,7 +8,7 @@ class Favourite < ApplicationRecord
 
   after_commit do
     broadcast_update_to(
-      'favourites',
+      'favourites_count',
       partial: 'favourites/favourites_count',
       target: "favourites_count_coffee_#{coffee.id}",
       plain: Favourite.where(coffee:).count,

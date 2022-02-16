@@ -8,7 +8,7 @@ class ShelfItem < ApplicationRecord
 
   after_commit do
     broadcast_update_to(
-      'shelf_items',
+      'shelf_items_count',
       partial: 'shelf_items/shelf_items_count',
       target: "shelf_items_count_coffee_#{coffee.id}",
       plain: ShelfItem.where(coffee:).count,
