@@ -1,5 +1,4 @@
 class ShelfItemsController < ApplicationController
-
   def create
     @shelf_item = ShelfItem.create(user: current_user, coffee_id: params[:coffee_id])
     @coffee = @shelf_item.coffee
@@ -18,5 +17,4 @@ class ShelfItemsController < ApplicationController
       format.turbo_stream
     end
   end
-
 end

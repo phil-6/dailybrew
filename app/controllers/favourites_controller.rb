@@ -1,5 +1,4 @@
 class FavouritesController < ApplicationController
-
   def create
     @favourite = Favourite.create(user: current_user, coffee_id: params[:coffee_id])
     @coffee = @favourite.coffee
@@ -18,5 +17,4 @@ class FavouritesController < ApplicationController
       format.turbo_stream
     end
   end
-
 end

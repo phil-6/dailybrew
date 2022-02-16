@@ -11,8 +11,8 @@ class Favourite < ApplicationRecord
       'favourites',
       partial: 'favourites/favourites_count',
       target: "favourites_count_coffee_#{coffee.id}",
-      plain: Favourite.where(coffee: coffee).count,
-      locals: { coffee: coffee }
+      plain: Favourite.where(coffee:).count,
+      locals: { coffee: }
     )
   end
 end

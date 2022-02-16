@@ -11,8 +11,8 @@ class ShelfItem < ApplicationRecord
       'shelf_items',
       partial: 'shelf_items/shelf_items_count',
       target: "shelf_items_count_coffee_#{coffee.id}",
-      plain: ShelfItem.where(coffee: coffee).count,
-      locals: { coffee: coffee }
+      plain: ShelfItem.where(coffee:).count,
+      locals: { coffee: }
     )
   end
 end
