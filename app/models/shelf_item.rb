@@ -1,4 +1,4 @@
-class Favourite < ApplicationRecord
+class ShelfItem < ApplicationRecord
   belongs_to :user
   belongs_to :coffee
   counter_culture :user
@@ -8,9 +8,9 @@ class Favourite < ApplicationRecord
 
   after_commit do
     broadcast_update_to(
-      'favourites_count',
-      target: "favourites_count_coffee_#{coffee.id}",
-      html: Favourite.where(coffee:).count,
+      'shelf_items_count',
+      target: "shelf_items_count_coffee_#{coffee.id}",
+      html: ShelfItem.where(coffee:).count,
       locals: { coffee: }
     )
   end

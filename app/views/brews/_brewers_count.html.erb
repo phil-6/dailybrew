@@ -1,0 +1,5 @@
+<%= turbo_stream_from "brewers_count" %>
+<%# is this file in the right place? %>
+<span id="brewers_count_<%= dom_id(coffee) %>">
+        <%= coffee.unique_brewers_count %>
+</span>

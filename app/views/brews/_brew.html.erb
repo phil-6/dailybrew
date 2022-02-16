@@ -1,5 +1,10 @@
 <div id="<%= dom_id brew %>">
   <p>
+    <strong>ID:</strong>
+    <%= brew.id %>
+  </p>
+
+  <p>
     <strong>User:</strong>
     <%= brew.user_id %>
   </p>
@@ -7,6 +12,11 @@
   <p>
     <strong>Coffee:</strong>
     <%= brew.coffee_id %>
+  </p>
+
+  <p>
+    <strong>Created At:</strong>
+    <%= time_ago_in_words(brew.created_at) %> ago
   </p>
 
   <p>
@@ -55,3 +65,4 @@
   </p>
 
 </div>
+<hr>

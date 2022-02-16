@@ -1,44 +1,21 @@
-<div id="<%= dom_id coffee %>">
+<div id="<%= dom_id coffee %>" class="<%= controller_name %>-<%= action_name %>">
 
   <!--  We can do something really cool and conditional with these.-->
-  <%#= controller_name %>
-  <%#= action_name %>
+<%#= controller_name %>
+<%#= action_name %>
 
   <div class="name">
     <h1><%= coffee.name %></h1>
+    <h2>by <%= link_to coffee.roaster.name, roaster_path(coffee.roaster) %></h2>
   </div>
 
-  <div class="tasting-notes">
-    <h2>
-      <strong>Tasting notes:</strong>
-      <%= coffee.tasting_notes %>
-    </h2>
+  <div class="controls">
+    <%= render 'favourites/favourite_toggle', coffee: coffee %>
+    <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
   </div>
 
-  <div class="website">
-    <a href="<%= coffee.url %>" target=_blank>
-      View on <%= coffee.roaster.name %>'s website<i class="las la-external-link-alt"></i>
-    </a>
-  </div>
-
-
-  <div class="stats">
-    <div class="brews">
-      <%= coffee.brews_count %> brews logged
-    </div>
-    <div class="inventories">
-      <%= coffee.inventories_count %> people currently have this coffee
-    </div>
-    <div class="favourites">
-      <%= coffee.favourites_count %> people have this saved as one of their favourites
-    </div>
-    <div class="reviews">
-      There are <%= coffee.reviews_count %> reviews of this coffee.
-    </div>
-  </div>
-
-  <div class="details-container">
-    <div class="details">
+  <div class="details-container" style="display:none;">
+    <div class="details card">
       <h2>Details</h2>
       <div class="country">
         <strong>Country:</strong>
@@ -68,12 +45,51 @@
         <strong>Producer:</strong>
         <%= coffee.producer %>
       </div>
+      <div class="description">
+        <strong>Description:</strong>
+        <%= coffee.description.html_safe %>
+      </div>
     </div>
   </div>
 
-
-  <div class="description">
-    <%= coffee.description.html_safe %>
+  <div class="global-stats">
+    <div class="favourites">
+      <%= render 'favourites/favourites_count', coffee: coffee %>
+      users have this as a favourite
+    </div>
+    <div class="current_users">
+      <%= render 'shelf_items/shelf_items_count', coffee: coffee %>
+      users currently have this on their shelf
+    </div>
+    <div class="brews">
+      This has been brewed
+      <%= render 'brews/brews_count', coffee: coffee %>
+      times by
+      <%= render 'brews/brewers_count', coffee: coffee %>
+      people
+    </div>
+    <div class="brew_rating">
+      The average rating is <%= coffee.average_brew_rating %>/10
+    </div>
   </div>
+
+  <div class="user-stats">
+    <div class="brews">
+      You have brewed this coffee <%= current_user.brews.where(coffee: coffee).count %> times
+    </div>
+    <div class="brew_rating">
+      Your average rating is <%= current_user.average_brew_rating(coffee) %>/10
+    </div>
+  </div>
+
+  <div class="recent_brews">
+    <h3>Recent Brews</h3>
+    <%= render 'brews/recent_brews', coffee: coffee %>
+  </div>
+
+
+  <% coffee.attributes.each do |a| %>
+    <p><%= a[0] %>: <%= a[1] %></p>
+  <% end %>
 
 </div>

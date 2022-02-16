@@ -1,8 +1,6 @@
 <p style="color: green"><%= notice %></p>
 <main class="roasters">
-  <div class="show-card">
-    <%= render @roaster %>
-  </div>
+  <%= render @roaster %>
 
   <div class="admin-controls-container">
     <div class="admin-controls">
@@ -22,24 +20,22 @@
     </div>
   </div>
 
-  <div class="coffees">
+  <div class="roaster-coffees">
     <h2 class="summary">
       <%= @roaster.name %> has <%= @roaster.available_coffees_count %> coffees available at the moment
     </h2>
-    <div class="available">
-      <% @roaster.coffees.available.order('brews_count DESC').each do |coffee| %>
-        <div class="roaster-card">
-          <%= render coffee %>
-          <div class="coffee-link">
-            <%= link_to "Show this coffee", coffee %>
-          </div>
-        </div>
-      <% end %>
+
+    <div class="add-coffee">
+      Is there a coffee we're missing? <%= link_to "Add it here.", new_roaster_coffee_path(@roaster) %>
     </div>
-    <%= link_to "New coffee", new_roaster_coffee_path(@roaster) %>
+
+    <div class="available">
+      <%= render partial: "coffees/roaster_coffee_card", collection: @available_coffees , as: :coffee %>
+    </div>
+
     <div class="unavailable">
-      <% @roaster.coffees.unavailable.each do |coffee| %>
-        <div class="roaster-card" style="border:1px dashed rebeccapurple">
+      <% @unavailable_coffees.each do |coffee| %>
+        <div class="card" style="border:1px dashed rebeccapurple">
           <%= render coffee %>
         </div>
       <% end %>

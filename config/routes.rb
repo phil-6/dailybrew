@@ -18,6 +18,11 @@ Rails.application.routes.draw do
   end
   resources :coffees, only: :index
   resources :brews
-  resources :inventories
-  resources :favourites
+
+  post 'shelf_items/:coffee_id', to: 'shelf_items#create', as: 'create_shelf_item'
+  delete 'shelf_items/:coffee_id', to: 'shelf_items#destroy', as: 'delete_shelf_item'
+
+  post 'favourites/:coffee_id', to: 'favourites#create', as: 'create_favourite'
+  delete 'favourites/:coffee_id', to: 'favourites#destroy', as: 'delete_favourite'
+
 end

@@ -20,15 +20,7 @@
 
   <div id="roasters">
     <%== pagy_nav(@pagy) %>
-    <% @roasters.each do |roaster| %>
-      <div class="index-card">
-        <%= render roaster %>
-        <div class="roaster-link">
-          <%= link_to 'Show This Roaster', roaster %>
-        </div>
-      </div>
-    <% end %>
+    <%= render @roasters %>
   </div>
-
 
 </main>

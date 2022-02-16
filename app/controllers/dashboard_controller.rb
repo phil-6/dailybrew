@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
   def index
-    @inventories = current_user.inventories.includes(:coffee).last(5)
-    @favourites = current_user.favourites.includes(:coffee).last(5)
-    @brews = current_user.brews.includes(:coffee).last(10)
+    @shelf_items = current_user.shelf_coffees.last(5)
+    @favourites = current_user.favourite_coffees.last(5)
+    @brews = current_user.brews.order('created_at DESC').includes(:coffee).first(10)
   end
 end
