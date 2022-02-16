@@ -62,7 +62,11 @@
       users currently have this on their shelf
     </div>
     <div class="brews">
-      This has been brewed <%= coffee.brews_count %> times by <%= coffee.unique_brewers_count %> people
+      This has been brewed
+      <%= render 'brews/brews_count', coffee: coffee %>
+      times by
+      <%= render 'brews/brewers_count', coffee: coffee %>
+      people
     </div>
     <div class="brew_rating">
       The average rating is <%= coffee.average_brew_rating %>/10

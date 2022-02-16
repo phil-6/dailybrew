@@ -16,5 +16,18 @@ class Brew < ApplicationRecord
         locals: { brew: self }
       )
     end
+    broadcast_update_to(
+      'brews_count',
+      target: "brews_count_coffee_#{coffee.id}",
+      html: Brew.where(coffee:).count,
+      locals: { coffee: }
+    )
+    broadcast_update_to(
+      'brewers_count',
+      target: "brewers_count_coffee_#{coffee.id}",
+      html: coffee.unique_brewers_count,
+      locals: { coffee: }
+    )
+
   end
 end
