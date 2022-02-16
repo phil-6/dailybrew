@@ -8,25 +8,27 @@
 </div>
 
 <div class="shelf">
-  <h1><%= link_to "Your Shelf", shelf_items_path %></h1>
-  <% @shelf_items.each do |coffee| %>
-  <div class="shelf-item">
-    <h3><%= coffee.name %></h3>
-    <h3>By <%= coffee.roaster.name %></h3>
-    <hr>
-    <p><%= current_user.brews.where(coffee: coffee).count %> brews logged</p>
-    <p><% link_to new_brew_path do %><i class="las la-coffee"></i> Make a Brew<% end %></p>
-    <p><i class="las la-history"></i>View Brews</p>
-  </div>
+  <h2><%= link_to "Your Shelf", shelf_items_path %></h2>
+  <% @shelf_coffees.each do |coffee| %>
+    <div class="shelf-item" style="border: 1px solid darkslateblue">
+      <h3><%= link_to coffee.name, coffee_path(coffee) %></h3>
+      <h4>By <%= link_to coffee.roaster.name, roaster_path(coffee.roaster) %></h4>
+      <p><%= current_user.brews.where(coffee: coffee).count %> brews logged</p>
+      <p><%= link_to new_brew_path do %><i class="las la-coffee"></i> Make a Brew
+        <% end %></p>
+      <p><i class="las la-history"></i>View Brews</p>
+      <%= render 'favourites/favourite_toggle', coffee: coffee %>
+      <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
+    </div>
   <% end %>
 </div>
 
 <div class="brews">
-  <h1><%= link_to "Your Brews", brews_path %></h1>
+  <h2><%= link_to "Your Brews", brews_path %></h2>
   <% @brews.each do |brew| %>
     <p><%= time_ago_in_words(brew.created_at) %> ago</p>
     <p><%= brew.coffee.name %></p>
-    <p><%= brew.rating %>/10</p>
+    <p><%= brew.rating || '?' %>/10</p>
     <hr>
   <% end %>
   <%= link_to "Make a Brew ", new_brew_path %>
@@ -34,14 +36,16 @@
 </div>
 
 <div class="favourites">
-  <h1><%= link_to "Your Favourites", favourites_path %></h1>
+  <h2><%= link_to "Your Favourites", favourites_path %></h2>
   <% @favourites.each do |coffee| %>
     <div class="favourite-item">
-      <h3><%= coffee.name %></h3>
-      <h3>By <%= coffee.roaster.name %></h3>
-      <hr>
+      <h3><%= link_to coffee.name, coffee_path(coffee) %></h3>
+      <h4>By <%= link_to coffee.roaster.name, roaster_path(coffee.roaster) %></h4>
       <p><%= current_user.brews.where(coffee: coffee).count %> brews logged</p>
       <p><%= current_user.brews.where(coffee: coffee).average(:rating).round %>/10 Average</p>
+      <%= render 'favourites/favourite_toggle', coffee: coffee %>
+      <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
     </div>
+    <hr>
   <% end %>
 </div>

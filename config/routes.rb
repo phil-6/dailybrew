@@ -23,9 +23,11 @@ Rails.application.routes.draw do
   resources :coffees, only: :index
   resources :brews
 
+  get 'shelf_items', to: 'shelf_items#index', as: 'shelf_items'
   post 'shelf_items/:coffee_id', to: 'shelf_items#create', as: 'create_shelf_item'
   delete 'shelf_items/:coffee_id', to: 'shelf_items#destroy', as: 'delete_shelf_item'
 
+  get 'favourites', to: 'favourites#index', as: 'favourites'
   post 'favourites/:coffee_id', to: 'favourites#create', as: 'create_favourite'
   delete 'favourites/:coffee_id', to: 'favourites#destroy', as: 'delete_favourite'
 
