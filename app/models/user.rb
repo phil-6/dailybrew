@@ -30,6 +30,6 @@ class User < ApplicationRecord
   end
 
   def average_brew_rating(coffee)
-    brews.where(coffee: coffee).average(:rating)&.round || "?"
+    brews.where(coffee: coffee).average(:rating)&.round || '?'
   end
 end

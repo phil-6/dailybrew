@@ -26,6 +26,6 @@ class Coffee < ApplicationRecord
   end
 
   def average_brew_rating
-    brews.average(:rating)&.round || "?"
+    brews.average(:rating)&.round || '?'
   end
 end
