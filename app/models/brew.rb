@@ -10,19 +10,19 @@ class Brew < ApplicationRecord
 
   after_create_commit do
     if public
-      broadcast_prepend_to(
+      broadcast_prepend_later_to(
         'recent_brews',
         target: "brews_coffee_#{coffee.id}",
         locals: { brew: self }
       )
     end
-    broadcast_update_to(
+    broadcast_update_later_to(
       'brews_count',
       target: "brews_count_coffee_#{coffee.id}",
       html: Brew.where(coffee:).count,
       locals: { coffee: }
     )
-    broadcast_update_to(
+    broadcast_update_later_to(
       'brewers_count',
       target: "brewers_count_coffee_#{coffee.id}",
       html: coffee.unique_brewers_count,
