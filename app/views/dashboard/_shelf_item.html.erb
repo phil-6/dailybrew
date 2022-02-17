@@ -4,7 +4,7 @@
   <p><%= current_user.brews.where(coffee: coffee).count %> brews logged</p>
   <p><%= link_to new_brew_path do %><i class="las la-coffee"></i> Make a Brew
     <% end %></p>
-  <p><i class="las la-history"></i>View Brews</p>
+  <p><i class="las la-history"></i> View Brews</p>
   <%= render 'favourites/favourite_toggle', coffee: coffee %>
   <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
 </div>
