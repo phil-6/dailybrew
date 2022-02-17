@@ -1,12 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<div class="<%= controller_name %>-<%= action_name %>">
 
-<h1>Coffees</h1>
+  <p style="color: green"><%= notice %></p>
 
-<div id="coffees">
-  <% @coffees.each do |coffee| %>
-    <%= render coffee %>
-    <p>
-      <%= link_to "Show this coffee", coffee %>
-    </p>
-  <% end %>
+  <h1 class="page-title">All Coffees</h1>
+  <p class="stats">There are <%= @coffees.count %> coffees from <%= Roaster.with_coffees.count %> roasters</p>
+
+  <div id="coffees">
+    <% @coffees.each do |coffee| %>
+      <%= render coffee %>
+      <p>
+        <%= link_to "Show this coffee", coffee %>
+      </p>
+    <% end %>
+  </div>
 </div>
