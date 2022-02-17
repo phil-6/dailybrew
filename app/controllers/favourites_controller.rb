@@ -8,7 +8,7 @@ class FavouritesController < ApplicationController
     @coffee = @favourite.coffee
 
     respond_to do |format|
-      format.turbo_stream { render 'toggle' }
+      format.turbo_stream
     end
   end
 
@@ -18,7 +18,7 @@ class FavouritesController < ApplicationController
     @favourite.destroy
 
     respond_to do |format|
-      format.turbo_stream { render 'toggle' }
+      format.turbo_stream
     end
   end
 end
