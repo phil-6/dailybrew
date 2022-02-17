@@ -35,3 +35,21 @@
     }
   }
 }
+
+.favourites-container {
+  .favourites {
+    display: flex;
+    flex-wrap: wrap;
+    .favourite {
+      flex: 1 1 0;
+      min-width: 260px;
+      margin: auto 0.75rem;
+      padding: 1rem;
+      .coffee-name {
+        white-space: nowrap;
+        overflow: clip;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
