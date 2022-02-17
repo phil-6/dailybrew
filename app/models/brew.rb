@@ -28,6 +28,5 @@ class Brew < ApplicationRecord
       html: coffee.unique_brewers_count,
       locals: { coffee: }
     )
-
   end
 end

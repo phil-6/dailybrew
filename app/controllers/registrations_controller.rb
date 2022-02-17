@@ -1,6 +1,5 @@
 # app/controllers/registrations_controller.rb
 class RegistrationsController < Devise::RegistrationsController
-
   def update_subscription_interest
     current_user.update!(subscription_interest_params)
 
@@ -10,7 +9,6 @@ class RegistrationsController < Devise::RegistrationsController
           'subscription_interest_toggle',
           partial: 'pages/subscription_interest_toggle'
         )
-
       end
     end
   end
@@ -24,7 +22,6 @@ class RegistrationsController < Devise::RegistrationsController
           'profile_privacy_toggle',
           partial: 'users/profile_privacy_toggle'
         )
-
       end
     end
   end
@@ -38,5 +35,4 @@ class RegistrationsController < Devise::RegistrationsController
   def profile_privacy_params
     params.require(:user).permit(:public_profile)
   end
-
 end
