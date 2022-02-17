@@ -4,7 +4,15 @@ class CoffeesController < ApplicationController
 
   # GET /coffees or /coffees.json
   def index
-    @coffees = @roaster.present? ? @roaster.coffees : Coffee.all
+    if params[:query].present?
+      @pagy, @coffees = pagy(
+        Coffee.where('name ILIKE :search OR tasting_notes ILIKE :search',
+                     search: "%#{params[:query].downcase}%"),
+        items: 10
+      )
+    else
+      @pagy, @coffees = @roaster.present? ? @roaster.coffees : pagy(Coffee.all, items: 10)
+    end
   end
 
   # GET /coffees/1 or /coffees/1.json
