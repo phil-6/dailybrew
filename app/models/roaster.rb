@@ -9,5 +9,4 @@ class Roaster < ApplicationRecord
   def update_coffees
     UpdateCoffeesJob.perform_later(reference)
   end
-
 end
