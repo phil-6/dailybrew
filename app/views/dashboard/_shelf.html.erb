@@ -1,5 +1,5 @@
 <h2><%= link_to "Your Shelf", shelf_items_path %></h2>
-<div id="shelf" class="shelf">
+<div id="dashboard_shelf" class="shelf">
   <% @shelf_coffees.each do |coffee| %>
     <%= render 'shelf_item', coffee: coffee %>
   <% end %>

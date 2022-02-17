@@ -1,5 +1,5 @@
 <h2><%= link_to "Your Favourites", favourites_path %></h2>
-<div id="favourites" class="favourites">
+<div id="dashboard_favourites" class="favourites">
   <% @favourites.each do |coffee| %>
     <%= render 'favourite', coffee: coffee %>
   <% end %>
