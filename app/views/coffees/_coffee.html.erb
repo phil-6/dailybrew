@@ -84,6 +84,7 @@
 
   <div class="recent_brews">
     <h3>Recent Brews</h3>
+    <%= link_to "View All Brews", coffee_brews_path(coffee) %>
     <%= render 'brews/recent_brews', coffee: coffee %>
   </div>
 
