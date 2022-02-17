@@ -1,0 +1,8 @@
+<div class="favourite">
+  <h3 class="coffee-name"><%= link_to coffee.name, coffee_path(coffee) %></h3>
+  <h4>By <%= link_to coffee.roaster.name, roaster_path(coffee.roaster) %></h4>
+  <p><%= current_user.brews.where(coffee: coffee).count %> brews logged</p>
+  <p><%= current_user.brews.where(coffee: coffee).average(:rating).round %>/10 Average</p>
+  <%= render 'favourites/favourite_toggle', coffee: coffee %>
+  <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
+</div>
