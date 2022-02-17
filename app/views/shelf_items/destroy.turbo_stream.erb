@@ -1,3 +1,5 @@
+<%= turbo_stream.remove("dashboard_shelf_#{dom_id(@coffee)}") %>
+
 <%= turbo_stream.replace(
       "shelf_item_toggle_#{dom_id(@coffee)}",
       partial: "shelf_item_toggle",
