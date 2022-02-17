@@ -23,15 +23,23 @@
   </div>
 </div>
 
-<div class="brews">
+<div class="brews-container">
   <h2><%= link_to "Your Brews", brews_path %></h2>
-  <% @brews.each do |brew| %>
-    <p><%= time_ago_in_words(brew.created_at) %> ago</p>
-    <p><%= brew.coffee.name %></p>
-    <p><%= brew.rating || '?' %>/10</p>
-    <hr>
-  <% end %>
-  <%= link_to "Make a Brew ", new_brew_path %>
+  <table class="brews-table">
+    <%# Paginate this sh!t with infinite scroll baby %>
+
+      <% @brews.each do |brew| %>
+      <tr>
+        <td class="coffee-name"><%= brew.coffee.name %></td>
+        <td><%= brew.equipment %></td>
+        <td><%= brew.rating || '?' %>/10</td>
+        <td><%= time_ago_in_words(brew.created_at) %> ago</td>
+        <td><%= link_to 'View Brew >>', brew_path(brew) %></td>
+      </tr>
+      <% end %>
+
+  </table>
+  <%= link_to "Make a Brew ", new_brew_path %> |
   <%= link_to "View More", brews_path %>
 </div>
 

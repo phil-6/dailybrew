@@ -1,18 +1,34 @@
 @import "variables";
 
-.shelf {
-  display: flex;
-  overflow: scroll;
-  justify-content: flex-start;
+.shelf-container {
+  .shelf {
+    display: flex;
+    overflow: scroll;
+    justify-content: flex-start;
 
-  .shelf-item {
-    border: 1px solid darkslateblue;
-    flex: 1 1 0;
-    min-width: 260px ;
-    margin: auto 0.75rem;
-    padding: 1rem;
+    .shelf-item {
+      border: 1px solid darkslateblue;
+      flex: 1 1 0;
+      min-width: 260px;
+      margin: auto 0.75rem;
+      padding: 1rem;
 
+      .coffee-name {
+        white-space: nowrap;
+        overflow: clip;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+.brews-container {
+  .brews-table {
+    td {
+      min-width: 50px;
+    }
     .coffee-name {
+      max-width: 200px;
       white-space: nowrap;
       overflow: clip;
       text-overflow: ellipsis;
