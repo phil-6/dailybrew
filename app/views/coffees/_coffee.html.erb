@@ -82,15 +82,16 @@
     </div>
   </div>
 
-  <div class="recent_brews">
-    <h3>Recent Brews</h3>
-    <%= link_to "View All Brews", coffee_brews_path(coffee) %>
-    <%= render 'brews/recent_brews', coffee: coffee %>
-  </div>
+  <% if action_name == 'show' %>
+    <div class="recent_brews">
+      <h3>Recent Brews</h3>
+      <%= link_to "View All Brews", coffee_brews_path(coffee) %>
+      <%= render 'brews/recent_brews', coffee: coffee %>
+    </div>
 
 
-  <% coffee.attributes.each do |a| %>
-    <p><%= a[0] %>: <%= a[1] %></p>
+    <% coffee.attributes.each do |a| %>
+      <p><%= a[0] %>: <%= a[1] %></p>
+    <% end %>
   <% end %>
-
 </div>
