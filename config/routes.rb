@@ -10,20 +10,24 @@ Rails.application.routes.draw do
   devise_scope :user do
     patch '/update_subscription_interest', to: 'registrations#update_subscription_interest', as: 'update_subscription_interest'
     patch '/update_profile_privacy', to: 'registrations#update_profile_privacy', as: 'update_profile_privacy'
-
   end
 
   namespace :admin do
     get 'dashboard'
   end
+
   get 'dashboard', to: 'dashboard#index'
 
   resources :roasters do
     resources :coffees, shallow: true
     post 'update_coffees', on: :member
   end
-  resources :coffees, only: :index
-  resources :brews
+
+  resources :coffees, only: :index do
+    resources :brews, shallow: true
+  end
+
+  resources :brews, only: :index
 
   get 'shelf_items', to: 'shelf_items#index', as: 'shelf_items'
   post 'shelf_items/:coffee_id', to: 'shelf_items#create', as: 'create_shelf_item'
