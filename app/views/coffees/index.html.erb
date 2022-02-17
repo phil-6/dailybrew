@@ -8,9 +8,7 @@
   <div id="coffees">
     <% @coffees.each do |coffee| %>
       <%= render coffee %>
-      <p>
-        <%= link_to "Show this coffee", coffee %>
-      </p>
+      <%= link_to "Show this coffee", coffee %>
     <% end %>
   </div>
 </div>
