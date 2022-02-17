@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include Pagy::Backend
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
+  before_action :turbo_frame_request_variant
 
   protected
 
@@ -24,5 +25,9 @@ class ApplicationController < ActionController::Base
     attributes = %i[email username first_name last_name password password_confirmation]
     devise_parameter_sanitizer.permit :sign_up, keys: attributes
     devise_parameter_sanitizer.permit :account_update, keys: attributes
+  end
+
+  def turbo_frame_request_variant
+    request.variant = :turbo_frame if turbo_frame_request?
   end
 end

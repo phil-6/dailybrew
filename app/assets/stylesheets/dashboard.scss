@@ -39,13 +39,20 @@
   }
 
   .brews-container {
+
     .brews-table {
+      border: 1px solid rebeccapurple;
+      max-height: 350px;
+      overflow-y: scroll;
+      display:block;
+      width: 650px;
       td {
         min-width: 50px;
+        padding: 0 0.4rem;
       }
 
       .coffee-name {
-        max-width: 200px;
+        max-width: 220px;
         white-space: nowrap;
         overflow: clip;
         text-overflow: ellipsis;

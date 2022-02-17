@@ -1,0 +1,13 @@
+<h2><%= link_to "Your Brews", brews_path %></h2>
+
+<%= turbo_frame_tag "page_handler" %>
+<table id="brews_table" class="brews-table">
+  <%# Paginate this sh!t with infinite scroll baby %>
+  <%= render "brews_table", brews: @brews %>
+
+</table>
+<%= render "brews_table_pager", pagy: @pagy %>
+
+
+<%= link_to "Make a Brew ", new_brew_path %> |
+<%= link_to "View More", brews_path %>
