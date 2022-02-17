@@ -19,11 +19,11 @@ class BrewsController < ApplicationController
 
   # POST /brews or /brews.json
   def create
-    @brew = Brew.new(brew_params)
+    @brew = current_user.brews.new(coffee_id: params[:coffee_id])
 
     respond_to do |format|
       if @brew.save
-        format.html { redirect_to brew_url(@brew), notice: 'Brew was successfully created.' }
+        format.html { redirect_to dashboard_path, notice: 'Brew was successfully created.' }
         format.json { render :show, status: :created, location: @brew }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -50,7 +50,7 @@ class BrewsController < ApplicationController
     @brew.destroy
 
     respond_to do |format|
-      format.html { redirect_to brews_url, notice: 'Brew was successfully destroyed.' }
+      format.html { redirect_to dashboard_path, notice: 'Brew was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

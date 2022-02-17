@@ -1,4 +1,4 @@
-<%= form_with(model: brew) do |form| %>
+<%= form_with(model: brew, url: coffee_brews_path) do |form| %>
   <% if brew.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(brew.errors.count, "error") %> prohibited this brew from being saved:</h2>
@@ -11,62 +11,52 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+  <div class="field">
+    <%= form.text_field :equipment, class: 'form-input' %>
+    <%= form.label :equipment, class: 'form-label' %>
   </div>
 
-  <div>
-    <%= form.label :coffee_id, style: "display: block" %>
-    <%= form.text_field :coffee_id %>
+  <div class="field">
+    <%= form.text_field :method, class: 'form-input' %>
+    <%= form.label :method, class: 'form-label' %>
   </div>
 
-  <div>
-    <%= form.label :equipment, style: "display: block" %>
-    <%= form.text_field :equipment %>
+  <div class="field">
+    <%= form.number_field :coffee_weight, class: 'form-input' %>
+    <%= form.label :coffee_weight, class: 'form-label' %>
   </div>
 
-  <div>
-    <%= form.label :method, style: "display: block" %>
-    <%= form.text_field :method %>
+  <div class="field">
+    <%= form.number_field :water_weight, class: 'form-input' %>
+    <%= form.label :water_weight, class: 'form-label' %>
   </div>
 
-  <div>
-    <%= form.label :coffee_weight, style: "display: block" %>
-    <%= form.number_field :coffee_weight %>
+  <div class="field">
+    <%= form.text_field :grinder, class: 'form-input' %>
+    <%= form.label :grinder, class: 'form-label' %>
   </div>
 
-  <div>
-    <%= form.label :water_weight, style: "display: block" %>
-    <%= form.number_field :water_weight %>
+  <div class="field">
+    <%= form.text_field :grinder_setting, class: 'form-input' %>
+    <%= form.label :grinder_setting, class: 'form-label' %>
   </div>
 
-  <div>
-    <%= form.label :grinder, style: "display: block" %>
-    <%= form.text_field :grinder %>
+  <div class="field">    
+    <%= form.number_field :time, class: 'form-input' %>
+    <%= form.label :time, class: 'form-label' %>
   </div>
 
-  <div>
-    <%= form.label :grinder_setting, style: "display: block" %>
-    <%= form.text_field :grinder_setting %>
+  <div class="field">
+    <%= form.text_area :notes, class: 'form-input' %>
+    <%= form.label :notes, class: 'form-label' %>
   </div>
 
-  <div>
-    <%= form.label :time, style: "display: block" %>
-    <%= form.number_field :time %>
+  <div class="field">
+    <%= form.number_field :rating, class: 'form-input' %>
+    <%= form.label :rating, class: 'form-label' %>
   </div>
 
-  <div>
-    <%= form.label :notes, style: "display: block" %>
-    <%= form.text_area :notes %>
-  </div>
-
-  <div>
-    <%= form.label :rating, style: "display: block" %>
-    <%= form.number_field :rating %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="action">
+    <%= form.submit 'Log Brew', class: 'form-submit btn btn-primary' %>
   </div>
 <% end %>
