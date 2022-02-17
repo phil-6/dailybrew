@@ -9,6 +9,11 @@
     <h1><%= coffee.name %></h1>
   </div>
 
+  <div class="controls">
+    <%= render 'favourites/favourite_toggle', coffee: coffee %>
+    <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
+  </div>
+
   <div class="tasting-notes">
     <h2>
       <strong>Tasting notes:</strong>
