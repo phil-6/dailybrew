@@ -15,10 +15,28 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def update_profile_privacy
+    current_user.update!(profile_privacy_params)
+
+    respond_to do |format|
+      format.turbo_stream do
+        render turbo_stream: turbo_stream.replace(
+          'profile_privacy_toggle',
+          partial: 'users/profile_privacy_toggle'
+        )
+
+      end
+    end
+  end
+
   protected
 
   def subscription_interest_params
     params.require(:user).permit(:subscription_interest)
+  end
+
+  def profile_privacy_params
+    params.require(:user).permit(:public_profile)
   end
 
 end

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     patch '/update_subscription_interest', to: 'registrations#update_subscription_interest', as: 'update_subscription_interest'
+    patch '/update_profile_privacy', to: 'registrations#update_profile_privacy', as: 'update_profile_privacy'
+
   end
 
   namespace :admin do
