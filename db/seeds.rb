@@ -99,18 +99,16 @@ end
 puts "Create some brews for each of the user's favourites and shelf"
 clifton_house = Coffee.find(9)
 User.all.each do |user|
-  if user.id == 1
-    equipment = "V60"
+  if user == User.first
+    equipment = ["V60"]
     grinder = "Fellow Ode"
     grind_setting = "3.1"
     method = "Hoffman"
-    time = 180
   else
-    equipment = ["V60", "Chemex", "French Press", "Aeropress"].sample
+    equipment = ["V60", "Chemex", "French Press", "Aeropress"]
     grinder = "Roaster"
     grind_setting = "Filter"
     method = ""
-    time = rand(120..600)
   end
 
   puts "User: #{user.id}"
@@ -120,13 +118,13 @@ User.all.each do |user|
       puts "Create Brew"
       user.brews.create!(
         coffee: favourite.coffee,
-        equipment: equipment,
+        equipment: equipment.sample,
         method: method,
         coffee_weight: 15,
         water_weight: 250,
         grinder: grinder,
         grinder_setting: grind_setting,
-        time: time,
+        time: rand(120..600),
         notes: Faker::Hipster.paragraph,
         rating: rand(4..10),
         created_at: Faker::Time.between_dates(from: 6.months.ago.to_date , to: 1.month.ago.to_date, period: :morning)
@@ -141,13 +139,13 @@ User.all.each do |user|
       puts "Create Brew // Public:#{public}"
       user.brews.create!(
         coffee: shelf.coffee,
-        equipment: equipment,
+        equipment: equipment.sample,
         method: method,
         coffee_weight: 15,
         water_weight: 250,
         grinder: grinder,
         grinder_setting: grind_setting,
-        time: time,
+        time: rand(120..600),
         notes: Faker::Hipster.paragraph,
         rating: rand(0..10),
         public: public,
