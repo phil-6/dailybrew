@@ -1,5 +1,5 @@
 module FetchCoffees
-  class RaveCoffee
+  class WorkshopCoffee
     require 'open-uri'
     require 'net/http'
     require 'json'
