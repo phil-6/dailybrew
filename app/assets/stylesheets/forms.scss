@@ -11,7 +11,7 @@
     color: $color-primary-0;
     padding: 0 0.5rem;
   }
-  
+
   &::after {
     content: "";
     height: 1px;
@@ -43,9 +43,9 @@
 
     &:-webkit-autofill::first-line,
     &:-webkit-autofill,
-    &:-webkit-autofill:hover, 
-    &:-webkit-autofill:focus, 
-    &:-webkit-autofill:active{
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
       font-family: $font;
       box-shadow: 0 0 0 30px white inset !important;
       -webkit-box-shadow: 0 0 0 30px white inset !important;
@@ -54,7 +54,7 @@
     &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
       & ~ .form-label {
         transform: scale(0.85) translateY(-1.9rem) translateX(0.1rem);
-        color: rgba(6,71,99,0.65);
+        color: rgba(6, 71, 99, 0.65);
         opacity: 1;
       }
     }
@@ -141,4 +141,29 @@
 input[type="submit" i] {
   border: none;
   padding: 0;
+}
+
+.search-form {
+  max-width: 470px;
+  margin: 3rem auto 0;
+
+  .field, .form-input {
+    .form-label {
+      border: none;
+      border-radius: 2rem;
+      background: white;
+    }
+
+    &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
+      & ~ .form-label {
+        background: linear-gradient(to bottom, $color-white, white);
+      }
+    }
+  }
+
+  .results {
+    text-align: center;
+    padding: 1rem;
+
+  }
 }
