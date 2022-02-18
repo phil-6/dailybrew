@@ -7,7 +7,7 @@
 
   <div class="search-form">
     <%= form_with url:coffees_path, method: "GET" do |form| %>
-      <%= form.label :query, "Search By Name or Tasting Notes" %>
+      <%= form.label :query, "Search by Name, Tasting Notes, Country or Process" %>
       <%= form.text_field :query %>
       <%= form.submit 'Search', name: nil %>
     <% end %>

@@ -6,7 +6,7 @@ class CoffeesController < ApplicationController
   def index
     if params[:query].present?
       @pagy, @coffees = pagy(
-        Coffee.where('name ILIKE :search OR tasting_notes ILIKE :search',
+        Coffee.where('name ILIKE :search OR tasting_notes ILIKE :search OR country ILIKE :search OR process ILIKE :search',
                      search: "%#{params[:query].downcase}%"),
         items: 10
       )
