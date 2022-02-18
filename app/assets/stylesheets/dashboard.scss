@@ -1,6 +1,32 @@
 @import "variables";
 
 .dashboard {
+  .welcome {
+    max-width: 400px;
+    padding: 1rem;
+
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+    }
+
+    .search-container {
+      text-align: center;
+
+      .search-form {
+        margin: 0 auto;
+        max-width: 300px;
+
+        .form-label {
+          max-width: 260px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
   .toggle-button {
     button {
       border: none;
@@ -18,6 +44,11 @@
   }
 
   .shelf-container {
+    h2 {
+      padding: 0 1rem;
+      display: block;
+    }
+
     .shelf {
       display: flex;
       overflow: scroll;
@@ -40,6 +71,7 @@
   }
 
   .brews-container {
+    padding: 0 1rem;
 
     .brews-table {
       border: 1px solid rebeccapurple;
@@ -62,6 +94,10 @@
   }
 
   .favourites-container {
+    h2 {
+      padding: 0 1rem;
+    }
+
     .favourites {
       display: flex;
       flex-wrap: wrap;
