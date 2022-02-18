@@ -1,16 +1,16 @@
-import { Controller } from "@hotwired/stimulus"
-import { useIntersection } from 'stimulus-use'
+import {Controller} from "@hotwired/stimulus"
+import {useIntersection} from 'stimulus-use'
 
 export default class extends Controller {
-  options = {
-    threshold: 1
-  }
+    options = {
+        threshold: 1
+    }
 
-  connect() {
-    useIntersection(this, this.options)
-  }
+    connect() {
+        useIntersection(this, this.options)
+    }
 
-  appear(entry) {
-    this.element.click()
-  }
+    appear(entry) {
+        this.element.click()
+    }
 }
