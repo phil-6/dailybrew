@@ -15,7 +15,7 @@ class CreateCoffees < ActiveRecord::Migration[7.0]
       t.string :producer
       t.text :description
       t.string :url, null: false
-      t.boolean :available
+      t.boolean :available, default: true
       t.integer :favourites_count, null: false, default: 0
       t.integer :shelf_items_count, null: false, default: 0
       t.integer :brews_count, null: false, default: 0
