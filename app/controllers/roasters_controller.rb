@@ -7,7 +7,11 @@ class RoastersController < ApplicationController
   # GET /roasters or /roasters.json
   def index
     @roasters_count = Roaster.all.count
-    @pagy, @roasters = pagy(Roaster.all.order('available_coffees_count DESC, name ASC'), items: 10)
+    if params[:query].present?
+      search
+    else
+      @pagy, @roasters = pagy(Roaster.all.order('available_coffees_count DESC, name ASC'), items: 10)
+    end
   end
 
   # GET /roasters/1 or /roasters/1.json
@@ -62,6 +66,14 @@ class RoastersController < ApplicationController
   # POST /roasters/1/update_coffees
   def update_coffees
     @roaster.update_coffees
+  end
+
+  def search
+    @pagy, @roasters = pagy(
+      Roaster.where('name ILIKE :search',
+                    search: "%#{params[:query].downcase}%"),
+      items: 10
+    )
   end
 
   private
