@@ -18,9 +18,10 @@
       add that functionality!</p>
   </div>
 
+  <%= turbo_frame_tag "page_handler" %>
   <div id="roasters">
-    <%== pagy_nav(@pagy) %>
     <%= render @roasters %>
   </div>
+  <%= render "shared/index_pager", pagy: @pagy %>
 
 </main>

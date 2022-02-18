@@ -1,0 +1,12 @@
+<%= turbo_frame_tag "page_handler" do %>
+  <%= turbo_stream_action_tag(
+        "append",
+        target: "roasters",
+        template: %(#{render @roasters})
+      ) %>
+  <%= turbo_stream_action_tag(
+        "replace",
+        target: "roasters_pager",
+        template: %(#{render "shared/index_pager", pagy: @pagy})
+      ) %>
+<% end %>
