@@ -7,11 +7,12 @@ class RoastersController < ApplicationController
   # GET /roasters or /roasters.json
   def index
     @roasters_count = Roaster.all.count
-    if params[:query].present?
-      search
-    else
-      @pagy, @roasters = pagy(Roaster.all.order('available_coffees_count DESC, name ASC'), items: 10)
-    end
+    @pagy, @roasters =
+      if params[:query].present?
+        search
+      else
+        pagy(Roaster.all.order('available_coffees_count DESC, name ASC'), items: 10)
+      end
   end
 
   # GET /roasters/1 or /roasters/1.json
@@ -68,15 +69,11 @@ class RoastersController < ApplicationController
     @roaster.update_coffees
   end
 
-  def search
-    @pagy, @roasters = pagy(
-      Roaster.where('name ILIKE :search',
-                    search: "%#{params[:query].downcase}%"),
-      items: 10
-    )
-  end
-
   private
+
+  def search
+    pagy(Roaster.where('name ILIKE :search', search: "%#{params[:query].downcase}%"), items: 10)
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_roaster
