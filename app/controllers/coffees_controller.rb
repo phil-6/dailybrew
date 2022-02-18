@@ -5,11 +5,7 @@ class CoffeesController < ApplicationController
   # GET /coffees or /coffees.json
   def index
     if params[:query].present?
-      @pagy, @coffees = pagy(
-        Coffee.where('name ILIKE :search OR tasting_notes ILIKE :search OR country ILIKE :search OR process ILIKE :search',
-                     search: "%#{params[:query].downcase}%"),
-        items: 10
-      )
+      search
     else
       @pagy, @coffees = @roaster.present? ? @roaster.coffees : pagy(Coffee.all, items: 10)
     end
@@ -62,6 +58,14 @@ class CoffeesController < ApplicationController
       format.html { redirect_to coffees_url, notice: 'Coffee was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def search
+    @pagy, @coffees = pagy(
+      Coffee.where('name ILIKE :search OR tasting_notes ILIKE :search OR country ILIKE :search OR process ILIKE :search',
+                   search: "%#{params[:query].downcase}%"),
+      items: 10
+    )
   end
 
   private

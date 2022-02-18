@@ -5,17 +5,7 @@
   <h1 class="page-title">All Coffees</h1>
   <p class="stats">There are <%= Coffee.all.size %> coffees from <%= Roaster.with_coffees.size %> roasters</p>
 
-  <div class="search-form">
-    <%= form_with url:coffees_path, method: "GET" do |form| %>
-      <%= form.label :query, "Search by Name, Tasting Notes, Country or Process" %>
-      <%= form.text_field :query %>
-      <%= form.submit 'Search', name: nil %>
-    <% end %>
-
-    <% if params[:query] %>
-      <%= @pagy.count %> results for "<%= params[:query] %>"
-    <% end %>
-  </div>
+  <%= render 'coffee_search' %>
 
   <div id="coffees">
     <% @coffees.each do |coffee| %>
