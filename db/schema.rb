@@ -49,7 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 6) do
     t.string "producer"
     t.text "description"
     t.string "url", null: false
-    t.boolean "available"
+    t.boolean "available", default: true
     t.integer "favourites_count", default: 0, null: false
     t.integer "shelf_items_count", default: 0, null: false
     t.integer "brews_count", default: 0, null: false
