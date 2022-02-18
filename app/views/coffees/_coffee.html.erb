@@ -90,9 +90,12 @@
       <%= render 'brews/recent_brews', coffee: coffee %>
     </div>
 
-
     <% coffee.attributes.each do |a| %>
       <p><%= a[0] %>: <%= a[1] %></p>
     <% end %>
+
+  <% elsif action_name == 'index' %>
+    <%= link_to "Show this coffee", coffee %>
   <% end %>
+
 </div>
