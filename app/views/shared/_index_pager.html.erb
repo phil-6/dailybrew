@@ -4,7 +4,8 @@
           "Load More",
           "#{controller_name}?query=#{params[:query]}&page=#{pagy.next}",
           data: {
-            turbo_frame: "page_handler"
+            turbo_frame: "page_handler",
+            controller: "autoclick"
           }
         ) %>
   <% end %>
