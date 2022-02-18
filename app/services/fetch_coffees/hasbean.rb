@@ -48,6 +48,8 @@ module FetchCoffees
 
         coffee['description'] = coffee_page.css('.prod-description p').text
 
+        coffee['available'] = true
+
         @coffees << coffee
       end
 

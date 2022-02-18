@@ -44,6 +44,8 @@ module FetchCoffees
 
         coffee['description'] = coffee_page.css('.hero-text').text + coffee_page.css('.moretext').text
 
+        coffee['available'] = true
+
         @coffees << coffee
       end
 

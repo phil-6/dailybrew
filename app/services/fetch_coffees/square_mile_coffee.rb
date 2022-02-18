@@ -63,6 +63,8 @@ module FetchCoffees
                                   coffee_page.css('.sqmile-single-product-description p').text
                                 end
 
+        coffee['available'] = true
+
         @coffees << coffee
       end
 

@@ -53,6 +53,8 @@ module FetchCoffees
         coffee['description'] =
           coffee_page.css('.slideout-body-pdp-description').text + coffee_page.css('.origin-table .table-main-content').text
 
+        coffee['available'] = true
+
         @coffees << coffee
       end
 
