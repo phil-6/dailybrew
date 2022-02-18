@@ -7,7 +7,9 @@
 
   <%= render 'coffee_search' %>
 
+  <%= turbo_frame_tag "page_handler" %>
   <div id="coffees">
     <%= render @coffees %>
   </div>
+  <%= render "shared/index_pager", pagy: @pagy %>
 </div>

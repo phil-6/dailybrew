@@ -1,0 +1,11 @@
+<div id="<%= controller_name %>_pager" class="<%= controller_name %>_pager">
+  <% if pagy.next %>
+    <%= link_to(
+          "Load More",
+          "#{controller_name}?query=#{params[:query]}&page=#{pagy.next}",
+          data: {
+            turbo_frame: "page_handler"
+          }
+        ) %>
+  <% end %>
+</div>
