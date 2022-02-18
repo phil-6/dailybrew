@@ -4,11 +4,14 @@ class CoffeesController < ApplicationController
 
   # GET /coffees or /coffees.json
   def index
-    if params[:query].present?
-      search
-    else
-      @pagy, @coffees = @roaster.present? ? @roaster.coffees : pagy(Coffee.all, items: 10)
-    end
+    @pagy, @coffees =
+      if params[:query].present?
+        pagy(search, items: 10)
+      elsif @roaster.present?
+        @roaster.coffees
+      else
+        pagy(Coffee.all.order('brews_count DESC, name ASC'), items: 10)
+      end
   end
 
   # GET /coffees/1 or /coffees/1.json
@@ -59,16 +62,13 @@ class CoffeesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  private
 
   def search
-    @pagy, @coffees = pagy(
-      Coffee.where('name ILIKE :search OR tasting_notes ILIKE :search OR country ILIKE :search OR process ILIKE :search',
-                   search: "%#{params[:query].downcase}%"),
-      items: 10
-    )
+    Coffee.where('name ILIKE :search OR tasting_notes ILIKE :search OR country ILIKE :search OR process ILIKE :search',
+                 search: "%#{params[:query].downcase}%")
   end
-
-  private
 
   # Use callbacks to share common setup or constraints between actions.
   def set_coffee
