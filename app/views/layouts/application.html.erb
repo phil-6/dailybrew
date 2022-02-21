@@ -22,9 +22,7 @@
       <% end %>
     <% end %>
 
-    <% unless devise_controller? %>
-      <%= render 'shared/navbar' %>
-    <% end %>
+    <%= render 'shared/navbar' %>
     <%= yield %>
   </body>
 </html>
