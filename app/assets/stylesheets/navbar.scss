@@ -16,10 +16,6 @@
       padding: 1rem 0;
       transition: color .25s;
       line-height: 1;
-
-      &:hover {
-        color: $color-complementary-0;
-      }
     }
 
     .nav-links {
@@ -43,7 +39,12 @@
   }
 
   .nav-right {
+    align-items: center;
+    gap: 0.5rem;
 
+    .btn {
+      width: 120px;
+    }
   }
 }
 //   display: flex;
