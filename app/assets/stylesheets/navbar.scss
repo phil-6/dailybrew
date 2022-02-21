@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 0 1rem;
   background-color: white;
-  box-shadow: 0 0 2px 0 #064763;
+  box-shadow: 0 0 2px 0 $color-primary-0;
 
   .nav-left {
     gap: 1rem;
@@ -36,7 +36,7 @@
 
         &:hover {
           color: $color-primary-1;
-          border-bottom-color: $color-complementary-0;
+          border-bottom-color: $color-complementary-0 !important;
         }
       }
     }

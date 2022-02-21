@@ -3,6 +3,7 @@
 .devise {
   min-height: 100vh;
   padding: 1rem;
+  align-items: center;
 
   @media screen and (max-width: $screen-lg) {
     justify-content: flex-start !important;
