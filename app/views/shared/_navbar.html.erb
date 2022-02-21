@@ -1,22 +1,11 @@
-<nav data-controller="navbar" class="navbar">
-  <div class="nav-left">
-
-  </div>
-  <div class="nav-center">
-    <div class="nav-brand">
-      <%= link_to "Daily Brew", root_path, class: "brand" %>
-    </div>
-
-    <div class="nav-links">
-      <% if current_user %>
-        <h2><%= link_to "Journal", dashboard_path, class: "nav-link" %></h2>
-      <% else %>
-        <h2><%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %></h2>
-      <% end %>
-
-      <h2><%= link_to "Roasters", roasters_path, class: "nav-link" %></h2>
-      <h2><%= link_to "Subscription", subscription_path, class: "nav-link" %></h2>
-      <h2><%= link_to "About Us", about_path, class: "nav-link" %></h2>
+<nav data-controller="navbar" class="navbar row">
+  <div class="nav-left row">
+    <%= link_to 'Daily Brew', root_path, class: 'nav-brand logo' %>
+    <div class="nav-links row">
+      <%= link_to 'Journal', dashboard_path, class: 'link link-primary' %>
+      <%= link_to 'Roasters', roasters_path, class: 'link link-primary' %>
+      <%= link_to 'Coffees', coffees_path, class: 'link link-primary' %>
+      <%= link_to 'Subscription', subscription_path, class: 'link link-primary' %>
     </div>
   </div>
 
