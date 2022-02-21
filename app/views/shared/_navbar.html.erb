@@ -8,23 +8,15 @@
       <%= link_to 'Subscription', subscription_path, class: 'link link-primary' %>
     </div>
   </div>
-
+  <div class="nav-left-mobile">
+    <div data-action="click->navbar#expand" class="btn btn-primary-border"><i class="las la-bars"></i></div>
+  </div>
   <div class="nav-right row">
-    <% if current_user %>
-      <div class="nav-dropdown">
-        <span class="dropdown-button nav-link link-secondary">
-          <i class="las la-user-circle"></i><i class="las la-angle-down"></i>
-        </span>
-        <div class="dropdown-content">
-          <%= render 'shared/navbar_dropdown_links', mobile_only: false %>
-        </div>
-      </div>
-      <div data-action="click->navbar#expand" class="nav-mobile-expand nav-link link-secondary">
-        <i class="las la-bars"></i>
-      </div>
-    <% else %>
+    <% unless current_user %>
       <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary-border' %>
       <%= link_to 'Login', new_user_session_path, class: 'btn btn-primary' %>
+    <% else %>
+    <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-primary-border' %>
     <% end %>
   </div>
 </nav>

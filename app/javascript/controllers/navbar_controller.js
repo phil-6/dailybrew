@@ -3,14 +3,14 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
 
     expand() {
-        const navbar = this.element,
-            nav_mobile_expand = navbar.querySelector('.nav-mobile-expand'),
-            icon_class_list = nav_mobile_expand.querySelector('i').classList
+        const navbar = this.element
+        const expandBtn = navbar.querySelector('.nav-left-mobile .btn.btn-primary-border')
+        const iconClassList = expandBtn.querySelector('i').classList
 
         if (navbar.classList.toggle('expanded')) {
-            icon_class_list.replace('fa-bars', 'fa-times')
+            iconClassList.replace('la-bars', 'la-times')
         } else {
-            icon_class_list.replace('fa-times', 'fa-bars')
+            iconClassList.replace('la-times', 'la-bars')
         }
     }
 }
