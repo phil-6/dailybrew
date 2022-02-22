@@ -50,7 +50,6 @@ module FetchCoffees
         @coffees << coffee
       end
 
-      puts @coffees
       @coffees
     end
   end
