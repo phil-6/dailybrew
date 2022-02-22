@@ -116,6 +116,17 @@ Roaster.create!(
 )
 
 Roaster.create!(
+  reference: 'assembly_coffee',
+  name: 'Assembly Coffee',
+  description: 'Coffee by Assembly. Coffee Roastery collectively creating forward thinking approaches to coffee and cafe culture.',
+  location: '244 Ferndale Road, London, SW9 8FR',
+  website: 'https://assemblycoffee.co.uk/',
+  twitter: '@assemblyroast',
+  instagram: 'assemblyroast',
+  facebook: 'assemblyroast'
+)
+
+Roaster.create!(
   reference: 'astrora_coffee',
   name: 'Astrora Coffee',
   description: 'a speciality coffee micro roastery & retailer',
