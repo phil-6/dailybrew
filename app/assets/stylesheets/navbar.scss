@@ -6,8 +6,8 @@ nav {
   padding: 0 1rem;
 
   .navbar {
-    max-width: 1600px;
-    height: 67px;
+    max-width: $container-xl;
+    height: $nav-height;
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,7 @@ nav {
           border-bottom-color: transparent;
 
           &:hover {
-            border-bottom-color: $color-complementary-0 !important;
+            border-bottom-color: $color-complementary-0;
           }
         }
       }
@@ -95,7 +95,7 @@ nav {
     right: 0;
     top: 0;
     z-index: 100;
-    width: 300px;
+    width: $container-sm;
     height: 100vh;
     padding: 0.75rem 1rem;
     background-color: white;

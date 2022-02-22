@@ -31,7 +31,7 @@
       color: $color-primary-0;
 
       &:hover, &:focus {
-        background-color: rgba(6,71,99,0.25);
+        background-color: $color-primary-opacity-25;
         color: $color-primary-0;
       }
     }
