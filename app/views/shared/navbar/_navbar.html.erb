@@ -2,12 +2,7 @@
   <div class="navbar row">
     <div class="nav-left row">
       <%= link_to 'Daily Brew', root_path, class: 'nav-brand logo' %>
-      <div class="nav-links row">
-        <%= link_to 'Journal', dashboard_path, class: 'link link-primary' %>
-        <%= link_to 'Roasters', roasters_path, class: 'link link-primary' %>
-        <%= link_to 'Coffees', coffees_path, class: 'link link-primary' %>
-        <%= link_to 'Subscription', subscription_path, class: 'link link-primary' %>
-      </div>
+      <%= render 'shared/navbar/nav_links', direction: 'row' %>
     </div>
     <div class="nav-right">
       <div class="nav-authentication-btns row">
@@ -27,12 +22,7 @@
     <div data-action="click->navbar#collapse" class="nav-menu-collapse btn btn-primary-border row">
       <i class="las la-times"></i>
     </div>
-    <div class="nav-links column">
-    <%= link_to 'Journal', dashboard_path, class: 'link link-primary' %>
-    <%= link_to 'Roasters', roasters_path, class: 'link link-primary' %>
-    <%= link_to 'Coffees', coffees_path, class: 'link link-primary' %>
-    <%= link_to 'Subscription', subscription_path, class: 'link link-primary' %>
-    </div>
+    <%= render 'shared/navbar/nav_links', direction: 'column' %>
     <div class="nav-authentication-btns row">
       <% unless current_user %>
         <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary-border' %>
