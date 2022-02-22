@@ -5,32 +5,19 @@
       <%= render 'shared/navbar/nav_links', direction: 'row' %>
     </div>
     <div class="nav-right">
-      <div class="nav-authentication-btns row">
-        <% unless current_user %>
-          <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary-border' %>
-          <%= link_to 'Login', new_user_session_path, class: 'btn btn-primary' %>
-        <% else %>
-          <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-primary-border' %>
-        <% end %>
-      </div>
+      <%= render 'shared/navbar/nav_authentication_btns' %>
       <div data-action="click->navbar#expand" class="nav-menu-expand btn btn-primary-border">
         <i class="las la-bars"></i>
       </div>
     </div>
   </div>
+
   <div class="nav-menu column">
     <div data-action="click->navbar#collapse" class="nav-menu-collapse btn btn-primary-border row">
       <i class="las la-times"></i>
     </div>
     <%= render 'shared/navbar/nav_links', direction: 'column' %>
-    <div class="nav-authentication-btns row">
-      <% unless current_user %>
-        <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary-border' %>
-        <%= link_to 'Login', new_user_session_path, class: 'btn btn-primary' %>
-      <% else %>
-        <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-primary-border' %>
-      <% end %>
-    </div>
+    <%= render 'shared/navbar/nav_authentication_btns' %>
   </div>
   <div class="nav-menu-background"></div>
 </nav>
