@@ -13,8 +13,10 @@
   </div>
 
   <div class="nav-menu column">
-    <div data-action="click->navbar#collapse" class="nav-menu-collapse btn btn-primary-border row">
-      <i class="las la-times"></i>
+    <div class="nav-menu-controls row">
+      <div data-action="click->navbar#collapse" class="nav-menu-collapse btn btn-primary-border row">
+        <i class="las la-times"></i>
+      </div>
     </div>
     <%= render 'shared/navbar/nav_links', direction: 'column' %>
     <%= render 'shared/navbar/nav_authentication_btns' %>

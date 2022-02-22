@@ -32,7 +32,8 @@ nav {
         }
 
         .link {
-          padding: calc(1rem + 3px) 0.5rem 1rem;
+          line-height: calc(#{$nav-height} - 2px);
+          padding: 0 0.25rem;
           border-bottom-color: transparent;
 
           &:hover {
@@ -45,7 +46,6 @@ nav {
     .nav-right {
       align-items: center;
       height: fit-content;
-      padding: 0.75rem 0;
       gap: 0.5rem;
 
       .nav-authentication-btns {
@@ -69,7 +69,7 @@ nav {
       color: $color-primary-0;
       font-weight: 600;
       letter-spacing: -1px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       transition: border-bottom-color .25s;
       border-bottom: 3px solid;
 
@@ -86,8 +86,6 @@ nav {
   .nav-menu-expand, .nav-menu-collapse {
     font-size: 1.5rem;
     line-height: 0;
-    padding: 0.6rem 1.5rem;
-    width: auto;
   }
 
   .nav-menu {
@@ -97,20 +95,28 @@ nav {
     z-index: 100;
     width: $container-sm;
     height: 100vh;
-    padding: 0.75rem 1rem;
+    padding: 0 1rem;
     background-color: white;
     box-shadow: 0 0 2px 0 $color-primary-0;
     align-items: flex-end;
-    gap: 2rem;
+    gap: 1rem;
     display: none;
 
     @media screen and (min-width: $screen-lg) {
       display: none !important;
     }
 
+    .nav-menu-controls {
+      width: 100%;
+      height: $nav-height;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
     .nav-links {
       gap: 1rem;
       width: 100%;
+      margin-bottom: 2rem;
 
       .link {
         width: fit-content;
