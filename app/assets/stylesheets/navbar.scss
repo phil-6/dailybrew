@@ -1,69 +1,74 @@
 @import "variables";
 
-.navbar {
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
+nav {
   background-color: white;
   box-shadow: 0 0 2px 0 $color-primary-0;
+  padding: 0 1rem;
 
-  .nav-left {
-    gap: 1rem;
+  .navbar {
+    max-width: 1600px;
+    margin: 0 auto;
+    justify-content: space-between;
     align-items: center;
 
-    @media screen and (max-width: $screen-lg) {
-      display: none;
-    }
+    .nav-left {
+      gap: 1rem;
+      align-items: center;
 
-    .nav-brand {
-      color: $color-primary-0;
-      font-size: 2rem;
-      padding: 1rem 0;
-      transition: color .25s;
-      line-height: 1;
-    }
+      @media screen and (max-width: $screen-lg) {
+        display: none;
+      }
 
-    .nav-links {
-      gap: 0.5rem;
-
-      .link {
+      .nav-brand {
         color: $color-primary-0;
-        font-weight: 600;
-        letter-spacing: -1px;
-        font-size: 1.2rem;
-        padding: calc(1rem + 3px) 0.5rem 1rem;
-        border-bottom: 3px solid transparent;
-        transition: border-bottom-color .25s;
+        font-size: 2rem;
+        padding: 1rem 0;
+        transition: color .25s;
+        line-height: 1;
+      }
 
-        &:hover {
-          color: $color-primary-1;
-          border-bottom-color: $color-complementary-0 !important;
+      .nav-links {
+        gap: 0.5rem;
+
+        .link {
+          color: $color-primary-0;
+          font-weight: 600;
+          letter-spacing: -1px;
+          font-size: 1.2rem;
+          padding: calc(1rem + 3px) 0.5rem 1rem;
+          border-bottom: 3px solid transparent;
+          transition: border-bottom-color .25s;
+
+          &:hover {
+            color: $color-primary-1;
+            border-bottom-color: $color-complementary-0 !important;
+          }
         }
       }
     }
-  }
 
-  .nav-left-mobile {
-    display: none;
+    .nav-left-mobile {
+      display: none;
 
-    @media screen and (max-width: $screen-lg) {
-      display: block;
+      @media screen and (max-width: $screen-lg) {
+        display: block;
+      }
+
+      .btn {
+        font-size: 1.2rem;
+        padding: 0.75rem 1.5rem;
+      }
     }
 
-    .btn {
-      font-size: 1.2rem;
-      padding: 0.75rem 1.5rem;
-    }
-  }
+    .nav-right {
+      align-items: center;
+      height: fit-content;
+      padding: 0.7rem 0;
+      gap: 0.5rem;
 
-  .nav-right {
-    align-items: center;
-    height: fit-content;
-    padding: 0.7rem;
-    gap: 0.5rem;
-
-    .btn {
-      width: 120px;
+      .btn {
+        width: 120px;
+      }
     }
   }
 }
