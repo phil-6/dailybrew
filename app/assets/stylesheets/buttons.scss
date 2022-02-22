@@ -14,6 +14,7 @@
   padding: 0.75rem 2rem;
   border-radius: 2rem;
   text-align: center;
+  border: none;
 
   &-primary {
     background-color: $color-primary-0;
@@ -25,6 +26,7 @@
     }
 
     &-border {
+      background-color: white;
       box-shadow: inset 0 0 0 2px $color-primary-0;
       color: $color-primary-0;
 

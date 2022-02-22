@@ -49,9 +49,6 @@ nav {
       gap: 0.5rem;
 
       .nav-authentication-btns {
-        .btn {
-          width: 120px;
-        }
         @media screen and (max-width: $screen-lg) {
           display: none;
         }
