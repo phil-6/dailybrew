@@ -51,31 +51,70 @@ nav {
     .nav-right {
       align-items: center;
       height: fit-content;
-      padding: 0.7rem 0;
+      padding: 0.75rem 0;
       gap: 0.5rem;
 
-      .btn:not(.nav-expand) {
-        width: 120px;
-      }
-
       .nav-authentication-btns {
-        display: block;
-
+        .btn {
+          width: 120px;
+        }
         @media screen and (max-width: $screen-lg) {
           display: none;
         }
       }
 
-      .nav-expand {
-        font-size: 1.5rem;
-        line-height: 0;
-        padding: 0.6rem 1.5rem;
+      .nav-menu-expand {
         display: none;
 
         @media screen and (max-width: $screen-lg) {
-          display: block;
+          display: inline-block;
         }
       }
+    }
+  }
+
+  .nav-authentication-btns {
+    gap: 0.5rem;
+  }
+
+  .nav-menu-expand, .nav-menu-collapse {
+    font-size: 1.5rem;
+    line-height: 0;
+    padding: 0.6rem 1.5rem;
+    width: auto;
+  }
+
+  .nav-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    height: 100vh;
+    padding: 0.75rem 1rem;
+    background-color: white;
+    box-shadow: 0 0 2px 0 $color-primary-0;
+    align-items: flex-end;
+    gap: 1rem;
+    display: none;
+
+    @media screen and (min-width: $screen-lg) {
+      display: none !important;
+    }
+
+    &-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 50;
+      width: 100vh;
+      height: 100vh;
+      background-color: $color-primary-0;
+      opacity: 0.25;
+      display: none;
+    }
+
+    .nav-menu-collapse {
+      // float: right;
     }
   }
 }
