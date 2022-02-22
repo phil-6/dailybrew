@@ -26,22 +26,16 @@ nav {
 
       .nav-links {
         gap: 0.5rem;
-
+    
         @media screen and (max-width: $screen-lg) {
           display: none;
         }
 
         .link {
-          color: $color-primary-0;
-          font-weight: 600;
-          letter-spacing: -1px;
-          font-size: 1.2rem;
           padding: calc(1rem + 3px) 0.5rem 1rem;
-          border-bottom: 3px solid transparent;
-          transition: border-bottom-color .25s;
+          border-bottom-color: transparent;
 
           &:hover {
-            color: $color-primary-1;
             border-bottom-color: $color-complementary-0 !important;
           }
         }
@@ -73,6 +67,21 @@ nav {
     }
   }
 
+  .nav-links {
+    .link {
+      color: $color-primary-0;
+      font-weight: 600;
+      letter-spacing: -1px;
+      font-size: 1.2rem;
+      transition: border-bottom-color .25s;
+      border-bottom: 3px solid;
+
+      &:hover {
+        color: $color-primary-1;
+      }
+    }
+  }
+
   .nav-authentication-btns {
     gap: 0.5rem;
   }
@@ -95,11 +104,25 @@ nav {
     background-color: white;
     box-shadow: 0 0 2px 0 $color-primary-0;
     align-items: flex-end;
-    gap: 1rem;
+    gap: 2rem;
     display: none;
 
     @media screen and (min-width: $screen-lg) {
       display: none !important;
+    }
+
+    .nav-links {
+      gap: 1rem;
+      width: 100%;
+
+      .link {
+        width: fit-content;
+        border-bottom-color: $color-complementary-0;
+
+        &:hover {
+          border-bottom-color: $color-complementary-1;
+        }
+      }
     }
 
     .nav-authentication-btns {
