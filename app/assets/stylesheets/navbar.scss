@@ -7,6 +7,7 @@ nav {
 
   .navbar {
     max-width: 1600px;
+    height: 67px;
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
@@ -14,10 +15,6 @@ nav {
     .nav-left {
       gap: 1rem;
       align-items: center;
-
-      @media screen and (max-width: $screen-lg) {
-        display: none;
-      }
 
       .nav-brand {
         color: $color-primary-0;
@@ -29,6 +26,10 @@ nav {
 
       .nav-links {
         gap: 0.5rem;
+
+        @media screen and (max-width: $screen-lg) {
+          display: none;
+        }
 
         .link {
           color: $color-primary-0;
@@ -47,27 +48,33 @@ nav {
       }
     }
 
-    .nav-left-mobile {
-      display: none;
-
-      @media screen and (max-width: $screen-lg) {
-        display: block;
-      }
-
-      .btn {
-        font-size: 1.2rem;
-        padding: 0.75rem 1.5rem;
-      }
-    }
-
     .nav-right {
       align-items: center;
       height: fit-content;
       padding: 0.7rem 0;
       gap: 0.5rem;
 
-      .btn {
+      .btn:not(.nav-expand) {
         width: 120px;
+      }
+
+      .nav-authentication-btns {
+        display: block;
+
+        @media screen and (max-width: $screen-lg) {
+          display: none;
+        }
+      }
+
+      .nav-expand {
+        font-size: 1.5rem;
+        line-height: 0;
+        padding: 0.6rem 1.5rem;
+        display: none;
+
+        @media screen and (max-width: $screen-lg) {
+          display: block;
+        }
       }
     }
   }
