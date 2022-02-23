@@ -86,11 +86,13 @@
     .roaster-card {
       background-color: white;
       border-radius: 2rem;
+      padding: 2rem;
+      height: $container-xs;
+      justify-content: space-between;
       flex-grow: 1;
       flex-basis: calc(25% - 2rem);
       max-width: calc(25% - 1rem);
       margin: 1rem;
-      padding: 2rem;
 
       @media screen and (max-width: $screen-xxl) {
         flex-basis: calc(33% - 2rem);
@@ -113,6 +115,42 @@
         flex-basis: 100%;
         max-width: 100%;
         margin: 0.5rem 0;
+      }
+
+      h3 {
+        width: fit-content;
+        line-height: 1.2;
+        padding-bottom: 0.25rem;
+        border-bottom: 3px solid $color-complementary-0;
+
+        &:hover {
+          border-bottom-color: $color-complementary-1;
+        }
+      }
+
+      .row {
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .available-coffees {
+          text-align: center;
+          font-size: 1.25rem;
+          color: $color-primary-0;
+        }
+
+        .socials {
+          flex-direction: row-reverse;
+          gap: 0.25rem;
+
+          a {
+            font-size: 1.5rem;
+            color: $color-primary-0;
+
+            &:hover {
+              color: $color-primary-1;
+            }
+          }
+        }
       }
     }
   }

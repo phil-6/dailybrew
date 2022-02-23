@@ -43,30 +43,14 @@ body {
     @media screen and (max-width: $screen-lg) {
       font-size: 1.8rem;
     }
-
-    @media screen and (max-width: $screen-md) {
-      font-size: 1.5rem;
-    }
   }
 
   h3 {
     font-size: 1.5rem;
-
-    @media screen and (max-width: $screen-md) {
-      font-size: 1.35rem;
-    }
-
-    @media screen and (max-width: $screen-sm) {
-      font-size: 1.2rem;
-    }
   }
 
   h4 {
     font-size: 1.25rem;
-
-    @media screen and (max-width: $screen-md) {
-      font-size: 1rem;
-    }
   }
 
   h5 {
@@ -93,11 +77,6 @@ body {
 
   a {
     text-decoration: none;
-    color: $color-secondary;
-
-    &:hover {
-      color: $color-secondary-light;
-    }
   }
 
   b {
@@ -171,7 +150,7 @@ body {
   .admin-controls-container {
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
+    margin-top: 2rem;
 
     .admin-controls {
       padding: 2rem 4rem;
