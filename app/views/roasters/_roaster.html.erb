@@ -10,16 +10,15 @@
       <%= roaster.available_coffees_count %><i class="las la-shopping-bag"></i>
     </div>
     <div class="socials row">
-      <a href="https://<%= roaster.website %>"><i class="las la-link"></i></a>
-      <a href="https://www.google.com/maps/?q=<%= roaster.name %>, <%= roaster.location %>" target=_blank><i class="las la-map-marked-alt"></i></a>
+      <a href="https://<%= roaster.website %>" class="link link-primary"><i class="las la-link"></i></a>
       <% if roaster.twitter %>
-        <a href="https://twitter.com/<%= roaster.twitter %>" target=_blank><i class="lab la-twitter"></i></a>
+        <a href="https://twitter.com/<%= roaster.twitter %>" target=_blank class="link link-primary"><i class="lab la-twitter"></i></a>
       <% end %>
       <% if roaster.instagram %>
-        <a href="https://instagram.com/<%= roaster.instagram %>" target=_blank><i class="lab la-instagram"></i></a>
+        <a href="https://instagram.com/<%= roaster.instagram %>" target=_blank class="link link-primary"><i class="lab la-instagram"></i></a>
       <% end %>
       <% if roaster.facebook %>
-        <a href="https://facebook.com/<%= roaster.facebook %>" target=_blank><i class="lab la-facebook-square"></i></a>
+        <a href="https://facebook.com/<%= roaster.facebook %>" target=_blank class="link link-primary"><i class="lab la-facebook-square"></i></a>
       <% end %>
     </div>
   </div>
