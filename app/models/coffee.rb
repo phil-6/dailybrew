@@ -10,7 +10,7 @@ class Coffee < ApplicationRecord
   has_many :favourites
   has_many :favourite_users, through: :favourites, source: :user
 
-  validates_presence_of :roaster, :name, :country, :tasting_notes, :url
+  validates_presence_of :roaster, :name, :tasting_notes, :url
   validates :url, uniqueness: { case_sensitive: false }
   validates :name, uniqueness: { scope: :roaster }
 
