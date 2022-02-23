@@ -3,7 +3,18 @@
 .roasters {
   .banner {
     width: 100%;
-    background-color: $color-primary-2;
+    
+    &.primary {
+      background-color: $color-primary-1;
+    }
+
+    &.secondary {
+      background-color: $color-primary-2;
+
+      .banner-content {
+        padding: 3rem;
+      }
+    }
 
     .banner-content {
       max-width: $container-md;
@@ -41,16 +52,13 @@
           margin-left: 1rem;
         }
       }
+
+      .results {
+        text-align: center;
+      }
     }
   }
 
-  .intro {
-    text-align: center;
-
-    .lead {
-      line-height: 1.8;
-    }
-  }
 
   .index-card {
     max-width: 1000px;

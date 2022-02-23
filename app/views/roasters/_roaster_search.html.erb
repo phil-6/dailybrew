@@ -1,8 +1,7 @@
 <div class="search-form">
   <%= form_with url: roasters_path, method: "GET" do |form| %>
     <div class="field">
-      <%= form.text_field :query, class: 'form-input search', placeholder: 'Search By Name' %>
-      <%= form.label :query, 'Search', class: 'form-label' %>
+      <%= form.text_field :query, class: 'form-input search', placeholder: 'Search' %>
       <%= button_tag(type: 'submit', class: 'form-submit form-search btn btn-primary') do %>
         <i class="las la-search"></i>
       <% end %>
