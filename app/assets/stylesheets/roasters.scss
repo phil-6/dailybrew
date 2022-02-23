@@ -8,18 +8,21 @@
       background-color: $color-primary-1;
 
       .banner-content {
-        padding-bottom: 4rem;
+        padding: 3rem 2rem 4rem;
       }
     }
 
     &.secondary {
       background-color: $color-primary-2;
+
+      .banner-content {
+        padding: 2rem;
+      }
     }
 
     .banner-content {
       max-width: $container-md;
       margin: 0 auto;
-      padding: 3rem 2rem;
 
       h2, p {
         color: $color-white;
@@ -55,7 +58,7 @@
 
       .search-form {
         .field {
-          margin: 0.5rem 0;
+          margin: 1rem 0;
         }
 
         .results {

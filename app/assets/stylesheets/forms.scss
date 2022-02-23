@@ -152,6 +152,11 @@
   &:not(a) {
     border: 1px solid $color-complementary-0 !important;
   }
+
+  &.btn-complementary {
+    outline-color: $color-primary-0;
+    box-shadow: 0 0 0 2px $color-primary-0;
+  }
 }
 
 input[type="submit" i] {
