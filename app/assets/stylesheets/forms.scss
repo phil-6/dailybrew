@@ -66,6 +66,10 @@
     &.invalid {
       border-color: $danger;
     }
+
+    &.search {
+      padding-right: 6rem;
+    }
   }
 
   .error-message {
@@ -95,6 +99,14 @@
       top: 1.1rem;
       font-size: 0.9rem;
     }
+  }
+
+  .form-search {
+    font-size: 1.5rem;
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
