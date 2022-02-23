@@ -37,6 +37,16 @@
       }
     }
   }
+
+  &-complementary {
+    background-color: $color-complementary-0;
+    border-color: $color-complementary-0;
+    color: $color-primary-0;
+
+    &:hover, &:focus {
+      background-color: $color-complementary-2;
+    }
+  }
 }
 
 .link {
