@@ -20,8 +20,12 @@ nav {
         color: $color-primary-0;
         font-size: 2rem;
         padding: 1rem 0;
-        transition: color .25s;
+        transition: color .5s;
         line-height: 1;
+
+        &:hover {
+          color: $color-complementary-0
+        }
       }
 
       .nav-links {
