@@ -1,0 +1,14 @@
+<div id="users_table_pager" class="users_table_pager">
+  <div>
+    <% if pagy.next %>
+      <%= link_to(
+            "Load more",
+            admin_dashboard_path(page: pagy.next),
+            class: "",
+            data: {
+              turbo_frame: "page_handler"
+            }
+          ) %>
+    <% end %>
+  </div>
+</div>

@@ -5,6 +5,7 @@ class AdminController < ApplicationController
 
   # GET /admin/dashboard/
   def dashboard
+    @pagy, @users = pagy(@users.order('created_at DESC'), items: 10)
     render 'dashboard'
   end
 

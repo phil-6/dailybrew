@@ -1,0 +1,5 @@
+<%= turbo_frame_tag "page_handler" %>
+<table id="users_table" class="users-table">
+  <%= render "users_table", users: @users %>
+</table>
+<%= render "users_table_pager", pagy: @pagy %>
