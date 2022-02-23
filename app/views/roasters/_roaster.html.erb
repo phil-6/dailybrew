@@ -1,8 +1,8 @@
-<div id="<%= dom_id roaster %>">
-  <div class="<%= action_name %>-card">
+<div id="<%= dom_id roaster %>" class="roaster-card">
+  <div>
 
     <div class="name">
-      <h1><%= roaster.name %></h1>
+      <h3><%= roaster.name %></h3>
     </div>
     <div class="socials">
       <a href="https://www.google.com/maps/?q=<%= roaster.name %>, <%= roaster.location %>" target=_blank><i class="las la-map-marked-alt"></i></a>
@@ -29,10 +29,6 @@
       </div>
     <% end %>
 
-    <div class="description">
-      <%= roaster.description %>
-    </div>
-
     <div class="available_coffees">
       <strong>Number of Coffees:</strong>
       <%= roaster.available_coffees_count %>
@@ -41,10 +37,6 @@
     <div class="location">
       <strong>Location:</strong>
       <%= roaster.location %>
-    </div>
-
-    <div class="website">
-      <a href="https://<%= roaster.website %>" target=_blank><%= roaster.website %></a>
     </div>
 
     <% if action_name == "index" %>

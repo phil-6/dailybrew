@@ -19,25 +19,21 @@ body {
     margin: $nav-height auto 0;
   }
 
-  h1 {
-    font-weight: 100;
-  }
-
-  h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5 {
     color: $color-primary-0;
     font-weight: 600;
     letter-spacing: -1px;
   }
 
   h1 {
-    font-size: 6rem;
+    font-size: 3rem;
 
     @media screen and (max-width: $screen-md) {
-      font-size: 5rem;
+      font-size: 2.5rem;
     }
 
     @media screen and (max-width: $screen-sm) {
-      font-size: 4rem;
+      font-size: 2rem;
     }
   }
 
@@ -193,5 +189,4 @@ body {
   .pager {
     text-align: center;
   }
-
 }

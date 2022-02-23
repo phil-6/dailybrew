@@ -12,15 +12,11 @@
       </p>
     </div>
   </div>
-  
-  
-
   <div class="banner secondary">
     <div class="banner-content">
       <%= render 'roaster_search' %>
     </div>
   </div>
-
   <% if current_user&.admin %>
     <div class="admin-controls-container">
       <div class="admin-controls">
@@ -29,12 +25,10 @@
       </div>
     </div>
   <% end %>
-  
 
   <%= turbo_frame_tag "page_handler" %>
-  <div id="roasters">
+  <div id="roasters" class="roasters row">
     <%= render @roasters %>
   </div>
   <%= render "shared/index_pager", pagy: @pagy %>
-
 </main>

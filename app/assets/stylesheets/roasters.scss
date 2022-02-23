@@ -69,96 +69,141 @@
     }
   }
 
+  .roasters {
+    max-width: $container-xl;
+    margin: 0 auto;
+    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 
-  .index-card {
-    max-width: 1000px;
-    margin: 1rem auto;
-    text-align: center;
-    border-radius: 2rem;
-    overflow: hidden;
-    box-shadow: 0 0 10px 0 #064763;
-
-    &:hover {
-      animation: pulse 1s infinite;
+    @media screen and (max-width: $screen-lg) {
+      padding: 2rem 1rem;
     }
 
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 10px 0 #064763;
+    .roaster-card {
+      background-color: white;
+      border-radius: 2rem;
+      flex-grow: 1;
+      flex-basis: calc(25% - 2rem);
+      max-width: calc(25% - 1rem);
+      margin: 1rem;
+      padding: 2rem;
+
+      @media screen and (max-width: $screen-xxl) {
+        flex-basis: calc(33% - 2rem);
+        max-width: calc(33% - 1rem);
       }
-      70% {
-        box-shadow: 0 0 30px 0 #064763;
+
+      @media screen and (max-width: $screen-xl) {
+        flex-basis: calc(33% - 2rem);
+        max-width: calc(33% - 1rem);
+        margin: 0.5rem;
       }
-      100% {
-        box-shadow: 0 0 10px 0 #064763;
+
+      @media screen and (max-width: $screen-lg) {
+        flex-basis: calc(50% - 2rem);
+        max-width: calc(50% - 1rem);
+        margin: 0.5rem;
       }
-    }
 
-    .name {
-      background-color: $color-secondary-dark;
-      color: $color-brand;
-
-
-      h1 {
-        font-family: $heading-font;
-        font-size: 2.5rem;
+      @media screen and (max-width: $screen-md) {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 1rem 0;
       }
-    }
-
-    .socials {
-      text-align: center;
-      background-color: $color-secondary-dark;
-
-      a i {
-        font-size: 2rem;
-        color: $color-secondary-light;
-
-        &:hover {
-          color: $color-secondary;
-        }
-      }
-    }
-
-    .reference {
-    }
-
-
-    .available_coffees {
-    }
-
-    .location {
-    }
-
-    .website, .roaster-link {
-    }
-
-    .roaster-link {
-      font-size: 1.5rem;
-      font-weight: 200;
     }
   }
 
-  .show-card {
-    max-width: 1000px;
-    margin: 1rem auto;
-    text-align: center;
 
-    .socials {
-      text-align: center;
+  // .index-card {
+  //   max-width: 1000px;
+  //   margin: 1rem auto;
+  //   text-align: center;
+  //   border-radius: 2rem;
+  //   overflow: hidden;
+  //   box-shadow: 0 0 10px 0 #064763;
 
-      a i {
-        font-size: 2.2rem;
-        padding: 0 1rem;
-      }
-    }
+  //   &:hover {
+  //     animation: pulse 1s infinite;
+  //   }
 
-    .description {
-      font-size: 1.7rem;
-      font-weight: 200;
-    }
+  //   @keyframes pulse {
+  //     0% {
+  //       box-shadow: 0 0 10px 0 #064763;
+  //     }
+  //     70% {
+  //       box-shadow: 0 0 30px 0 #064763;
+  //     }
+  //     100% {
+  //       box-shadow: 0 0 10px 0 #064763;
+  //     }
+  //   }
 
-    .available_coffees, .location {
-      display: none;
-    }
-  }
+  //   .name {
+  //     background-color: $color-secondary-dark;
+  //     color: $color-brand;
+
+
+  //     h1 {
+  //       font-family: $heading-font;
+  //       font-size: 2.5rem;
+  //     }
+  //   }
+
+  //   .socials {
+  //     text-align: center;
+  //     background-color: $color-secondary-dark;
+
+  //     a i {
+  //       font-size: 2rem;
+  //       color: $color-secondary-light;
+
+  //       &:hover {
+  //         color: $color-secondary;
+  //       }
+  //     }
+  //   }
+
+  //   .reference {
+  //   }
+
+
+  //   .available_coffees {
+  //   }
+
+  //   .location {
+  //   }
+
+  //   .website, .roaster-link {
+  //   }
+
+  //   .roaster-link {
+  //     font-size: 1.5rem;
+  //     font-weight: 200;
+  //   }
+  // }
+
+  // .show-card {
+  //   max-width: 1000px;
+  //   margin: 1rem auto;
+  //   text-align: center;
+
+  //   .socials {
+  //     text-align: center;
+
+  //     a i {
+  //       font-size: 2.2rem;
+  //       padding: 0 1rem;
+  //     }
+  //   }
+
+  //   .description {
+  //     font-size: 1.7rem;
+  //     font-weight: 200;
+  //   }
+
+  //   .available_coffees, .location {
+  //     display: none;
+  //   }
+  // }
 }
