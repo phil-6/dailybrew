@@ -1,0 +1,21 @@
+@import "variables";
+
+.coffee-card {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 2rem;
+  flex-grow: 1;
+  flex-basis: calc(50% - 2rem);
+  max-width: calc(50% - 1rem);
+  margin: 1rem;
+
+  @media screen and (max-width: $screen-xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    margin: 0.5rem 0;
+  }
+}

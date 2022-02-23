@@ -1,4 +1,4 @@
-<div id="<%= dom_id coffee %>" class="card">
+<div id="<%= dom_id coffee %>" class="coffee-card">
 
   <!--  We can do something really cool and conditional with these.-->
   <%#= controller_name %>
@@ -6,10 +6,12 @@
   <%#= coffee_counter %>
 
   <div class="name">
-    <h1><%= coffee.name %></h1>
+    <h3><%= coffee.name %></h3>
   </div>
 
-  <div class="controls">
+  <%
+=begin%>
+ <div class="controls">
     <%= render 'favourites/favourite_toggle', coffee: coffee %>
     <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
   </div>
@@ -78,5 +80,7 @@
 
   <div class="coffee-link">
     <%= link_to "Show this coffee", coffee %>
-  </div>
+  </div> 
+<%
+=end%>
 </div>

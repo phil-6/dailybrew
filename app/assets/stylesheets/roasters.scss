@@ -190,12 +190,22 @@
       text-align: center;
     }
 
-    .roasters.available {
-      padding-top: 0;
+    h4 {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 3rem;
+
+      @media screen and (max-width: $screen-xl) {
+        padding: 0 2rem;
+      }
+
+      @media screen and (max-width: $screen-lg) {
+        padding: 0 1rem;
+      }
     }
 
-    .roaster-coffee-card {
-
+    .roasters.row {
+      padding-top: 1rem;
     }
   }
 }
