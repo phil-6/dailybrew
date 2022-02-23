@@ -107,7 +107,6 @@ nav {
     box-shadow: 0 0 2px 0 $color-primary-0;
     align-items: flex-end;
     gap: 1rem;
-    display: none;
 
     @media screen and (min-width: $screen-lg) {
       display: none !important;
@@ -143,11 +142,10 @@ nav {
       top: 0;
       left: 0;
       z-index: 50;
-      width: 100vh;
+      width: 100vw;
       height: 100vh;
       background-color: $color-primary-0;
       opacity: 0.75;
-      display: none;
 
       @media screen and (min-width: $screen-lg) {
         display: none !important;
