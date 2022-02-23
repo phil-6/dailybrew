@@ -1,21 +1,20 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-    expand() {
-        const navbar = this.element,
-            navMenu = navbar.querySelector('.nav-menu'),
-            navMenuBackground = navbar.querySelector('.nav-menu-background')
+    static targets = [ "menu", "background" ]
 
-        navMenu.style.display = 'flex'
-        navMenuBackground.style.display = 'block'
+    initialize() {
+        this.menuTarget.hidden = true
+        this.backgroundTarget.hidden = true
     }
 
-    collapse() {
-        const navbar = this.element,
-            navMenu = navbar.querySelector('.nav-menu'),
-            navMenuBackground = navbar.querySelector('.nav-menu-background')
+    open() {
+        this.menuTarget.hidden = false
+        this.backgroundTarget.hidden = false
+    }
 
-        navMenu.style.display = 'none'
-        navMenuBackground.style.display = 'none'
+    close() {
+        this.menuTarget.hidden = true
+        this.backgroundTarget.hidden = true
     }
 }
