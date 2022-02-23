@@ -3,7 +3,6 @@
 nav {
   background-color: white;
   box-shadow: 0 0 2px 0 $color-primary-0;
-  padding: 0 1rem;
   position: fixed;
   top: 0;
   width: 100%;
@@ -13,6 +12,7 @@ nav {
     max-width: $container-xl;
     height: $nav-height;
     margin: 0 auto;
+    padding: 0 1rem;
     justify-content: space-between;
     align-items: center;
     position: relative;
