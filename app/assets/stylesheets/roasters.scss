@@ -7,6 +7,16 @@
     &.primary {
       background-color: $color-primary-1;
 
+      h2, p {
+        color: $color-white;
+      }
+    }
+
+    &.secondary {
+      background-color: $color-primary-3;
+    }
+
+    &.header-banner {
       .banner-content {
         padding: 3rem 2rem 4rem;
 
@@ -16,24 +26,13 @@
       }
     }
 
-    &.secondary {
-      background-color: $color-primary-3;
-
-      .banner-content {
-        padding: 2rem;
-
-        @media screen and (max-width: $screen-md) {
-          padding: 1rem 2rem;
-        }
-      }
-    }
-
     .banner-content {
-      max-width: $container-md;
       margin: 0 auto;
+      padding: 2rem;
+      max-width: $container-md;
 
-      h2, p {
-        color: $color-white;
+      @media screen and (max-width: $screen-md) {
+        padding: 1rem 2rem;
       }
 
       .page-title {
@@ -160,6 +159,43 @@
           color: $color-primary-0;
         }
       }
+    }
+  }
+
+  &.show {
+    .location {
+      font-size: 0.9rem;
+    }
+
+    .description {
+      margin: 1rem 0;
+    }
+
+    .socials {
+      flex-direction: row-reverse;
+      gap: 0.25rem;
+
+      .link {
+        font-size: 1.5rem;
+        padding: 0.5rem 0.875rem;
+        border-radius: 50%;
+
+        &:hover {
+          background-color: $color-primary-opacity-25;
+        }
+      }
+    }
+
+    .coffee-summary {
+      text-align: center;
+    }
+
+    .roasters.available {
+      padding-top: 0;
+    }
+
+    .roaster-coffee-card {
+
     }
   }
 }
