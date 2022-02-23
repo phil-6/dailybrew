@@ -1,22 +1,55 @@
 @import "variables";
 
 .roasters {
-  h1 {
-    text-align: center;
-    line-height: 1.4;
+  .banner {
+    width: 100%;
+    background-color: $color-primary-2;
+
+    .banner-content {
+      max-width: $container-md;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+
+      h2, p {
+        color: $color-white;
+      }
+
+      .page-title {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        h2 {
+          line-height: 1;
+        }
+
+        &::before, &::after {
+          content: "";
+          height: 1px;
+          background: $color-complementary-0;
+          flex: 1 1 auto;
+          margin-top: 2px;
+        }
+
+        &::before {
+          margin-right: 1rem;
+        }
+
+        &::after {
+          margin-left: 1rem;
+        }
+      }
+    }
   }
 
   .intro {
     text-align: center;
 
     .lead {
-      font-size: 1.2rem;
       line-height: 1.8;
     }
-  }
-
-  .pagy-nav {
-    text-align: center;
   }
 
   .index-card {

@@ -1,12 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
 <main class="roasters">
-  <h1>Roasters</h1>
-  <div class="intro">
-    <p class="lead">This is a list of <%= @roasters_count %> roasters in the UK. There are more, but we think this is a
-      pretty good list! </p>
-    <p>If there is a roaster not on this list, please let us know, and we'll get them added!</p>
-    <% if current_user&.admin %>
+  <div class="banner">
+    <div class="banner-content">
+      <div class="page-title">
+        <h2>Roasters</h2>
+      </div>
+      <p>We have collected a list of <strong><%= @roasters_count %> roasters</strong> in the UK.</p>
+      <p>There are many more and we are constantly updating our list but if you think someone is missing, please let us
+        know and we'll get them added.
+      </p>
+    </div>
+  </div>
+  
+  <% if current_user&.admin %>
       <div class="admin-controls-container">
         <div class="admin-controls">
           <h1>Admin Controls</h1>
@@ -14,7 +21,6 @@
         </div>
       </div>
     <% end %>
-  </div>
 
   <%= render 'roaster_search' %>
 

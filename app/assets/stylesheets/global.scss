@@ -17,12 +17,6 @@ body {
 
   main {
     margin: $nav-height auto 0;
-    padding: 1rem;
-    max-width: $container-xl;
-
-    @media screen and (max-width: $screen-md) {
-      padding: 1rem 0.5rem;
-    }
   }
 
   h1 {
@@ -30,7 +24,7 @@ body {
   }
 
   h2, h3, h4, h5 {
-    color: $color-brand-dark;
+    color: $color-primary-0;
     font-weight: 600;
     letter-spacing: -1px;
   }
@@ -81,6 +75,18 @@ body {
 
   h5 {
     font-size: 0.75rem;
+  }
+
+  p {
+    font-size: 1rem;
+
+    @media screen and (max-width: $screen-lg) {
+      font-size: 0.938rem;
+    }
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 0.875rem;
+    }
   }
 
   .logo {

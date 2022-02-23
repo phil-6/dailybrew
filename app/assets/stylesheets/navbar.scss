@@ -12,10 +12,14 @@ nav {
     max-width: $container-xl;
     height: $nav-height;
     margin: 0 auto;
-    padding: 0 1rem;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 0 2rem;
+
+    @media screen and (max-width: $screen-lg) {
+      padding: 0 1rem;
+    }
 
     .nav-brand {
       color: $color-primary-0;
