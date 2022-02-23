@@ -1,5 +1,16 @@
 <%= turbo_frame_tag "page_handler" %>
 <table id="users_table" class="users-table">
+  <tr>
+    <th>Display Name</th>
+    <th><i class="las la-at"></i></th>
+    <th><i class="las la-hand-holding-usd"></i></th>
+    <th><i class="las la-eye"></i></th>
+    <th><i class="las la-user-shield"></i></th>
+    <th><i class="las la-archive"></i></th>
+    <th><i class="las la-heart"></i></th>
+    <th><i class="las la-coffee"></i></th>
+    <th><i class="las la-coffee"></i></th>
+  </tr>
   <%= render "users_table", users: @users %>
 </table>
 <%= render "users_table_pager", pagy: @pagy %>
