@@ -4,6 +4,10 @@ nav {
   background-color: white;
   box-shadow: 0 0 2px 0 $color-primary-0;
   padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 
   .navbar {
     max-width: $container-xl;
@@ -20,8 +24,12 @@ nav {
         color: $color-primary-0;
         font-size: 2rem;
         padding: 1rem 0;
-        transition: color .25s;
+        transition: color .5s;
         line-height: 1;
+
+        &:hover {
+          color: $color-complementary-0
+        }
       }
 
       .nav-links {
@@ -67,9 +75,9 @@ nav {
   .nav-links {
     .link {
       color: $color-primary-0;
-      font-weight: 600;
-      letter-spacing: -1px;
-      font-size: 1.1rem;
+      font-weight: 200;
+      letter-spacing: -0.5px;
+      font-size: 1.4rem;
       transition: border-bottom-color .25s;
       border-bottom: 3px solid;
 

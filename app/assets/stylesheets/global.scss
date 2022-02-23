@@ -16,7 +16,7 @@ body {
   color: $ink;
 
   main {
-    margin: 0 auto;
+    margin: $nav-height auto 0;
     padding: 1rem;
 
     @media screen and (max-width: $screen-md) {
