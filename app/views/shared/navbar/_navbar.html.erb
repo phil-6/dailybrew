@@ -1,9 +1,7 @@
 <nav data-controller="navbar">
   <div class="navbar row">
-    <div class="nav-left row">
-      <%= link_to 'Daily Brew', root_path, class: 'nav-brand logo' %>
-      <%= render 'shared/navbar/nav_links', direction: 'row' %>
-    </div>
+    <%= link_to 'Daily Brew', root_path, class: 'nav-brand logo' %>
+    <%= render 'shared/navbar/nav_links', direction: 'row' %>
     <div class="nav-right">
       <%= render 'shared/navbar/nav_authentication_btns' %>
       <div data-action="click->navbar#expand" class="nav-menu-expand btn btn-primary-border">
