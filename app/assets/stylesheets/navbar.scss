@@ -128,10 +128,8 @@ nav {
       .link {
         width: fit-content;
         border-bottom-color: $color-complementary-0;
-
-        &:hover {
-          border-bottom-color: $color-complementary-1;
-        }
+        font-size: 1.4rem;
+        font-weight: 200;
       }
     }
 
