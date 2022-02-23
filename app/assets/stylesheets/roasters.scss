@@ -9,6 +9,10 @@
 
       .banner-content {
         padding: 3rem 2rem 4rem;
+
+        @media screen and (max-width: $screen-md) {
+          padding: 2rem;
+        }
       }
     }
 
@@ -17,6 +21,10 @@
 
       .banner-content {
         padding: 2rem;
+
+        @media screen and (max-width: $screen-md) {
+          padding: 1rem 2rem;
+        }
       }
     }
 
@@ -81,6 +89,10 @@
 
     @media screen and (max-width: $screen-lg) {
       padding: 2rem 1rem;
+    }
+
+    @media screen and (max-width: $screen-md) {
+      padding: 1rem;
     }
 
     .roaster-card {

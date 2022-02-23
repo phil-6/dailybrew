@@ -2,7 +2,7 @@
   <div class="header">
     <h3 class="link link-primary"><%= link_to roaster.name, roaster, class: 'link link-primary' %></h3>
     <div class="location">
-      <%= roaster.location.split(',').last(2).join(',') %>
+      <%= roaster.location.split(',').last(2)[0].titleize %>
     </div>
   </div>
   <div class="row">
