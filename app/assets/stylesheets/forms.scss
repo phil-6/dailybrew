@@ -36,7 +36,7 @@
       color: transparent;
     }
 
-    &:focus {
+    &:focus, &:focus-visible {
       outline: 0;
       box-shadow: 0 0 0 2px $color-complementary-0;
     }

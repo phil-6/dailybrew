@@ -1,9 +1,11 @@
-<h1>New coffee</h1>
+<main class="<%= controller_name %>-<%= action_name %>">
+  <h1>New coffee</h1>
 
-<%= render "form", coffee: @coffee %>
+  <%= render "form", coffee: @coffee %>
 
-<br>
+  <br>
 
-<div>
-  <%= link_to "Back to coffees", coffees_path %>
-</div>
+  <div>
+    <%= link_to "Back to coffees", coffees_path %>
+  </div>
+</main>

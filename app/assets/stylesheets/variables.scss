@@ -6,6 +6,10 @@ $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
 
+$container-sm: 300px;
+$container-xl: 1600px;
+$nav-height: 69px;
+
 $color-brand: #D5B034;
 $color-brand-light: #E0C467;
 $color-brand-dark: #987C1F;
@@ -36,6 +40,8 @@ $color-primary-1: #296D8A;
 $color-primary-2: #135977;
 $color-primary-3: #02364C;
 $color-primary-4: #012331;
+
+$color-primary-opacity-25: rgba(6,71,99,0.25);
 
 $color-complementary-0: #ECB365; // Complementary color */
 $color-complementary-1: #FFE3BC;
