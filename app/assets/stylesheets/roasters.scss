@@ -17,7 +17,7 @@
     }
 
     &.secondary {
-      background-color: $color-primary-2;
+      background-color: $color-primary-3;
 
       .banner-content {
         padding: 2rem;
@@ -135,10 +135,13 @@
           line-height: 1.2;
           padding-bottom: 0.25rem;
           margin-bottom: 0.25rem;
-          border-bottom: 3px solid $color-complementary-0;
 
-          &:hover {
-            border-bottom-color: $color-complementary-1;
+          a {
+            border-bottom: 3px solid $color-complementary-0;
+
+            &:hover {
+              border-bottom-color: $color-complementary-1;
+            }
           }
         }
 
