@@ -9,18 +9,6 @@
     <div class="available-coffees">
       <%= roaster.available_coffees_count %><i class="las la-shopping-bag"></i>
     </div>
-    <div class="socials row">
-      <a href="https://<%= roaster.website %>" class="link link-primary"><i class="las la-link"></i></a>
-      <% if roaster.twitter %>
-        <a href="https://twitter.com/<%= roaster.twitter %>" target=_blank class="link link-primary"><i class="lab la-twitter"></i></a>
-      <% end %>
-      <% if roaster.instagram %>
-        <a href="https://instagram.com/<%= roaster.instagram %>" target=_blank class="link link-primary"><i class="lab la-instagram"></i></a>
-      <% end %>
-      <% if roaster.facebook %>
-        <a href="https://facebook.com/<%= roaster.facebook %>" target=_blank class="link link-primary"><i class="lab la-facebook-square"></i></a>
-      <% end %>
-    </div>
   </div>
 <!-- end #{action-name}-card -->
 </div>

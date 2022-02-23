@@ -132,7 +132,6 @@
       .header {
         h3 {
           width: fit-content;
-          line-height: 1.2;
           padding-bottom: 0.25rem;
           margin-bottom: 0.25rem;
 
@@ -152,29 +151,13 @@
       }
 
       .row {
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
 
         .available-coffees {
           text-align: center;
           font-size: 1.25rem;
           color: $color-primary-0;
-        }
-
-        .socials {
-          flex-direction: row-reverse;
-          gap: 0.25rem;
-
-          a {
-            font-size: 1.5rem;
-            line-height: 1;
-            padding: 0.25rem;
-            border-radius: 50%;
-
-            &:hover {
-              background-color: $color-primary-opacity-25;
-            }
-          }
         }
       }
     }
