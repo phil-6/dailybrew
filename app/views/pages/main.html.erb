@@ -1,5 +1,5 @@
 <main class="pages">
-  <div class="banner primary">
+  <div class="banner banner-primary-1">
     <div class="banner-content">
       <div class="page-title">
         <h1>Daily Brew</h1>
@@ -9,7 +9,8 @@
         <%= turbo_stream_from "daily_brews_count" %>
         <h2>
           <% if Brew.today.count == 0 %>
-            No one has brewed today.Are you going to be the first?
+            No one has brewed today. <br>
+            Will you be the first?
           <% else %>
             <span id="daily_brewers"><%= User.daily_brewers.count %></span> users have brewed
             <span id="daily_brews"><%= Brew.today.count %></span> coffees today
