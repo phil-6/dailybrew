@@ -1,11 +1,6 @@
 <main>
   <h1>Admin Dashboard</h1>
 
-  <div class="user-container">
-    <h2>Users</h2>
-    <%= render 'users' %>
-  </div>
-
   <div class="stats-container">
     <h2>Stats</h2>
     <p>User Count: <%= @stats['user_count'] %></p>
@@ -18,7 +13,14 @@
     <p>Users With Brews: <%= @stats['user_with_brews'] %></p>
   </div>
 
-  <div class="roaster-info">
+  <div class="user-container">
+    <h2>Users</h2>
+    <%= render 'users' %>
+  </div>
+
+
+
+  <div class="roaster-container">
     <h2>Roasters</h2>
     <%= render 'roasters' %>
   </div>
