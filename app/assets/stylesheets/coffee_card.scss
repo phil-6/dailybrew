@@ -20,7 +20,7 @@
       font-weight: 200;
       letter-spacing: -0.25px;
 
-      @media screen and (max-width: $screen-md) {
+      @media screen and (max-width: $screen-lg) {
         font-size: 0.9rem;
       }
     }
@@ -36,8 +36,12 @@
     gap: 0.5rem;
 
     span {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       opacity: 0.8;
+
+      @media screen and (max-width: $screen-lg) {
+        font-size: 0.8rem;
+      }
     }
   }
 }
