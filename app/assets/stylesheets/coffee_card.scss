@@ -19,6 +19,10 @@
       font-size: 1rem;
       font-weight: 200;
       letter-spacing: -0.25px;
+
+      @media screen and (max-width: $screen-md) {
+        font-size: 0.9rem;
+      }
     }
 
     .controls {
@@ -32,7 +36,7 @@
     gap: 0.5rem;
 
     span {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       opacity: 0.8;
     }
   }
