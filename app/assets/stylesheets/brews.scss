@@ -1,5 +1,51 @@
 @import "variables";
 
-.brews-new{
+.brews-new {
   max-width: $container-lg;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+
+    .stopwatch {
+      align-self: flex-end;
+      color: $color-primary-0;
+
+      .time {
+        width: 200px;
+        padding: 0 0.5rem;
+        font-size: 3rem;
+      }
+
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-end;
+        text-align:center;
+
+        button {
+          font-size: 1.5rem;
+          background-color: white;
+          border: 1px solid $color-primary-0;
+          border-radius: 2rem;
+          color: $color-primary-0;
+          padding: 0.5rem 1rem;
+          font-weight: 600;
+
+        }
+        #start_button:hover {
+          color: forestgreen;
+        }
+        #pause_button:hover {
+          color: royalblue;
+        }
+        .reset_button:hover {
+          color: darkred;
+        }
+
+      }
+    }
+  }
 }
