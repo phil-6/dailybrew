@@ -18,7 +18,7 @@
     </div> 
 
   </div>
-  <div class="banner">
+  <div class="banner banner-primary-1">
     <div class="banner-content">
       <h2><%= @roaster.name %></h2>
       <div class="location">
@@ -26,9 +26,9 @@
           <%= @roaster.location.split(',').last(2)[0].titleize %> <i class="las la-map-marked-alt"></i>
         </a>
       </div>
-      <div class="description">
+      <p class="description">
         <%= @roaster.description %>
-      </div>
+      </p>
       <div class="socials row">
         <a href="https://<%= @roaster.website %>" class="link link-primary link-icon"><i class="las la-link"></i></a>
 

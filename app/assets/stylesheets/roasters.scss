@@ -26,6 +26,15 @@
   }
 
   &.show {
+    .banner-content {
+      .link {
+        color: $color-white;
+      }
+      .socials .link {
+        border-color: $color-white;
+      }
+    }
+
     .location {
       font-size: 0.9rem;
     }
