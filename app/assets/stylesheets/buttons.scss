@@ -2,7 +2,7 @@
 
 .btn, .link {
   font-family: $font;
-  transition: background-color 0.25s, color 0.25s;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
 
   &:hover {
     cursor: pointer;

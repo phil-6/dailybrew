@@ -1,0 +1,106 @@
+@import "variables";
+
+.shelf-items {
+  .banner.primary .banner-content {
+    padding: 3rem 2rem 2rem;
+
+    h4 {
+      text-align: center;
+      color: white;
+    }
+  }
+
+  .shelf {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+
+    .shelf-item .brew-link {
+      text-align: center;
+      margin-top: 1rem;
+
+      a {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 1.2rem;
+        padding: 0.5rem 1.5rem;
+        border-radius: 2rem;
+        border: 1px solid $color-primary-2;
+        color: $color-primary-2;
+        transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+
+        &:hover, &:focus {
+          background-color: $color-primary-opacity-10;
+          border-color: $color-primary-opacity-10;
+          color: $color-primary-0;
+        }
+      }
+    }
+  }
+}
+
+.shelf-container {
+  h2 {
+    padding: 0 1rem;
+    display: block;
+  }
+
+  .shelf {
+    display: flex;
+
+    &.dashboard-shelf {
+      overflow: scroll;
+      justify-content: flex-start;
+    }
+
+    .shelf-item {
+      //border: 1px solid darkslateblue;
+      flex: 1 0 0;
+      padding: 2rem;
+      border-radius: 2rem;
+      margin: 1rem;
+      max-width: 350px;
+      min-width: 350px;
+      background-color: white;
+
+      .coffee-name {
+        border-bottom: 3px solid $color-complementary-0;
+
+        &:hover {
+          border-bottom-color: $color-complementary-1;
+        }
+
+        h3 {
+          padding-bottom: 0.25rem;
+          margin-bottom: 0.25rem;
+
+          /* Overflow after 2nd line */
+          $font-size: 1.5rem;
+          $line-height: 0.9;
+          $lines-to-show: 2;
+          display: block; /* Fallback for non-webkit */
+          display: -webkit-box;
+          height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+          font-size: $font-size;
+          line-height: $line-height;
+          -webkit-line-clamp: $lines-to-show;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      h3, h4 {
+        color: $ink;
+      }
+
+      a, &:visited {
+        color: $color-primary-0;
+
+        &:hover {
+          color: $color-primary-2;
+        }
+      }
+    }
+  }
+}
