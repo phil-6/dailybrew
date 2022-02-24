@@ -1,6 +1,6 @@
 <h2><%= link_to "Your Shelf", shelf_items_path %></h2>
 <div id="dashboard_shelf" class="shelf">
   <% @shelf_coffees.reverse.each do |coffee| %>
-    <%= render 'shelf_item', coffee: coffee %>
+    <%= render 'shelf_items/shelf_item', coffee: coffee %>
   <% end %>
 </div>
