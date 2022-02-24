@@ -1,4 +1,54 @@
 <main class="pages">
+  <div class="banner primary">
+    <div class="banner-content">
+      <div class="page-title">
+        <h1>Daily Brew</h1>
+      </div>
+      <div class="stats">
+        <%= turbo_stream_from "daily_brewers_count" %>
+        <%= turbo_stream_from "daily_brews_count" %>
+        <h2>
+          <% if Brew.today.count == 0 %>
+            No one has brewed today.Are you going to be the first?
+          <% else %>
+            <span id="daily_brewers"><%= User.daily_brewers.count %></span> users have brewed
+            <span id="daily_brews"><%= Brew.today.count %></span> coffees today
+          <% end %>
+        </h2>
+      </div>
+      <div class="cta">
+        <%= link_to "Brew Now", shelf_items_path, class: 'btn btn-complementary' %>
+      </div>
+    </div>
+  </div>
+
+  # Daily Brew
+  Do you brew coffee daily? Do you want to be able to keep track of which coffees are your favourites and which brews
+  were the best? So did we! So join us in the Daily Brew Club.
+  { Sign Up Link }
+
+  With Daily Brew, you can log your brews, keep track of what methods works best, discover roasters, coffees and more.
+  {Your Dashboard}
+
+  # Stats
+  x users have brewed x coffees today.
+
+  ## Public Beta
+  We're still working on Daily Brew. To say that there are going to be rough edges would be understating how far along
+  in development we are! If you're here now that's great, your feedback can really help shape what we're building.
+
+  ### Features we’re working on.
+  Consumable tracking - keep track of how many filter papers and other consumables you have left.
+  Better Recommendations - Based on the ratings you give to your coffees, we’ll work to recommend what could be a good
+  next coffee to try.
+  Better Filters - We have a search which works for coffees and roasters at the moment but we're going to add some
+  filters too. If you have any suggestions please let us know.
+
+  ### Open and Transparent
+  We're building Daily Brew in public. If there is anything that you think we should be sharing, but we're not, then let
+  us know and we'll see what we can do. There's more info about this on the About Us page.
+
+
   <h1>Daily Brew</h1>
   <h2>pages#main</h2>
   <p>Find me in app/views/pages/main.html.erb</p>

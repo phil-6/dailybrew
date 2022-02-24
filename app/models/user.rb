@@ -17,6 +17,8 @@ class User < ApplicationRecord
   validates_presence_of :email
   validates :email, uniqueness: { case_sensitive: false }
 
+  scope :daily_brewers, -> { joins(:brews).where('brews.created_at > ?', Time.now.beginning_of_day).distinct }
+
   def display_name
     username || first_name
   end
