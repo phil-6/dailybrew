@@ -11,13 +11,16 @@
         color: $color-complementary-0;
       }
     }
+
     .cta {
       margin-top: 1rem;
+
       .btn {
         font-size: 1.2rem;
         font-weight: 500;
 
         box-shadow: 0 0 5px 5px $color-primary-opacity-50;
+
         &:hover {
           box-shadow: none;
         }
@@ -26,11 +29,28 @@
     }
   }
 
+  section {
+    margin: 1rem auto;
+    text-align: center;
+
+    &.introduction {
+      max-width: $container-md;
+    }
+
+    &.explanation {
+      max-width: $container-xl;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
 
   /* Content which is fed from MD files in /public */
   .content {
     margin: auto;
-    max-width: 800px;
+    max-width: $container-xl;
 
     h1 {
       font-family: $heading-font;

@@ -4,7 +4,9 @@
   font-family: $font;
   transition: background-color 0.25s, color 0.25s;
 
-  &:hover { cursor: pointer; }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .btn {
@@ -23,6 +25,7 @@
 
     &:hover, &:focus {
       background-color: $color-primary-2;
+      border-color: $color-primary-2;
       color: white;
     }
 
@@ -33,6 +36,7 @@
 
       &:hover, &:focus {
         background-color: $color-primary-opacity-25;
+        border-color: $color-primary-opacity-25;
         color: $color-primary-0;
       }
     }
@@ -45,6 +49,7 @@
 
     &:hover, &:focus {
       background-color: $color-complementary-2;
+      border-color: $color-complementary-2;
     }
   }
 }
