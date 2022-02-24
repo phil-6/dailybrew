@@ -86,6 +86,12 @@
     border-radius: 50%;
     border: 1px solid $color-primary-0;
 
+    @media screen and (max-width: $screen-lg) {
+      width: 35px;
+      height: 35px;
+      font-size: 1.5rem;
+    }
+
     &:hover {
       background-color: $color-primary-3;
     }
