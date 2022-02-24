@@ -10,6 +10,6 @@
     <td><%= user.favourites_count %></td>
     <td><%= user.brews_count %></td>
     <td><%= user.public_brews_count %></td>
-    <td>Last Sign In: <%= user.current_sign_in_at.present? ? "#{time_ago_in_words(user.current_sign_in_at)} ago" : "Never" %></td>
+    <td><%= user.current_sign_in_at.present? ? "#{time_ago_in_words(user.current_sign_in_at)} ago" : "Never" %></td>
   </tr>
 <% end %>

@@ -1,0 +1,17 @@
+.admin {
+  .row {
+    justify-content: space-between;
+
+    [class$="-table"] {
+      border: 1px solid rebeccapurple;
+      height: 350px;
+      overflow-y: scroll;
+      display: block;
+
+
+      td {
+        padding: 0 0.4rem;
+      }
+    }
+  }
+}
