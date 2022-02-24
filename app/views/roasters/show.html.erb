@@ -1,8 +1,6 @@
 <main class="roasters show">
   <div class="admin-controls-container">
 
-    <%
-=begin%>
  <div class="admin-controls">
       <h1>Admin Controls</h1>
       <% if current_user.admin? %>
@@ -18,8 +16,6 @@
         <%#= button_to "Destroy this roaster", @roaster, method: :delete, class: 'danger', form: { data: { turbo_confirm: 'Are you sure?' } } %>
       <% end %>
     </div> 
-<%
-=end%>
 
   </div>
   <div class="banner">
@@ -56,7 +52,7 @@
 
   <div class="banner">
     <div class="banner-content coffee-summary">
-      <p><%= @roaster.name %> has <%= @roaster.available_coffees_count %> coffees available at the moment.</p>
+      <p><%= @roaster.name %> has <strong><%= @roaster.available_coffees_count %> coffees</strong> available at the moment.</p>
       <p>Is there a coffee we're missing? <%= link_to 'Add it here', new_roaster_coffee_path(@roaster), class: 'link link-primary' %>.</p>
     </div>
   </div>
