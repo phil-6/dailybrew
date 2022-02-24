@@ -133,14 +133,6 @@
           width: fit-content;
           padding-bottom: 0.25rem;
           margin-bottom: 0.25rem;
-
-          a {
-            border-bottom: 3px solid $color-complementary-0;
-
-            &:hover {
-              border-bottom-color: $color-complementary-1;
-            }
-          }
         }
 
         .location {

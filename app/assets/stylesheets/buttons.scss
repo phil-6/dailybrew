@@ -56,9 +56,17 @@
 
   &-primary {
     color: $color-primary-0;
-
+    
     &:hover {
       color: $color-primary-2;
+    }
+
+    &-title {
+      border-bottom: 3px solid $color-complementary-0;
+
+      &:hover {
+        border-bottom-color: $color-complementary-1;
+      }
     }
   }
 
