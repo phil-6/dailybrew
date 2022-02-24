@@ -10,6 +10,14 @@
       <p>There are many more and we are constantly updating our list but if you think someone is missing, please let us
         know and we'll get them added.
       </p>
+      <% if current_user&.admin %>
+        <div class="admin-controls-container">
+          <div class="admin-controls">
+            <h1>Admin Controls</h1>
+            <%= link_to "New roaster", new_roaster_path %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
   <div class="banner secondary">
@@ -17,14 +25,6 @@
       <%= render 'roaster_search' %>
     </div>
   </div>
-  <% if current_user&.admin %>
-    <div class="admin-controls-container">
-      <div class="admin-controls">
-        <h1>Admin Controls</h1>
-        <%= link_to "New roaster", new_roaster_path %>
-      </div>
-    </div>
-  <% end %>
 
   <%= turbo_frame_tag "page_handler" %>
   <div id="roasters" class="roasters row">
