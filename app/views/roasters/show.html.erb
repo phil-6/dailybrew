@@ -1,23 +1,4 @@
 <main class="roasters show">
-  <div class="admin-controls-container">
-
- <div class="admin-controls">
-      <h1>Admin Controls</h1>
-      <% if current_user.admin? %>
-        <% if @roaster.last_coffee_fetch.nil? %>
-          <p> Coffees Never Updated </p>
-        <% else %>
-          <p>Coffees Last Updated: <%= time_ago_in_words(@roaster.last_coffee_fetch) %> ago</p>
-        <% end %>
-        <% if @roaster.last_coffee_fetch.nil? || @roaster.last_coffee_fetch < 1.week.ago %>
-          <%= button_to "Update Coffees", update_coffees_roaster_path(@roaster), method: :post %>
-        <% end %>
-        <%= link_to "Edit this roaster", edit_roaster_path(@roaster) %>
-        <%#= button_to "Destroy this roaster", @roaster, method: :delete, class: 'danger', form: { data: { turbo_confirm: 'Are you sure?' } } %>
-      <% end %>
-    </div> 
-
-  </div>
   <div class="banner banner-primary-1">
     <div class="banner-content">
       <h2><%= @roaster.name %></h2>
@@ -31,7 +12,6 @@
       </p>
       <div class="socials row">
         <a href="https://<%= @roaster.website %>" class="link link-primary link-icon"><i class="las la-link"></i></a>
-
         <% if @roaster.twitter %>
           <a href="https://twitter.com/<%= @roaster.twitter %>" class="link link-primary link-icon" target=_blank><i class="lab la-twitter"></i></a>
         <% end %>
@@ -41,12 +21,26 @@
         <% if @roaster.facebook %>
           <a href="https://facebook.com/<%= @roaster.facebook %>" class="link link-primary link-icon" target=_blank><i class="lab la-facebook-square"></i></a>
         <% end %>
-        </div>
+      </div>
     </div>
   </div>
-
-  <hr>
-
+  <div class="admin-controls-container">
+    <div class="admin-controls">
+      <h1>Admin Controls</h1>
+      <% if current_user.admin? %>
+        <% if @roaster.last_coffee_fetch.nil? %>
+          <p> Coffees Never Updated </p>
+        <% else %>
+          <p>Coffees Last Updated: <%= time_ago_in_words(@roaster.last_coffee_fetch) %> ago</p>
+        <% end %>
+        <% if @roaster.last_coffee_fetch.nil? || @roaster.last_coffee_fetch < 1.week.ago %>
+          <%= button_to "Update Coffees", update_coffees_roaster_path(@roaster), method: :post %>
+        <% end %>
+        <%= link_to "Edit this roaster", edit_roaster_path(@roaster) %>
+        <%#= button_to "Destroy this roaster", @roaster, method: :delete, class: 'danger', form: { data: { turbo_confirm: 'Are you sure?' } } %>
+      <% end %>
+    </div>
+  </div>
   <div class="banner">
     <div class="banner-content coffee-summary">
       <p><%= @roaster.name %> has <strong><%= @roaster.available_coffees_count %> coffees</strong> available at the moment.</p>
