@@ -12,6 +12,7 @@ class BrewsController < ApplicationController
   # GET /brews/new
   def new
     @brew = Brew.new
+    @coffee = Coffee.find(params[:coffee_id])
   end
 
   # GET /brews/1/edit
