@@ -1,52 +1,57 @@
 <div id="<%= dom_id roaster %>">
-  <p>
-    <strong>User:</strong>
-    <%= roaster.user_id %>
-  </p>
+  <div class="<%= action_name %>-card">
 
-  <p>
-    <strong>Name:</strong>
-    <%= roaster.name %>
-  </p>
+    <div class="name">
+      <h1><%= roaster.name %></h1>
+    </div>
+    <div class="socials">
+      <a href="https://www.google.com/maps/?q=<%= roaster.name %>, <%= roaster.location %>" target=_blank><i class="las la-map-marked-alt"></i></a>
 
-  <p>
-    <strong>Description:</strong>
-    <%= roaster.description %>
-  </p>
+      <a href="https://<%= roaster.website %>"><i class="las la-link"></i></a>
 
-  <p>
-    <strong>Location:</strong>
-    <%= roaster.location %>
-  </p>
+      <% if roaster.twitter %>
+        <a href="https://twitter.com/<%= roaster.twitter %>" target=_blank><i class="lab la-twitter"></i></a>
+      <% end %>
 
-  <p>
-    <strong>Lat:</strong>
-    <%= roaster.lat %>
-  </p>
+      <% if roaster.instagram %>
+        <a href="https://instagram.com/<%= roaster.instagram %>" target=_blank><i class="lab la-instagram"></i></a>
+      <% end %>
 
-  <p>
-    <strong>Lng:</strong>
-    <%= roaster.lng %>
-  </p>
+      <% if roaster.facebook %>
+        <a href="https://facebook.com/<%= roaster.facebook %>" target=_blank><i class="lab la-facebook-square"></i></a>
+      <% end %>
+    </div>
 
-  <p>
-    <strong>Website:</strong>
-    <%= roaster.website %>
-  </p>
+    <% if current_user&.admin %>
+      <div class="reference">
+        <strong>Reference:</strong>
+        <%= roaster.reference %>
+      </div>
+    <% end %>
 
-  <p>
-    <strong>Twitter:</strong>
-    <%= roaster.twitter %>
-  </p>
+    <div class="description">
+      <%= roaster.description %>
+    </div>
 
-  <p>
-    <strong>Instagram:</strong>
-    <%= roaster.instagram %>
-  </p>
+    <div class="available_coffees">
+      <strong>Number of Coffees:</strong>
+      <%= roaster.available_coffees_count %>
+    </div>
 
-  <p>
-    <strong>Facebook:</strong>
-    <%= roaster.facebook %>
-  </p>
+    <div class="location">
+      <strong>Location:</strong>
+      <%= roaster.location %>
+    </div>
 
+    <div class="website">
+      <a href="https://<%= roaster.website %>" target=_blank><%= roaster.website %></a>
+    </div>
+
+    <% if action_name == "index" %>
+      <div class="roaster-link">
+        <%= link_to 'Show This Roaster', roaster %>
+      </div>
+    <% end %>
+
+  </div> <!-- end #{action-name}-card -->
 </div>

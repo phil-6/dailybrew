@@ -1,0 +1,38 @@
+<div id="<%= dom_id user %>">
+
+  <% if user.public_profile || user == current_user %>
+
+    <% if user == current_user %>
+      <div class="admin-controls-container">
+        <div class="admin-controls">
+          <h3>This is your public profile. You can set it to public or private in your user settings.</h3>
+          <%= render 'profile_privacy_toggle' %>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="name">
+      <h1><%= user.display_name %></h1>
+    </div>
+
+    <div class="brews">
+      <h2><%= user.public_brews_count %> brews</h2>
+    </div>
+
+    <div class="reviews">
+      <h2><%= user.public_reviews_count %> reviews</h2>
+    </div>
+
+    <div class="favourites">
+      <h2><%= user.favourites_count %> coffee favourites</h2>
+    </div>
+
+    <div class="shelf_items">
+      <h2><%= user.shelf_items_count %> coffee's at home</h2>
+    </div>
+
+  <% else %>
+    <h1> Private Profile </h1>
+  <% end %>
+
+</div>

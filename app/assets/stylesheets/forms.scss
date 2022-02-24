@@ -1,0 +1,169 @@
+@import "variables";
+
+.form-title {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  h2 {
+    color: $color-primary-0;
+    padding: 0 0.5rem;
+  }
+
+  &::after {
+    content: "";
+    height: 1px;
+    background: $color-complementary-0;
+    flex: 1 1 auto;
+    margin-right: 0.5rem;
+  }
+}
+
+.field {
+  position: relative;
+  margin-bottom: 0.75rem;
+
+  .form-input {
+    display: block;
+    padding: 1rem 2rem;
+    background-clip: padding-box;
+    border: 1px solid $color-mid-1;
+    transition: border-color 0.25s, box-shadow 0.25s;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus, &:focus-visible {
+      outline: 0;
+      box-shadow: 0 0 0 2px $color-complementary-0;
+    }
+
+    &:-webkit-autofill::first-line,
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      font-family: $font;
+      box-shadow: 0 0 0 30px white inset !important;
+      -webkit-box-shadow: 0 0 0 30px white inset !important;
+    }
+
+    &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
+      & ~ .form-label {
+        transform: scale(0.85) translateY(-1.9rem) translateX(0.1rem);
+        color: rgba(6, 71, 99, 0.65);
+        opacity: 1;
+      }
+    }
+
+    &:required + .form-label::after {
+      content: '*';
+    }
+
+    &.invalid {
+      border-color: $danger;
+    }
+  }
+
+  .error-message {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 0 2rem;
+    color: $danger;
+  }
+
+  .form-label {
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    left: 1.75rem;
+    padding: 0 0.25rem;
+    background-color: white;
+    pointer-events: none;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    transform-origin: 0 0;
+    transition: transform 0.1s ease-in-out;
+    color: $color-primary-0;
+    opacity: 0.65;
+
+    @media screen and (max-width: $screen-md) {
+      top: 1.1rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.multi-field {
+  gap: 0.5rem;
+}
+
+.form-links {
+  justify-content: space-between;
+  margin: 1rem 0 2rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.form-check {
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.form-input, .form-submit {
+  width: 100%;
+  height: calc(3.5rem + 2px);
+  border-radius: 2rem;
+  font-family: $font;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  @media screen and (max-width: $screen-md) {
+    font-size: 1rem;
+  }
+}
+
+:focus-visible {
+  box-shadow: 0 0 0 2px $color-complementary-0;
+  outline-color: $color-complementary-0;
+  outline-style: solid;
+
+  &:not(a) {
+    border: 1px solid $color-complementary-0 !important;
+  }
+}
+
+input[type="submit" i] {
+  border: none;
+  padding: 0;
+}
+
+.search-form {
+  max-width: 470px;
+  margin: 3rem auto 0;
+
+  .field, .form-input {
+    .form-label {
+      border: none;
+      border-radius: 2rem;
+      background: white;
+    }
+
+    &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
+      & ~ .form-label {
+        background: linear-gradient(to bottom, $color-white, white);
+      }
+    }
+  }
+
+  .results {
+    text-align: center;
+    padding: 1rem;
+
+  }
+}

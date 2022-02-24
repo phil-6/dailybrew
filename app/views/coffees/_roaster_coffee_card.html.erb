@@ -1,0 +1,82 @@
+<div id="<%= dom_id coffee %>" class="card">
+
+  <!--  We can do something really cool and conditional with these.-->
+  <%#= controller_name %>
+  <%#= action_name %>
+  <%#= coffee_counter %>
+
+  <div class="name">
+    <h1><%= coffee.name %></h1>
+  </div>
+
+  <div class="controls">
+    <%= render 'favourites/favourite_toggle', coffee: coffee %>
+    <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
+  </div>
+
+  <div class="tasting-notes">
+    <h2>
+      <strong>Tasting notes:</strong>
+      <%= coffee.tasting_notes %>
+    </h2>
+  </div>
+
+  <div class="website">
+    <a href="<%= coffee.url %>" target=_blank>
+      View on <%= coffee.roaster.name %>'s website<i class="las la-external-link-alt"></i>
+    </a>
+  </div>
+
+  <div class="stats">
+    <div class="brews">
+      <%= coffee.brews_count %> brews logged
+    </div>
+    <div class="shelf_items">
+      <%= coffee.shelf_items_count %> people currently have this coffee
+    </div>
+    <div class="favourites">
+      <%= coffee.favourites_count %> people have this saved as one of their favourites
+    </div>
+    <div class="reviews">
+      There are <%= coffee.reviews_count %> reviews of this coffee.
+    </div>
+  </div>
+
+  <div class="details-container">
+    <div class="details">
+      <h2>Details</h2>
+      <div class="country">
+        <strong>Country:</strong>
+        <%= coffee.country %>
+      </div>
+      <div class="region">
+        <strong>Region:</strong>
+        <%= coffee.region %>
+      </div>
+      <div class="town">
+        <strong>Town:</strong>
+        <%= coffee.town %>
+      </div>
+      <div class="altitude">
+        <strong>Altitude:</strong>
+        <%= coffee.altitude %> masl
+      </div>
+      <div class="process">
+        <strong>Process:</strong>
+        <%= coffee.process %>
+      </div>
+      <div class="variety">
+        <strong>Variety:</strong>
+        <%= coffee.variety %>
+      </div>
+      <div class="producer">
+        <strong>Producer:</strong>
+        <%= coffee.producer %>
+      </div>
+    </div>
+  </div>
+
+  <div class="coffee-link">
+    <%= link_to "Show this coffee", coffee %>
+  </div>
+</div>

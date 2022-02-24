@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ride the Wave</title>
+    <title>Daily Brew</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <script src="https://kit.fontawesome.com/30fa2950fc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-  <%= render 'shared/navbar' %>
-
-  <% flash.each do |type, msg| %>
-    <% if type != 'timedout' %>
-      <div data-controller="alerts" class="alert <%= alert_class_for(type) %>" role="alert">
-        <%= msg %>
-        <span data-action="click->alerts#dismiss" class="btn-close"><i class="fas fa-times"></i></span>
-      </div>
+    <% flash.each do |type, msg| %>
+      <% if type != 'timedout' %>
+        <div data-controller="alerts" class="alert <%= alert_class_for(type) %>" role="alert">
+          <%= msg %>
+          <span data-action="click->alerts#dismiss" class="btn-close"><i class="las la-times"></i></span>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <%= yield %>
-
+    <%= render 'shared/navbar/navbar' %>
+    <%= yield %>
   </body>
 </html>

@@ -3,8 +3,9 @@ class AdminController < ApplicationController
   before_action :authorize_admin
   before_action :users
 
-  # GET /admin/index/
-  def index
+  # GET /admin/dashboard/
+  def dashboard
+    @pagy, @users = pagy(@users.order('created_at DESC'), items: 10)
     render 'dashboard'
   end
 
@@ -13,5 +14,4 @@ class AdminController < ApplicationController
   def users
     @users = User.first(10)
   end
-
 end

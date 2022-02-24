@@ -1,1 +1,24 @@
-<h1> Dashboard </h1>
+<main class="dashboard">
+
+  <div class="welcome">
+    <h1>Welcome Back <%= current_user.first_name %></h1>
+    <div class="search-container">
+      <h3 class="search-header">Find A coffee</h3>
+      <%= render 'coffees/coffee_search' %>
+    </div>
+    <h3>Do Something</h3>
+    <h3>Do Something Else</h3>
+  </div>
+
+  <div class="shelf-container">
+    <%= render 'shelf' %>
+  </div>
+
+  <div class="brews-container">
+    <%= render 'brews' %>
+  </div>
+
+  <div class="favourites-container">
+    <%= render 'favourites' %>
+  </div>
+</main>

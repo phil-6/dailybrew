@@ -1,0 +1,62 @@
+@import "variables";
+
+.btn, .link {
+  font-family: $font;
+  transition: background-color 0.25s, color 0.25s;
+
+  &:hover { cursor: pointer; }
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 1px solid;
+
+  &-primary {
+    background-color: $color-primary-0;
+    border-color: $color-primary-0;
+    color: white;
+
+    &:hover, &:focus {
+      background-color: $color-primary-1;
+      color: white;
+    }
+
+    &-border {
+      background-color: white;
+      border-color: $color-primary-0;
+      color: $color-primary-0;
+
+      &:hover, &:focus {
+        background-color: $color-primary-opacity-25;
+        color: $color-primary-0;
+      }
+    }
+  }
+}
+
+.link {
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-primary {
+    color: $color-primary-0;
+
+    &:hover {
+      color: $color-primary-1;
+    }
+  }
+
+  &-complementary {
+    color: $color-complementary-0;
+
+    &:hover {
+      color: $color-complementary-2;
+    }
+  }
+}

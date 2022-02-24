@@ -1,0 +1,4 @@
+<%= turbo_stream_from "brews_count" %>
+<span id="brews_count_<%= dom_id(coffee) %>">
+        <%= coffee.brews.count %>
+</span>

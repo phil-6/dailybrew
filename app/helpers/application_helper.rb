@@ -1,5 +1,7 @@
 # app/helpers/application_helper.rb
 module ApplicationHelper
+  include Pagy::Frontend
+
   def alert_class_for(flash_type)
     {
       success: 'alert-success',

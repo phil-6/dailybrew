@@ -1,0 +1,6 @@
+<h2><%= link_to "Your Favourites", favourites_path %></h2>
+<div id="dashboard_favourites" class="favourites">
+  <% @favourites.each do |coffee| %>
+    <%= render 'favourite', coffee: coffee %>
+  <% end %>
+</div>

@@ -47,3 +47,5 @@ config/secrets.yml
 /.env
 # Sendgrid.env
 sendgrid.env
+
+.DS_Store

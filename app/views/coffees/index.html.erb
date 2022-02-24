@@ -1,14 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<main class="<%= controller_name %>-<%= action_name %>">
 
-<h1>Coffees</h1>
+  <p style="color: green"><%= notice %></p>
 
-<div id="coffees">
-  <% @coffees.each do |coffee| %>
-    <%= render coffee %>
-    <p>
-      <%= link_to "Show this coffee", coffee %>
-    </p>
-  <% end %>
-</div>
+  <h1 class="page-title">All Coffees</h1>
+  <p class="stats">There are <%= Coffee.all.size %> coffees from <%= Roaster.with_coffees.size %> roasters</p>
 
-<%= link_to "New coffee", new_coffee_path %>
+  <%= render 'coffee_search' %>
+
+  <%= turbo_frame_tag "page_handler" %>
+  <div id="coffees">
+    <%= render @coffees %>
+  </div>
+  <%= render "shared/index_pager", pagy: @pagy %>
+</main>

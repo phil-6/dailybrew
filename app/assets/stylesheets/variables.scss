@@ -1,25 +1,27 @@
-@import "fonts";
-
 $font: 'Poppins', sans-serif;
-$heading-font: 'Kolker', sans-serif;
+$heading-font: 'Playball', sans-serif;
 
 $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
 
-$color-brand: #63DFE3;
-$color-brand-light: #86E6EA;
-$color-brand-dark: #0C4345;
+$container-sm: 300px;
+$container-xl: 1600px;
+$nav-height: 69px;
+
+$color-brand: #D5B034;
+$color-brand-light: #E0C467;
+$color-brand-dark: #987C1F;
 $color-mid-0: #95b1b0;
 $color-mid-1: #BEC9DF;
 $color-white: #ecf0f1;
 
-$color-secondary: #6774a9;
+$color-secondary: #03418C;
 $color-secondary-light: #9ca8e0;
-//$color-secondary-dark: #06385b;
-$color-secondary-dark: #052F4D;
+$color-secondary-dark: #011936;
 
+//$ink: ##030027;
 $ink: #021727;
 
 $primary-box-shadow: 0 0.1rem 0.25rem $color-brand-light;
@@ -30,3 +32,19 @@ $warning-dark: #DE6402;
 $danger: #FD272C;
 $danger-light: #FE787C;
 $danger-dark: #DC0208;
+
+// From https://colorhunt.co/palette/041c3204293a064663ecb365
+
+$color-primary-0: #064763; // Main Primary color */
+$color-primary-1: #296D8A;
+$color-primary-2: #135977;
+$color-primary-3: #02364C;
+$color-primary-4: #012331;
+
+$color-primary-opacity-25: rgba(6,71,99,0.25);
+
+$color-complementary-0: #ECB365; // Complementary color */
+$color-complementary-1: #FFE3BC;
+$color-complementary-2: #FFD193;
+$color-complementary-3: #CC903E;
+$color-complementary-4: #A86F1F;

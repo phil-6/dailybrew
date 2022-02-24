@@ -1,0 +1,119 @@
+@import "variables";
+
+.dashboard {
+  .welcome {
+    max-width: 400px;
+    padding: 1rem;
+
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+    }
+
+    .search-container {
+      text-align: center;
+
+      .search-form {
+        margin: 0 auto;
+        max-width: 300px;
+
+        .form-label {
+          max-width: 260px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+  .toggle-button {
+    button {
+      border: none;
+      background: transparent;
+      padding: 0;
+      font-size: 1rem;
+      font-family: $font;
+      color: $color-secondary;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-secondary-light;
+      }
+    }
+  }
+
+  .shelf-container {
+    h2 {
+      padding: 0 1rem;
+      display: block;
+    }
+
+    .shelf {
+      display: flex;
+      overflow: scroll;
+      justify-content: flex-start;
+
+      .shelf-item {
+        border: 1px solid darkslateblue;
+        flex: 1 1 0;
+        min-width: 260px;
+        margin: auto 0.75rem;
+        padding: 1rem;
+
+        .coffee-name {
+          white-space: nowrap;
+          overflow: clip;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+  .brews-container {
+    padding: 0 1rem;
+
+    .brews-table {
+      border: 1px solid rebeccapurple;
+      max-height: 350px;
+      overflow-y: scroll;
+      display: block;
+      width: 650px;
+
+      td {
+        padding: 0 0.4rem;
+      }
+
+      .coffee-name {
+        max-width: 220px;
+        white-space: nowrap;
+        overflow: clip;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .favourites-container {
+    h2 {
+      padding: 0 1rem;
+    }
+
+    .favourites {
+      display: flex;
+      flex-wrap: wrap;
+
+      .favourite {
+        flex: 1 1 0;
+        min-width: 260px;
+        margin: auto 0.75rem;
+        padding: 1rem;
+
+        .coffee-name {
+          white-space: nowrap;
+          overflow: clip;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}

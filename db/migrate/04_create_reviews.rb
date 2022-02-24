@@ -5,7 +5,7 @@ class CreateReviews < ActiveRecord::Migration[7.0]
       t.belongs_to :coffee, null: false, foreign_key: true
       t.integer :rating
       t.text :content
-      t.boolean :public
+      t.boolean :public, null: false, default: true
 
       t.timestamps
     end

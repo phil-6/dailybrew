@@ -1,2 +1,14 @@
-<h1>Pages#subscription</h1>
-<p>Find me in app/views/pages/subscription.html.erb</p>
+<main class="pages">
+  <section class="content">
+    <%= @content.html_safe %>
+  </section>
+
+  <section class="sub-switch">
+    <% if current_user %>
+      <%= render 'subscription_interest_toggle' %>
+    <% else %>
+      <h3>You need to <%= link_to "sign up", new_user_registration_path %>
+        or <%= link_to "sign in", new_user_session_path %> before you can register your interest.</h3>
+    <% end %>
+  </section>
+</main>

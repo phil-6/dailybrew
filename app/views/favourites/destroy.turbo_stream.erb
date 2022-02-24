@@ -1,0 +1,6 @@
+<%= turbo_stream.remove("dashboard_favourites_#{dom_id(@coffee)}") %>
+
+<%= turbo_stream.replace(
+      "favourite_toggle_#{dom_id(@coffee)}",
+      partial: "favourite_toggle",
+      locals: { coffee: @coffee }) %>

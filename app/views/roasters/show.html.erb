@@ -1,10 +1,45 @@
 <p style="color: green"><%= notice %></p>
+<main class="roasters">
+  <%= render @roaster %>
 
-<%= render @roaster %>
+  <div class="admin-controls-container">
+    <div class="admin-controls">
+      <h1>Admin Controls</h1>
+      <% if current_user.admin? %>
+        <% if @roaster.last_coffee_fetch.nil? %>
+          <p> Coffees Never Updated </p>
+        <% else %>
+          <p>Coffees Last Updated: <%= time_ago_in_words(@roaster.last_coffee_fetch) %> ago</p>
+        <% end %>
+        <% if @roaster.last_coffee_fetch.nil? || @roaster.last_coffee_fetch < 1.week.ago %>
+          <%= button_to "Update Coffees", update_coffees_roaster_path(@roaster), method: :post %>
+        <% end %>
+        <%= link_to "Edit this roaster", edit_roaster_path(@roaster) %>
+        <%#= button_to "Destroy this roaster", @roaster, method: :delete, class: 'danger', form: { data: { turbo_confirm: 'Are you sure?' } } %>
+      <% end %>
+    </div>
+  </div>
 
-<div>
-  <%= link_to "Edit this roaster", edit_roaster_path(@roaster) %> |
-  <%= link_to "Back to roasters", roasters_path %>
+  <div class="roaster-coffees">
+    <h2 class="summary">
+      <%= @roaster.name %> has <%= @roaster.available_coffees_count %> coffees available at the moment
+    </h2>
 
-  <%= button_to "Destroy this roaster", @roaster, method: :delete %>
-</div>
+    <div class="add-coffee">
+      Is there a coffee we're missing? <%= link_to "Add it here.", new_roaster_coffee_path(@roaster) %>
+    </div>
+
+    <div class="available">
+      <%= render partial: "coffees/roaster_coffee_card", collection: @available_coffees , as: :coffee %>
+    </div>
+
+    <div class="unavailable">
+      <% @unavailable_coffees.each do |coffee| %>
+        <div class="card" style="border:1px dashed rebeccapurple">
+          <%= render coffee %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</main>

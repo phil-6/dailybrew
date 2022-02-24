@@ -12,69 +12,68 @@ require 'rails_helper'
 # of tools you can use to make these specs even more expressive, but we're
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
-RSpec.describe "/coffees", type: :request do
-  
+RSpec.describe '/coffees', type: :request do
   # This should return the minimal set of attributes required to create a valid
   # Coffee. As you add validations to Coffee, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
+  let(:valid_attributes) do
+    skip('Add a hash of attributes valid for your model')
+  end
 
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
+  let(:invalid_attributes) do
+    skip('Add a hash of attributes invalid for your model')
+  end
 
-  describe "GET /index" do
-    it "renders a successful response" do
+  describe 'GET /index' do
+    it 'renders a successful response' do
       Coffee.create! valid_attributes
       get coffees_url
       expect(response).to be_successful
     end
   end
 
-  describe "GET /show" do
-    it "renders a successful response" do
+  describe 'GET /show' do
+    it 'renders a successful response' do
       coffee = Coffee.create! valid_attributes
       get coffee_url(coffee)
       expect(response).to be_successful
     end
   end
 
-  describe "GET /new" do
-    it "renders a successful response" do
+  describe 'GET /new' do
+    it 'renders a successful response' do
       get new_coffee_url
       expect(response).to be_successful
     end
   end
 
-  describe "GET /edit" do
-    it "renders a successful response" do
+  describe 'GET /edit' do
+    it 'renders a successful response' do
       coffee = Coffee.create! valid_attributes
       get edit_coffee_url(coffee)
       expect(response).to be_successful
     end
   end
 
-  describe "POST /create" do
-    context "with valid parameters" do
-      it "creates a new Coffee" do
-        expect {
+  describe 'POST /create' do
+    context 'with valid parameters' do
+      it 'creates a new Coffee' do
+        expect do
           post coffees_url, params: { coffee: valid_attributes }
-        }.to change(Coffee, :count).by(1)
+        end.to change(Coffee, :count).by(1)
       end
 
-      it "redirects to the created coffee" do
+      it 'redirects to the created coffee' do
         post coffees_url, params: { coffee: valid_attributes }
         expect(response).to redirect_to(coffee_url(Coffee.last))
       end
     end
 
-    context "with invalid parameters" do
-      it "does not create a new Coffee" do
-        expect {
+    context 'with invalid parameters' do
+      it 'does not create a new Coffee' do
+        expect do
           post coffees_url, params: { coffee: invalid_attributes }
-        }.to change(Coffee, :count).by(0)
+        end.to change(Coffee, :count).by(0)
       end
 
       it "renders a successful response (i.e. to display the 'new' template)" do
@@ -84,20 +83,20 @@ RSpec.describe "/coffees", type: :request do
     end
   end
 
-  describe "PATCH /update" do
-    context "with valid parameters" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
+  describe 'PATCH /update' do
+    context 'with valid parameters' do
+      let(:new_attributes) do
+        skip('Add a hash of attributes valid for your model')
+      end
 
-      it "updates the requested coffee" do
+      it 'updates the requested coffee' do
         coffee = Coffee.create! valid_attributes
         patch coffee_url(coffee), params: { coffee: new_attributes }
         coffee.reload
-        skip("Add assertions for updated state")
+        skip('Add assertions for updated state')
       end
 
-      it "redirects to the coffee" do
+      it 'redirects to the coffee' do
         coffee = Coffee.create! valid_attributes
         patch coffee_url(coffee), params: { coffee: new_attributes }
         coffee.reload
@@ -105,7 +104,7 @@ RSpec.describe "/coffees", type: :request do
       end
     end
 
-    context "with invalid parameters" do
+    context 'with invalid parameters' do
       it "renders a successful response (i.e. to display the 'edit' template)" do
         coffee = Coffee.create! valid_attributes
         patch coffee_url(coffee), params: { coffee: invalid_attributes }
@@ -114,15 +113,15 @@ RSpec.describe "/coffees", type: :request do
     end
   end
 
-  describe "DELETE /destroy" do
-    it "destroys the requested coffee" do
+  describe 'DELETE /destroy' do
+    it 'destroys the requested coffee' do
       coffee = Coffee.create! valid_attributes
-      expect {
+      expect do
         delete coffee_url(coffee)
-      }.to change(Coffee, :count).by(-1)
+      end.to change(Coffee, :count).by(-1)
     end
 
-    it "redirects to the coffees list" do
+    it 'redirects to the coffees list' do
       coffee = Coffee.create! valid_attributes
       delete coffee_url(coffee)
       expect(response).to redirect_to(coffees_url)

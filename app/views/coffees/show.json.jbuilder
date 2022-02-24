@@ -1,1 +1,1 @@
-json.partial! "coffees/coffee", coffee: @coffee
+json.partial! 'coffees/coffee', coffee: @coffee

@@ -1,0 +1,9 @@
+<%= turbo_stream.replace(
+      "shelf_item_toggle_#{dom_id(@coffee)}",
+      partial: "shelf_item_toggle",
+      locals: { coffee: @coffee }) %>
+
+<%= turbo_stream.prepend(
+      "dashboard_shelf",
+      partial: "dashboard/shelf_item",
+      locals: { coffee: @coffee }) %>

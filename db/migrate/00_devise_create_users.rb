@@ -5,8 +5,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
     enable_extension 'pgcrypto'
     create_table :users, id: :uuid do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
+      t.string :email,              null: false, default: ''
+      t.string :encrypted_password, null: false, default: ''
 
       ## Recoverable
       t.string   :reset_password_token
@@ -37,8 +37,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       t.string    :first_name, null: false, default: ''
       t.string    :last_name, null: false, default: ''
       t.string    :username, default: ''
-      t.boolean   :terms, default: false
       t.boolean   :subscription_interest, default: false
+      t.boolean   :public_profile, default: false
 
       t.boolean   :admin, default: false
 
@@ -54,6 +54,13 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       t.string    :address_bill_county
       t.string    :address_bill_postcode
       t.string    :address_bill_phone
+
+      t.integer :favourites_count, null: false, default: 0
+      t.integer :shelf_items_count, null: false, default: 0
+      t.integer :brews_count, null: false, default: 0
+      t.integer :public_brews_count, null: false, default: 0
+      t.integer :reviews_count, null: false, default: 0
+      t.integer :public_reviews_count, null: false, default: 0
 
       t.timestamps null: false
     end
