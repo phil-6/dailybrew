@@ -165,17 +165,7 @@
 
     .socials {
       flex-direction: row-reverse;
-      gap: 0.25rem;
-
-      .link {
-        font-size: 1.5rem;
-        padding: 0.5rem 0.875rem;
-        border-radius: 50%;
-
-        &:hover {
-          background-color: $color-primary-opacity-25;
-        }
-      }
+      gap: 0.5rem;
     }
 
     .coffee-summary {

@@ -79,6 +79,11 @@ body {
     text-decoration: none;
   }
 
+  button {
+    background-color: transparent;
+    border: none;
+  }
+
   b {
     color: $color-secondary-dark;
     text-decoration: underline;
