@@ -1,4 +1,4 @@
-<%= turbo_frame_tag "page_handler" %>
+<%= turbo_frame_tag "users_handler" %>
 <table id="users_table" class="users-table">
   <tr>
     <th>Display Name</th>
@@ -13,4 +13,4 @@
   </tr>
   <%= render "users_table", users: @users %>
 </table>
-<%= render "users_table_pager", pagy: @pagy %>
+<%= render "users_table_pager", pagy_users: @pagy_users %>

@@ -5,8 +5,8 @@ class AdminController < ApplicationController
 
   # GET /admin/dashboard/
   def dashboard
-    @pagy, @users = pagy(User.all.order('created_at DESC'), items: 10)
-
+    @pagy_users, @users = pagy(User.all.order('created_at DESC'), items: 10, page_param: :page_users)
+    @pagy_roasters, @roasters = pagy(Roaster.all.order('last_coffee_fetch DESC'), items: 10, page_param: :page_roasters)
     render 'dashboard'
   end
 

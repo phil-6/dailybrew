@@ -1,4 +1,4 @@
-<%= turbo_frame_tag "page_handler" do %>
+<%= turbo_frame_tag "users_handler" do %>
   <%= turbo_stream_action_tag(
         "append",
         target: "users_table",
@@ -7,6 +7,19 @@
   <%= turbo_stream_action_tag(
         "replace",
         target: "users_table_pager",
-        template: %(#{render "users_table_pager", pagy: @pagy})
+        template: %(#{render "users_table_pager", pagy_users: @pagy_users})
+      ) %>
+<% end %>
+
+<%= turbo_frame_tag "roasters_handler" do %>
+  <%= turbo_stream_action_tag(
+        "append",
+        target: "roasters_table",
+        template: %(#{render 'roasters_table', roasters: @roasters})
+      ) %>
+  <%= turbo_stream_action_tag(
+        "replace",
+        target: "roasters_table_pager",
+        template: %(#{render "roasters_table_pager", pagy_roasters: @pagy_roasters})
       ) %>
 <% end %>

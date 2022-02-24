@@ -2,10 +2,12 @@
   <h1>Admin Dashboard</h1>
 
   <div class="user-container">
+    <h2>Users</h2>
     <%= render 'users' %>
   </div>
 
   <div class="stats-container">
+    <h2>Stats</h2>
     <p>User Count: <%= @stats['user_count'] %></p>
     <p>Roaster Count: <%= @stats['roaster_count'] %></p>
     <p>Roasters with Coffees: <%= @stats['roaster_with_coffees'] %></p>
@@ -14,5 +16,10 @@
     <p>Total Brews: <%= @stats['brews_count'] %></p>
     <p>Daily Brews: <%= @stats['daily_brews'] %></p>
     <p>Users With Brews: <%= @stats['user_with_brews'] %></p>
+  </div>
+
+  <div class="roaster-info">
+    <h2>Roasters</h2>
+    <%= render 'roasters' %>
   </div>
 </main>
