@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
-<main class="roasters">
-  <div class="banner primary">
+<main class="roasters index">
+  <div class="banner banner-primary-1">
     <div class="banner-content">
       <div class="page-title">
         <h2>Roasters</h2>
@@ -12,7 +12,7 @@
       </p>
     </div>
   </div>
-  <div class="banner secondary">
+  <div class="banner banner-primary-3">
     <div class="banner-content">
       <%= render 'roaster_search' %>
     </div>
@@ -27,7 +27,7 @@
   <% end %>
 
   <%= turbo_frame_tag "page_handler" %>
-  <div id="roasters" class="roasters row">
+  <div id="roasters" class="card-collection row">
     <%= render @roasters %>
   </div>
   <%= render "shared/index_pager", pagy: @pagy %>

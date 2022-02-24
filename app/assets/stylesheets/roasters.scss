@@ -1,165 +1,65 @@
 @import "variables";
 
 .roasters {
-  .banner {
-    width: 100%;
-    
-    &.primary {
-      background-color: $color-primary-1;
+  &.index {
+    .banner-primary-1 .banner-content {
+      padding: 3rem 2rem 4rem;
 
-      .banner-content {
-        padding: 3rem 2rem 4rem;
-
-        @media screen and (max-width: $screen-md) {
-          padding: 2rem;
-        }
-      }
-    }
-
-    &.secondary {
-      background-color: $color-primary-3;
-
-      .banner-content {
+      @media screen and (max-width: $screen-md) {
         padding: 2rem;
-
-        @media screen and (max-width: $screen-md) {
-          padding: 1rem 2rem;
-        }
       }
     }
 
-    .banner-content {
-      max-width: $container-md;
-      margin: 0 auto;
-
-      h2, p {
-        color: $color-white;
+    .search-form {
+      .field {
+        margin: 1rem 0;
       }
 
-      .page-title {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        margin-bottom: 1.5rem;
+      .results {
+        text-align: center;
 
-        h2 {
-          line-height: 1;
-        }
-
-        &::before, &::after {
-          content: "";
-          height: 1px;
-          background: $color-complementary-0;
-          flex: 1 1 auto;
-          margin-top: 2px;
-        }
-
-        &::before {
-          margin-right: 1rem;
-        }
-
-        &::after {
-          margin-left: 1rem;
-        }
-      }
-
-      .search-form {
-        .field {
-          margin: 1rem 0;
-        }
-
-        .results {
-          text-align: center;
-
-          &:empty {
-            appearance: none;
-          }
+        &:empty {
+          appearance: none;
         }
       }
     }
   }
 
-  .roasters {
-    max-width: $container-xl;
-    margin: 0 auto;
-    padding: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    @media screen and (max-width: $screen-lg) {
-      padding: 2rem 1rem;
+  &.show {
+    .banner-primary-1 .banner-content {
+      .link {
+        color: $color-white;
+      }
+      .socials .link {
+        border-color: $color-white;
+      }
     }
 
-    @media screen and (max-width: $screen-md) {
-      padding: 1rem;
+    .location {
+      font-size: 0.9rem;
     }
 
-    .roaster-card {
-      background-color: white;
-      border-radius: 2rem;
-      padding: 2rem;
-      height: $container-xs;
-      justify-content: space-between;
-      flex-grow: 1;
-      flex-basis: calc(25% - 2rem);
-      max-width: calc(25% - 1rem);
-      margin: 1rem;
+    .description {
+      margin: 1rem 0;
+    }
 
-      @media screen and (max-width: $screen-xxl) {
-        flex-basis: calc(33% - 2rem);
-        max-width: calc(33% - 1rem);
-      }
+    .socials {
+      flex-direction: row-reverse;
+      gap: 0.5rem;
+    }
 
-      @media screen and (max-width: $screen-xl) {
-        flex-basis: calc(33% - 2rem);
-        max-width: calc(33% - 1rem);
-        margin: 0.5rem;
-      }
+    .coffee-summary {
+      text-align: center;
+    }
 
-      @media screen and (max-width: $screen-lg) {
-        flex-basis: calc(50% - 2rem);
-        max-width: calc(50% - 1rem);
-        margin: 0.5rem;
-      }
+    h4 {
+      max-width: 1600px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-      @media screen and (max-width: $screen-md) {
-        flex-basis: 100%;
-        max-width: 100%;
-        margin: 0.5rem 0;
-      }
-
-      .header {
-        h3 {
-          width: fit-content;
-          padding-bottom: 0.25rem;
-          margin-bottom: 0.25rem;
-
-          a {
-            border-bottom: 3px solid $color-complementary-0;
-
-            &:hover {
-              border-bottom-color: $color-complementary-1;
-            }
-          }
-        }
-
-        .location {
-          font-size: 0.9rem;
-          opacity: 0.8;
-        }
-      }
-
-      .row {
-        justify-content: flex-end;
-        align-items: center;
-
-        .available-coffees {
-          text-align: center;
-          font-size: 1.25rem;
-          color: $color-primary-0;
-        }
-      }
+    .roasters.row {
+      padding-top: 1rem;
     }
   }
 }
