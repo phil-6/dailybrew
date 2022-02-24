@@ -7,7 +7,10 @@
 
   <h3 class="name"><%= link_to coffee.name, coffee, class: 'link link-primary link-primary-title' %></h3>
   <div class="country">
-    <i class="las la-map-marker"></i> <%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').upcase %>
+    <i class="las la-map-marker"></i> <%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').titleize %>
+  </div>
+  <div class="tasting-notes">
+    <i class="las la-music"></i> <%= coffee.tasting_notes.titleize %>
   </div>
 
   
