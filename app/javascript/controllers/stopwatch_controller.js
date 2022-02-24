@@ -25,7 +25,7 @@ function timeToString(time) {
 }
 
 export default class extends Controller {
-    static targets = ["display", "start", "pause", "reset"]
+    static targets = ["display", "start", "pause", "reset", "brewTime"]
     initialize() {
         this.pauseTarget.hidden = true
     }
@@ -45,6 +45,7 @@ export default class extends Controller {
 
     pause() {
         clearInterval(timerInterval);
+        this.brewTimeTarget.value = elapsedTime / 1000
         this.pauseTarget.hidden = true
         this.startTarget.hidden = false
     }
