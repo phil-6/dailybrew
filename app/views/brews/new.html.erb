@@ -2,6 +2,23 @@
 
   <h1>New brew</h1>
 
+  <div data-controller="stopwatch" class="stopwatch">
+    <div data-stopwatch-target="display" class="time" id="display">00:00:00</div>
+    <div class="controls">
+      <div class="start-pause-button">
+        <button data-stopwatch-target="start" data-action="stopwatch#start" id="start_button">
+          Start
+        </button>
+        <button data-stopwatch-target="pause" data-action="stopwatch#pause" id="pause_button" hidden>
+          Pause
+        </button>
+      </div>
+      <button data-stopwatch-target="reset" data-action="stopwatch#reset" class="reset_button">
+        Reset
+      </button>
+    </div>
+  </div>
+
   <%= render "form", brew: @brew %>
 
 </main>
