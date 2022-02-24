@@ -55,12 +55,12 @@
   </div>
 
   <h4>Available</h4>
-  <div class="roasters row">
+  <div class="card-collection row">
     <%= render partial: "coffees/roaster_coffee_card", collection: @available_coffees , as: :coffee %>
   </div>
 
   <% if @unavailable_coffees.present? %>
-    <div class="roasters unavailable">
+    <div class="card-collection unavailable">
       <h4>Unavailable</h4>
       <% @unavailable_coffees.each do |coffee| %>
         <div class="card" style="border:1px dashed rebeccapurple">

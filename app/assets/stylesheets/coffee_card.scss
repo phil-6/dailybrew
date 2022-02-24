@@ -1,9 +1,7 @@
 @import "variables";
 
 .coffee-card {
-  background-color: white;
-  border-radius: 2rem;
-  padding: 2rem;
+  justify-content: space-between;
   flex-grow: 1;
   flex-basis: calc(25% - 2rem);
   max-width: 25%;

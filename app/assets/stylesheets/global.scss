@@ -83,31 +83,7 @@ body {
     background-color: transparent;
     border: none;
   }
-
-  b {
-    color: $color-secondary-dark;
-    text-decoration: underline;
-  }
-
-  em {
-    font-style: unset;
-    font-weight: bold;
-    color: $color-brand-dark;
-  }
-
-  .card {
-    background-color: white;
-    box-shadow: $primary-box-shadow;
-    border-radius: 2rem;
-    padding: 4rem;
-    box-shadow: 0px 0px 10px 0 $color-primary-0;
-
-    @media screen and (max-width: $screen-lg) {
-      width: 100%;
-      padding: 2rem;
-    }
-  }
-
+  
   .button-tabs {
     display: flex;
     border-bottom: $color-secondary-dark solid;
@@ -116,16 +92,6 @@ body {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
-  }
-
-  .row {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .column {
-    display: flex;
-    flex-direction: column;
   }
 
   br {

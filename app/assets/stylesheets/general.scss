@@ -1,0 +1,93 @@
+@import "variables";
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner {
+  width: 100%;
+
+  &-primary-1 {
+    background-color: $color-primary-1;
+
+    h2, p {
+      color: $color-white;
+    }
+  }
+
+  &-primary-3 {
+    background-color: $color-primary-3;
+  }
+
+  .banner-content {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: $container-md;
+
+    @media screen and (max-width: $screen-md) {
+      padding: 1rem;
+    }
+
+    .page-title {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 1.5rem;
+
+      h2 {
+        line-height: 1;
+      }
+
+      &::before, &::after {
+        content: "";
+        height: 1px;
+        background: $color-complementary-0;
+        flex: 1 1 auto;
+        margin-top: 2px;
+      }
+
+      &::before {
+        margin-right: 1rem;
+      }
+
+      &::after {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.card-collection {
+  max-width: $container-xl;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (max-width: $screen-xl) {
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    gap: 1rem;
+  }
+}

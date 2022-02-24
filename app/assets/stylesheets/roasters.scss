@@ -1,160 +1,25 @@
 @import "variables";
 
 .roasters {
-  .banner {
-    width: 100%;
-    
-    &.primary {
-      background-color: $color-primary-1;
-
-      h2, p {
-        color: $color-white;
-      }
-    }
-
-    &.secondary {
-      background-color: $color-primary-3;
-    }
-
-    &.header-banner {
-      .banner-content {
-        padding: 3rem 2rem 4rem;
-
-        @media screen and (max-width: $screen-md) {
-          padding: 2rem;
-        }
-      }
-    }
-
-    .banner-content {
-      margin: 0 auto;
-      padding: 2rem;
-      max-width: $container-md;
+  &.index {
+    .banner-primary-1 .banner-content {
+      padding: 3rem 2rem 4rem;
 
       @media screen and (max-width: $screen-md) {
-        padding: 1rem 2rem;
-      }
-
-      .page-title {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        margin-bottom: 1.5rem;
-
-        h2 {
-          line-height: 1;
-        }
-
-        &::before, &::after {
-          content: "";
-          height: 1px;
-          background: $color-complementary-0;
-          flex: 1 1 auto;
-          margin-top: 2px;
-        }
-
-        &::before {
-          margin-right: 1rem;
-        }
-
-        &::after {
-          margin-left: 1rem;
-        }
-      }
-
-      .search-form {
-        .field {
-          margin: 1rem 0;
-        }
-
-        .results {
-          text-align: center;
-
-          &:empty {
-            appearance: none;
-          }
-        }
+        padding: 2rem;
       }
     }
-  }
 
-  .roasters {
-    max-width: $container-xl;
-    margin: 0 auto;
-    padding: 2rem;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    @media screen and (max-width: $screen-xl) {
-      gap: 1rem;
-    }
-
-    @media screen and (max-width: $screen-lg) {
-      padding: 1rem;
-      gap: 1rem;
-    }
-
-    @media screen and (max-width: $screen-md) {
-      gap: 1rem;
-    }
-
-    .roaster-card {
-      background-color: white;
-      border-radius: 2rem;
-      padding: 2rem;
-      height: $container-xs;
-      justify-content: space-between;
-      flex-grow: 1;
-      flex-basis: calc(25% - 2rem);
-      max-width: calc(25% - 1rem);
-      margin: 1rem;
-
-      @media screen and (max-width: $screen-xxl) {
-        flex-basis: calc(33% - 2rem);
-        max-width: calc(33% - 1rem);
+    .search-form {
+      .field {
+        margin: 1rem 0;
       }
 
-      @media screen and (max-width: $screen-xl) {
-        flex-basis: calc(33% - 2rem);
-        max-width: calc(33% - 1rem);
-        margin: 0.5rem;
-      }
+      .results {
+        text-align: center;
 
-      @media screen and (max-width: $screen-lg) {
-        flex-basis: calc(50% - 2rem);
-        max-width: calc(50% - 1rem);
-        margin: 0.5rem;
-      }
-
-      @media screen and (max-width: $screen-md) {
-        flex-basis: 100%;
-        max-width: 100%;
-        margin: 0.5rem 0;
-      }
-
-      .header {
-        h3 {
-          width: fit-content;
-          padding-bottom: 0.25rem;
-          margin-bottom: 0.25rem;
-        }
-
-        .location {
-          font-size: 0.9rem;
-          opacity: 0.8;
-        }
-      }
-
-      .row {
-        justify-content: flex-end;
-        align-items: center;
-
-        .available-coffees {
-          text-align: center;
-          font-size: 1.25rem;
-          color: $color-primary-0;
+        &:empty {
+          appearance: none;
         }
       }
     }
@@ -181,15 +46,7 @@
     h4 {
       max-width: 1600px;
       margin: 0 auto;
-      padding: 0 3rem;
-
-      @media screen and (max-width: $screen-xl) {
-        padding: 0 2rem;
-      }
-
-      @media screen and (max-width: $screen-lg) {
-        padding: 0 1rem;
-      }
+      text-align: center;
     }
 
     .roasters.row {
