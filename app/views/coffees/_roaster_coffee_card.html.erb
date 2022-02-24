@@ -5,17 +5,29 @@
   <%#= action_name %>
   <%#= coffee_counter %>
 
-  <div class="header row">
-    <h3 class="name"><%= link_to coffee.name, coffee, class: 'link link-primary link-primary-title' %></h3>
-    <div class="controls">
+  <div class="coffee-card-content row">
+    <div class="column">
+      <h3 class="name"><%= link_to coffee.name, coffee, class: 'link link-primary link-primary-title' %></h3>
+      <div class="country">
+        <i class="las la-map-marker"></i> <%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').titleize %>
+      </div>
+      <div class="tasting-notes">
+        <i class="las la-music"></i> <%= coffee.tasting_notes.titleize %>
+      </div>
+    </div>
+    <div class="controls column">
       <%= render 'favourites/favourite_toggle', coffee: coffee %>
+      <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
     </div>
   </div>
-  <div class="country">
-    <i class="las la-map-marker"></i> <%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').titleize %>
-  </div>
-  <div class="tasting-notes">
-    <i class="las la-music"></i> <%= coffee.tasting_notes.titleize %>
+  <div class="metadata row">
+    <span><i class="las la-mug-hot"></i> <%= coffee.brews_count %></span>
+    <span>&#8226;</span>
+    <span><i class="las la-hand-holding"></i> <%= coffee.shelf_items_count %></span>
+    <span>&#8226;</span>
+    <span><i class="las la-heart"></i> <%= coffee.favourites_count %></span>
+    <span>&#8226;</span>
+    <span><i class="las la-comment"></i> <%= coffee.reviews_count %></span>
   </div>
 
   
