@@ -5,18 +5,27 @@
   border-radius: 2rem;
   padding: 2rem;
   flex-grow: 1;
-  flex-basis: calc(50% - 2rem);
-  max-width: calc(50% - 1rem);
-  margin: 1rem;
+  flex-basis: calc(25% - 2rem);
+  max-width: 25%;
+
+  @media screen and (max-width: $screen-xxl) {
+    flex-basis: calc(33% - 2rem);
+    max-width: 33%;
+  }
 
   @media screen and (max-width: $screen-xl) {
-    flex-basis: 100%;
-    max-width: 100%;
-    margin: 1rem 0;
+    flex-basis: calc(50% - 1rem);
+    max-width: 50%;
   }
 
   @media screen and (max-width: $screen-lg) {
-    margin: 0.5rem 0;
+    flex-basis: calc(50% - 1rem);
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 
   .coffee-card-content {
@@ -32,9 +41,9 @@
     }
 
     .country, .tasting-notes {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 200;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.25px;
     }
 
     .controls {

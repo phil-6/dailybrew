@@ -83,15 +83,21 @@
     max-width: $container-xl;
     margin: 0 auto;
     padding: 2rem;
+    gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 
+    @media screen and (max-width: $screen-xl) {
+      gap: 1rem;
+    }
+
     @media screen and (max-width: $screen-lg) {
-      padding: 2rem 1rem;
+      padding: 1rem;
+      gap: 1rem;
     }
 
     @media screen and (max-width: $screen-md) {
-      padding: 1rem;
+      gap: 1rem;
     }
 
     .roaster-card {

@@ -45,10 +45,7 @@
     </div>
   </div>
 
-  
-
   <hr>
-
 
   <div class="banner">
     <div class="banner-content coffee-summary">
@@ -72,31 +69,4 @@
       <% end %>  
     </div>
   <% end %>
-<%
-=begin%>
- 
-  <div class="roaster-coffees">
-    <h2 class="summary">
-      <%= @roaster.name %> has <%= @roaster.available_coffees_count %> coffees available at the moment
-    </h2>
-
-    <div class="add-coffee">
-      Is there a coffee we're missing? <%= link_to "Add it here.", new_roaster_coffee_path(@roaster) %>
-    </div>
-
-    <div class="available">
-      <%= render partial: "coffees/roaster_coffee_card", collection: @available_coffees , as: :coffee %>
-    </div>
-
-    <div class="unavailable">
-      <% @unavailable_coffees.each do |coffee| %>
-        <div class="card" style="border:1px dashed rebeccapurple">
-          <%= render coffee %>
-        </div>
-      <% end %>
-    </div>
-  </div> 
-<%
-=end%>
-
 </main>
