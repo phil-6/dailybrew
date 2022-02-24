@@ -22,7 +22,7 @@
     color: white;
 
     &:hover, &:focus {
-      background-color: $color-primary-1;
+      background-color: $color-primary-2;
       color: white;
     }
 
@@ -37,6 +37,16 @@
       }
     }
   }
+
+  &-complementary {
+    background-color: $color-complementary-0;
+    border-color: $color-complementary-0;
+    color: $color-primary-0;
+
+    &:hover, &:focus {
+      background-color: $color-complementary-2;
+    }
+  }
 }
 
 .link {
@@ -48,7 +58,7 @@
     color: $color-primary-0;
 
     &:hover {
-      color: $color-primary-1;
+      color: $color-primary-2;
     }
   }
 

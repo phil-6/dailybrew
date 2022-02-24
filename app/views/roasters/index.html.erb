@@ -1,27 +1,34 @@
 <p style="color: green"><%= notice %></p>
 
 <main class="roasters">
-  <h1>Roasters</h1>
-  <div class="intro">
-    <p class="lead">This is a list of <%= @roasters_count %> roasters in the UK. There are more, but we think this is a
-      pretty good list! </p>
-    <p>If there is a roaster not on this list, please let us know, and we'll get them added!</p>
-    <% if current_user&.admin %>
-      <div class="admin-controls-container">
-        <div class="admin-controls">
-          <h1>Admin Controls</h1>
-          <%= link_to "New roaster", new_roaster_path %>
-        </div>
+  <div class="banner primary">
+    <div class="banner-content">
+      <div class="page-title">
+        <h2>Roasters</h2>
       </div>
-    <% end %>
+      <p>Below is a list of <strong><%= @roasters_count %> roasters</strong> in the UK that we have collected.</p>
+      <p>There are many more and we are constantly updating our list but if you think someone is missing, please let us
+        know and we'll get them added.
+      </p>
+    </div>
   </div>
-
-  <%= render 'roaster_search' %>
+  <div class="banner secondary">
+    <div class="banner-content">
+      <%= render 'roaster_search' %>
+    </div>
+  </div>
+  <% if current_user&.admin %>
+    <div class="admin-controls-container">
+      <div class="admin-controls">
+        <h1>Admin Controls</h1>
+        <%= link_to "New roaster", new_roaster_path %>
+      </div>
+    </div>
+  <% end %>
 
   <%= turbo_frame_tag "page_handler" %>
-  <div id="roasters">
+  <div id="roasters" class="roasters row">
     <%= render @roasters %>
   </div>
   <%= render "shared/index_pager", pagy: @pagy %>
-
 </main>

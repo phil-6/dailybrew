@@ -1,12 +1,13 @@
-<div id="<%= controller_name %>_pager" class="<%= controller_name %>_pager pager">
+<div id="<%= controller_name %>_pager" class="pager <%= controller_name %>-pager row">
   <% if pagy.next %>
     <%= link_to(
-          "Load More",
+          'Load More',
           "#{controller_name}?query=#{params[:query]}&page=#{pagy.next}",
           data: {
-            turbo_frame: "page_handler",
-            controller: "autoclick"
-          }
+            turbo_frame: 'page_handler',
+            controller: 'autoclick'
+          },
+          class: 'btn btn-primary'
         ) %>
   <% end %>
 </div>

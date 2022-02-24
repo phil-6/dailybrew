@@ -1,113 +1,165 @@
 @import "variables";
 
 .roasters {
-  h1 {
-    text-align: center;
-    line-height: 1.4;
-  }
+  .banner {
+    width: 100%;
+    
+    &.primary {
+      background-color: $color-primary-1;
 
-  .intro {
-    text-align: center;
+      .banner-content {
+        padding: 3rem 2rem 4rem;
 
-    .lead {
-      font-size: 1.2rem;
-      line-height: 1.8;
-    }
-  }
-
-  .pagy-nav {
-    text-align: center;
-  }
-
-  .index-card {
-    max-width: 1000px;
-    margin: 1rem auto;
-    text-align: center;
-    border-radius: 2rem;
-    overflow: hidden;
-    box-shadow: 0 0 10px 0 #064763;
-
-    &:hover {
-      animation: pulse 1s infinite;
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 10px 0 #064763;
-      }
-      70% {
-        box-shadow: 0 0 30px 0 #064763;
-      }
-      100% {
-        box-shadow: 0 0 10px 0 #064763;
-      }
-    }
-
-    .name {
-      background-color: $color-secondary-dark;
-      color: $color-brand;
-
-
-      h1 {
-        font-family: $heading-font;
-        font-size: 2.5rem;
-      }
-    }
-
-    .socials {
-      text-align: center;
-      background-color: $color-secondary-dark;
-
-      a i {
-        font-size: 2rem;
-        color: $color-secondary-light;
-
-        &:hover {
-          color: $color-secondary;
+        @media screen and (max-width: $screen-md) {
+          padding: 2rem;
         }
       }
     }
 
-    .reference {
-    }
+    &.secondary {
+      background-color: $color-primary-3;
 
+      .banner-content {
+        padding: 2rem;
 
-    .available_coffees {
-    }
-
-    .location {
-    }
-
-    .website, .roaster-link {
-    }
-
-    .roaster-link {
-      font-size: 1.5rem;
-      font-weight: 200;
-    }
-  }
-
-  .show-card {
-    max-width: 1000px;
-    margin: 1rem auto;
-    text-align: center;
-
-    .socials {
-      text-align: center;
-
-      a i {
-        font-size: 2.2rem;
-        padding: 0 1rem;
+        @media screen and (max-width: $screen-md) {
+          padding: 1rem 2rem;
+        }
       }
     }
 
-    .description {
-      font-size: 1.7rem;
-      font-weight: 200;
+    .banner-content {
+      max-width: $container-md;
+      margin: 0 auto;
+
+      h2, p {
+        color: $color-white;
+      }
+
+      .page-title {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        h2 {
+          line-height: 1;
+        }
+
+        &::before, &::after {
+          content: "";
+          height: 1px;
+          background: $color-complementary-0;
+          flex: 1 1 auto;
+          margin-top: 2px;
+        }
+
+        &::before {
+          margin-right: 1rem;
+        }
+
+        &::after {
+          margin-left: 1rem;
+        }
+      }
+
+      .search-form {
+        .field {
+          margin: 1rem 0;
+        }
+
+        .results {
+          text-align: center;
+
+          &:empty {
+            appearance: none;
+          }
+        }
+      }
+    }
+  }
+
+  .roasters {
+    max-width: $container-xl;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media screen and (max-width: $screen-lg) {
+      padding: 2rem 1rem;
     }
 
-    .available_coffees, .location {
-      display: none;
+    @media screen and (max-width: $screen-md) {
+      padding: 1rem;
+    }
+
+    .roaster-card {
+      background-color: white;
+      border-radius: 2rem;
+      padding: 2rem;
+      height: $container-xs;
+      justify-content: space-between;
+      flex-grow: 1;
+      flex-basis: calc(25% - 2rem);
+      max-width: calc(25% - 1rem);
+      margin: 1rem;
+
+      @media screen and (max-width: $screen-xxl) {
+        flex-basis: calc(33% - 2rem);
+        max-width: calc(33% - 1rem);
+      }
+
+      @media screen and (max-width: $screen-xl) {
+        flex-basis: calc(33% - 2rem);
+        max-width: calc(33% - 1rem);
+        margin: 0.5rem;
+      }
+
+      @media screen and (max-width: $screen-lg) {
+        flex-basis: calc(50% - 2rem);
+        max-width: calc(50% - 1rem);
+        margin: 0.5rem;
+      }
+
+      @media screen and (max-width: $screen-md) {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 0.5rem 0;
+      }
+
+      .header {
+        h3 {
+          width: fit-content;
+          padding-bottom: 0.25rem;
+          margin-bottom: 0.25rem;
+
+          a {
+            border-bottom: 3px solid $color-complementary-0;
+
+            &:hover {
+              border-bottom-color: $color-complementary-1;
+            }
+          }
+        }
+
+        .location {
+          font-size: 0.9rem;
+          opacity: 0.8;
+        }
+      }
+
+      .row {
+        justify-content: flex-end;
+        align-items: center;
+
+        .available-coffees {
+          text-align: center;
+          font-size: 1.25rem;
+          color: $color-primary-0;
+        }
+      }
     }
   }
 }

@@ -3,7 +3,6 @@
 nav {
   background-color: white;
   box-shadow: 0 0 2px 0 $color-primary-0;
-  padding: 0 1rem;
   position: fixed;
   top: 0;
   width: 100%;
@@ -16,6 +15,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 0 2rem;
+
+    @media screen and (max-width: $screen-lg) {
+      padding: 0 1rem;
+    }
 
     .nav-brand {
       color: $color-primary-0;
@@ -76,7 +80,7 @@ nav {
       color: $color-primary-0;
       font-weight: 400;
       letter-spacing: -0.5px;
-      font-size: 1rem;
+      font-size: 1.1rem;
       transition: border-bottom-color .25s;
       border-bottom: 3px solid;
 

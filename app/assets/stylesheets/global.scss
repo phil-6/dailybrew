@@ -17,32 +17,23 @@ body {
 
   main {
     margin: $nav-height auto 0;
-    padding: 1rem;
-
-    @media screen and (max-width: $screen-md) {
-      padding: 1rem 0.5rem;
-    }
   }
 
-  h1 {
-    font-weight: 100;
-  }
-
-  h2, h3, h4, h5 {
-    color: $color-brand-dark;
+  h1, h2, h3, h4, h5 {
+    color: $color-primary-0;
     font-weight: 600;
     letter-spacing: -1px;
   }
 
   h1 {
-    font-size: 6rem;
+    font-size: 3rem;
 
     @media screen and (max-width: $screen-md) {
-      font-size: 5rem;
+      font-size: 2.5rem;
     }
 
     @media screen and (max-width: $screen-sm) {
-      font-size: 4rem;
+      font-size: 2rem;
     }
   }
 
@@ -52,34 +43,30 @@ body {
     @media screen and (max-width: $screen-lg) {
       font-size: 1.8rem;
     }
-
-    @media screen and (max-width: $screen-md) {
-      font-size: 1.5rem;
-    }
   }
 
   h3 {
     font-size: 1.5rem;
-
-    @media screen and (max-width: $screen-md) {
-      font-size: 1.35rem;
-    }
-
-    @media screen and (max-width: $screen-sm) {
-      font-size: 1.2rem;
-    }
   }
 
   h4 {
     font-size: 1.25rem;
-
-    @media screen and (max-width: $screen-md) {
-      font-size: 1rem;
-    }
   }
 
   h5 {
     font-size: 0.75rem;
+  }
+
+  p {
+    font-size: 1rem;
+
+    @media screen and (max-width: $screen-lg) {
+      font-size: 0.938rem;
+    }
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 0.875rem;
+    }
   }
 
   .logo {
@@ -90,11 +77,6 @@ body {
 
   a {
     text-decoration: none;
-    color: $color-secondary;
-
-    &:hover {
-      color: $color-secondary-light;
-    }
   }
 
   b {
@@ -168,6 +150,7 @@ body {
   .admin-controls-container {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 
     .admin-controls {
       padding: 2rem 4rem;
@@ -183,7 +166,6 @@ body {
   }
 
   .pager {
-    text-align: center;
+    justify-content: center;
   }
-
 }

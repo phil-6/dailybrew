@@ -32,7 +32,7 @@
     border: 1px solid $color-mid-1;
     transition: border-color 0.25s, box-shadow 0.25s;
 
-    &::placeholder {
+    &:not(.search)::placeholder {
       color: transparent;
     }
 
@@ -66,6 +66,10 @@
     &.invalid {
       border-color: $danger;
     }
+
+    &.search {
+      padding-right: 6.5rem;
+    }
   }
 
   .error-message {
@@ -95,6 +99,20 @@
       top: 1.1rem;
       font-size: 0.9rem;
     }
+  }
+
+  .form-search {
+    font-size: 1.5rem;
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -136,34 +154,14 @@
   &:not(a) {
     border: 1px solid $color-complementary-0 !important;
   }
+
+  &.btn-complementary {
+    outline-color: $color-primary-0;
+    box-shadow: 0 0 0 2px $color-primary-0;
+  }
 }
 
 input[type="submit" i] {
   border: none;
   padding: 0;
-}
-
-.search-form {
-  max-width: 470px;
-  margin: 3rem auto 0;
-
-  .field, .form-input {
-    .form-label {
-      border: none;
-      border-radius: 2rem;
-      background: white;
-    }
-
-    &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
-      & ~ .form-label {
-        background: linear-gradient(to bottom, $color-white, white);
-      }
-    }
-  }
-
-  .results {
-    text-align: center;
-    padding: 1rem;
-
-  }
 }
