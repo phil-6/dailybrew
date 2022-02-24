@@ -1,0 +1,8 @@
+<% @roasters.each do |roaster| %>
+  <tr>
+    <td><%= roaster.name %></td>
+    <td><%= roaster.coffees_count %></td>
+    <td><%= roaster.available_coffees_count %></td>
+    <td><%= roaster.last_coffee_fetch ? "#{time_ago_in_words(roaster.last_coffee_fetch)} ago" : "never" %></td>
+  </tr>
+<% end %>

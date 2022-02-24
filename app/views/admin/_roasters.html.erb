@@ -1,0 +1,11 @@
+<%= turbo_frame_tag "roasters_handler" %>
+<table id="roasters_table" class="roasters-table">
+  <tr>
+    <th>Name</th>
+    <th>Coffees</th>
+    <th>Available</th>
+    <th>Last Coffee Fetch</th>
+  </tr>
+  <%= render "roasters_table", roasters: @roasters %>
+</table>
+<%= render "roasters_table_pager", pagy_roasters: @pagy_roasters %>

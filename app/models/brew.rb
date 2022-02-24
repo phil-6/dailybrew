@@ -7,6 +7,7 @@ class Brew < ApplicationRecord
   counter_culture :coffee, column_name: proc { |model| model.public? ? 'public_brews_count' : nil }
 
   scope :visible, -> { where(public: true) }
+  scope :today, -> { where('created_at >= ?', Time.now.beginning_of_day) }
 
   after_create_commit do
     if public
