@@ -73,7 +73,7 @@
 .card-collection {
   max-width: $container-xl;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 2rem 4rem;
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
@@ -83,7 +83,7 @@
   }
 
   @media screen and (max-width: $screen-lg) {
-    padding: 1rem;
+    padding: 1rem 1rem 2rem;
     gap: 1rem;
   }
 
