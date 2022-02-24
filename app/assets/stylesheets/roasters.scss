@@ -1,7 +1,8 @@
 @import "variables";
 
-.roasters {
+.roasters.row {
   max-width: $container-xl;
+  margin: auto;
   flex-wrap: wrap;
   justify-content: center;
 
