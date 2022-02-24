@@ -17,6 +17,75 @@ body {
 
   main {
     margin: $nav-height auto 0;
+
+    .banner {
+      width: 100%;
+
+      &.primary {
+        background-color: $color-primary-1;
+
+        .banner-content {
+          padding: 3rem 2rem 4rem;
+
+          @media screen and (max-width: $screen-md) {
+            padding: 2rem;
+          }
+        }
+      }
+
+      &.secondary {
+        background-color: $color-primary-3;
+
+        .banner-content {
+          padding: 2rem;
+
+          h2, p {
+            color: $ink;
+          }
+
+          @media screen and (max-width: $screen-md) {
+            padding: 1rem 2rem;
+          }
+        }
+      }
+
+      .banner-content {
+        max-width: $container-md;
+        margin: 0 auto;
+
+        h2, p {
+          color: $color-white;
+        }
+
+        .page-title {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 1.5rem;
+
+          h2 {
+            line-height: 1;
+          }
+
+          &::before, &::after {
+            content: "";
+            height: 1px;
+            background: $color-complementary-0;
+            flex: 1 1 auto;
+            margin-top: 2px;
+          }
+
+          &::before {
+            margin-right: 1rem;
+          }
+
+          &::after {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
   }
 
   h1, h2, h3, h4, h5 {

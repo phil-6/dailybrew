@@ -1,165 +1,98 @@
 @import "variables";
 
 .roasters {
-  .banner {
-    width: 100%;
-    
-    &.primary {
-      background-color: $color-primary-1;
+  max-width: $container-xl;
+  flex-wrap: wrap;
+  justify-content: center;
 
-      .banner-content {
-        padding: 3rem 2rem 4rem;
-
-        @media screen and (max-width: $screen-md) {
-          padding: 2rem;
-        }
-      }
+  .search-form {
+    .field {
+      margin: 1rem 0;
     }
 
-    &.secondary {
-      background-color: $color-primary-3;
+    .results {
+      text-align: center;
 
-      .banner-content {
-        padding: 2rem;
-
-        @media screen and (max-width: $screen-md) {
-          padding: 1rem 2rem;
-        }
-      }
-    }
-
-    .banner-content {
-      max-width: $container-md;
-      margin: 0 auto;
-
-      h2, p {
-        color: $color-white;
-      }
-
-      .page-title {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        margin-bottom: 1.5rem;
-
-        h2 {
-          line-height: 1;
-        }
-
-        &::before, &::after {
-          content: "";
-          height: 1px;
-          background: $color-complementary-0;
-          flex: 1 1 auto;
-          margin-top: 2px;
-        }
-
-        &::before {
-          margin-right: 1rem;
-        }
-
-        &::after {
-          margin-left: 1rem;
-        }
-      }
-
-      .search-form {
-        .field {
-          margin: 1rem 0;
-        }
-
-        .results {
-          text-align: center;
-
-          &:empty {
-            appearance: none;
-          }
-        }
+      &:empty {
+        appearance: none;
       }
     }
   }
 
-  .roasters {
-    max-width: $container-xl;
-    margin: 0 auto;
+  @media screen and (max-width: $screen-lg) {
+    padding: 2rem 1rem;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    padding: 1rem;
+  }
+
+  .roaster-card {
+    background-color: white;
+    border-radius: 2rem;
     padding: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    height: $container-xs;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-basis: calc(25% - 2rem);
+    max-width: calc(25% - 1rem);
+    margin: 1rem;
+
+    @media screen and (max-width: $screen-xxl) {
+      flex-basis: calc(33% - 2rem);
+      max-width: calc(33% - 1rem);
+    }
+
+    @media screen and (max-width: $screen-xl) {
+      flex-basis: calc(33% - 2rem);
+      max-width: calc(33% - 1rem);
+      margin: 0.5rem;
+    }
 
     @media screen and (max-width: $screen-lg) {
-      padding: 2rem 1rem;
+      flex-basis: calc(50% - 2rem);
+      max-width: calc(50% - 1rem);
+      margin: 0.5rem;
     }
 
     @media screen and (max-width: $screen-md) {
-      padding: 1rem;
+      flex-basis: 100%;
+      max-width: 100%;
+      margin: 0.5rem 0;
     }
 
-    .roaster-card {
-      background-color: white;
-      border-radius: 2rem;
-      padding: 2rem;
-      height: $container-xs;
-      justify-content: space-between;
-      flex-grow: 1;
-      flex-basis: calc(25% - 2rem);
-      max-width: calc(25% - 1rem);
-      margin: 1rem;
+    .header {
+      h3 {
+        width: fit-content;
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.25rem;
 
-      @media screen and (max-width: $screen-xxl) {
-        flex-basis: calc(33% - 2rem);
-        max-width: calc(33% - 1rem);
-      }
+        a {
+          border-bottom: 3px solid $color-complementary-0;
 
-      @media screen and (max-width: $screen-xl) {
-        flex-basis: calc(33% - 2rem);
-        max-width: calc(33% - 1rem);
-        margin: 0.5rem;
-      }
-
-      @media screen and (max-width: $screen-lg) {
-        flex-basis: calc(50% - 2rem);
-        max-width: calc(50% - 1rem);
-        margin: 0.5rem;
-      }
-
-      @media screen and (max-width: $screen-md) {
-        flex-basis: 100%;
-        max-width: 100%;
-        margin: 0.5rem 0;
-      }
-
-      .header {
-        h3 {
-          width: fit-content;
-          padding-bottom: 0.25rem;
-          margin-bottom: 0.25rem;
-
-          a {
-            border-bottom: 3px solid $color-complementary-0;
-
-            &:hover {
-              border-bottom-color: $color-complementary-1;
-            }
+          &:hover {
+            border-bottom-color: $color-complementary-1;
           }
         }
-
-        .location {
-          font-size: 0.9rem;
-          opacity: 0.8;
-        }
       }
 
-      .row {
-        justify-content: flex-end;
-        align-items: center;
+      .location {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+    }
 
-        .available-coffees {
-          text-align: center;
-          font-size: 1.25rem;
-          color: $color-primary-0;
-        }
+    .row {
+      justify-content: flex-end;
+      align-items: center;
+
+      .available-coffees {
+        text-align: center;
+        font-size: 1.25rem;
+        color: $color-primary-0;
       }
     }
   }
 }
+
+
