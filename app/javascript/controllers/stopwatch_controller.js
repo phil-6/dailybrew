@@ -45,7 +45,7 @@ export default class extends Controller {
 
     pause() {
         clearInterval(timerInterval);
-        this.brewTimeTarget.value = elapsedTime / 1000
+        this.brewTimeTarget.value = timeToString(elapsedTime)
         this.pauseTarget.hidden = true
         this.startTarget.hidden = false
     }
