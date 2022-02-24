@@ -19,8 +19,13 @@
     margin: 0.5rem 0;
   }
 
-  .name {
-    margin-bottom: 0.5rem;
+  .header {
+    justify-content: space-between;
+    gap: 2rem;
+
+    .name {
+      margin-bottom: 0.5rem;
+    }
   }
 
   .country, .tasting-notes {

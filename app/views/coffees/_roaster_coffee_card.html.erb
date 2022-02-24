@@ -5,7 +5,12 @@
   <%#= action_name %>
   <%#= coffee_counter %>
 
-  <h3 class="name"><%= link_to coffee.name, coffee, class: 'link link-primary link-primary-title' %></h3>
+  <div class="header row">
+    <h3 class="name"><%= link_to coffee.name, coffee, class: 'link link-primary link-primary-title' %></h3>
+    <div class="controls">
+      <%= render 'favourites/favourite_toggle', coffee: coffee %>
+    </div>
+  </div>
   <div class="country">
     <i class="las la-map-marker"></i> <%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').titleize %>
   </div>
