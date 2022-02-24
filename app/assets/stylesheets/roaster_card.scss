@@ -1,29 +1,8 @@
 @import "variables";
 
 .roaster-card {
-  background-color: white;
-  border-radius: 2rem;
-  padding: 2rem;
   height: $container-xs;
   justify-content: space-between;
-  flex-grow: 1;
-  flex-basis: calc(25% - 2rem);
-  max-width: calc(25% - 1rem);
-
-  @media screen and (max-width: $screen-xl) {
-    flex-basis: calc(33% - 2rem);
-    max-width: calc(33% - 1rem);
-  }
-
-  @media screen and (max-width: $screen-lg) {
-    flex-basis: calc(50% - 2rem);
-    max-width: calc(50% - 1rem);
-  }
-
-  @media screen and (max-width: $screen-md) {
-    flex-basis: 100%;
-    max-width: 100%;
-  }
 
   .header {
     h3 {
