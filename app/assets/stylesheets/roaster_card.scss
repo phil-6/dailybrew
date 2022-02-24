@@ -1,0 +1,30 @@
+@import "variables";
+
+.roaster-card {
+  height: $container-xs;
+  justify-content: space-between;
+
+  .header {
+    h3 {
+      width: fit-content;
+      padding-bottom: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .location {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  }
+
+  .row {
+    justify-content: flex-end;
+    align-items: center;
+
+    .available-coffees {
+      text-align: center;
+      font-size: 1.25rem;
+      color: $color-primary-0;
+    }
+  }
+}

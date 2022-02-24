@@ -61,9 +61,17 @@
 
   &-primary {
     color: $color-primary-0;
-
+    
     &:hover {
       color: $color-primary-2;
+    }
+
+    &-title {
+      border-bottom: 3px solid $color-complementary-0;
+
+      &:hover {
+        border-bottom-color: $color-complementary-1;
+      }
     }
   }
 
@@ -72,6 +80,33 @@
 
     &:hover {
       color: $color-complementary-2;
+    }
+  }
+
+  &-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid $color-primary-0;
+
+    @media screen and (max-width: $screen-lg) {
+      width: 35px;
+      height: 35px;
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      background-color: $color-primary-3;
+    }
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+
     }
   }
 }
