@@ -48,4 +48,9 @@
       }
     }
   }
+
+  /* We might want to extract this to forms.scss */
+  form {
+    padding: 1rem; // This forces input fields to the same length
+  }
 }

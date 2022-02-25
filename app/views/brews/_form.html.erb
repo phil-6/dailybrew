@@ -11,39 +11,48 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.text_field :equipment, class: 'form-input', placeholder: 'Equipment' %>
-    <%= form.label :equipment, class: 'form-label' %>
+  <div class="multi-field row">
+    <div class="field">
+      <%= form.number_field :coffee_weight, class: 'form-input', placeholder: 'Coffee Weight' %>
+      <%= form.label :coffee_weight, class: 'form-label' %>
+    </div>
+
+    <div class="field">
+      <%= form.number_field :water_weight, class: 'form-input', placeholder: 'Water Weight' %>
+      <%= form.label :water_weight, class: 'form-label' %>
+    </div>
+    <div class="ratio">
+
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.text_field :method, class: 'form-input', placeholder: 'Method' %>
-    <%= form.label :method, class: 'form-label' %>
-  </div>
-
-  <div class="field">
-    <%= form.number_field :coffee_weight, class: 'form-input', placeholder: 'Coffee Weight' %>
-    <%= form.label :coffee_weight, class: 'form-label' %>
-  </div>
-
-  <div class="field">
-    <%= form.number_field :water_weight, class: 'form-input', placeholder: 'Water Weight' %>
-    <%= form.label :water_weight, class: 'form-label' %>
-  </div>
-
-  <div class="field">
-    <%= form.text_field :grinder, class: 'form-input', placeholder: 'Grinder' %>
-    <%= form.label :grinder, class: 'form-label' %>
-  </div>
-
-  <div class="field">
-    <%= form.text_field :grinder_setting, class: 'form-input', placeholder: 'Grinder Setting' %>
-    <%= form.label :grinder_setting, class: 'form-label' %>
-  </div>
-
-  <div class="field">    
-    <%= form.time_field :time, step: '1', class: 'form-input', data: {target: "stopwatch.brewTime"}, placeholder: 'Time' %>
+  <div class="time field">
+    <%= form.time_field :time, step: '1', class: 'form-input', data: { target: "stopwatch.brewTime" }, placeholder: 'Time' %>
     <%= form.label :time, class: 'form-label' %>
+  </div>
+
+  <div class="multi-field row">
+    <div class="field">
+      <%= form.text_field :equipment, class: 'form-input', placeholder: 'Equipment' %>
+      <%= form.label :equipment, class: 'form-label' %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :method, class: 'form-input', placeholder: 'Method' %>
+      <%= form.label :method, class: 'form-label' %>
+    </div>
+  </div>
+
+  <div class="multi-field row">
+    <div class="field">
+      <%= form.text_field :grinder, class: 'form-input', placeholder: 'Grinder' %>
+      <%= form.label :grinder, class: 'form-label' %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :grinder_setting, class: 'form-input', placeholder: 'Grinder Setting' %>
+      <%= form.label :grinder_setting, class: 'form-label' %>
+    </div>
   </div>
 
   <div class="field">
