@@ -98,12 +98,6 @@ body {
     }
   }
 
-  br {
-    display: block;
-    margin: 1rem;
-    content: "";
-  }
-
   hr {
     opacity: 0.25;
     border: 0;
@@ -127,13 +121,23 @@ body {
 
     .admin-controls {
       padding: 2rem 4rem;
-      background: repeating-linear-gradient(-40deg, #FE787C15, #FFB47915 10px, #FFB47915 10px, #FE787C15 40px);
+      background: repeating-linear-gradient(-40deg, #FE787C25, #FFB47925 10px, #FFB47925 10px, #FE787C25 40px);
       border: 0.2rem dashed #FFB47955;
       border-radius: 1rem;
       text-align: center;
 
+
       h1 {
         font-size: 1.5rem;
+        color: $danger-light;
+      }
+
+      a {
+        color: $warning-light;
+
+        &:hover {
+          color: $warning;
+        }
       }
     }
   }

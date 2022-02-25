@@ -8,6 +8,7 @@ class Brew < ApplicationRecord
 
   scope :visible, -> { where(public: true) }
   scope :today, -> { where('created_at >= ?', Time.now.beginning_of_day) }
+  # scope :daily_brewers
 
   after_create_commit do
     if public
@@ -28,6 +29,16 @@ class Brew < ApplicationRecord
       target: "brewers_count_coffee_#{coffee.id}",
       html: coffee.unique_brewers_count,
       locals: { coffee: }
+    )
+    broadcast_update_later_to(
+      'daily_brewers_count',
+      target: 'daily_brewers',
+      html: User.daily_brewers.count
+    )
+    broadcast_update_later_to(
+      'daily_brews_count',
+      target: 'daily_brews',
+      html: Brew.today.count
     )
   end
 end

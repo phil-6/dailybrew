@@ -1,7 +1,40 @@
-<main class="<%= controller_name %>-<%= action_name %>">
+<main data-controller="stopwatch" class="<%= controller_name %>-<%= action_name %>">
 
-  <h1>New brew</h1>
+  <header>
+    <div class="title">
+      <h1>Log a Brew</h1>
+      <h2><%= @coffee&.name || @brew&.coffee_id %></h2>
+    </div>
+
+    <div class="stopwatch">
+      <div data-stopwatch-target="display" class="time" id="display">00:00:00</div>
+      <div class="controls">
+        <div class="start-pause-button">
+          <button data-stopwatch-target="start" data-action="stopwatch#start" id="start_button">
+            Start
+          </button>
+          <button data-stopwatch-target="pause" data-action="stopwatch#pause" id="pause_button" hidden>
+            Pause
+          </button>
+        </div>
+        <div>
+          <button data-stopwatch-target="reset" data-action="stopwatch#reset" class="reset_button">
+            Reset
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <%= render "form", brew: @brew %>
+
+  <div class="info">
+    <% if @last_brew %>
+      <p>Note: Details filled from your last brew of <%= @last_coffee.name %>,
+        <%= time_ago_in_words(@last_brew.created_at) %> ago</p>
+    <% else %>
+      <p><b>This is your first brew!</b> We haven't built a guide for this yet, as we hope its fairly obvious! If there's anything that doesn't make sense please drop us an email!</p>
+    <% end %>
+  </div>
 
 </main>
