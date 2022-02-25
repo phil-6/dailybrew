@@ -60,6 +60,21 @@
   /* We might want to extract this to forms.scss */
   form {
     padding: 1rem; // This forces input fields to the same length
+
+    /* Make the label look okay on white background */
+    .field, .form-input {
+      .form-label {
+        border: none;
+        border-radius: 2rem;
+        background: white;
+      }
+
+      &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
+        & ~ .form-label {
+          background: linear-gradient(to bottom, $color-white, white);
+        }
+      }
+    }
   }
 
   .info {
