@@ -1,101 +1,31 @@
-<div id="<%= dom_id coffee %>" class="<%= controller_name %>-<%= action_name %>">
-
-  <!--  We can do something really cool and conditional with these.-->
-<%#= controller_name %>
-<%#= action_name %>
-
-  <div class="name">
-    <h1><%= coffee.name %></h1>
-    <h2>by <%= link_to coffee.roaster.name, roaster_path(coffee.roaster) %></h2>
-    <h3><%= coffee.tasting_notes if action_name == 'index' %></h3>
-  </div>
-
-  <div class="controls">
-    <%= render 'favourites/favourite_toggle', coffee: coffee %>
-    <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
-  </div>
-
-  <div class="details-container" style="display:none;">
-    <div class="details card">
-      <h2>Details</h2>
+<div id="<%= dom_id coffee %>" class="coffee-card card column">
+  <div class="coffee-card-content row">
+    <div class="column">
+      <h3 class="name"><%= link_to coffee.name, coffee, class: 'link link-primary link-primary-title' %></h3>
+      <% if controller_name == 'coffees' %>
+        <div class="roaster">
+          by <%= link_to coffee.roaster.name, roaster_path(coffee.roaster), class: 'link link-primary' %>
+        </div>
+      <% end %>
       <div class="country">
-        <strong>Country:</strong>
-        <%= coffee.country %>
+        <i class="las la-map-marker"></i> <%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').titleize %>
       </div>
-      <div class="region">
-        <strong>Region:</strong>
-        <%= coffee.region %>
+      <div class="tasting-notes">
+        <i class="las la-music"></i> <%= coffee.tasting_notes.titleize %>
       </div>
-      <div class="town">
-        <strong>Town:</strong>
-        <%= coffee.town %>
-      </div>
-      <div class="altitude">
-        <strong>Altitude:</strong>
-        <%= coffee.altitude %> masl
-      </div>
-      <div class="process">
-        <strong>Process:</strong>
-        <%= coffee.process %>
-      </div>
-      <div class="variety">
-        <strong>Variety:</strong>
-        <%= coffee.variety %>
-      </div>
-      <div class="producer">
-        <strong>Producer:</strong>
-        <%= coffee.producer %>
-      </div>
-      <div class="description">
-        <strong>Description:</strong>
-        <%= coffee.description.html_safe %>
-      </div>
+    </div>
+    <div class="controls column">
+      <%= render 'favourites/favourite_toggle', coffee: coffee %>
+      <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
     </div>
   </div>
-
-  <div class="global-stats">
-    <div class="favourites">
-      <%= render 'favourites/favourites_count', coffee: coffee %>
-      users have this as a favourite
-    </div>
-    <div class="current_users">
-      <%= render 'shelf_items/shelf_items_count', coffee: coffee %>
-      users currently have this on their shelf
-    </div>
-    <div class="brews">
-      This has been brewed
-      <%= render 'brews/brews_count', coffee: coffee %>
-      times by
-      <%= render 'brews/brewers_count', coffee: coffee %>
-      people
-    </div>
-    <div class="brew_rating">
-      The average rating is <%= coffee.average_brew_rating %>/10
-    </div>
+  <div class="metadata row">
+    <span><i class="las la-mug-hot"></i> <%= coffee.brews_count %></span>
+    <span>&#8226;</span>
+    <span><i class="las la-hand-holding"></i> <%= coffee.shelf_items_count %></span>
+    <span>&#8226;</span>
+    <span><i class="las la-heart"></i> <%= coffee.favourites_count %></span>
+    <span>&#8226;</span>
+    <span><i class="las la-comment"></i> <%= coffee.reviews_count %></span>
   </div>
-
-  <div class="user-stats">
-    <div class="brews">
-      You have brewed this coffee <%= current_user.brews.where(coffee: coffee).count %> times
-    </div>
-    <div class="brew_rating">
-      Your average rating is <%= current_user.average_brew_rating(coffee) %>/10
-    </div>
-  </div>
-
-  <% if action_name == 'show' %>
-    <div class="recent_brews">
-      <h3>Recent Brews</h3>
-      <%= link_to "View All Brews", coffee_brews_path(coffee) %>
-      <%= render 'brews/recent_brews', coffee: coffee %>
-    </div>
-
-    <% coffee.attributes.each do |a| %>
-      <p><%= a[0] %>: <%= a[1] %></p>
-    <% end %>
-
-  <% elsif action_name == 'index' %>
-    <%= link_to "Show this coffee", coffee %>
-  <% end %>
-
 </div>

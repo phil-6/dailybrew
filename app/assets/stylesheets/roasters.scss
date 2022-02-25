@@ -2,25 +2,23 @@
 
 .roasters {
   &.index {
-    .banner-primary-1 .banner-content {
-      padding: 3rem 2rem 4rem;
+    .card-collection .card {
+      flex-basis: calc(25% - 2rem);
+      max-width: 25%;
+
+      @media screen and (max-width: $screen-xxl) {
+        flex-basis: calc(33% - 2rem);
+        max-width: 33%;
+      }
+
+      @media screen and (max-width: $screen-lg) {
+        flex-basis: calc(50% - 1rem);
+        max-width: 50%;
+      }
 
       @media screen and (max-width: $screen-md) {
-        padding: 2rem;
-      }
-    }
-
-    .search-form {
-      .field {
-        margin: 1rem 0;
-      }
-
-      .results {
-        text-align: center;
-
-        &:empty {
-          appearance: none;
-        }
+        flex-basis: 100%;
+        max-width: 100%;
       }
     }
   }

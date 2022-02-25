@@ -50,14 +50,14 @@
 
   <% if @available_coffees.present? %>
     <div class="card-collection row">
-      <%= render partial: "coffees/roaster_coffee_card", collection: @available_coffees , as: :coffee %>
+      <%= render partial: 'coffees/coffee', collection: @available_coffees , as: :coffee %>
     </div>
   <% end %>
 
   <% if @unavailable_coffees.present? %>
     <h4>Unavailable</h4>
     <div class="card-collection row">
-      <%= render partial: "coffees/roaster_coffee_card", collection: @unavailable_coffees , as: :coffee %>
+      <%= render partial: 'coffees/coffee', collection: @unavailable_coffees , as: :coffee %>
     </div>
   <% end %>
 </main>

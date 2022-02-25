@@ -16,8 +16,16 @@
   &-primary-1 {
     background-color: $color-primary-1;
 
-    h2, p {
-      color: $color-white;
+    .banner-content {
+      padding: 3rem 2rem 4rem !important;
+
+      @media screen and (max-width: $screen-md) {
+        padding: 2rem 2rem 3rem !important;
+      }
+
+      h1, h2, p {
+        color: $color-white;
+      }
     }
   }
 
@@ -78,7 +86,7 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  @media screen and (max-width: $screen-xl) {
+  @media screen and (max-width: $screen-xxl) {
     gap: 1rem;
   }
 
@@ -93,15 +101,10 @@
 
   .card {
     flex-grow: 1;
-    flex-basis: calc(25% - 2rem);
-    max-width: 25%;
+    flex-basis: calc(33% - 2rem);
+    max-width: 33%;
 
-    @media screen and (max-width: $screen-xxl) {
-      flex-basis: calc(33% - 2rem);
-      max-width: 33%;
-    }
-
-    @media screen and (max-width: $screen-lg) {
+    @media screen and (max-width: $screen-xl) {
       flex-basis: calc(50% - 1rem);
       max-width: 50%;
     }
