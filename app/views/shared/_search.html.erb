@@ -1,0 +1,16 @@
+<div class="search">
+  <%= form_with url: path, method: 'GET' do |form| %>
+    <div class="field">
+      <%= form.text_field :query, class: 'form-input search', placeholder: placeholder %>
+      <%= button_tag(type: 'submit', class: 'form-submit form-search btn btn-complementary') do %>
+        <i class="las la-search"></i>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="results">
+    <% if params[:query] %>
+      <%= pluralize(@pagy.count, 'result') %> for "<%= params[:query] %>"
+    <% end %>
+  </div>
+</div>
