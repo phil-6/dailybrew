@@ -15,18 +15,12 @@
       margin-bottom: 0.5rem;
     }
 
-    .country, .tasting-notes {
-      font-size: 1rem;
-      font-weight: 200;
-      letter-spacing: -0.25px;
+    .roaster {
+      font-size: 0.9rem;
 
       @media screen and (max-width: $screen-lg) {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
-    }
-
-    .country {
-      margin-top: 1rem;
     }
 
     .controls {
@@ -36,15 +30,29 @@
 
   .metadata {
     margin-top: 1rem;
-    justify-content: center;
-    gap: 0.5rem;
-
-    span {
-      font-size: 0.9rem;
-      opacity: 0.8;
+    
+    .country, .tasting-notes {
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: -0.25px;
 
       @media screen and (max-width: $screen-lg) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .row {
+      margin-top: 0.5rem;
+      justify-content: center;
+      gap: 0.5rem;
+
+      span {
         font-size: 0.8rem;
+        opacity: 0.8;
+
+        @media screen and (max-width: $screen-lg) {
+          font-size: 0.7rem;
+        }
       }
     }
   }
