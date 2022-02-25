@@ -45,6 +45,17 @@ Rails.application.configure do
 
   config.action_mailer.perform_deliveries = true
 
+  # Send Mail with Sendgrid
+  config.action_mailer.smtp_settings = {
+    user_name: 'apikey',
+    password: ENV['SENDGRID_API_KEY'],
+    domain: 'dailybrew.club',
+    address: 'smtp.sendgrid.net',
+    port: 587,
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

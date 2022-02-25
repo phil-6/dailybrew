@@ -1,11 +1,11 @@
-<div id="shelf_item_toggle_<%= dom_id(coffee) %>" class="toggle-button">
+<div id="shelf_item_toggle_<%= dom_id(coffee) %>">
   <% if current_user&.shelf_items.find_by(coffee: coffee) %>
-    <%= button_to delete_shelf_item_path(coffee), method: :delete do %>
-      <i class="las la-minus-circle"></i> Remove from Shelf
+    <%= button_to delete_shelf_item_path(coffee), method: :delete, class:'link link-primary link-icon' do %>
+      <i class="las la-minus-circle"></i>
     <% end %>
   <% else %>
-    <%= button_to create_shelf_item_path(coffee), method: :post do %>
-      <i class="las la-plus-circle"></i> Add to Shelf
+    <%= button_to create_shelf_item_path(coffee), method: :post, class:'link link-primary link-icon' do %>
+      <i class="las la-plus-circle"></i>
     <% end %>
   <% end %>
 </div>

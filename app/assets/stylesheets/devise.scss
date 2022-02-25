@@ -1,8 +1,10 @@
 @import "variables";
 
 .devise {
+  margin-top: $nav-height;
   min-height: 100vh;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  align-items: center;
 
   @media screen and (max-width: $screen-lg) {
     justify-content: flex-start !important;

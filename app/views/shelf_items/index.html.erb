@@ -1,6 +1,27 @@
-<% @shelf_coffees.each do |coffee| %>
-  <% coffee.attributes.each do |a| %>
-    <p><%= a[0] %>: <%= a[1] %></p>
-  <% end %>
-  <hr>
-<% end %>
+<main class="shelf-items">
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <div class="page-title">
+        <h2>Your Coffee Shelf</h2>
+      </div>
+      <h4>Which coffee are you brewing?</h4>
+    </div>
+  </div>
+
+  <div class="shelf-container">
+    <div class="shelf">
+      <% @shelf_coffees.reverse.each do |coffee| %>
+        <%= render 'shelf_item', coffee: coffee %>
+      <% end %>
+
+      <% if @shelf_coffees.count == 0 %>
+        <div class="no-coffees">
+          <h1>Your Coffee Shelf is Empty</h1>
+          <h3>Try searching for a <%= link_to "roaster", roasters_path %> or a <%= link_to "coffee", coffees_path %> and
+            add it to your self</h3>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</main>

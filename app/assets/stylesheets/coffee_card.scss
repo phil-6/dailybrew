@@ -1,0 +1,57 @@
+@import "variables";
+
+.coffee-card {
+  justify-content: space-between;
+
+  .coffee-card-content {
+    justify-content: space-between;
+    gap: 1rem;
+
+    .column:not(.controls) {
+      width: 100%;
+    }
+
+    .name {
+      margin-bottom: 0.5rem;
+    }
+
+    .roaster {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+
+      @media screen and (max-width: $screen-lg) {
+        font-size: 0.8rem;
+      }
+    }
+
+    .country, .tasting-notes {
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: -0.25px;
+
+      @media screen and (max-width: $screen-lg) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .controls {
+      gap: 0.5rem;
+    }
+  }
+
+  .metadata {
+    margin-top: 0.5rem;
+    justify-content: center;
+    gap: 0.5rem;
+
+    span {
+      font-size: 0.8rem;
+      opacity: 0.8;
+
+      @media screen and (max-width: $screen-lg) {
+        font-size: 0.7rem;
+      }
+    }
+    
+  }
+}

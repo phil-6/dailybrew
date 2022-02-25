@@ -1,10 +1,12 @@
 <p style="color: green"><%= notice %></p>
+<main class="<%= controller_name %>-<%= action_name %>">
 
-<%= render @brew %>
+  <%= render @brew %>
 
-<div>
-  <%= link_to "Edit this brew", edit_brew_path(@brew) %> |
-  <%= link_to "Back to brews", brews_path %>
+  <div>
+    <%= link_to "Edit this brew", edit_brew_path(@brew) %> |
+    <%= link_to "Back to brews", brews_path %>
 
-  <%= button_to "Destroy this brew", @brew, method: :delete %>
-</div>
+    <%= button_to "Destroy this brew", @brew, method: :delete %>
+  </div>
+</main>

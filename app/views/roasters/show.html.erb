@@ -1,7 +1,29 @@
-<p style="color: green"><%= notice %></p>
-<main class="roasters">
-  <%= render @roaster %>
-
+<main class="roasters show">
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <h2><%= @roaster.name %></h2>
+      <div class="location">
+        <a href="https://www.google.com/maps/?q=<%= @roaster.name %>, <%= @roaster.location %>" class="link link-primary" target=_blank>
+          <%= @roaster.location.split(',').last(2)[0].titleize %> <i class="las la-map-marked-alt"></i>
+        </a>
+      </div>
+      <p class="description">
+        <%= @roaster.description %>
+      </p>
+      <div class="socials row">
+        <a href="https://<%= @roaster.website %>" class="link link-primary link-icon"><i class="las la-link"></i></a>
+        <% if @roaster.twitter %>
+          <a href="https://twitter.com/<%= @roaster.twitter %>" class="link link-primary link-icon" target=_blank><i class="lab la-twitter"></i></a>
+        <% end %>
+        <% if @roaster.instagram %>
+          <a href="https://instagram.com/<%= @roaster.instagram %>" class="link link-primary link-icon" target=_blank><i class="lab la-instagram"></i></a>
+        <% end %>
+        <% if @roaster.facebook %>
+          <a href="https://facebook.com/<%= @roaster.facebook %>" class="link link-primary link-icon" target=_blank><i class="lab la-facebook-square"></i></a>
+        <% end %>
+      </div>
+    </div>
+  </div>
   <div class="admin-controls-container">
     <div class="admin-controls">
       <h1>Admin Controls</h1>
@@ -19,27 +41,23 @@
       <% end %>
     </div>
   </div>
-
-  <div class="roaster-coffees">
-    <h2 class="summary">
-      <%= @roaster.name %> has <%= @roaster.available_coffees_count %> coffees available at the moment
-    </h2>
-
-    <div class="add-coffee">
-      Is there a coffee we're missing? <%= link_to "Add it here.", new_roaster_coffee_path(@roaster) %>
-    </div>
-
-    <div class="available">
-      <%= render partial: "coffees/roaster_coffee_card", collection: @available_coffees , as: :coffee %>
-    </div>
-
-    <div class="unavailable">
-      <% @unavailable_coffees.each do |coffee| %>
-        <div class="card" style="border:1px dashed rebeccapurple">
-          <%= render coffee %>
-        </div>
-      <% end %>
+  <div class="banner">
+    <div class="banner-content coffee-summary">
+      <p><%= @roaster.name %> has <strong><%= @roaster.available_coffees_count %> coffees</strong> available at the moment.</p>
+      <p>Is there a coffee we're missing? <%= link_to 'Add it here', new_roaster_coffee_path(@roaster), class: 'link link-primary' %>.</p>
     </div>
   </div>
 
+  <% if @available_coffees.present? %>
+    <div class="card-collection row">
+      <%= render partial: 'coffees/coffee', collection: @available_coffees , as: :coffee %>
+    </div>
+  <% end %>
+
+  <% if @unavailable_coffees.present? %>
+    <h4>Unavailable</h4>
+    <div class="card-collection row">
+      <%= render partial: 'coffees/coffee', collection: @unavailable_coffees , as: :coffee %>
+    </div>
+  <% end %>
 </main>

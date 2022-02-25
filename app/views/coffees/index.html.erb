@@ -1,15 +1,21 @@
-<div class="<%= controller_name %>-<%= action_name %>">
+<main class="coffees index">
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <div class="page-title">
+        <h1>Coffees</h1>
+      </div>
+      <p>There are <strong><%= Coffee.all.size %> coffees</strong> from <strong><%= Roaster.with_coffees.size %> roasters</strong>.</p>
+    </div>
+  </div>
+  <div class="banner banner-primary-3">
+    <div class="banner-content">
+      <%= render 'shared/search', path: coffees_path, placeholder: 'Name, Tasting Notes, Country or Process' %>
+    </div>
+  </div>
 
-  <p style="color: green"><%= notice %></p>
-
-  <h1 class="page-title">All Coffees</h1>
-  <p class="stats">There are <%= Coffee.all.size %> coffees from <%= Roaster.with_coffees.size %> roasters</p>
-
-  <%= render 'coffee_search' %>
-
-  <%= turbo_frame_tag "page_handler" %>
-  <div id="coffees">
+  <%= turbo_frame_tag 'page_handler' %>
+  <div id="coffees" class="card-collection row">
     <%= render @coffees %>
   </div>
-  <%= render "shared/index_pager", pagy: @pagy %>
-</div>
+  <%= render 'shared/index_pager', pagy: @pagy %>
+</main>

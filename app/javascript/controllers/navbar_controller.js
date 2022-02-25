@@ -1,16 +1,20 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
+    static targets = [ "menu", "background" ]
 
-    expand() {
-        const navbar = this.element,
-            nav_mobile_expand = navbar.querySelector('.nav-mobile-expand'),
-            icon_class_list = nav_mobile_expand.querySelector('i').classList
+    initialize() {
+        this.menuTarget.hidden = true
+        this.backgroundTarget.hidden = true
+    }
 
-        if (navbar.classList.toggle('expanded')) {
-            icon_class_list.replace('fa-bars', 'fa-times')
-        } else {
-            icon_class_list.replace('fa-times', 'fa-bars')
-        }
+    open() {
+        this.menuTarget.hidden = false
+        this.backgroundTarget.hidden = false
+    }
+
+    close() {
+        this.menuTarget.hidden = true
+        this.backgroundTarget.hidden = true
     }
 }

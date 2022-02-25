@@ -1,0 +1,14 @@
+<div id="roasters_table_pager" class="roasters_table_pager">
+  <div>
+    <% if pagy_roasters.next %>
+      <%= link_to(
+            "Load more",
+            admin_dashboard_path(page_roasters: pagy_roasters.next),
+            class: "",
+            data: {
+              turbo_frame: "roasters_handler"
+            }
+          ) %>
+    <% end %>
+  </div>
+</div>
