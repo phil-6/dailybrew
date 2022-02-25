@@ -1,6 +1,6 @@
 class BrewsController < ApplicationController
-  before_action :set_coffee, only: %i[new create]
   before_action :set_brew, only: %i[show edit update destroy]
+  before_action :set_coffee, only: %i[new create edit update]
 
   # GET /brews or /brews.json
   def index
@@ -18,7 +18,12 @@ class BrewsController < ApplicationController
   end
 
   # GET /brews/1/edit
-  def edit; end
+  def edit
+    # hrs = @brew.time / 3600
+    # mins = (@brew.time / 60) - (hrs * 60)
+    # secs = @brew.time - (mins * 60)
+    # @brew.time = "#{hrs}:#{mins}:#{secs}"
+  end
 
   # POST /brews or /brews.json
   def create
@@ -68,7 +73,7 @@ class BrewsController < ApplicationController
   end
 
   def set_coffee
-    @coffee = Coffee.find(params[:coffee_id])
+    @coffee = params[:coffee_id] ? Coffee.find(params[:coffee_id]) : @brew.coffee
   end
 
   # Only allow a list of trusted parameters through.

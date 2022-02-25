@@ -1,10 +1,20 @@
-<h1>Editing brew</h1>
+<main class="<%= controller_name %>-<%= action_name %>">
+  <header>
+    <div class="title">
+      <h1>Edit Brew</h1>
+      <h2><%= @coffee&.name || @brew&.coffee_id %></h2>
+    </div>
+    <div class="created-at">
+      <h3>Logged <%= time_ago_in_words(@brew.created_at) %> ago</h3>
+    </div>
+  </header>
 
-<%= render "form", brew: @brew %>
+  <%= render "form", brew: @brew %>
 
-<br>
+  <br>
 
-<div>
-  <%= link_to "Show this brew", @brew %> |
-  <%= link_to "Back to brews", brews_path %>
-</div>
+  <div class="links">
+    <%= link_to "Show this brew", @brew %> |
+    <%= link_to "Back to brews", brews_path %>
+  </div>
+</main>

@@ -1,4 +1,6 @@
-<%= form_with(model: brew, url: coffee_brews_path) do |form| %>
+
+
+<%= form_with model: @brew do |form| %>
   <% if brew.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(brew.errors.count, "error") %> prohibited this brew from being saved:</h2>
@@ -27,7 +29,7 @@
   </div>
 
   <div class="time field">
-    <%= form.time_field :time, step: '1', class: 'form-input', data: { target: "stopwatch.brewTime" }, placeholder: 'Time' %>
+    <%= form.text_field :time, class: 'form-input', data: { target: "stopwatch.brewTime" }, placeholder: 'Time' %>
     <%= form.label :time, class: 'form-label' %>
   </div>
 
