@@ -16,6 +16,7 @@
     }
 
     .roaster {
+      margin-bottom: 0.5rem;
       font-size: 0.9rem;
 
       @media screen and (max-width: $screen-lg) {
@@ -23,14 +24,6 @@
       }
     }
 
-    .controls {
-      gap: 0.5rem;
-    }
-  }
-
-  .metadata {
-    margin-top: 1rem;
-    
     .country, .tasting-notes {
       font-size: 1rem;
       font-weight: 300;
@@ -41,19 +34,24 @@
       }
     }
 
-    .row {
-      margin-top: 0.5rem;
-      justify-content: center;
+    .controls {
       gap: 0.5rem;
+    }
+  }
 
-      span {
-        font-size: 0.8rem;
-        opacity: 0.8;
+  .metadata {
+    margin-top: 0.5rem;
+    justify-content: center;
+    gap: 0.5rem;
 
-        @media screen and (max-width: $screen-lg) {
-          font-size: 0.7rem;
-        }
+    span {
+      font-size: 0.8rem;
+      opacity: 0.8;
+
+      @media screen and (max-width: $screen-lg) {
+        font-size: 0.7rem;
       }
     }
+    
   }
 }
