@@ -32,6 +32,8 @@
     <% if @last_brew %>
       <p>Note: Details filled from your last brew of <%= @last_coffee.name %>,
         <%= time_ago_in_words(@last_brew.created_at) %> ago</p>
+    <% else %>
+      <p><b>This is your first brew!</b> We haven't built a guide for this yet, as we hope its fairly obvious! If there's anything that doesn't make sense please drop us an email!</p>
     <% end %>
   </div>
 
