@@ -25,9 +25,9 @@
       </div>
     </div>
   <% end %>
-  <%= turbo_frame_tag "page_handler" %>
+  <%= turbo_frame_tag 'page_handler' %>
   <div id="roasters" class="card-collection row">
     <%= render @roasters %>
   </div>
-  <%= render "shared/index_pager", pagy: @pagy %>
+  <%= render 'shared/index_pager', pagy: @pagy %>
 </main>
