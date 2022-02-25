@@ -106,9 +106,7 @@
       text-align: center;
       h3 a {
         color: $color-primary-0;
-        text-decoration-line: underline;
-        text-decoration-style: wavy;
-        text-decoration-thickness: 0.1rem;
+        text-decoration: wavy underline 0.1rem;
         transition: text-shadow 0.5s;
 
 
