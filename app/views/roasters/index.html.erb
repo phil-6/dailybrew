@@ -14,7 +14,7 @@
   </div>
   <div class="banner banner-primary-3">
     <div class="banner-content">
-      <%= render 'roaster_search' %>
+      <%= render 'shared/search', path: roasters_path, placeholder: 'Search' %>
     </div>
   </div>
   <% if current_user&.admin %>

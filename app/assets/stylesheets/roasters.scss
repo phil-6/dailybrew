@@ -1,22 +1,6 @@
 @import "variables";
 
 .roasters {
-  &.index {
-    .search-form {
-      .field {
-        margin: 1rem 0;
-      }
-
-      .results {
-        text-align: center;
-
-        &:empty {
-          appearance: none;
-        }
-      }
-    }
-  }
-
   &.show {
     .banner-primary-1 .banner-content {
       .link {
