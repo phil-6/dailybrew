@@ -1,6 +1,6 @@
 class BrewsController < ApplicationController
   before_action :set_brew, only: %i[show edit update destroy]
-  before_action :set_coffee, only: %i[new create edit update]
+  before_action :set_coffee, only: %i[new create update]
 
   # GET /brews or /brews.json
   def index
