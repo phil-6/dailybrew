@@ -25,12 +25,12 @@ module FetchCoffees
         coffee['name'] = coffee_page.css('.product-area__details__title').text
         coffee_description_section = coffee_page.css('.shg-c')
 
+        coffee['tasting_notes'] = 'Try it and find out!'
         coffee_description_section.css('p').each do |paragraph|
           if paragraph.text.downcase.include? 'expect notes of'
             coffee['tasting_notes'] = paragraph.css('strong').text.gsub(' | ', ', ') .titleize
           end
         end
-        coffee['tasting_notes'] = 'Try it and find out!' if coffee['tasting_notes'] == ''
 
         coffee['country'] = /(?<=country: |location: )(.*?)(?=<)/i.match(coffee_description_section.to_s)
         coffee['region'] = /(?<=region: )(.*?)(?=<)/i.match(coffee_description_section.to_s)
