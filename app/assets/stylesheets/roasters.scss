@@ -2,14 +2,6 @@
 
 .roasters {
   &.index {
-    .banner-primary-1 .banner-content {
-      padding: 3rem 2rem 4rem;
-
-      @media screen and (max-width: $screen-md) {
-        padding: 2rem;
-      }
-    }
-
     .search-form {
       .field {
         margin: 1rem 0;

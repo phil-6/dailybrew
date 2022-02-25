@@ -16,8 +16,16 @@
   &-primary-1 {
     background-color: $color-primary-1;
 
-    h2, p {
-      color: $color-white;
+    .banner-content {
+      padding: 3rem 2rem 4rem !important;
+
+      @media screen and (max-width: $screen-md) {
+        padding: 2rem 2rem 3rem !important;
+      }
+
+      h2, p {
+        color: $color-white;
+      }
     }
   }
 
