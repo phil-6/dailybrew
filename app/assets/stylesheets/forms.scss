@@ -114,6 +114,11 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  textarea {
+    resize: vertical;
+    min-height: 7rem;
+  }
 }
 
 .multi-field {
