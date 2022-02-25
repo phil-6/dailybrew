@@ -1,15 +1,18 @@
-<p style="color: green"><%= notice %></p>
-<main class="coffees">
-  <%= render @coffee %>
-
-  <div class="admin-controls-container" style="display:none;">
-    <div class="admin-controls">
-      <h1>Admin Controls</h1>
-      <% if current_user.admin? %>
+<main class="coffees show">
+  <% if current_user&.admin && false %>
+    <div class="admin-controls-container">
+      <div class="admin-controls">
+        <h1>Admin Controls</h1>
         <%= link_to "Edit this coffee", edit_coffee_path(@coffee) %>
         <%#= button_to "Destroy this coffee", @coffee, method: :delete %>
-      <% end %>
+      </div>
+    </div>
+  <% end %>
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <%= render @coffee %>
     </div>
   </div>
+  
 
 </main>
