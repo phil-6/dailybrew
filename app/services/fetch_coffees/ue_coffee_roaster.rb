@@ -1,5 +1,5 @@
 module FetchCoffees
-  class UeCoffeeRoasters
+  class UeCoffeeRoaster
     require 'open-uri'
     require 'net/http'
     require 'json'
