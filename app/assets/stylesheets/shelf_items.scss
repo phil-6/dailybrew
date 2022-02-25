@@ -102,5 +102,30 @@
         }
       }
     }
+    .no-coffees {
+      text-align: center;
+      h3 a {
+        color: $color-primary-0;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-decoration-thickness: 0.1rem;
+        transition: text-shadow 0.5s;
+
+
+        &:hover{
+          color: $color-primary-1;
+          text-shadow: 0 0 15px $color-complementary-0;
+        }
+
+        @media screen and (max-width: $screen-sm) {
+          animation: glow 1s infinite alternate;
+          @keyframes glow {
+            to {
+              text-shadow: 0 0 15px $color-complementary-0;
+            }
+          }
+        }
+      }
+    }
   }
 }
