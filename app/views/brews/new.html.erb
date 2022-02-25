@@ -17,13 +17,22 @@
             Pause
           </button>
         </div>
-        <div><button data-stopwatch-target="reset" data-action="stopwatch#reset" class="reset_button">
-          Reset
-        </button></div>
+        <div>
+          <button data-stopwatch-target="reset" data-action="stopwatch#reset" class="reset_button">
+            Reset
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
   <%= render "form", brew: @brew %>
+
+  <div class="info">
+    <% if @last_brew %>
+      <p>Note: Details filled from your last brew of <%= @last_coffee.name %>,
+        <%= time_ago_in_words(@last_brew.created_at) %> ago</p>
+    <% end %>
+  </div>
 
 </main>

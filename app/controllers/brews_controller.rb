@@ -13,6 +13,8 @@ class BrewsController < ApplicationController
   def new
     @brew = Brew.new
     @coffee = Coffee.find(params[:coffee_id])
+    @last_brew = current_user.brews.where(coffee: @coffee).last || current_user.brews.last
+    @last_coffee = @last_brew.coffee if @last_brew
   end
 
   # GET /brews/1/edit
