@@ -7,12 +7,17 @@
           by <%= link_to coffee.roaster.name, roaster_path(coffee.roaster), class: 'link link-primary' %>
         </div>
       <% end %>
-      <div class="country">
-        <i class="las la-map-marker"></i> <%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').titleize %>
-      </div>
-      <div class="tasting-notes">
-        <i class="las la-music"></i> <%= coffee.tasting_notes.titleize %>
-      </div>
+      <ul class="details">
+        <li class="row tasting-notes">
+          <i class="las la-music"></i> <span><%= coffee.tasting_notes.titleize %></span>
+        </li>
+        <li class="row country">
+          <i class="las la-map-marker"></i> <span><%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').titleize %></span>
+        </li>
+        <li class="row process">
+          <i class="las la-industry"></i> <span><%= coffee.process.titleize %></span>
+        </li>
+      </ul>
     </div>
     <div class="controls column">
       <%= render 'favourites/favourite_toggle', coffee: coffee %>
