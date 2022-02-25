@@ -27,8 +27,9 @@ module FetchCoffees
 
         coffee_description_section.css('p').each do |paragraph|
           if paragraph.text.downcase.include? 'expect notes of'
-            coffee['tasting_notes'] = paragraph.css('strong').text.gsub(' | ', ', ') #.titleize
+            coffee['tasting_notes'] = paragraph.css('strong').text.gsub(' | ', ', ') .titleize
           end
+          coffee['tasting_notes'] = 'Try it and find out!' if coffee['tasting_notes'] == ''
         end
 
         coffee['country'] = /(?<=country: |location: )(.*?)(?=<)/i.match(coffee_description_section.to_s)
