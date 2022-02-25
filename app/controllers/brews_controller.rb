@@ -1,4 +1,5 @@
 class BrewsController < ApplicationController
+  before_action :set_coffee, only: %i[new create]
   before_action :set_brew, only: %i[show edit update destroy]
 
   # GET /brews or /brews.json
@@ -12,7 +13,6 @@ class BrewsController < ApplicationController
   # GET /brews/new
   def new
     @brew = Brew.new
-    @coffee = Coffee.find(params[:coffee_id])
     @last_brew = current_user.brews.where(coffee: @coffee).last || current_user.brews.last
     @last_coffee = @last_brew.coffee if @last_brew
   end
@@ -22,7 +22,9 @@ class BrewsController < ApplicationController
 
   # POST /brews or /brews.json
   def create
-    @brew = current_user.brews.new(coffee_id: params[:coffee_id])
+    @brew = current_user.brews.new(brew_params)
+    @brew.coffee = @coffee
+    @brew.time = Time.parse(brew_params['time']).min if @brew.time.instance_of?(String)
 
     respond_to do |format|
       if @brew.save
@@ -63,6 +65,10 @@ class BrewsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_brew
     @brew = Brew.find(params[:id])
+  end
+
+  def set_coffee
+    @coffee = Coffee.find(params[:coffee_id])
   end
 
   # Only allow a list of trusted parameters through.
