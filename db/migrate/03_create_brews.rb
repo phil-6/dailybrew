@@ -9,7 +9,7 @@ class CreateBrews < ActiveRecord::Migration[7.0]
       t.integer :water_weight
       t.string :grinder
       t.string :grinder_setting
-      t.integer :time
+      t.integer :time, default: 0
       t.text :notes
       t.integer :rating
       t.boolean :public, null: false, default: true
