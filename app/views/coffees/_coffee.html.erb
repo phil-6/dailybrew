@@ -15,7 +15,7 @@
           <i class="las la-map-marker"></i> <span><%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').titleize %></span>
         </li>
         <li class="row process">
-          <i class="las la-industry"></i> <span><%= coffee.process.titleize %></span>
+          <i class="las la-industry"></i> <span><%= coffee.process.present? ? coffee.process.titleize : 'Unknown' %></span>
         </li>
       </ul>
     </div>
