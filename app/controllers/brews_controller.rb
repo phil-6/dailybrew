@@ -18,18 +18,13 @@ class BrewsController < ApplicationController
   end
 
   # GET /brews/1/edit
-  def edit
-    # hrs = @brew.time / 3600
-    # mins = (@brew.time / 60) - (hrs * 60)
-    # secs = @brew.time - (mins * 60)
-    # @brew.time = "#{hrs}:#{mins}:#{secs}"
-  end
+  def edit; end
 
   # POST /brews or /brews.json
   def create
     @brew = current_user.brews.new(brew_params)
     @brew.coffee = @coffee
-    @brew.time = Time.parse(brew_params['time']).min if @brew.time.instance_of?(String)
+    @brew.time = time_in_seconds if @brew.time.instance_of?(String)
 
     respond_to do |format|
       if @brew.save
@@ -44,8 +39,10 @@ class BrewsController < ApplicationController
 
   # PATCH/PUT /brews/1 or /brews/1.json
   def update
+    @brew.update(brew_params)
+    @brew.time = time_in_seconds if brew_params['time'].instance_of?(String)
     respond_to do |format|
-      if @brew.update(brew_params)
+      if @brew.save!
         format.html { redirect_to brew_url(@brew), notice: 'Brew was successfully updated.' }
         format.json { render :show, status: :ok, location: @brew }
       else
@@ -80,5 +77,9 @@ class BrewsController < ApplicationController
   def brew_params
     params.require(:brew).permit(:user_id, :coffee_id, :equipment, :method, :coffee_weight, :water_weight, :grinder,
                                  :grinder_setting, :time, :notes, :rating)
+  end
+
+  def time_in_seconds
+    (Time.parse(brew_params['time']).hour * 60) + Time.parse(brew_params['time']).min
   end
 end
