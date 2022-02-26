@@ -42,7 +42,11 @@
     }
 
     &.explanation {
-      max-width: $container-xl;
+      max-width: $container-lg;
+      text-align: justify;
+      h2, h3 {
+        padding-top: 1rem;
+      }
     }
 
     p {
