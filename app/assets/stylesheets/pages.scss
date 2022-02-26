@@ -39,11 +39,16 @@
 
     &.introduction {
       max-width: $container-md;
+
+      h2 {
+        padding-top: 1rem;
+      }
     }
 
     &.explanation {
       max-width: $container-lg;
       text-align: justify;
+
       h2, h3 {
         padding-top: 1rem;
       }
