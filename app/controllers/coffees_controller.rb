@@ -1,6 +1,6 @@
 class CoffeesController < ApplicationController
   before_action :set_coffee, only: %i[show edit update destroy]
-  before_action :set_roaster, only: :index
+  before_action :set_roaster, only: %i[index new create update]
 
   # GET /coffees or /coffees.json
   def index

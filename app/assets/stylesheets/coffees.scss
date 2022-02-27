@@ -11,8 +11,14 @@
   &-new, &-create, &-edit, &-update {
     max-width: $container-lg;
 
-    .title h2 {
+    .title {
+      h1 {
+        text-align: center;
+      }
+      h2 {
         font-size: 1.2rem;
+        padding: 0 1rem;
+      }
     }
   }
 }
