@@ -7,4 +7,8 @@
       text-align: center;
     }
   }
+
+  &-new, &-create, &-edit, &-update {
+    max-width: $container-lg;
+  }
 }
