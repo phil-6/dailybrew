@@ -27,7 +27,7 @@ class CoffeesController < ApplicationController
 
   # POST /coffees or /coffees.json
   def create
-    @coffee = Coffee.new(coffee_params)
+    @coffee = @roaster.coffees.new(coffee_params)
 
     respond_to do |format|
       if @coffee.save
@@ -62,7 +62,7 @@ class CoffeesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
   private
 
   def search
