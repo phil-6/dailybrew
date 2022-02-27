@@ -2,6 +2,10 @@
 
 .roasters {
   &-index {
+    .banner-content p:first-of-type {
+      text-align: center;
+    }
+
     .card-collection .card {
       flex-basis: calc(25% - 2rem);
       max-width: 25%;
@@ -28,6 +32,7 @@
       .link {
         color: $color-white;
       }
+
       .socials .link {
         border-color: $color-white;
       }
