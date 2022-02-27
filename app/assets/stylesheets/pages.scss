@@ -3,7 +3,6 @@
 .pages {
   .banner-content {
     text-align: center;
-    min-height: 100vh;
 
     .page-title {
       h1 {
@@ -48,9 +47,17 @@
     &.explanation {
       max-width: $container-lg;
       text-align: justify;
+      padding: 0 0.4rem;
 
       h2, h3 {
         padding-top: 1rem;
+      }
+
+      @media screen and (max-width: $screen-sm) {
+        ul {
+          padding: 0;
+          list-style-type: none;
+        }
       }
     }
 
@@ -187,6 +194,7 @@
   &.subscription {
     .banner-content {
       max-width: $container-lg;
+      min-height: calc(100vh - 69px);
 
       .page-title {
         padding: 0 2rem;
