@@ -4,7 +4,8 @@
       <div class="page-title">
         <h1>Coffees</h1>
       </div>
-      <p>There are <strong><%= Coffee.all.size %> coffees</strong> from <strong><%= Roaster.with_coffees.size %> roasters</strong>.</p>
+      <p>There are <strong><%= Coffee.all.size %> coffees</strong> from
+        <strong><%= Roaster.with_coffees.size %> roasters</strong>.</p>
     </div>
   </div>
   <div class="banner banner-primary-3">
@@ -16,6 +17,13 @@
   <%= turbo_frame_tag 'page_handler' %>
   <div id="coffees" class="card-collection row">
     <%= render @coffees %>
+    <% unless @coffees.present? %>
+      <div class="no-results">
+        <h3>Sorry, it looks like we can't find any matching coffees for that search. If there was something specific
+          that you think should be here, you can always add a coffee manually.</h3>
+        <h3>To do this, go to any roaster's page and click the "add a coffee" link. </h3>
+      </div>
+    <% end %>
   </div>
   <%= render 'shared/index_pager', pagy: @pagy %>
 </main>

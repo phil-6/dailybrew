@@ -6,6 +6,10 @@
       font-size: 1.1rem;
       text-align: center;
     }
+    .no-results {
+      max-width: $container-lg;
+      padding: 0 1rem;
+    }
   }
 
   &-new, &-create, &-edit, &-update {
