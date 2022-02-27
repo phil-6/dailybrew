@@ -24,7 +24,7 @@ class BrewsController < ApplicationController
   def create
     @brew = current_user.brews.new(brew_params)
     @brew.coffee = @coffee
-    @brew.time = time_in_seconds if @brew.time.instance_of?(String)
+    @brew.time = time_in_seconds if brew_params['time'].instance_of?(String)
 
     respond_to do |format|
       if @brew.save
