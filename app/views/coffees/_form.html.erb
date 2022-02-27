@@ -1,4 +1,4 @@
-<%= form_with model: [@roaster, coffee] do |form| %>
+<%= form_with model: [@roaster, coffee], class: "model-form" do |form| %>
   <% if coffee.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(coffee.errors.count, "error") %> prohibited this coffee from being saved:</h2>
@@ -15,7 +15,7 @@
     <%= form.text_field :url, class: 'form-input' %>
     <%= form.label :url, class: 'form-label' %>
   </div>
-  
+
   <div class="field">
     <%= form.text_field :name, class: 'form-input' %>
     <%= form.label :name, class: 'form-label' %>

@@ -170,3 +170,24 @@ input[type="submit" i] {
   border: none;
   padding: 0;
 }
+
+form.model-form {
+  @media screen and (min-width: $screen-lg) {
+    padding: 0 2rem; // This forces input fields to the same length
+  }
+
+  /* Make the label look okay on white background */
+  .field, .form-input {
+    .form-label {
+      border: none;
+      border-radius: 2rem;
+      background: white;
+    }
+
+    &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
+      & ~ .form-label {
+        background: linear-gradient(to bottom, $color-white, white);
+      }
+    }
+  }
+}
