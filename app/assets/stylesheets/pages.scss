@@ -1,6 +1,12 @@
 @import "variables";
 
 .pages {
+  &.about, &.subscription {
+    .banner .banner-content {
+      padding: 3rem 0.3rem 2rem !important;
+    }
+  }
+
   .banner-content {
     text-align: center;
 
@@ -70,7 +76,7 @@
   .content {
     margin: auto;
     text-align: justify;
-    padding: 0 0.4rem;
+    //padding: 0 0.4rem;
 
     h3 {
       text-align: center;
