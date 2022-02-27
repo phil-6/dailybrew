@@ -1,14 +1,12 @@
-# About Us
-
-We wanted a way to be able to keep track of how we were brewing our coffees, and what our favourite coffees are! The
+We wanted a way to be able to keep track of how we were brewing our coffees, and what our favourite coffees are. The
 apps that we looked at to do this, didn't make us _want_ to use them, and we're developers... so here we are. Well, more
 specifically, we're here _and_ we're open source on [GitHub](https://github.com/phil-6/dailybrew).
 
-We want to build something which shows off how good the web can be. **No ads, no tracking, no big auto pop ups.** We've
+We want to build something which shows off how good the web can be. **No ads, no sneaky tracking, no big pop-ups.** We've
 built Daily Brew with Rails 7 and leaning into the Hotwire approach to minimise JavaScript.
 
 One of the questions that I always ask when I'm using a free piece of software is how does it make money? At the moment,
-Daily Brew runs for free on Heroku, which helps with reducing costs. The plan is that the brew journaling portion
+Daily Brew runs fairly cheaply on Heroku, which helps with reducing costs. The plan is that the brew journaling portion
 of the app will remain free. We're then looking to do something a bit different with a coffee subscription - but that's
 coming soon.
 
