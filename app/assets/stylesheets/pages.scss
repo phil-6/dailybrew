@@ -3,6 +3,7 @@
 .pages {
   .banner-content {
     text-align: center;
+    min-height: 100vh;
 
     .page-title {
       h1 {
@@ -29,7 +30,6 @@
           box-shadow: none;
         }
       }
-
     }
   }
 
@@ -59,15 +59,14 @@
     }
   }
 
-
   /* Content which is fed from MD files in /public */
   .content {
     margin: auto;
-    max-width: $container-xl;
+    text-align: justify;
 
-    h1 {
-      font-family: $heading-font;
+    h3 {
       text-align: center;
+      color: white;
     }
 
     p {
@@ -185,18 +184,33 @@
     }
   }
 
-  .sub-switch {
-    margin: 5rem auto;
-    max-width: 1200px;
-    text-align: center;
+  &.subscription {
+    .banner-content {
+      max-width: $container-lg;
 
-    a {
-      color: inherit;
+      .page-title {
+        padding: 0 2rem;
+        margin: 0 auto 1.5rem;
+        max-width: $container-md;
+      }
+    }
 
-      &:hover {
-        color: $ink;
+    .sub-switch {
+      margin: 5rem auto;
+      max-width: 1200px;
+      text-align: center;
+
+      h3 {
+        color: $color-primary-3;
+
+        a {
+          color: white;
+
+          &:hover {
+            color: $ink;
+          }
+        }
       }
     }
   }
-
 }
