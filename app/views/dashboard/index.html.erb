@@ -13,7 +13,7 @@
   </div>
   <div class="banner banner-primary-1">
     <div class="banner-content">
-      <h2><%= link_to 'Your Shelf', root_path, class: 'link link-white link-title' %></h2>
+      <h2><%= link_to 'Your Shelf', shelf_items_path, class: 'link link-white link-title' %></h2>
       <div class="shelf row">
         <% @shelf_coffees.reverse.each do |coffee| %>
           <%= render 'coffees/coffee', coffee: coffee %>
@@ -24,7 +24,7 @@
   <div class="banner banner-primary-1">
     <div class="banner-content">
       <div class="brews">
-        <h2><%= link_to 'Your Brews', root_path, class: 'link link-white link-title' %></h2>
+        <h2><%= link_to 'Your Brews', brews_path, class: 'link link-white link-title' %></h2>
       </div>
     </div>
   </div>
