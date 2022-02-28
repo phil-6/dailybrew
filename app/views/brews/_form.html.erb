@@ -13,12 +13,12 @@
 
   <div class="multi-field row">
     <div class="field">
-      <%= form.number_field :coffee_weight, class: 'form-input', placeholder: 'Coffee Weight', value: (@last_brew ? @last_brew.coffee_weight : @brew.coffee_weight) %>
+      <%= form.number_field :coffee_weight, class: 'form-input', placeholder: 'Coffee Weight', step: '0.1', min: '0', value: (@last_brew ? @last_brew.coffee_weight : @brew.coffee_weight) %>
       <%= form.label :coffee_weight, class: 'form-label' %>
     </div>
 
     <div class="field">
-      <%= form.number_field :water_weight, class: 'form-input', placeholder: 'Water Weight', value: (@last_brew ? @last_brew.water_weight : @brew.water_weight) %>
+      <%= form.number_field :water_weight, class: 'form-input', placeholder: 'Water Weight', step: '0.1', min: '0', value: (@last_brew ? @last_brew.water_weight : @brew.water_weight) %>
       <%= form.label :water_weight, class: 'form-label' %>
     </div>
     <div class="ratio">
