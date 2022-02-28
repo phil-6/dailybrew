@@ -11,6 +11,7 @@
   <div class="results">
     <% if params[:query] %>
       <%= pluralize(@pagy.count, 'result') %> for "<%= params[:query] %>"
+      <p><%= link_to 'Clear Search', path, class: 'btn btn-complementary' %></p>
     <% end %>
   </div>
 </div>

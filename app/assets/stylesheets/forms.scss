@@ -170,3 +170,44 @@ input[type="submit" i] {
   border: none;
   padding: 0;
 }
+
+form.model-form {
+  @media screen and (min-width: $screen-lg) {
+    padding: 0 2rem; // This forces input fields to the same length
+  }
+
+  /* Make the label look okay on white background */
+  .field, .form-input {
+    .form-label {
+      border: none;
+      border-radius: 2rem;
+      background: white;
+    }
+
+    &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
+      & ~ .form-label {
+        background: linear-gradient(to bottom, $color-white, white);
+      }
+    }
+  }
+}
+
+form.with-hints {
+  .field {
+    display: flex;
+
+    .form-input {
+      flex: 1.5;
+    }
+
+    .hint {
+      font-size: 0.8rem;
+      color: $color-primary-0;
+      flex: 1;
+      align-self: center;
+      padding-left: 0.5rem;
+      max-height: 4rem;
+      overflow-y: auto;
+    }
+  }
+}

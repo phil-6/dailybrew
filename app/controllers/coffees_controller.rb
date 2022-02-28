@@ -1,6 +1,6 @@
 class CoffeesController < ApplicationController
   before_action :set_coffee, only: %i[show edit update destroy]
-  before_action :set_roaster, only: :index
+  before_action :set_roaster, only: %i[index new create update]
 
   # GET /coffees or /coffees.json
   def index
@@ -27,7 +27,7 @@ class CoffeesController < ApplicationController
 
   # POST /coffees or /coffees.json
   def create
-    @coffee = Coffee.new(coffee_params)
+    @coffee = @roaster.coffees.new(coffee_params)
 
     respond_to do |format|
       if @coffee.save
@@ -62,7 +62,7 @@ class CoffeesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
   private
 
   def search

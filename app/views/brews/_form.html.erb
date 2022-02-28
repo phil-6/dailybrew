@@ -1,4 +1,4 @@
-<%= form_with model: [@coffee, @brew] do |form| %>
+<%= form_with model: [@coffee, @brew], class: "model-form" do |form| %>
   <% if brew.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(brew.errors.count, "error") %> prohibited this brew from being saved:</h2>

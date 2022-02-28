@@ -1,10 +1,16 @@
 <div id="subscription_interest_toggle">
   <% if current_user&.subscription_interest %>
-    <%= button_to update_subscription_interest_path, method: :patch, params: {user: { subscription_interest: false }} do %>
+    <%= button_to update_subscription_interest_path,
+                  method: :patch,
+                  params: {user: { subscription_interest: false }},
+                  class: "btn btn-complementary" do %>
       I'm not interested anymore
     <% end %>
   <% else %>
-    <%= button_to update_subscription_interest_path, method: :patch, params: {user: { subscription_interest: true }} do %>
+    <%= button_to update_subscription_interest_path,
+                  method: :patch,
+                  params: {user: { subscription_interest: true }},
+                  class: "btn btn-complementary" do %>
       I'm In!
     <% end %>
   <% end %>

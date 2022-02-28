@@ -1,14 +1,22 @@
-<main class="pages">
-  <section class="content">
-    <%= @content.html_safe %>
-  </section>
-
-  <section class="sub-switch">
-    <% if current_user %>
-      <%= render 'subscription_interest_toggle' %>
-    <% else %>
-      <h3>You need to <%= link_to "sign up", new_user_registration_path %>
-        or <%= link_to "sign in", new_user_session_path %> before you can register your interest.</h3>
-    <% end %>
-  </section>
+<main class="pages subscription">
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <div class="page-title">
+        <h2>A subscription?</h2>
+      </div>
+      <section class="content">
+        <%= @content.html_safe %>
+      </section>
+      <section class="sub-switch">
+        <% if current_user %>
+          <%= render 'subscription_interest_toggle' %>
+        <% else %>
+          <h3>
+            You need to <%= link_to "sign up", new_user_registration_path %> or
+            <%= link_to "sign in", new_user_session_path %> before you can register your interest.
+          </h3>
+        <% end %>
+      </section>
+    </div>
+  </div>
 </main>

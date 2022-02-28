@@ -1,6 +1,5 @@
-# A subscription?
 
-## At some point soon, we're going to try and do something *cool*.
+### At some point soon, we're going to try and do something *cool*.
 
 A lot of roasters offer a coffee subscription, but then you only get coffee from that one roaster. With over 400
 roasters in the UK, wouldn't you like to be able to sample coffee from a range of roasters? I know I do!

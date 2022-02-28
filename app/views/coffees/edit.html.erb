@@ -1,12 +1,17 @@
 <main class="<%= controller_name %>-<%= action_name %>">
 
-  <h1>Editing coffee</h1>
+  <header>
+    <div class="title">
+      <h1>
+        Edit <a class="link-primary" href="<%= @coffee.url %>"><%= @coffee.name %></a> from
+        <a class="link-primary" href="<%= @coffee.roaster.website %>"><%= @coffee.roaster.name %></a>
+      </h1>
+    </div>
+  </header>
 
   <%= render "form", coffee: @coffee %>
 
-  <br>
-
-  <div>
+  <div class="form-links">
     <%= link_to "Show this coffee", @coffee %> |
     <%= link_to "Back to coffees", coffees_path %>
   </div>
