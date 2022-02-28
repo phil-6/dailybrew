@@ -80,6 +80,7 @@ class BrewsController < ApplicationController
   end
 
   def time_in_seconds
-    (Time.parse(brew_params['time']).hour * 60) + Time.parse(brew_params['time']).min
+    time = brew_params['time'].split(':')
+    (time.first.to_i * 60) + time.second.to_i
   end
 end
