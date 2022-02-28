@@ -26,7 +26,7 @@ filters too. If you have any suggestions please let us know.
 - **Review Coffees** Leave reviews on the coffees you've tried and read others reviews
 - **Public Reviews** See what coffee reviews other people have shared
 - **Loads more coffees!** (Hint: you can help with this!)
-- **Filter all coffees**
+- **Live Brew Map** A map which shows approximate locations for public brews
 
 ### Open and Transparent
 We're building Daily Brew in public. If there is anything that you think we should be sharing, but we're not, then let
