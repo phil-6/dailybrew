@@ -7,7 +7,11 @@
 
   .banner-primary-1 .banner-content {
     max-width: $container-xl;
-    padding-bottom: 0 !important;
+    padding: 2rem 2rem 0 !important;
+
+    @media screen and (max-width: $screen-lg) {
+      padding: 1rem 1rem 0 !important;
+    }
   }
 
   .header {

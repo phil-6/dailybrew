@@ -28,12 +28,8 @@ body {
   h1 {
     font-size: 3rem;
 
-    @media screen and (max-width: $screen-md) {
+    @media screen and (max-width: $screen-lg) {
       font-size: 2.5rem;
-    }
-
-    @media screen and (max-width: $screen-sm) {
-      font-size: 2rem;
     }
   }
 

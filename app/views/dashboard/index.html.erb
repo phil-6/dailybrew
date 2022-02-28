@@ -28,13 +28,20 @@
         <table class="brews-table card">
           <% @brews.first(10).each do |brew| %>
             <tr onclick="location.href='<%= brew_path(brew) %>'" class="brew-row row">
-              <td class="coffee-name"><p><%= brew.coffee.name %></p></td>
+              <td class="coffee-name"><%= brew.coffee.name %></td>
               <td class="equipment"><p><%= brew.equipment %></p></td>
               <td class="rating"><p><%= brew.rating || '?' %>/10</p></td>
               <td class="created"><p><%= time_ago_in_words(brew.created_at) %> ago</p></td>
             </tr>
           <% end %>
         </table>
+      </div>
+    </div>
+  </div>
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <div class="favourites">
+        <h2><%= link_to 'Your Favourites', favourites_path, class: 'link link-white link-title' %></h2>
       </div>
     </div>
   </div>
