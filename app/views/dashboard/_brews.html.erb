@@ -1,7 +1,0 @@
-<h2><%= link_to "Your Brews", brews_path %></h2>
-
-<%= turbo_frame_tag "page_handler" %>
-<table id="brews_table" class="brews-table">
-  <%= render "brews_table", brews: @brews %>
-</table>
-<%= render "brews_table_pager", pagy: @pagy %>
