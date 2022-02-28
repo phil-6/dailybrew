@@ -11,18 +11,31 @@
     </div>
   <% end %>
 
-  <div class="multi-field row">
+  <div class="multi-field row" data-controller="brew-ratio">
     <div class="field">
-      <%= form.number_field :coffee_weight, class: 'form-input', placeholder: 'Coffee Weight', step: '0.1', min: '0', value: (@last_brew ? @last_brew.coffee_weight : @brew.coffee_weight) %>
+      <%= form.number_field :coffee_weight,
+                            class: 'form-input',
+                            placeholder: 'Coffee Weight',
+                            step: '0.1',
+                            min: '0',
+                            value: (@last_brew ? @last_brew.coffee_weight : @brew.coffee_weight),
+                            data: { target: "brew-ratio.coffeeWeight", action: "brew-ratio#connect" }%>
       <%= form.label :coffee_weight, class: 'form-label' %>
     </div>
 
     <div class="field">
-      <%= form.number_field :water_weight, class: 'form-input', placeholder: 'Water Weight', step: '0.1', min: '0', value: (@last_brew ? @last_brew.water_weight : @brew.water_weight) %>
+      <%= form.number_field :water_weight,
+                            class: 'form-input',
+                            placeholder: 'Water Weight',
+                            step: '0.1',
+                            min: '0',
+                            value: (@last_brew ? @last_brew.water_weight : @brew.water_weight),
+                            data: { target: "brew-ratio.waterWeight", action: "brew-ratio#connect" } %>
       <%= form.label :water_weight, class: 'form-label' %>
     </div>
     <div class="ratio">
-      <!--      TODO: Create a stimulus controller which automatically puts the ratio here.-->
+      <p>Ratio</p>
+      <p>1 : <span data-brew-ratio-target="ratio"></span></p>
     </div>
   </div>
 
