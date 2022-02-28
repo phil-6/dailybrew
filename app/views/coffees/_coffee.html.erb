@@ -22,8 +22,8 @@
       <% end %>
     </div>
     <div class="controls column">
-      <%= render 'favourites/favourite_toggle', coffee: coffee %>
       <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
+      <%= render 'favourites/favourite_toggle', coffee: coffee %>
     </div>
   </div>
   <% unless controller_name == 'dashboard' %>

@@ -93,17 +93,11 @@
 
   &-icon {
     position: relative;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 32px;
+    height: 32px;
+    font-size: 1.25rem;
     border-radius: 50%;
     border: 1px solid $color-primary-0;
-
-    @media screen and (max-width: $screen-lg) {
-      width: 35px;
-      height: 35px;
-      font-size: 1.5rem;
-    }
 
     &:hover {
       background-color: $color-primary-3;
