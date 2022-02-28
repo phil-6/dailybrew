@@ -43,6 +43,11 @@
     <div class="banner-content">
       <div class="favourites">
         <h2><%= link_to 'Your Favourites', favourites_path, class: 'link link-white link-title' %></h2>
+        <div class="shelf row">
+          <% @favourites.each do |coffee| %>
+            <%= render 'favourites/favourite', coffee: coffee %>
+          <% end %>
+        <div>
       </div>
     </div>
   </div>
