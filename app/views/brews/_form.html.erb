@@ -91,9 +91,12 @@
       <%= form.number_field :rating, class: 'form-input', placeholder: 'Rating' %>
       <%= form.label :rating, class: 'form-label' %>
     </div>
-    <div class="field">
-      <%= form.check_box :public, class: "form-check-box", value: (@last_brew ? @last_brew.public? : @brew.public?)  %>
-      <%= form.label :public, "Make this public?", class: 'form-check-box-label'  %>
+    <div class="field toggle-field">
+      <label class="toggle">
+        <%= form.check_box :public, class: "toggle-checkbox", value: (@last_brew ? @last_brew.public? : @brew.public?) %>
+        <div class="toggle-switch"></div>
+        <span class="toggle-label">Make this brew public?</span>
+      </label>
     </div>
   </div>
 
