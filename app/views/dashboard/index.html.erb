@@ -16,7 +16,7 @@
       <h2><%= link_to 'Your Shelf', shelf_items_path, class: 'link link-white link-title' %></h2>
       <div class="shelf row">
         <% @shelf_coffees.reverse.each do |coffee| %>
-          <%= render 'coffees/coffee', coffee: coffee %>
+          <%= render 'shelf_items/shelf_item', coffee: coffee %>
         <% end %>
       </div>
     </div>

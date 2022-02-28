@@ -17,6 +17,7 @@
     .row {
       gap: 0.5rem;
       color: $color-white;
+      opacity: 0.8;
     }
   }
 
@@ -31,6 +32,7 @@
 
     .coffee-card {
       min-width: $container-sm;
+      height: 100%;
     }
   }
 }
