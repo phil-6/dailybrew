@@ -1,24 +1,30 @@
 <main class="dashboard">
-  <div class="banner banner-primary-0">
-    <div class="banner-content">
-      <h1 class="username"><%= current_user.username.downcase %></h1>
-      <div class="row">
-        <p class="full-name"><%= current_user.full_name %></p>
-        <span>&#8226;</span>
-        <p class="joined">Brewing since <%= current_user.created_at.strftime("%d %b %Y") %></p>
-    </div>
-  </div>
   <div class="banner banner-primary-1">
     <div class="banner-content">
-      <div class="shelf">
-        <h2><%= link_to 'Your Shelf', root_path, class: 'link link-white link-title' %></h2>
+      <div class="header">
+        <h1 class="username"><%= current_user.username.downcase %></h1>
+        <div class="row">
+          <p class="full-name"><%= current_user.full_name %></p>
+          <span>&#8226;</span>
+          <p class="joined">Brewing since <%= current_user.created_at.strftime("%d %b %Y") %></p>
+        </div>
       </div>
     </div>
   </div>
   <div class="banner banner-primary-1">
     <div class="banner-content">
-      <div class="shelf">
-        <h2><%= link_to 'Your Shelf', root_path, class: 'link link-white link-title' %></h2>
+      <h2><%= link_to 'Your Shelf', root_path, class: 'link link-white link-title' %></h2>
+      <div class="shelf row">
+        <% @shelf_coffees.reverse.each do |coffee| %>
+          <%= render 'coffees/coffee', coffee: coffee %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <div class="brews">
+        <h2><%= link_to 'Your Brews', root_path, class: 'link link-white link-title' %></h2>
       </div>
     </div>
   </div>

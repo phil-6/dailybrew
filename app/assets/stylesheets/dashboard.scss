@@ -4,26 +4,32 @@
   min-height: 100vh;
   background-color: $color-primary-1;
 
-  .banner-primary-0 .banner-content {
+  .banner-primary-1 .banner-content {
     max-width: $container-xl;
+    padding-bottom: 0 !important;
+  }
 
+  .header {
     .username {
       margin-bottom: 0.5rem;
     }
-
+  
     .row {
       gap: 0.5rem;
       color: $color-white;
     }
   }
 
-  .dashboard-content {
-    max-width: $screen-xl;
-    margin: 0 auto;
-    padding: 0 2rem;
+  h2 {
+    margin-bottom: 2rem;
+  }
 
-    @media screen and (max-width: $screen-lg) {
-      padding: 0 1rem;
+  .shelf {
+    gap: 1rem;
+    overflow-x: scroll;
+
+    .coffee-card {
+      min-width: $container-sm;
     }
   }
 }
