@@ -1,24 +1,25 @@
 <main class="dashboard">
-
-  <div class="welcome">
-    <h1>Welcome Back <%= current_user.first_name %></h1>
-    <div class="search-container">
-      <h3 class="search-header">Find A coffee</h3>
-      <%= render 'shared/search', path: coffees_path, placeholder: 'Name, Tasting Notes, Country or Process' %>
+  <div class="banner banner-primary-0">
+    <div class="banner-content">
+      <h1 class="username"><%= current_user.username.downcase %></h1>
+      <div class="row">
+        <p class="full-name"><%= current_user.full_name %></p>
+        <span>&#8226;</span>
+        <p class="joined">Brewing since <%= current_user.created_at.strftime("%d %b %Y") %></p>
     </div>
-    <h3>Do Something</h3>
-    <h3>Do Something Else</h3>
   </div>
-
-  <div class="shelf-container">
-    <%= render 'shelf' %>
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <div class="shelf">
+        <h2><%= link_to 'Your Shelf', root_path, class: 'link link-white link-title' %></h2>
+      </div>
+    </div>
   </div>
-
-  <div class="brews-container">
-    <%= render 'brews' %>
-  </div>
-
-  <div class="favourites-container">
-    <%= render 'favourites' %>
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <div class="shelf">
+        <h2><%= link_to 'Your Shelf', root_path, class: 'link link-white link-title' %></h2>
+      </div>
+    </div>
   </div>
 </main>
