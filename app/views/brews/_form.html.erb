@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="multi-field row" data-controller="brew-ratio">
+  <div class="multi-field row ratio-row" data-controller="brew-ratio">
     <div class="field">
       <%= form.number_field :coffee_weight,
                             class: 'form-input',
@@ -33,9 +33,9 @@
                             data: { target: "brew-ratio.waterWeight", action: "brew-ratio#connect" } %>
       <%= form.label :water_weight, class: 'form-label' %>
     </div>
-    <div class="ratio">
-      <p>Ratio</p>
-      <p>1 : <span data-brew-ratio-target="ratio"></span></p>
+    <div class="field ratio">
+      <div class="form-input">1 : <span data-brew-ratio-target="ratio"></span></div>
+      <div class="form-label">Ratio</div>
     </div>
   </div>
 

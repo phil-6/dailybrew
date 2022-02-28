@@ -65,6 +65,19 @@
     }
   }
 
+  .ratio-row {
+    display: flex;
+
+    .field {
+      flex: 1;
+
+      &.ratio .form-input {
+        background: white;
+
+      }
+    }
+  }
+
   .info {
     padding: 1rem;
   }
