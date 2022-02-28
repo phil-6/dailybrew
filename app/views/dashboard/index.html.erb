@@ -23,9 +23,9 @@
   </div>
   <div class="banner banner-primary-1">
     <div class="banner-content">
-      <div class="brews">
-        <h2><%= link_to 'Your Brews', brews_path, class: 'link link-white link-title' %></h2>
-        <table class="brews-table card">
+      <h2><%= link_to 'Your Brews', brews_path, class: 'link link-white link-title' %></h2>
+      <div class="brews card">
+        <table class="brews-table">
           <% @brews.first(10).each do |brew| %>
             <tr onclick="location.href='<%= brew_path(brew) %>'" class="brew-row row">
               <td class="coffee-name"><%= brew.coffee.name %></td>
@@ -35,6 +35,7 @@
             </tr>
           <% end %>
         </table>
+        <%= link_to 'More brews', brews_path, class: 'link link-primary' %>
       </div>
     </div>
   </div>

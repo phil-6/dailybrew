@@ -15,6 +15,8 @@
   }
 
   .header {
+    padding: 1rem 0;
+
     .username {
       margin-bottom: 0.5rem;
     }
@@ -42,9 +44,10 @@
   }
 
   .brews {
+    padding: 1rem;
+
     .brews-table {
       width: 100%;
-      padding: 1rem;
 
       .brew-row {
         padding: 1rem;
@@ -108,6 +111,12 @@
           }
         }
       }
+    }
+
+    .link {
+      display: block;
+      padding: 1rem;
+      text-align: center;
     }
   }
 }
