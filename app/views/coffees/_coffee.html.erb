@@ -1,7 +1,7 @@
 <div id="<%= dom_id coffee %>" class="coffee-card card column">
   <div class="coffee-card-content row">
     <div class="column">
-      <h3 class="name"><%= link_to coffee.name, coffee, class: 'link link-primary link-primary-title' %></h3>
+      <h3 class="name"><%= link_to coffee.name, coffee, class: 'link link-primary link-title' %></h3>
       <% if controller_name == 'coffees' %>
         <div class="roaster">
           by <%= link_to coffee.roaster.name, roaster_path(coffee.roaster), class: 'link link-primary' %>

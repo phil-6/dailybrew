@@ -65,13 +65,21 @@
     &:hover {
       color: $color-primary-2;
     }
+  }
 
-    &-title {
-      border-bottom: 3px solid $color-complementary-0;
+  &-white {
+    color: $color-white;
 
-      &:hover {
-        border-bottom-color: $color-complementary-1;
-      }
+    &:hover {
+      color: $color-primary-2;
+    }
+  }
+
+  &-title {
+    border-bottom: 3px solid $color-complementary-0;
+
+    &:hover {
+      border-bottom-color: $color-complementary-1;
     }
   }
 
