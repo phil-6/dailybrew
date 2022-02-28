@@ -26,16 +26,22 @@
     </div>
   </div>
 
-  <div class="time field">
-    <% if %w[new create].include? action_name %>
-      <%= form.text_field :time, class: 'form-input', data: { target: "stopwatch.brewTime" }, placeholder: 'Time' %>
-    <% else %>
-      <% mins = (@brew.time / 60)
-         secs = @brew.time - (mins * 60)
-         time = "%02d:%02d:%02d" % [mins, secs, 0] %>
-      <%= form.text_field :time, class: 'form-input', placeholder: 'Time', value: time %>
-    <% end %>
-    <%= form.label :time, class: 'form-label' %>
+  <div class="multi-field row">
+    <div class="time field">
+      <% if %w[new create].include? action_name %>
+        <%= form.text_field :time, class: 'form-input', data: { target: "stopwatch.brewTime" }, placeholder: 'Time' %>
+      <% else %>
+        <% mins = (@brew.time / 60)
+           secs = @brew.time - (mins * 60)
+           time = "%02d:%02d:%02d" % [mins, secs, 0] %>
+        <%= form.text_field :time, class: 'form-input', placeholder: 'Time', value: time %>
+      <% end %>
+      <%= form.label :time, class: 'form-label' %>
+    </div>
+    <div class="field">
+      <%= form.number_field :temperature, class: 'form-input', placeholder: 'Temperature', step: '0.1', min: '0', max: '200', value: (@last_brew ? @last_brew.temperature : @brew.temperature) %>
+      <%= form.label :temperature, class: 'form-label' %>
+    </div>
   </div>
 
   <div class="multi-field row">
