@@ -1,7 +1,8 @@
 @import "variables";
 
 .dashboard {
-  min-height: 100vh;
+  min-height: calc(100vh - #{$nav-height});
+  padding-bottom: 4rem;
   background-color: $color-primary-1;
 
   .banner-primary-1 .banner-content {
@@ -22,7 +23,7 @@
   }
 
   h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .shelf {
@@ -33,6 +34,76 @@
     .coffee-card {
       min-width: $container-sm;
       height: 100%;
+    }
+  }
+
+  .brews {
+    .brews-table {
+      width: 100%;
+      padding: 1rem;
+
+      .brew-row {
+        padding: 1rem;
+        border-radius: 2rem;
+        position: relative;
+        transition: all .25s;
+
+        @media screen and (max-width: $screen-lg) {
+          display: block;
+
+          td {
+            display: block;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: $color-primary-0;
+          p {
+            color: $color-white;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 1rem;
+          bottom: 0;
+          width: calc(100% - 2rem);
+          height: 1px;
+          background-color: $color-primary-opacity-25;
+        }
+
+        p {
+          color: $ink;
+        }
+
+        .coffee-name {
+          font-weight: 600;
+        }
+
+        .created {
+          text-align: right;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+          .coffee-name {
+            width: 50%;
+          }
+
+          .equipment {
+            width: 20%;
+          }
+
+          .rating {
+            width: 10%;
+          }
+
+          .created {
+            width: 20%;
+          }
+        }
+      }
     }
   }
 }

@@ -25,6 +25,16 @@
     <div class="banner-content">
       <div class="brews">
         <h2><%= link_to 'Your Brews', brews_path, class: 'link link-white link-title' %></h2>
+        <table class="brews-table card">
+          <% @brews.first(10).each do |brew| %>
+            <tr onclick="location.href='<%= brew_path(brew) %>'" class="brew-row row">
+              <td class="coffee-name"><p><%= brew.coffee.name %></p></td>
+              <td class="equipment"><p><%= brew.equipment %></p></td>
+              <td class="rating"><p><%= brew.rating || '?' %>/10</p></td>
+              <td class="created"><p><%= time_ago_in_words(brew.created_at) %> ago</p></td>
+            </tr>
+          <% end %>
+        </table>
       </div>
     </div>
   </div>
