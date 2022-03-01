@@ -1,11 +1,11 @@
 <main class="<%= controller_name %>-<%= action_name %>">
-  <h1>New coffee</h1>
+
+  <header>
+    <div class="title">
+      <h1>Add a coffee from <a class="link-primary" href="<%= @roaster.website %>"><%= @roaster.name %></a></h1>
+      <h2>Copy the details about a coffee from the roaster's website. The URL and name must be unique.</h2>
+    </div>
+  </header>
 
   <%= render "form", coffee: @coffee %>
-
-  <br>
-
-  <div>
-    <%= link_to "Back to coffees", coffees_path %>
-  </div>
 </main>

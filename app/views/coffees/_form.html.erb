@@ -1,4 +1,4 @@
-<%= form_with(model: coffee) do |form| %>
+<%= form_with model: [@roaster, coffee], class: "model-form with-hints" do |form| %>
   <% if coffee.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(coffee.errors.count, "error") %> prohibited this coffee from being saved:</h2>
@@ -11,77 +11,74 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :roaster_id, style: "display: block" %>
-    <%= form.text_field :roaster_id %>
+  <div class="field">
+    <%= form.text_field :url, class: 'form-input', required: true, placeholder: 'Web Address' %>
+    <%= form.label :url, class: 'form-label' %>
+    <div class="hint">The web address of the coffee on the roasters website.</div>
   </div>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="field">
+    <%= form.text_field :name, class: 'form-input', required: true, placeholder: 'name' %>
+    <%= form.label :name, class: 'form-label' %>
+    <div class="hint">The name of the coffee.</div>
   </div>
 
-  <div>
-    <%= form.label :country, style: "display: block" %>
-    <%= form.text_field :country %>
+  <div class="field">
+    <%= form.text_field :tasting_notes, class: 'form-input', required: true, placeholder: 'tasting notes' %>
+    <%= form.label :tasting_notes, class: 'form-label' %>
+    <div class="hint">How the roaster describes the taste or flavour of the coffee. Normally this is 3 words separated
+      by commas.
+    </div>
   </div>
 
-  <div>
-    <%= form.label :region, style: "display: block" %>
-    <%= form.text_field :region %>
+  <div class="field">
+    <%= form.number_field :altitude, class: 'form-input', placeholder: 'Altitude' %>
+    <%= form.label :altitude, class: 'form-label' %>
+    <div class="hint">The height the coffee was grown at, in meters above sea level. If there is a range just enter the
+      lower number.
+    </div>
   </div>
 
-  <div>
-    <%= form.label :town, style: "display: block" %>
-    <%= form.text_field :town %>
+  <div class="multi-field row">
+    <div class="field">
+      <%= form.text_field :country, class: 'form-input', placeholder: 'Country' %>
+      <%= form.label :country, class: 'form-label' %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :region, class: 'form-input', placeholder: 'Region' %>
+      <%= form.label :region, class: 'form-label' %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :town, class: 'form-input', placeholder: 'town' %>
+      <%= form.label :town, class: 'form-label' %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :lat, style: "display: block" %>
-    <%= form.text_field :lat %>
+  <div class="multi-field row">
+    <div class="field">
+      <%= form.text_field :variety, class: 'form-input', placeholder: 'variety' %>
+      <%= form.label :variety, class: 'form-label' %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :process, class: 'form-input', placeholder: 'process' %>
+      <%= form.label :process, class: 'form-label' %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :producer, class: 'form-input', placeholder: 'producer' %>
+      <%= form.label :producer, class: 'form-label' %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :lng, style: "display: block" %>
-    <%= form.text_field :lng %>
+  <div class="field">
+    <%= form.text_area :description, class: 'form-input', placeholder: 'description' %>
+    <%= form.label :description, class: 'form-label' %>
   </div>
 
-  <div>
-    <%= form.label :process, style: "display: block" %>
-    <%= form.text_field :process %>
-  </div>
-
-  <div>
-    <%= form.label :altitude, style: "display: block" %>
-    <%= form.number_field :altitude %>
-  </div>
-
-  <div>
-    <%= form.label :variety, style: "display: block" %>
-    <%= form.text_field :variety %>
-  </div>
-
-  <div>
-    <%= form.label :tasting_notes, style: "display: block" %>
-    <%= form.text_field :tasting_notes %>
-  </div>
-
-  <div>
-    <%= form.label :producer, style: "display: block" %>
-    <%= form.text_field :producer %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.label :url, style: "display: block" %>
-    <%= form.text_field :url %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="action">
+    <%= form.submit "#{action_name.titleize} Coffee", class: 'form-submit btn btn-primary' %>
   </div>
 <% end %>

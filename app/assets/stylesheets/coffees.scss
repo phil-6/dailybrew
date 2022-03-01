@@ -1,10 +1,28 @@
 @import "variables";
 
 .coffees {
-  &.index {
+  &-index {
     .banner-primary-1 p {
       font-size: 1.1rem;
       text-align: center;
+    }
+    .no-results {
+      max-width: $container-lg;
+      padding: 0 1rem;
+    }
+  }
+
+  &-new, &-create, &-edit, &-update {
+    max-width: $container-lg;
+
+    .title {
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+      }
     }
   }
 }
