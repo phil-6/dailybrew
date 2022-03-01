@@ -1,6 +1,7 @@
 <main class="dashboard">
   <div class="banner banner-primary-1">
     <div class="banner-content">
+
       <div class="header">
         <h1 class="username"><%= current_user.username.downcase %></h1>
         <div class="row">
@@ -9,18 +10,14 @@
           <p class="joined">Brewing since <%= current_user.created_at.strftime("%d %b %Y") %></p>
         </div>
       </div>
-    </div>
 
-    <div class="banner-content">
       <h2><%= link_to 'Your Shelf', shelf_items_path, class: 'link link-white link-title' %></h2>
       <div id="dashboard_shelf" class="shelf row">
         <% @shelf_coffees.reverse.each do |coffee| %>
           <%= render 'shelf_items/shelf_item', coffee: coffee %>
         <% end %>
       </div>
-    </div>
 
-    <div class="banner-content">
       <h2><%= link_to 'Your Brews', brews_path, class: 'link link-white link-title' %></h2>
       <div class="brews card">
           <table class="brews-table">
@@ -35,19 +32,16 @@
           </table>
         <%= link_to 'More brews', brews_path, class: 'link link-primary' %>
       </div>
-    </div>
 
-    <div class="banner-content">
       <div class="favourites">
         <h2><%= link_to 'Your Favourites', favourites_path, class: 'link link-white link-title' %></h2>
         <div id="dashboard_favourites" class="shelf row">
           <% @favourites.each do |coffee| %>
             <%= render 'favourites/favourite', coffee: coffee %>
           <% end %>
-          <div>
-          </div>
         </div>
       </div>
+
     </div>
   </div>
 </main>
