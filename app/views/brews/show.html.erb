@@ -1,7 +1,9 @@
-<p style="color: green"><%= notice %></p>
 <main class="<%= controller_name %>-<%= action_name %>">
-
-  <%= render @brew %>
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <%= render @brew %>
+    </div>
+  </div>
 
   <div>
     <%= link_to "Edit this brew", edit_brew_path(@brew) %> |
