@@ -1,7 +1,7 @@
 <div id="<%= dom_id roaster %>" class="roaster-card card column">
   <div class="header">
     <div class="left">
-      <h3><%= link_to roaster.name, roaster, class: 'link link-primary link-primary-title' %></h3>
+      <h3><%= link_to roaster.name, roaster, class: 'link link-primary link-title' %></h3>
       <div class="location">
         <%= roaster.location.split(',').last(2)[0].titleize %>
       </div>
@@ -10,8 +10,4 @@
       <%= roaster.available_coffees_count %><i class="las la-shopping-bag"></i>
     </div>
   </div>
-<!--  <div class="row">-->
-    <%#= roaster.description %>
-<!--  </div>-->
-  <!-- end #{action-name}-card -->
 </div>

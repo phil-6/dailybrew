@@ -1,12 +1,12 @@
-<%= turbo_frame_tag "page_handler" do %>
+<%= turbo_frame_tag 'page_handler' do %>
   <%= turbo_stream_action_tag(
-        "append",
-        target: "brews_table",
+        'append',
+        target: 'brews_table',
         template: %(#{render 'brews_table', brews: @brews})
       ) %>
   <%= turbo_stream_action_tag(
-        "replace",
-        target: "brews_table_pager",
-        template: %(#{render "brews_table_pager", pagy: @pagy})
+        'replace',
+        target: 'brews_table_pager',
+        template: %(#{render 'brews_table_pager', pagy: @pagy})
       ) %>
 <% end %>

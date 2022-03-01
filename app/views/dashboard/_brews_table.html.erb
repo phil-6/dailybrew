@@ -1,9 +1,0 @@
-<% @brews.each do |brew| %>
-  <tr>
-    <td class="coffee-name"><%= brew.coffee.name %></td>
-    <td><%= brew.equipment %></td>
-    <td><%= brew.rating || '?' %>/10</td>
-    <td><%= time_ago_in_words(brew.created_at) %> ago</td>
-    <td><%= link_to 'View Brew >>', brew_path(brew) %></td>
-  </tr>
-<% end %>

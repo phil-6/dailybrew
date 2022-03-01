@@ -1,9 +1,9 @@
 <%= turbo_stream.replace(
       "favourite_toggle_#{dom_id(@coffee)}",
-      partial: "favourite_toggle",
+      partial: 'favourite_toggle',
       locals: { coffee: @coffee }) %>
 
 <%= turbo_stream.prepend(
-      "dashboard_favourites",
-      partial: "dashboard/favourite",
+      'dashboard_favourites',
+      partial: 'favourite',
       locals: { coffee: @coffee }) %>
