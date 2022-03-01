@@ -83,6 +83,14 @@
     }
   }
 
+  &-danger {
+    color: $danger-dark;
+
+    &:hover {
+      color: $danger;
+    }
+  }
+
   &-icon {
     position: relative;
     width: 40px;
