@@ -19,25 +19,24 @@
   border: 1px solid;
 
   &-primary {
-    background-color: $color-primary-0;
-    border-color: $color-primary-0;
+    background-color: $color-primary-1;
+    border-color: $color-primary-1;
     color: white;
 
     &:hover, &:focus {
       background-color: $color-primary-2;
-      border-color: $color-primary-2;
       color: white;
     }
 
     &-border {
       background-color: white;
-      border-color: $color-primary-0;
-      color: $color-primary-0;
+      border-color: $color-primary-1;
+      color: $color-primary-1;
 
       &:hover, &:focus {
-        background-color: $color-primary-opacity-25;
-        border-color: $color-primary-opacity-25;
-        color: $color-primary-0;
+        background-color: $color-primary-2;
+        border-color: $color-primary-2;
+        color: $color-primary-1;
       }
     }
   }
@@ -45,7 +44,7 @@
   &-complementary {
     background-color: $color-complementary-0;
     border-color: $color-complementary-0;
-    color: $color-primary-0;
+    color: $color-primary-1;
 
     &:hover, &:focus {
       background-color: $color-complementary-2;
@@ -60,7 +59,7 @@
   }
 
   &-primary {
-    color: $color-primary-0;
+    color: $color-primary-1;
     
     &:hover {
       color: $color-primary-2;
@@ -71,7 +70,7 @@
     color: $color-white;
 
     &:hover {
-      color: $color-primary-2;
+      color: $color-complementary-0;
     }
   }
 
@@ -97,7 +96,7 @@
     height: 32px;
     font-size: 1.25rem;
     border-radius: 50%;
-    border: 1px solid $color-primary-0;
+    border: 1px solid $color-primary-1;
 
     &:hover {
       background-color: $color-primary-3;

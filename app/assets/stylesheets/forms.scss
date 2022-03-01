@@ -8,7 +8,7 @@
   align-items: center;
 
   h2 {
-    color: $color-primary-0;
+    color: $color-primary-1;
     padding: 0 0.5rem;
   }
 
@@ -92,7 +92,7 @@
     line-height: 1.5;
     transform-origin: 0 0;
     transition: transform 0.1s ease-in-out;
-    color: $color-primary-0;
+    color: $color-primary-1;
     opacity: 0.65;
 
     @media screen and (max-width: $screen-md) {
@@ -161,8 +161,8 @@
   }
 
   &.btn-complementary {
-    outline-color: $color-primary-0;
-    box-shadow: 0 0 0 2px $color-primary-0;
+    outline-color: $color-primary-1;
+    box-shadow: 0 0 0 2px $color-primary-1;
   }
 }
 
@@ -202,7 +202,7 @@ form.with-hints {
 
     .hint {
       font-size: 0.8rem;
-      color: $color-primary-0;
+      color: $color-primary-1;
       flex: 1;
       align-self: center;
       padding-left: 0.5rem;
