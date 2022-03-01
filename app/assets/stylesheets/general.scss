@@ -75,6 +75,23 @@
         margin-left: 1rem;
       }
     }
+
+    p {
+      text-align: justify;
+    }
+
+    .cta {
+      margin-top: 2rem;
+      text-align: center;
+
+      .btn {
+        box-shadow: 0 0 5px 5px $color-primary-opacity-50;
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
   }
 }
 

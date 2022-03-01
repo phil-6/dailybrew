@@ -21,21 +21,6 @@
     .stats h2 {
       line-height: 1.2;
     }
-
-    .cta {
-      margin-top: 2rem;
-
-      .btn {
-        font-size: 1.2rem;
-        font-weight: 500;
-
-        box-shadow: 0 0 5px 5px $color-primary-opacity-50;
-
-        &:hover {
-          box-shadow: none;
-        }
-      }
-    }
   }
 
   section {

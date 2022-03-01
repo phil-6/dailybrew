@@ -1,110 +1,39 @@
 @import "variables";
 
 .shelf-items {
-  .banner.banner-primary-1 .banner-content {
-    padding: 3rem 2rem 2rem;
-
-    h4 {
-      text-align: center;
-      color: white;
-    }
-  }
-
-  .shelf {
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 100%;
-
-    .shelf-item .brew-link {
-      text-align: center;
-      margin-top: 1rem;
-
-      a {
-        display: inline-block;
-        font-weight: 600;
-        font-size: 1.2rem;
-        padding: 0.5rem 1.5rem;
-        border-radius: 2rem;
-        border: 1px solid $color-primary-2;
-        color: $color-primary-2;
-        transition: background-color 0.25s, color 0.25s, border-color 0.25s;
-
-        &:hover, &:focus {
-          background-color: $color-primary-opacity-10;
-          border-color: $color-primary-opacity-10;
-          color: $color-primary-0;
-        }
-      }
-    }
-  }
-}
-
-.shelf-container {
-  h2 {
-    padding: 0 1rem;
-    display: block;
-  }
-
-  .shelf {
-    display: flex;
-
-    &.dashboard-shelf {
-      overflow: scroll;
-      justify-content: flex-start;
-    }
-
+  .card-collection {
     .shelf-item {
-      //border: 1px solid darkslateblue;
-      flex: 1 0 0;
-      padding: 2rem;
-      border-radius: 2rem;
-      margin: 1rem;
-      max-width: 350px;
-      min-width: 350px;
-      background-color: white;
+      flex-basis: calc(25% - 2rem);
+      max-width: 25%;
 
-      .coffee-name {
-        border-bottom: 3px solid $color-complementary-0;
-
-        &:hover {
-          border-bottom-color: $color-complementary-1;
-        }
-
-        h3 {
-          padding-bottom: 0.25rem;
-          margin-bottom: 0.25rem;
-
-          /* Overflow after 2nd line */
-          $font-size: 1.5rem;
-          $line-height: 0.9;
-          $lines-to-show: 2;
-          display: block; /* Fallback for non-webkit */
-          display: -webkit-box;
-          height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
-          font-size: $font-size;
-          line-height: $line-height;
-          -webkit-line-clamp: $lines-to-show;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
+      @media screen and (max-width: $screen-xxl) {
+        flex-basis: calc(33% - 2rem);
+        max-width: 33%;
       }
 
-      h3, h4 {
-        color: $ink;
+      @media screen and (max-width: $screen-lg) {
+        flex-basis: calc(50% - 1rem);
+        max-width: 50%;
       }
 
-      a, &:visited {
-        color: $color-primary-0;
+      @media screen and (max-width: $screen-md) {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
 
-        &:hover {
-          color: $color-primary-2;
+      .card {
+        height: 100%;
+
+        @media screen and (min-width: $screen-sm) {
+          max-width: 100%;
         }
       }
     }
+
     .no-coffees {
       text-align: center;
-      h3 a {
+
+      p a {
         color: $color-primary-0;
         text-decoration: wavy underline 0.1rem;
         transition: text-shadow 0.5s;
