@@ -8,6 +8,7 @@ class Brew < ApplicationRecord
 
   scope :visible, -> { where(public: true) }
   scope :today, -> { where('created_at >= ?', Time.now.beginning_of_day) }
+  scope :this_week, -> { where('created_at >= ?', 1.week.ago) }
   # scope :daily_brewers
 
   after_create_commit do

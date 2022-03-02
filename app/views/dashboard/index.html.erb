@@ -9,6 +9,13 @@
           <span>&#8226;</span>
           <span id="favourites_count_<%= dom_id(current_user) %>"><%= current_user.favourites.count %></span> favourites
         </div>
+        <div class="row">
+          <span id="total_brews_count_<%= dom_id(current_user) %>"><%= current_user.brews.count %></span> total brews
+          <span>&#8226;</span>
+          <span id="total_brews_count_<%= dom_id(current_user) %>"><%= current_user.brews.this_week.count %></span> this week
+          <span>&#8226;</span>
+          <span id="total_brews_count_<%= dom_id(current_user) %>"><%= current_user.brews.today.count %></span> today
+        </div>
 
         <div class="row">
           <p class="full-name"><%= current_user.full_name %></p>
