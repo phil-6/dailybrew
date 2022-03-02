@@ -19,25 +19,24 @@
   border: 1px solid;
 
   &-primary {
-    background-color: $color-primary-0;
-    border-color: $color-primary-0;
+    background-color: $color-primary-1;
+    border-color: $color-primary-1;
     color: white;
 
     &:hover, &:focus {
       background-color: $color-primary-2;
-      border-color: $color-primary-2;
       color: white;
     }
 
     &-border {
       background-color: white;
-      border-color: $color-primary-0;
-      color: $color-primary-0;
+      border-color: $color-primary-1;
+      color: $color-primary-1;
 
       &:hover, &:focus {
-        background-color: $color-primary-opacity-25;
-        border-color: $color-primary-opacity-25;
-        color: $color-primary-0;
+        background-color: $color-primary-2;
+        border-color: $color-primary-2;
+        color: $color-primary-1;
       }
     }
   }
@@ -45,7 +44,7 @@
   &-complementary {
     background-color: $color-complementary-0;
     border-color: $color-complementary-0;
-    color: $color-primary-0;
+    color: $color-primary-1;
 
     &:hover, &:focus {
       background-color: $color-complementary-2;
@@ -60,18 +59,26 @@
   }
 
   &-primary {
-    color: $color-primary-0;
+    color: $color-primary-1;
     
     &:hover {
       color: $color-primary-2;
     }
+  }
 
-    &-title {
-      border-bottom: 3px solid $color-complementary-0;
+  &-white {
+    color: $color-white;
 
-      &:hover {
-        border-bottom-color: $color-complementary-1;
-      }
+    &:hover {
+      color: $color-complementary-0;
+    }
+  }
+
+  &-title {
+    border-bottom: 3px solid $color-complementary-0;
+
+    &:hover {
+      border-bottom-color: $color-complementary-1;
     }
   }
 
@@ -93,17 +100,11 @@
 
   &-icon {
     position: relative;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 32px;
+    height: 32px;
+    font-size: 1.25rem;
     border-radius: 50%;
-    border: 1px solid $color-primary-0;
-
-    @media screen and (max-width: $screen-lg) {
-      width: 35px;
-      height: 35px;
-      font-size: 1.5rem;
-    }
+    border: 1px solid $color-primary-1;
 
     &:hover {
       background-color: $color-primary-3;

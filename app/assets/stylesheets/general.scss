@@ -13,14 +13,20 @@
 .banner {
   width: 100%;
 
+  &-primary-0 {
+    background-color: $color-primary-0;
+  }
+
   &-primary-1 {
     background-color: $color-primary-1;
+  }
 
+  &-primary-0, &-primary-1 {
     .banner-content {
       padding: 3rem 2rem 4rem !important;
 
       @media screen and (max-width: $screen-md) {
-        padding: 2rem 2rem 3rem !important;
+        padding: 2rem 1rem 3rem !important;
       }
 
       h1, h2, p {
@@ -67,6 +73,23 @@
 
       &::after {
         margin-left: 1rem;
+      }
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    .cta {
+      margin-top: 2rem;
+      text-align: center;
+
+      .btn {
+        box-shadow: 0 0 5px 5px $color-primary-opacity-50;
+
+        &:hover {
+          box-shadow: none;
+        }
       }
     }
   }

@@ -1,17 +1,3 @@
 <div id="shelf_<%= dom_id(coffee) %>" class="shelf-item">
-
-  <div class="coffee-name">
-    <h3><%= link_to coffee.name, coffee_path(coffee) %></h3>
-  </div>
-  <h4>By <%= link_to coffee.roaster.name, roaster_path(coffee.roaster) %></h4>
-  <p><%= current_user.brews.where(coffee: coffee).count %> brews logged</p>
-  <div class="brew-link"><%= link_to new_coffee_brew_path(coffee) do %><i class="las la-coffee"></i> Make a Brew
-    <% end %></div>
-
-  <% if controller_name == 'dashboard' or action_name == 'create' %>
-    <p><i class="las la-history"></i> View Brews</p>
-    <%= render 'favourites/favourite_toggle', coffee: coffee %>
-    <%= render 'shelf_items/shelf_item_toggle', coffee: coffee %>
-  <% end %>
-
+  <%= render partial: 'coffees/coffee', locals: { coffee: coffee, shelf_item: true } %>
 </div>

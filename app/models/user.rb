@@ -19,6 +19,10 @@ class User < ApplicationRecord
 
   scope :daily_brewers, -> { joins(:brews).where('brews.created_at > ?', Time.now.beginning_of_day).distinct }
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
   def display_name
     username || first_name
   end

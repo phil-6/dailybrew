@@ -1,24 +1,54 @@
 <main class="dashboard">
-
-  <div class="welcome">
-    <h1>Welcome Back <%= current_user.first_name %></h1>
-    <div class="search-container">
-      <h3 class="search-header">Find A coffee</h3>
-      <%= render 'shared/search', path: coffees_path, placeholder: 'Name, Tasting Notes, Country or Process' %>
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <div class="header">
+        <h1 class="username"><%= current_user.username.downcase %></h1>
+        <div class="row">
+          <p class="full-name"><%= current_user.full_name %></p>
+          <span>&#8226;</span>
+          <p class="joined">Brewing since <%= current_user.created_at.strftime("%d %b %Y") %></p>
+        </div>
+      </div>
     </div>
-    <h3>Do Something</h3>
-    <h3>Do Something Else</h3>
   </div>
-
-  <div class="shelf-container">
-    <%= render 'shelf' %>
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <h2><%= link_to 'Your Shelf', shelf_items_path, class: 'link link-white link-title' %></h2>
+      <div class="shelf row">
+        <% @shelf_coffees.reverse.each do |coffee| %>
+          <%= render 'shelf_items/shelf_item', coffee: coffee %>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <div class="brews-container">
-    <%= render 'brews' %>
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <h2><%= link_to 'Your Brews', brews_path, class: 'link link-white link-title' %></h2>
+      <div class="brews card">
+        <table class="brews-table">
+          <% @brews.first(10).each do |brew| %>
+            <tr onclick="location.href='<%= brew_path(brew) %>'" class="brew-row row">
+              <td class="coffee-name"><%= brew.coffee.name %></td>
+              <td class="equipment"><p><%= brew.equipment %></p></td>
+              <td class="rating"><p><%= brew.rating || '?' %>/10</p></td>
+              <td class="created"><p><%= time_ago_in_words(brew.created_at) %> ago</p></td>
+            </tr>
+          <% end %>
+        </table>
+        <%= link_to 'More brews', brews_path, class: 'link link-primary' %>
+      </div>
+    </div>
   </div>
-
-  <div class="favourites-container">
-    <%= render 'favourites' %>
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <div class="favourites">
+        <h2><%= link_to 'Your Favourites', favourites_path, class: 'link link-white link-title' %></h2>
+        <div class="shelf row">
+          <% @favourites.each do |coffee| %>
+            <%= render 'favourites/favourite', coffee: coffee %>
+          <% end %>
+        <div>
+      </div>
+    </div>
   </div>
 </main>

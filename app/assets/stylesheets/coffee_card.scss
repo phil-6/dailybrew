@@ -49,23 +49,27 @@
     }
 
     .controls {
-      gap: 0.5rem;
+      gap: 0.25rem;
     }
   }
 
-  .metadata {
-    margin-top: 0.5rem;
-    justify-content: center;
-    gap: 0.5rem;
+  .footer {
+    margin-top: 1rem;
 
-    span {
-      font-size: 1rem;
+    .metadata {
+      margin-top: 0.5rem;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
       opacity: 0.8;
 
       @media screen and (max-width: $screen-lg) {
         font-size: 0.7rem;
       }
     }
-    
+
+    .btn {
+      margin-top: 0.5rem;
+    }
   }
 }

@@ -2,26 +2,27 @@
   <div class="banner banner-primary-1">
     <div class="banner-content">
       <div class="page-title">
-        <h2>Your Coffee Shelf</h2>
+        <h2>Your Shelf</h2>
       </div>
-      <h4>Which coffee are you brewing?</h4>
+      <p>This is where you can keep track of the coffees you currently own. Use the button below to find your coffees, add them to your shelf and start recording your brews!</p>
+      <div class="cta">
+        <%= link_to 'Find Coffees', coffees_path, class: 'btn btn-complementary' %>
+      </div>
     </div>
   </div>
 
-  <div class="shelf-container">
-    <div class="shelf">
-      <% @shelf_coffees.reverse.each do |coffee| %>
-        <%= render 'shelf_item', coffee: coffee %>
-      <% end %>
+  <div class="card-collection row">
+    <% @shelf_coffees.reverse.each do |coffee| %>
+      <%= render 'shelf_item', coffee: coffee %>
+    <% end %>
 
-      <% if @shelf_coffees.count == 0 %>
-        <div class="no-coffees">
-          <h1>Your Coffee Shelf is Empty</h1>
-          <h3>Try searching for a <%= link_to "roaster", roasters_path %> or a <%= link_to "coffee", coffees_path %> and
-            add it to your self</h3>
-        </div>
-      <% end %>
-    </div>
+    <% if @shelf_coffees.count == 0 %>
+      <div class="no-coffees">
+        <h3>Your Coffee Shelf is Empty</h1>
+        <p>Try searching for a <%= link_to "roaster", roasters_path %> or a <%= link_to "coffee", coffees_path %> and
+          add it to your shelf</p>
+      </div>
+    <% end %>
   </div>
 
 </main>
