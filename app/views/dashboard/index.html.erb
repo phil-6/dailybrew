@@ -25,7 +25,7 @@
         </div>
       </section>
 
-      <section class="shelf-section">
+      <section class="shelf-items">
         <h2><%= link_to 'Your Shelf', shelf_items_path, class: 'link link-white link-title' %></h2>
         <div id="dashboard_shelf" class="shelf row">
           <% @shelf_coffees.reverse.each do |coffee| %>
@@ -37,17 +37,13 @@
       <section class="brews">
         <h2><%= link_to 'Your Brews', brews_path, class: 'link-white link-title' %></h2>
         <div class="card">
-          <table class="brews-table">
-            <% @brews.first(10).each do |brew| %>
-              <tr onclick="location.href='<%= brew_path(brew) %>'" class="brew-row row">
-                <td class="coffee-name"><%= brew.coffee.name %></td>
-                <td class="equipment"><p><%= brew.equipment %></p></td>
-                <td class="rating"><p><%= brew.rating || '?' %>/10</p></td>
-                <td class="created"><p><%= time_ago_in_words(brew.created_at) %> ago</p></td>
-              </tr>
-            <% end %>
+          <%= turbo_frame_tag "page_handler" %>
+          <table>
+            <tbody id="brews_table">
+            <%= render "brews_table", brews: @brews %>
+            </tbody>
           </table>
-          <%= link_to 'More brews', brews_path, class: 'link link-primary' %>
+          <%= render "brews_table_pager", pagy: @pagy %>
         </div>
       </section>
 

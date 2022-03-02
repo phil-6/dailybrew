@@ -34,7 +34,7 @@
     margin-bottom: 1.5rem;
   }
 
-  .shelf {
+  section > .shelf.row {
     gap: 1rem;
     overflow-x: scroll;
     padding-bottom: 1rem;
@@ -45,7 +45,7 @@
     }
   }
 
-  section.favourites{
+  section.favourites {
     .shelf .coffee-card {
       width: 450px;
     }
@@ -54,10 +54,13 @@
   .brews {
     padding: 1rem;
 
-    .brews-table {
+    table, tbody{
       width: 100%;
+      max-height: 610px;
+      overflow-y: auto;
+      display: block;
 
-      .brew-row {
+      tr {
         padding: 1rem;
         border-radius: 2rem;
         position: relative;

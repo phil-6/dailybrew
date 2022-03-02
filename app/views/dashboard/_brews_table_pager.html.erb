@@ -1,0 +1,12 @@
+<div id="brews_table_pager" class="brews_table_pager">
+  <% if @pagy.next %>
+    <%= link_to(
+          "Load more",
+          dashboard_path(page: pagy.next),
+          class: "link link-primary",
+          data: {
+            turbo_frame: "page_handler"
+          }
+        ) %>
+  <% end %>
+</div>
