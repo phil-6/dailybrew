@@ -123,4 +123,7 @@ body {
   .small {
     font-size: 80%;
   }
+
+  .inline-action { display: none; }
+  .inline-edit .inline-action { display: initial; }
 }

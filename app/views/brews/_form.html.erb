@@ -78,10 +78,16 @@
     </div>
   </div>
 
-  <div class="field">
-    <%= form.text_area :notes, class: 'form-input', placeholder: 'Notes' %>
-    <%= form.label :notes, class: 'form-label' %>
-  </div>
+  <%= turbo_frame_tag "#{dom_id(brew)}_notes" do %>
+    <div class="field">
+      <%= form.text_area :notes, class: 'form-input', placeholder: 'Notes' %>
+      <%= form.label :notes, class: 'form-label' %>
+      <% if action_name == "edit" %>
+        <%= form.button "Update Note", class: "inline-action link link-primary" %>
+        <%= link_to "Cancel", brew_path(brew), class: "inline-action link link-primary" %>
+      <% end %>
+    </div>
+  <% end %>
 
   <div class="multi-field row">
     <div class="field">

@@ -46,9 +46,16 @@
     <div>&#8226;</div>
     <p><strong>Grinder setting: </strong><%= brew.grinder_setting %></p>
   </div>
-  
-  <div>
-    <p><strong>Notes: </strong><%= simple_format(brew.notes) %></p>
+
+  <div class="notes field">
+    <%= form_with model: brew, class: "", data: { turbo_frame: "#{dom_id(brew)}_notes" } do |form| %>
+      <%= turbo_frame_tag "#{dom_id(brew)}_notes", class: "inline-edit" do %>
+        <%= link_to edit_brew_path(brew) do %>
+          <div class="form-input"><%= simple_format(brew.notes) %></div>
+          <div class="form-label">Notes</div>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
 
   <div>
@@ -64,5 +71,4 @@
       <i class="las la-trash"></i>
     <% end %>
   </div>
-
 </div>

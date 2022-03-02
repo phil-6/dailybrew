@@ -1,114 +1,135 @@
 @import "variables";
 
-.brews-new, .brews-create, .brews-edit, .brews-update {
-  max-width: $container-lg;
+.brews {
+  &-new, &-create, &-edit, &-update {
+    max-width: $container-lg;
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    padding: 0 1rem;
+    header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+
+      .title {
+        max-width: $container-sm;
+
+        h2 {
+          font-size: 1.2rem;
+          line-height: 0.95;
+        }
+      }
+
+      .created-at {
+        align-self: flex-end;
+      }
+
+      .stopwatch {
+        align-self: flex-end;
+        color: $color-primary-1;
+
+
+        .time {
+          width: $container-xs;
+          padding: 0 0.5rem;
+          font-size: 3rem;
+          font-variant-numeric: tabular-nums;
+        }
+
+        .controls {
+          display: flex;
+          justify-content: space-between;
+          align-content: flex-end;
+          text-align: center;
+
+          button {
+            font-size: 1.5rem;
+            background-color: white;
+            border: 1px solid $color-primary-1;
+            border-radius: 2rem;
+            color: $color-primary-1;
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+
+          }
+
+          #start_button:hover {
+            color: forestgreen;
+          }
+
+          #pause_button:hover {
+            color: royalblue;
+          }
+
+          .reset_button:hover {
+            color: darkred;
+          }
+
+        }
+      }
+    }
+
+    .info {
+      padding: 1rem;
+    }
+
+    .links {
+      text-align: center;
+    }
+
+    .field {
+      margin-bottom: 0.75rem !important;
+    }
+    .ratio-row {
+      padding: 0.5rem 0;
+
+      .field {
+        flex: 1;
+
+        &.ratio .form-input {
+          background: white;
+
+        }
+      }
+    }
+  }
+
+  &-show {
+    .banner .banner-content .card div p {
+      color: $ink;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-evenly;
+      font-variant-numeric: tabular-nums;
+    }
 
     .title {
-      max-width: $container-sm;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.25rem;
 
-      h2 {
-        font-size: 1.2rem;
-        line-height: 0.95;
+      .link-danger {
+        font-size: 1.5rem;
+        border: 1px solid;
+        border-radius: 2rem;
       }
     }
-
-    .created-at {
-      align-self: flex-end;
+    .ratio-row {
+      padding: 0.5rem 0;
     }
 
-    .stopwatch {
-      align-self: flex-end;
-      color: $color-primary-1;
-
-
-      .time {
-        width: $container-xs;
-        padding: 0 0.5rem;
-        font-size: 3rem;
-        font-variant-numeric: tabular-nums;
+    .notes {
+      margin: 0.5rem -0.5rem ;
+      .form-input {
+        height: fit-content;
       }
-
-      .controls {
-        display: flex;
-        justify-content: space-between;
-        align-content: flex-end;
-        text-align: center;
-
-        button {
-          font-size: 1.5rem;
-          background-color: white;
-          border: 1px solid $color-primary-1;
-          border-radius: 2rem;
-          color: $color-primary-1;
-          padding: 0.5rem 1rem;
-          font-weight: 600;
-
-        }
-
-        #start_button:hover {
-          color: forestgreen;
-        }
-
-        #pause_button:hover {
-          color: royalblue;
-        }
-
-        .reset_button:hover {
-          color: darkred;
-        }
-
+      textarea{
+        min-height: 10rem;
       }
-    }
-  }
-
-  .info {
-    padding: 1rem;
-  }
-
-  .links {
-    text-align: center;
-  }
-}
-
-.brews-show {
-  .banner > .banner-content > .card > div > p {
-    color: $ink;
-  }
-
-  .row {
-    display: flex;
-    justify-content: space-evenly;
-    font-variant-numeric: tabular-nums;
-  }
-
-  .title {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0.25rem;
-
-    .link-danger {
-      font-size: 1.5rem;
-      border: 1px solid;
-      border-radius: 2rem;
-    }
-  }
-}
-
-.ratio-row {
-  padding: 0.5rem 0;
-
-  .field {
-    flex: 1;
-
-    &.ratio .form-input {
-      background: white;
-
+      .link {
+        font-size: 1rem;
+      }
     }
   }
 }
