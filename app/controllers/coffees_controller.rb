@@ -60,6 +60,7 @@ class CoffeesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to coffees_url, notice: 'Coffee was successfully destroyed.' }
       format.json { head :no_content }
+      #format.turbo_stream
     end
   end
 

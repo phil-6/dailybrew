@@ -1,3 +1,5 @@
+@import "variables";
+
 .admin {
   .row {
     justify-content: space-between;
@@ -8,9 +10,37 @@
       overflow-y: scroll;
       display: block;
 
-
       td {
         padding: 0 0.4rem;
+      }
+    }
+  }
+}
+
+.admin-controls-container {
+  display: flex;
+  justify-content: center;
+
+  .admin-controls {
+    padding: 2rem 4rem;
+    background: repeating-linear-gradient(-40deg, #FE787C25, #FFB47925 10px, #FFB47925 10px, #FE787C25 40px);
+    border: 0.2rem dashed #FFB47955;
+    border-radius: 1rem;
+    text-align: center;
+
+
+    h1 {
+      font-size: 1.5rem;
+      color: $warning-dark;
+    }
+    .btn {
+      margin: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      box-shadow: 0 0 2px 2px $color-primary-opacity-10;
+      transition: 0.2s;
+
+      &:hover {
+        box-shadow: none;
       }
     }
   }
