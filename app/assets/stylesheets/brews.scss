@@ -79,6 +79,7 @@
     .field {
       margin-bottom: 0.75rem !important;
     }
+
     .ratio-row {
       padding: 0.5rem 0;
 
@@ -94,41 +95,49 @@
   }
 
   &-show {
-    .banner .banner-content .card div p {
-      color: $ink;
-    }
+    .banner {
+      height: calc(100vh - #{$nav-height});
 
-    .row {
-      display: flex;
-      justify-content: space-evenly;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .title {
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 0.25rem;
-
-      .link-danger {
-        font-size: 1.5rem;
-        border: 1px solid;
-        border-radius: 2rem;
+      .banner-content .card div p {
+        color: $ink;
       }
-    }
-    .ratio-row {
-      padding: 0.5rem 0;
-    }
 
-    .notes {
-      margin: 0.5rem -0.5rem ;
-      .form-input {
-        height: fit-content;
+      .row {
+        display: flex;
+        justify-content: space-evenly;
+        font-variant-numeric: tabular-nums;
       }
-      textarea{
-        min-height: 10rem;
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.25rem;
+
+        .link-danger {
+          font-size: 1.5rem;
+          border: 1px solid;
+          border-radius: 2rem;
+        }
       }
-      .link {
-        font-size: 1rem;
+
+      .ratio-row {
+        padding: 0.5rem 0;
+      }
+
+      .notes {
+        margin: 0.5rem -0.5rem;
+
+        .form-input {
+          height: fit-content;
+        }
+
+        textarea {
+          min-height: 10rem;
+        }
+
+        .link {
+          font-size: 1rem;
+        }
       }
     }
   }
