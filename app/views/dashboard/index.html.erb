@@ -4,8 +4,12 @@
 
       <section class="header">
         <h1 class="username"><%= current_user.username.downcase %></h1>
-        <div class="row">&#8226;<span id="shelf_items_count_<%= dom_id(current_user) %>"><%= current_user.shelf_items.count %></span> shelf items</div>
-        <div class="row">&#8226;<span id="favourites_count_<%= dom_id(current_user) %>"><%= current_user.favourites.count %></span> favourites</div>
+        <div class="row">
+          <span id="shelf_items_count_<%= dom_id(current_user) %>"><%= current_user.shelf_items.count %></span> shelf items
+          <span>&#8226;</span>
+          <span id="favourites_count_<%= dom_id(current_user) %>"><%= current_user.favourites.count %></span> favourites
+        </div>
+
         <div class="row">
           <p class="full-name"><%= current_user.full_name %></p>
           <span>&#8226;</span>
