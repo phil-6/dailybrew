@@ -116,34 +116,19 @@ body {
     box-sizing: border-box;
   }
 
-  .admin-controls-container {
-    display: flex;
-    justify-content: center;
-
-    .admin-controls {
-      padding: 2rem 4rem;
-      background: repeating-linear-gradient(-40deg, #FE787C25, #FFB47925 10px, #FFB47925 10px, #FE787C25 40px);
-      border: 0.2rem dashed #FFB47955;
-      border-radius: 1rem;
-      text-align: center;
-
-
-      h1 {
-        font-size: 1.5rem;
-        color: $danger-light;
-      }
-
-      a {
-        color: $warning-light;
-
-        &:hover {
-          color: $warning;
-        }
-      }
-    }
-  }
-
   .pager {
     justify-content: center;
+  }
+
+  .small {
+    font-size: 80%;
+  }
+
+  .inline-action { display: none; }
+  .inline-edit .inline-action { display: initial; }
+
+  .coming-soon{
+    max-width: $screen-md;
+    margin: auto;
   }
 }

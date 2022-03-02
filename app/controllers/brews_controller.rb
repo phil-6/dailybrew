@@ -67,6 +67,9 @@ class BrewsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_brew
     @brew = Brew.find(params[:id])
+    mins = (@brew.time / 60)
+    secs = @brew.time - (mins * 60)
+    @brew_time = format('%<mins>02d:%<secs>02d:%<ms>02d', { mins:, secs:, ms: 0 })
   end
 
   def set_coffee
@@ -76,7 +79,7 @@ class BrewsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def brew_params
     params.require(:brew).permit(:user_id, :coffee_id, :equipment, :method, :coffee_weight, :water_weight, :grinder,
-                                 :grinder_setting, :time, :notes, :rating)
+                                 :grinder_setting, :time, :notes, :rating, :public)
   end
 
   def time_in_seconds

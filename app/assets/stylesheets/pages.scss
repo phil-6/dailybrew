@@ -20,6 +20,7 @@
 
     .stats h2 {
       line-height: 1.2;
+      @media screen  and (min-width: $screen-lg){margin: auto -1.5rem;}
     }
   }
 

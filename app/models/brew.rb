@@ -34,12 +34,12 @@ class Brew < ApplicationRecord
     broadcast_update_later_to(
       'daily_brewers_count',
       target: 'daily_brewers',
-      html: User.daily_brewers.count
+      html: ActionController::Base.helpers.pluralize(User.daily_brewers.count, 'user has', plural: 'users have')
     )
     broadcast_update_later_to(
       'daily_brews_count',
       target: 'daily_brews',
-      html: Brew.today.count
+      html: ActionController::Base.helpers.pluralize(Brew.today.count, 'coffee')
     )
   end
 end

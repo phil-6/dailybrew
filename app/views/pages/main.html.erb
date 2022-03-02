@@ -12,8 +12,8 @@
             No one has brewed today. <br>
             Will you be the first?
           <% else %>
-            <span id="daily_brewers"><%= User.daily_brewers.count %></span> users have brewed
-            <span id="daily_brews"><%= Brew.today.count %></span> coffees today
+            <span id="daily_brewers"><%= pluralize(User.daily_brewers.count, 'user has', plural: 'users have') %></span> brewed
+            <span id="daily_brews"><%= pluralize(Brew.today.count, 'coffee') %></span> today
           <% end %>
         </h2>
       </div>
