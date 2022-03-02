@@ -4,10 +4,15 @@
       <div class="page-title">
         <h2>Your Shelf</h2>
       </div>
-      <p>This is where you can keep track of the coffees you currently own. Use the button below to find your coffees, add them to your shelf and start recording your brews!</p>
-      <div class="cta">
-        <%= link_to 'Find Coffees', coffees_path, class: 'btn btn-complementary' %>
-      </div>
+      <% if params["brew_now"] %>
+        <h4 class="title-white">Which coffee are you brewing?</h4>
+      <% else %>
+        <p>This is where you can keep track of the coffees you currently own. Use the button below to find your coffees,
+          add them to your shelf and start recording your brews!</p>
+        <div class="cta">
+          <%= link_to 'Find Coffees', coffees_path, class: 'btn btn-complementary' %>
+        </div>
+      <% end %>
     </div>
   </div>
 
