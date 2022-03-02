@@ -14,8 +14,14 @@
     }
   }
 
+  section {
+    padding-bottom: 2rem;
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+
   .header {
-    padding: 1rem 0;
     max-width: $container-xl;
     margin: auto;
 
@@ -30,10 +36,6 @@
     }
   }
 
-  h2 {
-    margin-bottom: 1.5rem;
-  }
-
   section > .shelf.row {
     gap: 1rem;
     overflow-x: scroll;
@@ -45,15 +47,7 @@
     }
   }
 
-  section.favourites {
-    .shelf .coffee-card {
-      width: 450px;
-    }
-  }
-
   .brews {
-    padding: 1rem;
-
     table, tbody {
       width: 100%;
       max-height: 610px;
@@ -129,6 +123,12 @@
       display: block;
       padding: 1rem;
       text-align: center;
+    }
+  }
+
+  section.favourites {
+    .shelf .coffee-card {
+      width: 450px;
     }
   }
 }
