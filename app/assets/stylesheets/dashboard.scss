@@ -35,10 +35,19 @@
       margin-bottom: 0.5rem;
     }
 
+    hr {
+      background: $color-white;
+      margin: 1rem 0;
+    }
+
     .row {
       gap: 0.5rem;
       color: $color-white;
       opacity: 0.8;
+
+      &.stats {
+        font-size: 0.9rem;
+      }
     }
   }
 

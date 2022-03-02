@@ -5,23 +5,25 @@
       <section class="header">
         <h1 class="username"><%= current_user.username.downcase %></h1>
         <div class="row">
-          <span id="shelf_items_count"><%= current_user.shelf_items.count %></span> shelf items
-          <span>&#8226;</span>
-          <span id="favourites_count"><%= current_user.favourites.count %></span> favourites
-        </div>
-
-        <div class="row">
-          <span id="total_brews_count"><%= current_user.brews.count %></span> total brews
-          <span>&#8226;</span>
-          <span id="weekly_brews_count"><%= current_user.brews.this_week.count %></span> this week
-          <span>&#8226;</span>
-          <span id="daily_brews_count"><%= current_user.brews.today.count %></span> today
-        </div>
-
-        <div class="row">
           <p class="full-name"><%= current_user.full_name %></p>
           <span>&#8226;</span>
           <p class="joined">Brewing since <%= current_user.created_at.strftime("%d %b %Y") %></p>
+        </div>
+
+        <hr />
+
+        <div class="row stats">
+          <span><span id="shelf_items_count"><%= current_user.shelf_items.count %></span> shelf items</span>
+          <span>&#8226;</span>
+          <span><span id="favourites_count"><%= current_user.favourites.count %></span> favourites</span>
+        </div>
+
+        <div class="row stats">
+          <span><span id="total_brews_count"><%= current_user.brews.count %></span> brews</span>
+          <span>&#8226;</span>
+          <span><span id="weekly_brews_count"><%= current_user.brews.this_week.count %></span> this week</span>
+          <span>&#8226;</span>
+          <span><span id="daily_brews_count"><%= current_user.brews.today.count %></span> today</span>
         </div>
       </section>
 
