@@ -55,6 +55,21 @@
     gap: 1rem;
     overflow-x: scroll;
     padding-bottom: 1rem;
+    
+    @media screen and (max-width: $screen-lg) {
+      margin-left: -1rem;
+      margin-right: -1rem;
+
+      .shelf-item {
+        &:first-child {
+          padding-left: 1rem;
+        }
+
+        &:last-child {
+          padding-right: 1rem;
+        }
+      }
+    }
 
     .coffee-card {
       width: $container-sm;
