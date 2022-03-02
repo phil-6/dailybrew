@@ -1,4 +1,4 @@
-### With Daily Brew, you can log your brews, keep track of what methods works best, discover roasters, coffees and more.
+### With Daily Brew, you can log your brews, keep track of what methods work best, discover roasters, coffees and more.
 
 ## Public Beta
 We're still hard at work on Daily Brew. To say that there are going to be rough edges would be understating how far along
