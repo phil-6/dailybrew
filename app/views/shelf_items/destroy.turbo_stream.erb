@@ -4,3 +4,7 @@
       "shelf_item_toggle_#{dom_id(@coffee)}",
       partial: "shelf_item_toggle",
       locals: { coffee: @coffee }) %>
+
+<%= turbo_stream.update(
+      "shelf_items_count",
+      html: %(#{current_user.shelf_items.count})) %>

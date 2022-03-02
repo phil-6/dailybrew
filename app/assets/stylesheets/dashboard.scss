@@ -6,7 +6,7 @@
   background-color: $color-primary-1;
 
   .banner-primary-1 .banner-content {
-    max-width: $container-xl;
+    max-width: $container-xxl;
     padding: 2rem 2rem 0 !important;
 
     @media screen and (max-width: $screen-lg) {
@@ -14,28 +14,62 @@
     }
   }
 
+  section {
+    padding-bottom: 3rem;
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+
   .header {
-    padding: 1rem 0;
+    max-width: $container-md;
+    margin: auto;
+    padding: 0 2rem 3rem;
+
+    @media screen and (max-width: $screen-lg) {
+      padding: 0 1rem 3rem;
+    }
 
     .username {
       margin-bottom: 0.5rem;
     }
-  
+
+    hr {
+      background: $color-white;
+      margin: 1rem 0;
+    }
+
     .row {
       gap: 0.5rem;
       color: $color-white;
       opacity: 0.8;
+
+      &.stats {
+        font-size: 0.9rem;
+      }
     }
   }
 
-  h2 {
-    margin-bottom: 1.5rem;
-  }
-
-  .shelf {
+  section > .shelf.row {
     gap: 1rem;
     overflow-x: scroll;
     padding-bottom: 1rem;
+    
+    @media screen and (max-width: $screen-lg) {
+      margin-left: -1rem;
+      margin-right: -1rem;
+
+      .shelf-item {
+        &:first-child {
+          padding-left: 1rem;
+        }
+
+        &:last-child {
+          padding-right: 1rem;
+        }
+      }
+    }
 
     .coffee-card {
       width: $container-sm;
@@ -44,12 +78,13 @@
   }
 
   .brews {
-    padding: 1rem;
-
-    .brews-table {
+    table, tbody {
       width: 100%;
+      max-height: 610px;
+      overflow-y: auto;
+      display: block;
 
-      .brew-row {
+      tr {
         padding: 1rem;
         border-radius: 2rem;
         position: relative;
@@ -66,6 +101,7 @@
         &:hover {
           cursor: pointer;
           background-color: $color-primary-1;
+
           .coffee-name, p {
             color: $color-white;
           }
@@ -117,6 +153,12 @@
       display: block;
       padding: 1rem;
       text-align: center;
+    }
+  }
+
+  section.favourites {
+    .shelf .coffee-card {
+      width: 450px;
     }
   }
 }
