@@ -5,16 +5,17 @@
       <section class="header">
         <h1 class="username"><%= current_user.username.downcase %></h1>
         <div class="row">
-          <span id="shelf_items_count_<%= dom_id(current_user) %>"><%= current_user.shelf_items.count %></span> shelf items
+          <span id="shelf_items_count"><%= current_user.shelf_items.count %></span> shelf items
           <span>&#8226;</span>
-          <span id="favourites_count_<%= dom_id(current_user) %>"><%= current_user.favourites.count %></span> favourites
+          <span id="favourites_count"><%= current_user.favourites.count %></span> favourites
         </div>
+
         <div class="row">
-          <span id="total_brews_count_<%= dom_id(current_user) %>"><%= current_user.brews.count %></span> total brews
+          <span id="total_brews_count"><%= current_user.brews.count %></span> total brews
           <span>&#8226;</span>
-          <span id="total_brews_count_<%= dom_id(current_user) %>"><%= current_user.brews.this_week.count %></span> this week
+          <span id="weekly_brews_count"><%= current_user.brews.this_week.count %></span> this week
           <span>&#8226;</span>
-          <span id="total_brews_count_<%= dom_id(current_user) %>"><%= current_user.brews.today.count %></span> today
+          <span id="daily_brews_count"><%= current_user.brews.today.count %></span> today
         </div>
 
         <div class="row">

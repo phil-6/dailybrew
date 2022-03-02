@@ -4,7 +4,7 @@
       locals: { coffee: @coffee }) %>
 
 <%= turbo_stream.update(
-      "favourites_count_#{dom_id(current_user)}",
+      "favourites_count",
       html: %(#{current_user.favourites.count}) )%>
 
 <%= turbo_stream.prepend(
