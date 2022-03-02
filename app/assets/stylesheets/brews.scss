@@ -65,24 +65,31 @@
     }
   }
 
-  .ratio-row {
-    display: flex;
-
-    .field {
-      flex: 1;
-
-      &.ratio .form-input {
-        background: white;
-
-      }
-    }
-  }
-
   .info {
     padding: 1rem;
   }
 
   .links {
     text-align: center;
+  }
+}
+
+.brews-show {
+  .banner > .banner-content > .card > p {
+    color: $ink;
+  }
+
+}
+
+.ratio-row {
+  display: flex;
+
+  .field {
+    flex: 1;
+
+    &.ratio .form-input {
+      background: white;
+
+    }
   }
 }

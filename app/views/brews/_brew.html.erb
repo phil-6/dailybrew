@@ -1,42 +1,33 @@
-<div id="<%= dom_id brew %>">
-  <p>
-    <strong>ID:</strong>
-    <%= brew.id %>
+<div id="<%= dom_id brew %>" class="card column">
+
+  <h3>
+    <%= brew.user == current_user ? "You" : brew.user.display_name %>
+    brewed <%= link_to brew.coffee.name, brew.coffee, class: 'link link-primary link-primary-title' %>
+  </h3>
+  <h4><%= time_ago_in_words(brew.created_at) %> ago</h4>
+
+  <p class="small">
+    <strong>Tasting Notes:</strong>
+    <%= brew.coffee.tasting_notes %>
   </p>
 
-  <p>
-    <strong>User:</strong>
-    <%= brew.user_id %>
-  </p>
-
-  <p>
-    <strong>Coffee:</strong>
-    <%= brew.coffee_id %>
-  </p>
-
-  <p>
-    <strong>Created At:</strong>
-    <%= time_ago_in_words(brew.created_at) %> ago
-  </p>
+  <div data-controller="brew-ratio" class="ratio-row">
+    <div class="field">
+      <span data-brew-ratio-target="coffeeWeight"><%= brew.coffee_weight %></span>g Coffee
+    </div>
+    <div class="field">
+      <span data-brew-ratio-target="waterWeight"><%= brew.water_weight %></span>g Water
+    </div>
+    <div class="field">
+      Ratio: 1:<span data-brew-ratio-target="ratio"></span>
+    </div>
+  </div>
 
   <p>
     <strong>Equipment:</strong>
     <%= brew.equipment %>
-  </p>
-
-  <p>
     <strong>Method:</strong>
     <%= brew.method %>
-  </p>
-
-  <p>
-    <strong>Coffee weight:</strong>
-    <%= brew.coffee_weight %>
-  </p>
-
-  <p>
-    <strong>Water weight:</strong>
-    <%= brew.water_weight %>
   </p>
 
   <p>
