@@ -126,4 +126,9 @@ body {
 
   .inline-action { display: none; }
   .inline-edit .inline-action { display: initial; }
+
+  .coming-soon{
+    max-width: $screen-md;
+    margin: auto;
+  }
 }
