@@ -15,15 +15,21 @@
   }
 
   section {
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
+
     h2 {
       margin-bottom: 1.5rem;
     }
   }
 
   .header {
-    max-width: $container-xl;
+    max-width: $container-md;
     margin: auto;
+    padding: 0 2rem 3rem;
+
+    @media screen and (max-width: $screen-lg) {
+      padding: 0 1rem 3rem;
+    }
 
     .username {
       margin-bottom: 0.5rem;
