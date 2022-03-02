@@ -26,10 +26,12 @@
       align-self: flex-end;
       color: $color-primary-1;
 
+
       .time {
         width: $container-xs;
         padding: 0 0.5rem;
         font-size: 3rem;
+        font-variant-numeric: tabular-nums;
       }
 
       .controls {
@@ -75,14 +77,31 @@
 }
 
 .brews-show {
-  .banner > .banner-content > .card > p {
+  .banner > .banner-content > .card > div > p {
     color: $ink;
   }
 
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.25rem;
+
+    .link-danger {
+      font-size: 1.5rem;
+      border: 1px solid;
+      border-radius: 2rem;
+    }
+  }
 }
 
 .ratio-row {
-  display: flex;
+  padding: 0.5rem 0;
 
   .field {
     flex: 1;

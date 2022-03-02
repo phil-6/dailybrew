@@ -67,6 +67,9 @@ class BrewsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_brew
     @brew = Brew.find(params[:id])
+    mins = (@brew.time / 60)
+    secs = @brew.time - (mins * 60)
+    @brew_time = format('%<mins>02d:%<secs>02d:%<ms>02d', { mins:, secs:, ms: 0 })
   end
 
   def set_coffee

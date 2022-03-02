@@ -1,59 +1,68 @@
 <div id="<%= dom_id brew %>" class="card column">
 
-  <h3>
-    <%= brew.user == current_user ? "You" : brew.user.display_name %>
-    brewed <%= link_to brew.coffee.name, brew.coffee, class: 'link link-primary link-primary-title' %>
-  </h3>
-  <h4><%= time_ago_in_words(brew.created_at) %> ago</h4>
+  <div class="title">
+    <h3>
+      <%= brew.user == current_user ? "You" : brew.user.display_name %>
+      brewed <%= link_to brew.coffee.name, brew.coffee, class: 'link link-primary link-title' %>
+    </h3>
+    <h3>
+      <%= link_to edit_brew_path(@brew), class: 'link link-primary' do %><i class="las la-edit"></i>
+      <% end %>
+    </h3>
+  </div>
 
-  <p class="small">
-    <strong>Tasting Notes:</strong>
-    <%= brew.coffee.tasting_notes %>
-  </p>
+  <div class="small">
+    <strong>Tasting Notes: </strong><%= brew.coffee.tasting_notes %>
+  </div>
 
-  <div data-controller="brew-ratio" class="ratio-row">
-    <div class="field">
+  <div data-controller="brew-ratio" class="ratio-row row">
+    <div>
       <span data-brew-ratio-target="coffeeWeight"><%= brew.coffee_weight %></span>g Coffee
     </div>
-    <div class="field">
+    <div>&#8226;</div>
+    <div>
       <span data-brew-ratio-target="waterWeight"><%= brew.water_weight %></span>g Water
     </div>
-    <div class="field">
-      Ratio: 1:<span data-brew-ratio-target="ratio"></span>
+    <div>&#8226;</div>
+    <div>
+      Ratio: 1:<span data-brew-ratio-target="ratio">10.0</span>
     </div>
   </div>
 
-  <p>
-    <strong>Equipment:</strong>
-    <%= brew.equipment %>
-    <strong>Method:</strong>
-    <%= brew.method %>
-  </p>
+  <div class="row">
+    <p><strong>Time: </strong><%= @brew_time %></p>
+    <div>&#8226;</div>
+    <p><strong>Temp: </strong><%= brew.temperature %></p>
+  </div>
 
-  <p>
-    <strong>Grinder:</strong>
-    <%= brew.grinder %>
-  </p>
+  <div class="row">
+    <p><strong>Equipment: </strong><%= brew.equipment %></p>
+    <div>&#8226;</div>
+    <p><strong>Method: </strong><%= brew.method %></p>
+  </div>
 
-  <p>
-    <strong>Grinder setting:</strong>
-    <%= brew.grinder_setting %>
-  </p>
+  <div class="row">
+    <p><strong>Grinder: </strong><%= brew.grinder %></p>
+    <div>&#8226;</div>
+    <p><strong>Grinder setting: </strong><%= brew.grinder_setting %></p>
+  </div>
+  
+  <div>
+    <p><strong>Notes: </strong><%= simple_format(brew.notes) %></p>
+  </div>
 
-  <p>
-    <strong>Time:</strong>
-    <%= brew.time %>
-  </p>
+  <div>
+    <p><strong>Rating: </strong><%= brew.rating %></p>
+  </div>
 
-  <p>
-    <strong>Notes:</strong>
-    <%= brew.notes %>
-  </p>
-
-  <p>
-    <strong>Rating:</strong>
-    <%= brew.rating %>
-  </p>
+  <div class="title">
+    <h4><%= time_ago_in_words(brew.created_at) %> ago</h4>
+    <%= button_to brew,
+                  method: :delete,
+                  form: { data: { turbo_confirm: "Are you sure you want do delete this brew?" } },
+                  class: "link-danger" do %>
+      <i class="las la-trash"></i>
+    <% end %>
+  </div>
 
 </div>
-<hr>
