@@ -3,9 +3,9 @@
       partial: "shelf_item_toggle",
       locals: { coffee: @coffee }) %>
 
-<%= turbo_stream.replace(
+<%= turbo_stream.update(
       "shelf_items_count_#{dom_id(current_user)}",
-      partial: "shelf_items_count_user") %>
+      html: %(#{current_user.shelf_items.count})) %>
 
 <%= turbo_stream.prepend(
       "dashboard_shelf",

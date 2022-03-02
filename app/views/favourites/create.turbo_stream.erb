@@ -3,9 +3,9 @@
       partial: 'favourite_toggle',
       locals: { coffee: @coffee }) %>
 
-<%= turbo_stream.replace(
+<%= turbo_stream.update(
       "favourites_count_#{dom_id(current_user)}",
-      partial: "favourites_count_user") %>
+      html: %(#{current_user.favourites.count}) )%>
 
 <%= turbo_stream.prepend(
       'dashboard_favourites',
