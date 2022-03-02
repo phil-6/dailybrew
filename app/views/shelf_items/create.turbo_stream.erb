@@ -3,6 +3,10 @@
       partial: "shelf_item_toggle",
       locals: { coffee: @coffee }) %>
 
+<%= turbo_stream.update(
+      "shelf_items_count",
+      html: %(#{current_user.shelf_items.count})) %>
+
 <%= turbo_stream.prepend(
       "dashboard_shelf",
       partial: "shelf_items/shelf_item",

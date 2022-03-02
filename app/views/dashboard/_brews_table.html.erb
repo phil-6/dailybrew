@@ -1,0 +1,8 @@
+<% @brews.each do |brew| %>
+  <tr onclick="location.href='<%= brew_path(brew) %>'" class="brew-row row">
+    <td class="coffee-name"><%= brew.coffee.name %></td>
+    <td class="equipment"><p><%= brew.equipment %></p></td>
+    <td class="rating"><p><%= brew.rating || '?' %>/10</p></td>
+    <td class="created"><p><%= time_ago_in_words(brew.created_at) %> ago</p></td>
+  </tr>
+<% end %>

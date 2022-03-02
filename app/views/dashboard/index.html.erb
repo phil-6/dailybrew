@@ -1,54 +1,63 @@
 <main class="dashboard">
   <div class="banner banner-primary-1">
     <div class="banner-content">
-      <div class="header">
+
+      <section class="header">
         <h1 class="username"><%= current_user.username.downcase %></h1>
         <div class="row">
           <p class="full-name"><%= current_user.full_name %></p>
           <span>&#8226;</span>
           <p class="joined">Brewing since <%= current_user.created_at.strftime("%d %b %Y") %></p>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="banner banner-primary-1">
-    <div class="banner-content">
-      <h2><%= link_to 'Your Shelf', shelf_items_path, class: 'link link-white link-title' %></h2>
-      <div class="shelf row">
-        <% @shelf_coffees.reverse.each do |coffee| %>
-          <%= render 'shelf_items/shelf_item', coffee: coffee %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <div class="banner banner-primary-1">
-    <div class="banner-content">
-      <h2><%= link_to 'Your Brews', brews_path, class: 'link link-white link-title' %></h2>
-      <div class="brews card">
-        <table class="brews-table">
-          <% @brews.first(10).each do |brew| %>
-            <tr onclick="location.href='<%= brew_path(brew) %>'" class="brew-row row">
-              <td class="coffee-name"><%= brew.coffee.name %></td>
-              <td class="equipment"><p><%= brew.equipment %></p></td>
-              <td class="rating"><p><%= brew.rating || '?' %>/10</p></td>
-              <td class="created"><p><%= time_ago_in_words(brew.created_at) %> ago</p></td>
-            </tr>
+
+        <hr />
+
+        <div class="row stats">
+          <span><span id="shelf_items_count"><%= current_user.shelf_items.count %></span> shelf items</span>
+          <span>&#8226;</span>
+          <span><span id="favourites_count"><%= current_user.favourites.count %></span> favourites</span>
+        </div>
+
+        <div class="row stats">
+          <span><span id="total_brews_count"><%= current_user.brews.count %></span> brews</span>
+          <span>&#8226;</span>
+          <span><span id="weekly_brews_count"><%= current_user.brews.this_week.count %></span> this week</span>
+          <span>&#8226;</span>
+          <span><span id="daily_brews_count"><%= current_user.brews.today.count %></span> today</span>
+        </div>
+      </section>
+
+      <section class="shelf-items">
+        <h2><%= link_to 'Your Shelf', shelf_items_path, class: 'link link-white link-title' %></h2>
+        <div id="dashboard_shelf" class="shelf row">
+          <% @shelf_coffees.reverse.each do |coffee| %>
+            <%= render 'shelf_items/shelf_item', coffee: coffee %>
           <% end %>
-        </table>
-        <%= link_to 'More brews', brews_path, class: 'link link-primary' %>
-      </div>
-    </div>
-  </div>
-  <div class="banner banner-primary-1">
-    <div class="banner-content">
-      <div class="favourites">
+        </div>
+      </section>
+
+      <section class="brews">
+        <h2><%= link_to 'Your Brews', brews_path, class: 'link-white link-title' %></h2>
+        <div class="card">
+          <%= turbo_frame_tag "page_handler" %>
+          <table>
+            <tbody id="brews_table">
+            <%= render "brews_table", brews: @brews %>
+            </tbody>
+          </table>
+          <%= render "brews_table_pager", pagy: @pagy %>
+        </div>
+      </section>
+
+      <section class="favourites">
         <h2><%= link_to 'Your Favourites', favourites_path, class: 'link link-white link-title' %></h2>
-        <div class="shelf row">
+        <div id="dashboard_favourites" class="shelf row">
           <% @favourites.each do |coffee| %>
             <%= render 'favourites/favourite', coffee: coffee %>
           <% end %>
-        <div>
-      </div>
+        </div>
+      </section>
+
     </div>
   </div>
 </main>
