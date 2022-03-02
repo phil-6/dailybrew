@@ -54,7 +54,7 @@
   .brews {
     padding: 1rem;
 
-    table, tbody{
+    table, tbody {
       width: 100%;
       max-height: 610px;
       overflow-y: auto;
@@ -76,7 +76,7 @@
 
         &:hover {
           cursor: pointer;
-          background-color: $color-primary-0;
+          background-color: $color-primary-1;
 
           .coffee-name, p {
             color: $color-white;
