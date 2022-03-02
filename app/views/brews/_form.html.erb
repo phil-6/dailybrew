@@ -91,7 +91,7 @@
 
   <div class="multi-field row">
     <div class="field">
-      <%= form.number_field :rating, class: 'form-input', placeholder: 'Rating' %>
+      <%= form.number_field :rating, class: 'form-input', min: '0', max: '11', placeholder: 'Rating' %>
       <%= form.label :rating, class: 'form-label' %>
     </div>
     <div class="field toggle-field">
