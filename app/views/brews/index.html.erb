@@ -1,15 +1,26 @@
-<p style="color: green"><%= notice %></p>
 <main class="<%= controller_name %>-<%= action_name %>">
-
-  <h1>Brews</h1>
-
-  <div id="brews">
-    <% @brews.each do |brew| %>
-      <%= render brew %>
+  <div class="banner banner-primary-1">
+    <div class="banner-content">
+      <div class="page-title">
+        <h2>Your Brews</h2>
+      </div>
       <p>
-        <%= link_to "Show this brew", brew %>
+        <span><span id="total_brews_count"><%= current_user.brews.count %></span> brews</span>
+        <span>&#8226;</span>
+        <span><span id="weekly_brews_count"><%= current_user.brews.this_week.count %></span> this week</span>
+        <span>&#8226;</span>
+        <span><span id="daily_brews_count"><%= current_user.brews.today.count %></span> today</span>
       </p>
-    <% end %>
+    </div>
   </div>
 
+  <div class="brews-container">
+    <div class="brews-table card column">
+      <% @brews.each do |brew| %>
+        <div class="brew-row row">
+          <%= brew.coffee.name %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </main>

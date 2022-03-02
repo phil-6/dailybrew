@@ -1,5 +1,31 @@
 @import "variables";
 
+.brews {
+  &-index {
+    .banner-primary-1 .banner-content p {
+      text-align: center;
+    }
+
+    .brews-container {
+      max-width: $container-xxl;
+      margin: 0 auto;
+      padding: 2rem;
+
+      @media screen and (max-width: $screen-lg) {
+        padding: 2rem 1rem;
+      }
+
+      .brews-table {
+        padding: 1rem;
+
+        .brew-row {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
 .brews-new, .brews-create, .brews-edit, .brews-update {
   max-width: $container-lg;
 
