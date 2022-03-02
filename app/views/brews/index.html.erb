@@ -15,12 +15,8 @@
   </div>
 
   <div class="brews-container">
-    <div class="brews-table card column">
-      <% @brews.each do |brew| %>
-        <div class="brew-row row">
-          <%= brew.coffee.name %>
-        </div>
-      <% end %>
+    <div class="card">
+      <%= render 'brews_table' %>
     </div>
   </div>
 </main>

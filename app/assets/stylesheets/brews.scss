@@ -15,12 +15,48 @@
         padding: 2rem 1rem;
       }
 
-      .brews-table {
+      .card {
         padding: 1rem;
+      }
+    }
+  }
 
-        .brew-row {
-          padding: 1rem;
-        }
+  &-table {
+    width: 100%;
+    
+    .brew-row {
+      position: relative;
+      padding: 1rem 0.5rem;
+
+      td {
+        padding: 0 0.5rem;
+      }
+
+      .coffee-name {
+        width: 30%;
+      }
+
+      .equipment {
+        width: 20%;
+      }
+
+      .config {
+        width: 30%;
+      }
+
+      .created {
+        width: 20%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 1rem;
+        bottom: 0;
+        width: calc(100% - 2rem);
+        height: 1px;
+        background-color: $color-primary-0;
+        opacity: 0.25;
       }
     }
   }
