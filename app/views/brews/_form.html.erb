@@ -78,21 +78,29 @@
     </div>
   </div>
 
-  <%= turbo_frame_tag "#{dom_id(brew)}_notes" do %>
-    <div class="field">
+
+  <div class="field">
+    <%= turbo_frame_tag "#{dom_id(brew)}_notes" do %>
       <%= form.text_area :notes, class: 'form-input', placeholder: 'Notes' %>
       <%= form.label :notes, class: 'form-label' %>
       <% if action_name == "edit" %>
         <%= form.button "Update Note", class: "inline-action link link-primary" %>
         <%= link_to "Cancel", brew_path(brew), class: "inline-action link link-primary" %>
       <% end %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+
 
   <div class="multi-field row">
     <div class="field">
-      <%= form.number_field :rating, class: 'form-input', min: '0', max: '11', placeholder: 'Rating' %>
-      <%= form.label :rating, class: 'form-label' %>
+      <%= turbo_frame_tag "#{dom_id(brew)}_rating" do %>
+        <%= form.number_field :rating, class: 'form-input', min: '0', max: '11', placeholder: 'Rating' %>
+        <%= form.label :rating, class: 'form-label' %>
+        <% if action_name == "edit" %>
+          <%= form.button "Update Rating", class: "inline-action link link-primary" %>
+          <%= link_to "Cancel", brew_path(brew), class: "inline-action link link-primary" %>
+        <% end %>
+      <% end %>
     </div>
     <div class="field toggle-field">
       <label class="toggle">

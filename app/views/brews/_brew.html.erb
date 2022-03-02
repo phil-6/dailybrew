@@ -58,8 +58,15 @@
     <% end %>
   </div>
 
-  <div>
-    <p><strong>Rating: </strong><%= brew.rating %></p>
+  <div class="rating field">
+    <%= form_with model: brew, class: "", data: { turbo_frame: "#{dom_id(brew)}_rating" } do |form| %>
+      <%= turbo_frame_tag "#{dom_id(brew)}_rating", class: "inline-edit" do %>
+        <%= link_to edit_brew_path(brew) do %>
+          <div class="form-input"><%= brew.rating || '?' %>/10</div>
+          <div class="form-label">Rating</div>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
 
   <div class="title">

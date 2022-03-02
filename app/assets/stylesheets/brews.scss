@@ -124,8 +124,11 @@
         padding: 0.5rem 0;
       }
 
+      .field .link {
+        font-size: 1rem;
+      }
       .notes {
-        margin: 0.5rem -0.5rem;
+        margin: 0.5rem -1rem;
 
         .form-input {
           height: fit-content;
@@ -134,10 +137,9 @@
         textarea {
           min-height: 10rem;
         }
-
-        .link {
-          font-size: 1rem;
-        }
+      }
+      .rating {
+        margin: 0.5rem auto 0.5rem -1rem ;
       }
     }
   }
