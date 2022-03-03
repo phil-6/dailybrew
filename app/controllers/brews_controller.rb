@@ -4,7 +4,7 @@ class BrewsController < ApplicationController
 
   # GET /brews or /brews.json
   def index
-    @brews = params[:coffee_id] ? Coffee.find(params[:coffee_id]).brews : current_user.brews.all
+    @brews = (params[:coffee_id] ? Coffee.find(params[:coffee_id]).brews : current_user.brews.all).order(created_at: :desc)
   end
 
   # GET /brews/1 or /brews/1.json

@@ -5,7 +5,7 @@
         <td class="coffee-name"><%= brew.coffee.name %></td>
         <td class="equipment"><p><%= brew.equipment %></p></td>
         <td class="config"></td>
-        <td class="created"><p><%= time_ago_in_words(brew.created_at) %> ago</p></td>
+        <td class="created"><p><%= brew.created_at > 1.week.ago ? "#{time_ago_in_words(brew.created_at)} ago" : brew.created_at.strftime("%d %b %Y") %></p></td>
       </tr>
     <% end %>
   </tbody>
