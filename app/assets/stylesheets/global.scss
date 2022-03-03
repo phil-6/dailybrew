@@ -59,7 +59,15 @@ body {
   }
 
   h5 {
-    font-size: 0.75rem;
+    font-size: 1.1rem;
+
+    @media screen and (max-width: $screen-lg) {
+      font-size: 1.038rem;
+    }
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 0.975rem;
+    }
   }
 
   p {
