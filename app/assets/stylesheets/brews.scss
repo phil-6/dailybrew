@@ -97,6 +97,10 @@
               font-size: 1.075rem;
             }
           }
+
+          &:last-child {
+            justify-content: flex-end;
+          }
         }
       }
 
