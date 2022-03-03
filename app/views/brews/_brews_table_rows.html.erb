@@ -1,0 +1,20 @@
+<% @brews.each do |brew| %>
+  <tr onclick="location.href='<%= brew_path(brew) %>'" class="brew-row row">
+    <td class="coffee-name">
+      <h5><%= brew.coffee.name %></h5>
+    </td>
+    <td class="equipment">
+      <p><%= brew.equipment %></p>
+    </td>
+    <td class="config row">
+      <span class="row"><i class="las la-balance-scale"></i><p><%= brew.coffee_weight.present? ? "#{brew.coffee_weight}g" : '-' %></p></span>
+      <span class="row"><i class="las la-tint"></i><p><%= brew.water_weight.present? ? "#{brew.water_weight}g" : '-' %></p></span>
+      <span class="row"><i class="las la-thermometer-half"></i><p><%= brew.temperature ||= '-' %></p></span>
+      <span class="row"><i class="las la-stopwatch"></i><p><%= brew.time != 0 ? brew.formatted_time : '-' %></p></span>
+      <span class="row"><i class="lar la-star"></i></i><p><%= brew.rating ||= '-' %></p></span>
+    </td>
+    <td class="created">
+      <p><small><%= brew.created_at > 1.week.ago ? "#{time_ago_in_words(brew.created_at)} ago" : brew.created_at.strftime("%d %b %Y") %></small></p>
+    </td>
+  </tr>
+<% end %>

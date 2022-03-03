@@ -2,7 +2,7 @@
   <%= turbo_stream_action_tag(
         'append',
         target: 'brews_table',
-        template: %(#{render 'brews_table', brews: @brews})
+        template: %(#{render 'brews/brews_table_rows'})
       ) %>
   <%= turbo_stream_action_tag(
         'replace',

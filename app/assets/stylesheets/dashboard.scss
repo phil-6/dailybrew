@@ -83,6 +83,10 @@
       max-height: 610px;
       overflow-y: auto;
       display: block;
+
+      p {
+        color: $ink;
+      }
     }
 
     .link {
