@@ -30,10 +30,6 @@
 
       @media screen and (max-width: $screen-lg) {
         display: block;
-
-        .config, .created {
-          display: block;
-        }
       }
 
       td {
@@ -46,23 +42,49 @@
         }
 
         .equipment {
-          width: 20%;
+          width: 17.5%;
+        }
+
+        .config {
+          width: 35%
         }
       }
 
       .config {
-        width: 35%;
+        width: 45%;
+        gap: 1rem;
 
         @media screen and (max-width: $screen-lg) {
           width: 100%;
+          display: flex;
+          padding: 0.5rem;
+        }
+
+        .row {
+          flex-wrap: nowrap;
+          align-items: center;
+          width: 20%;
+
+          i {
+            font-size: 1.2rem;
+
+            @media screen and (max-width: $screen-lg) {
+              font-size: 1.1375rem;
+            }
+
+            @media screen and (max-width: $screen-md) {
+              font-size: 1.075rem;
+            }
+          }
         }
       }
 
       .created {
-        width: 15%;
+        width: 12.5%;
         text-align: right;
 
         @media screen and (max-width: $screen-lg) {
+          display: block;
           width: 100%;
         }
       }
