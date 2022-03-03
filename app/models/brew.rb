@@ -42,4 +42,10 @@ class Brew < ApplicationRecord
       html: ActionController::Base.helpers.pluralize(Brew.today.count, 'coffee')
     )
   end
+
+  def formatted_time
+    mins = time / 60
+    secs = time - (mins * 60)
+    format('%<mins>02d:%<secs>02d', { mins:, secs:, ms: 0 })
+  end
 end
