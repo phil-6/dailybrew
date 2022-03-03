@@ -44,6 +44,8 @@ class Brew < ApplicationRecord
   end
 
   def formatted_time
+    return unless time
+
     mins = time / 60
     secs = time - (mins * 60)
     format('%<mins>02d:%<secs>02d', { mins:, secs:, ms: 0 })
