@@ -14,6 +14,10 @@ class AdminController < ApplicationController
     render 'icon-sl'
   end
 
+  def icon_basic
+    render 'icon-basic'
+  end
+
   private
 
   def stats

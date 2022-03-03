@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'dashboard'
     get 'icon-sl'
+    get 'icon-basic'
   end
 
   get 'dashboard', to: 'dashboard#index'
