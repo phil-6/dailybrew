@@ -83,11 +83,27 @@
       max-height: 610px;
       overflow-y: auto;
       display: block;
+    }
 
-      p {
-        color: $ink;
+    .brews-table {
+      .brew-row {
+        p {
+          color: $ink;
+        }
+  
+        &:hover {
+          p {
+            color: $color-white;
+          }
+        }
+
+        .created p {
+          text-align: right;
+        }
       }
     }
+
+    
 
     .link {
       display: block;
