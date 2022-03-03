@@ -1,7 +1,7 @@
 <table class="brews-table">
   <tbody id="brews_table">
     <% @brews.each do |brew| %>
-      <tr onclick="//location.href='<%= brew_path(brew) %>'" class="brew-row row">
+      <tr onclick="location.href='<%= brew_path(brew) %>'" class="brew-row row">
         <td class="coffee-name">
           <h5><%= brew.coffee.name %></h5>
         </td>

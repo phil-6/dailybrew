@@ -27,6 +27,17 @@
     .brew-row {
       position: relative;
       padding: 1rem 0.5rem;
+      border-radius: 2rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $color-primary-1;
+        color: $color-white;
+
+        h5 {
+          color: $color-complementary-0;
+        }
+      }
 
       @media screen and (max-width: $screen-lg) {
         display: block;
@@ -102,9 +113,9 @@
       &:not(:last-child)::after {
         content: "";
         position: absolute;
-        left: 1rem;
+        left: 1.5rem;
         bottom: 0;
-        width: calc(100% - 2rem);
+        width: calc(100% - 3rem);
         height: 1px;
         background-color: $color-primary-0;
         opacity: 0.25;
