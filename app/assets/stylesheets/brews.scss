@@ -28,25 +28,43 @@
       position: relative;
       padding: 1rem 0.5rem;
 
+      @media screen and (max-width: $screen-lg) {
+        display: block;
+
+        .config, .created {
+          display: block;
+        }
+      }
+
       td {
         padding: 0 0.5rem;
       }
 
-      .coffee-name {
-        width: 30%;
-      }
+      @media screen and (min-width: $screen-lg) {
+        .coffee-name {
+          width: 30%;
+        }
 
-      .equipment {
-        width: 20%;
+        .equipment {
+          width: 20%;
+        }
       }
 
       .config {
         width: 35%;
+
+        @media screen and (max-width: $screen-lg) {
+          width: 100%;
+        }
       }
 
       .created {
         width: 15%;
         text-align: right;
+
+        @media screen and (max-width: $screen-lg) {
+          width: 100%;
+        }
       }
 
       &:not(:last-child)::after {
