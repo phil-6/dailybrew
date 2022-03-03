@@ -41,14 +41,15 @@
       }
 
       .config {
-        width: 30%;
+        width: 35%;
       }
 
       .created {
-        width: 20%;
+        width: 15%;
+        text-align: right;
       }
 
-      &::after {
+      &:not(:last-child)::after {
         content: "";
         position: absolute;
         left: 1rem;
