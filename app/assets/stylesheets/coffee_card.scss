@@ -68,8 +68,18 @@
       }
     }
 
-    .btn {
+    .brew-btn {
       margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+
+      .btn {
+        width: 80%;
+
+        i {
+          font-size: 1rem;
+        }
+      }
     }
   }
 }

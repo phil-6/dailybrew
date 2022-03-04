@@ -13,10 +13,12 @@
             <i class="icon-basic-tongue-out"></i> <span><%= coffee.tasting_notes.titleize %></span>
           </li>
           <li class="row country">
-            <i class="icon-basic-location-1"></i> <span><%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').titleize %></span>
+            <i class="icon-basic-location-1"></i>
+            <span><%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').titleize %></span>
           </li>
           <li class="row process">
-            <i class="icon-basic-factory"></i> <span><%= coffee.process.present? ? coffee.process.titleize : 'Unknown' %></span>
+            <i class="icon-basic-factory"></i>
+            <span><%= coffee.process.present? ? coffee.process.titleize : 'Unknown' %></span>
           </li>
         </ul>
       <% end %>
@@ -42,9 +44,11 @@
       </div>
     <% end %>
     <% if local_assigns[:shelf_item] %>
-      <%= link_to new_coffee_brew_path(coffee), class: 'btn btn-primary btn-primary-border' do %>
-        Make a Brew <i class="las la-coffee"></i>
-      <% end %>
+      <div class="brew-btn">
+        <%= link_to new_coffee_brew_path(coffee), class: 'btn btn-primary btn-primary-border' do %>
+          Make a Brew <i class="icon-basic-coffee-cup-3"></i>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
