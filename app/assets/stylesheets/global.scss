@@ -30,6 +30,8 @@ body {
 
     @media screen and (max-width: $screen-lg) {
       font-size: 2.5rem;
+      line-height: 0.8;
+      padding-top: 0.8rem;
     }
   }
 
@@ -59,7 +61,15 @@ body {
   }
 
   h5 {
-    font-size: 0.75rem;
+    font-size: 1.1rem;
+
+    @media screen and (max-width: $screen-lg) {
+      font-size: 1.038rem;
+    }
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 0.975rem;
+    }
   }
 
   p {
@@ -124,11 +134,56 @@ body {
     font-size: 80%;
   }
 
-  .inline-action { display: none; }
-  .inline-edit .inline-action { display: initial; }
+  .inline-action {
+    display: none;
+  }
 
-  .coming-soon{
+  .inline-edit .inline-action {
+    display: initial;
+  }
+
+  .coming-soon {
     max-width: $screen-md;
     margin: auto;
   }
+
+  .tooltip-parent {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip-parent .tooltip-content {
+    visibility: hidden;
+    max-width: 220px;
+    min-width: 140px;
+    background-color: $ink;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    transition-delay: 0.5s;
+  }
+
+  .tooltip-parent .tooltip-content::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent $ink transparent;
+  }
+
+  .tooltip-parent:hover .tooltip-content {
+      visibility: visible;
+      opacity: 1;
+    }
 }

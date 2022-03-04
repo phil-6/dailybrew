@@ -3,6 +3,7 @@
     <div class="banner-content">
       <div class="page-title">
         <h1>Daily Brew</h1>
+
       </div>
       <div class="stats">
         <%= turbo_stream_from "daily_brewers_count" %>
@@ -27,7 +28,9 @@
     <p>Do you brew coffee daily?</p>
     <p>Do you want to be able to keep track of which coffees are your favourites and which brews were the best?</p>
     <p>So did we! So join us in the <b>Daily Brew Club.</b></p>
-    <h2>Welcome to <%= @newest_user.display_name %>, our latest member!</h2>
+    <% if @newest_user.created_at > 3.days.ago %>
+      <h2>Welcome to <%= @newest_user.display_name %>, our latest member!</h2>
+    <% end %>
 
     <% unless current_user %>
       <div class="cta">

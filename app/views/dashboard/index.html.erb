@@ -39,13 +39,9 @@
       <section class="brews">
         <h2><%= link_to 'Your Brews', brews_path, class: 'link-white link-title' %></h2>
         <div class="card">
-          <%= turbo_frame_tag "page_handler" %>
-          <table>
-            <tbody id="brews_table">
-            <%= render "brews_table", brews: @brews %>
-            </tbody>
-          </table>
-          <%= render "brews_table_pager", pagy: @pagy %>
+          <%= turbo_frame_tag 'page_handler' %>
+          <%= render 'brews/brews_table' %>
+          <%= render 'brews_table_pager', pagy: @pagy %>
         </div>
       </section>
 

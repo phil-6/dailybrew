@@ -10,6 +10,14 @@ class AdminController < ApplicationController
     render 'dashboard'
   end
 
+  def icon_sl
+    render 'icon-sl'
+  end
+
+  def icon_basic
+    render 'icon-basic'
+  end
+
   private
 
   def stats

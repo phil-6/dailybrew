@@ -20,11 +20,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_28_102500) do
     t.bigint "coffee_id", null: false
     t.string "equipment"
     t.string "method"
-    t.decimal "coffee_weight", precision: 5, scale: 1
+    t.decimal "coffee_weight", precision: 5, scale: 2
     t.decimal "water_weight", precision: 5, scale: 1
     t.string "grinder"
     t.string "grinder_setting"
-    t.integer "time"
+    t.integer "time", default: 0
     t.text "notes"
     t.integer "rating"
     t.boolean "public", default: true, null: false

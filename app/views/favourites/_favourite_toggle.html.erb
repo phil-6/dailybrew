@@ -1,11 +1,11 @@
 <div id="favourite_toggle_<%= dom_id(coffee) %>">
   <% if current_user&.favourites.find_by(coffee: coffee) %>
-    <%= button_to delete_favourite_path(coffee), method: :delete, class:'link link-primary link-icon' do %>
-      <i class="las la-heart"></i>
+    <%= button_to delete_favourite_path(coffee), method: :delete, class:'link link-primary link-icon icon-line-1-4' do %>
+      <i class="icon-basic-heart-1"></i>
     <% end %>
   <% else %>
-    <%= button_to create_favourite_path(coffee), method: :post, class:'link link-primary link-icon' do %>
-      <i class="lar la-heart"></i>
+    <%= button_to create_favourite_path(coffee), method: :post, class:'link link-primary link-icon icon-line-1-4' do %>
+      <i class="icon-basic-heart"></i>
     <% end %>
   <% end %>
 </div>

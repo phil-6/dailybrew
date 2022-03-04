@@ -83,71 +83,27 @@
       max-height: 610px;
       overflow-y: auto;
       display: block;
+    }
 
-      tr {
-        padding: 1rem;
-        border-radius: 2rem;
-        position: relative;
-        transition: all .25s;
-
-        @media screen and (max-width: $screen-lg) {
-          display: block;
-
-          td {
-            display: block;
-          }
+    .brews-table {
+      .brew-row {
+        p {
+          color: $ink;
         }
-
+  
         &:hover {
-          cursor: pointer;
-          background-color: $color-primary-1;
-
-          .coffee-name, p {
+          p {
             color: $color-white;
           }
         }
 
-        &::after {
-          content: "";
-          position: absolute;
-          left: 1rem;
-          bottom: 0;
-          width: calc(100% - 2rem);
-          height: 1px;
-          background-color: $color-primary-opacity-25;
-        }
-
-        p {
-          color: $ink;
-        }
-
-        .coffee-name {
-          font-weight: 600;
-        }
-
-        .created {
+        .created p {
           text-align: right;
-        }
-
-        @media screen and (min-width: $screen-lg) {
-          .coffee-name {
-            width: 50%;
-          }
-
-          .equipment {
-            width: 20%;
-          }
-
-          .rating {
-            width: 10%;
-          }
-
-          .created {
-            width: 20%;
-          }
         }
       }
     }
+
+    
 
     .link {
       display: block;

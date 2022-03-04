@@ -6,7 +6,7 @@
       brewed <%= link_to brew.coffee.name, brew.coffee, class: 'link link-primary link-title' %>
     </h3>
     <h3>
-      <%= link_to edit_brew_path(brew), class: 'link link-primary' do %><i class="las la-edit"></i>
+      <%= link_to edit_brew_path(brew), class: 'link link-primary' do %><i class="icon-basic-editing"></i>
       <% end %>
     </h3>
   </div>
@@ -30,7 +30,7 @@
   </div>
 
   <div class="row">
-    <p><strong>Time: </strong><%= @brew_time %></p>
+    <p><strong>Time: </strong><%= @brew.formatted_time %></p>
     <div>&#8226;</div>
     <p><strong>Temp: </strong><%= brew.temperature %></p>
   </div>
@@ -75,7 +75,7 @@
                   method: :delete,
                   form: { data: { turbo_confirm: "Are you sure you want do delete this brew?" } },
                   class: "link-danger" do %>
-      <i class="las la-trash"></i>
+      <i class="icon-basic-garbage-2"></i>
     <% end %>
   </div>
 </div>

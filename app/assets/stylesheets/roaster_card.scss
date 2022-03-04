@@ -1,8 +1,7 @@
 @import "variables";
 
 .roaster-card {
-  //height: $container-xs;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   justify-content: space-between;
 
 
@@ -23,10 +22,18 @@
 
     .available-coffees {
       width: 20%;
-      align-self: center;
-      text-align: right;
-      font-size: 1.25rem;
+      align-self: flex-start;
+      font-size: 1.2rem;
       color: $color-primary-1;
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.25rem;
+
+      i {
+        font-size: 1.2rem;
+
+      }
     }
   }
 

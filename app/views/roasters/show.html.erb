@@ -4,22 +4,22 @@
       <h2><%= @roaster.name %></h2>
       <div class="location">
         <a href="https://www.google.com/maps/?q=<%= @roaster.name %>, <%= @roaster.location %>" class="link link-primary" target=_blank>
-          <%= @roaster.location.split(',').last(2)[0].titleize %> <i class="las la-map-marked-alt"></i>
+          <%= @roaster.location.split(',').last(2)[0].titleize %> <i class="icon-basic-location-1"></i>
         </a>
       </div>
       <p class="description">
         <%= @roaster.description %>
       </p>
       <div class="socials row">
-        <a href="https://<%= @roaster.website %>" class="link link-primary link-icon"><i class="las la-link"></i></a>
+        <a href="https://<%= @roaster.website %>" class="link link-primary link-icon"><i class="icon-sl-link-1"></i></a>
         <% if @roaster.twitter %>
-          <a href="https://twitter.com/<%= @roaster.twitter %>" class="link link-primary link-icon" target=_blank><i class="lab la-twitter"></i></a>
+          <a href="https://twitter.com/<%= @roaster.twitter %>" class="link link-primary link-icon" target=_blank><i class="icon-sl-twitter"></i></a>
         <% end %>
         <% if @roaster.instagram %>
-          <a href="https://instagram.com/<%= @roaster.instagram %>" class="link link-primary link-icon" target=_blank><i class="lab la-instagram"></i></a>
+          <a href="https://instagram.com/<%= @roaster.instagram %>" class="link link-primary link-icon" target=_blank><i class="icon-sl-instagram"></i></a>
         <% end %>
         <% if @roaster.facebook %>
-          <a href="https://facebook.com/<%= @roaster.facebook %>" class="link link-primary link-icon" target=_blank><i class="lab la-facebook-square"></i></a>
+          <a href="https://facebook.com/<%= @roaster.facebook %>" class="link link-primary link-icon" target=_blank><i class="icon-sl-facebook"></i></a>
         <% end %>
       </div>
     </div>
@@ -55,7 +55,7 @@
   <% end %>
 
   <% if @unavailable_coffees.present? %>
-    <h4>Unavailable</h4>
+    <h4 class="unavailable">Unavailable</h4>
     <div class="card-collection row">
       <%= render partial: 'coffees/coffee', collection: @unavailable_coffees , as: :coffee %>
     </div>

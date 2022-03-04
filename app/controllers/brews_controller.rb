@@ -4,7 +4,7 @@ class BrewsController < ApplicationController
 
   # GET /brews or /brews.json
   def index
-    @brews = params[:coffee_id] ? Coffee.find(params[:coffee_id]).brews : current_user.brews.all
+    @brews = (params[:coffee_id] ? Coffee.find(params[:coffee_id]).brews : current_user.brews.all).order(created_at: :desc)
   end
 
   # GET /brews/1 or /brews/1.json
@@ -67,9 +67,6 @@ class BrewsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_brew
     @brew = Brew.find(params[:id])
-    mins = (@brew.time / 60)
-    secs = @brew.time - (mins * 60)
-    @brew_time = format('%<mins>02d:%<secs>02d:%<ms>02d', { mins:, secs:, ms: 0 })
   end
 
   def set_coffee

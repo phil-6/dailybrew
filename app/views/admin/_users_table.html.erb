@@ -2,9 +2,9 @@
 <% @users.each do |user| %>
   <tr>
     <td class="user-name"><%= user.display_name %></td>
-    <td><a href="mailto:<%= user.email %>"><i class="las la-envelope"></i></a></td>
+    <td><a href="mailto:<%= user.email %>"><i class="icon-sl-email"></i></a></td>
     <td><%= user.subscription_interest %></td>
-    <td><%= user.public_profile %></td>
+    <td><% if user.public_profile %><i class="icon-sl-show"></i><% else %><i class="icon-sl-hide"></i><% end %></td>
     <td><%= user.admin %></td>
     <td><%= user.shelf_items_count %></td>
     <td><%= user.favourites_count %></td>

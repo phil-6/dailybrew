@@ -36,7 +36,7 @@
       &:hover, &:focus {
         background-color: $color-primary-2;
         border-color: $color-primary-2;
-        color: $color-primary-1;
+        color: $color-white;
       }
     }
   }
@@ -111,11 +111,13 @@
     }
 
     i {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-
+      //position: absolute;
+      //top: 50%;
+      //left: 50%;
+      //transform: translate(-50%,-50%);
     }
   }
 }
+
+.icon-line-1-4  i::before{ line-height: 1.4 !important; }
+.icon-line-2  i::before{ line-height: 2 !important; }

@@ -1,0 +1,925 @@
+$icon-basic-font: "icon-basic";
+
+@font-face {
+    font-family: $icon-basic-font;
+    src: url("./icon-basic.ttf?856f9a466b1841bf93eee0c507aaae47") format("truetype"),
+url("./icon-basic.woff?856f9a466b1841bf93eee0c507aaae47") format("woff"),
+url("./icon-basic.woff2?856f9a466b1841bf93eee0c507aaae47") format("woff2"),
+url("./icon-basic.eot?856f9a466b1841bf93eee0c507aaae47#iefix") format("embedded-opentype"),
+url("./icon-basic.svg?856f9a466b1841bf93eee0c507aaae47#icon-basic") format("svg");
+}
+
+i[class^="icon-basic-"]:before, i[class*=" icon-basic-"]:before {
+    font-family: icon-basic !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$icon-basic-map: (
+    "coffee": "\f101",
+    "coffee-1": "\f102",
+    "water-drop": "\f103",
+    "water-drop-1": "\f104",
+    "heart": "\f105",
+    "heart-1": "\f106",
+    "like": "\f107",
+    "like-1": "\f108",
+    "heart-2": "\f109",
+    "heart-3": "\f10a",
+    "heart-4": "\f10b",
+    "heart-5": "\f10c",
+    "favourite": "\f10d",
+    "favourite-1": "\f10e",
+    "star": "\f10f",
+    "star-1": "\f110",
+    "shield": "\f111",
+    "shield-1": "\f112",
+    "coffee-beans": "\f113",
+    "coffee-beans-1": "\f114",
+    "coffee-beans-2": "\f115",
+    "coffee-beans-3": "\f116",
+    "coffee-beans-4": "\f117",
+    "coffee-beans-5": "\f118",
+    "coffee-bean": "\f119",
+    "coffee-bean-1": "\f11a",
+    "coffee-cup": "\f11b",
+    "coffee-cup-1": "\f11c",
+    "coffee-cup-2": "\f11d",
+    "coffee-cup-3": "\f11e",
+    "coffee-cup-4": "\f11f",
+    "coffee-cup-5": "\f120",
+    "kettle": "\f121",
+    "kettle-1": "\f122",
+    "dripper": "\f123",
+    "dripper-1": "\f124",
+    "coffee-bag": "\f125",
+    "coffee-bag-1": "\f126",
+    "coffee-jar": "\f127",
+    "coffee-jar-1": "\f128",
+    "location": "\f129",
+    "cup": "\f12a",
+    "coffee-bean-2": "\f12b",
+    "sprout": "\f12c",
+    "coffee-grinder": "\f12d",
+    "dripper-2": "\f12e",
+    "coffee-machine": "\f12f",
+    "harvest": "\f130",
+    "coffee-bag-2": "\f131",
+    "french-press": "\f132",
+    "coffee-maker": "\f133",
+    "shelf": "\f134",
+    "shelf-1": "\f135",
+    "coffee-bag-3": "\f136",
+    "grinder": "\f137",
+    "syphon": "\f138",
+    "coffee-machine-1": "\f139",
+    "factory": "\f13a",
+    "percolator": "\f13b",
+    "coffee-bag-4": "\f13c",
+    "drip-glass": "\f13d",
+    "email": "\f13e",
+    "email-1": "\f13f",
+    "email-2": "\f140",
+    "loading": "\f141",
+    "thermometer": "\f142",
+    "temperature": "\f143",
+    "temperature-1": "\f144",
+    "stopwatch": "\f145",
+    "timer": "\f146",
+    "stopwatch-1": "\f147",
+    "stop-watch": "\f148",
+    "scale": "\f149",
+    "balance": "\f14a",
+    "scale-1": "\f14b",
+    "user": "\f14c",
+    "user-1": "\f14d",
+    "user-2": "\f14e",
+    "user-3": "\f14f",
+    "user-4": "\f150",
+    "user-5": "\f151",
+    "user-6": "\f152",
+    "settings": "\f153",
+    "clock": "\f154",
+    "clock-1": "\f155",
+    "settings-1": "\f156",
+    "settings-2": "\f157",
+    "bookmark": "\f158",
+    "up-arrow": "\f159",
+    "down-arrow": "\f15a",
+    "right-arrow": "\f15b",
+    "left-arrow": "\f15c",
+    "up-arrow-1": "\f15d",
+    "down-arrow-1": "\f15e",
+    "right-arrow-1": "\f15f",
+    "left-arrow-1": "\f160",
+    "up-arrow-2": "\f161",
+    "down-arrow-2": "\f162",
+    "right-arrow-2": "\f163",
+    "left-arrow-2": "\f164",
+    "rotate": "\f165",
+    "rotate-1": "\f166",
+    "refresh": "\f167",
+    "refresh-1": "\f168",
+    "ruler": "\f169",
+    "details": "\f16a",
+    "magnifying-glass": "\f16b",
+    "refresh-2": "\f16c",
+    "minimize": "\f16d",
+    "minimize-1": "\f16e",
+    "close": "\f16f",
+    "close-1": "\f170",
+    "check": "\f171",
+    "play": "\f172",
+    "check-1": "\f173",
+    "add": "\f174",
+    "play-1": "\f175",
+    "add-1": "\f176",
+    "plus": "\f177",
+    "minus": "\f178",
+    "twitter": "\f179",
+    "facebook": "\f17a",
+    "instagram": "\f17b",
+    "external": "\f17c",
+    "play-button": "\f17d",
+    "stop": "\f17e",
+    "pause": "\f17f",
+    "play-button-1": "\f180",
+    "stop-1": "\f181",
+    "pause-1": "\f182",
+    "play-button-2": "\f183",
+    "stop-2": "\f184",
+    "pause-2": "\f185",
+    "crown": "\f186",
+    "location-1": "\f187",
+    "visibility": "\f188",
+    "hide": "\f189",
+    "show": "\f18a",
+    "hide-1": "\f18b",
+    "vision": "\f18c",
+    "vision-1": "\f18d",
+    "eye": "\f18e",
+    "eye-1": "\f18f",
+    "info": "\f190",
+    "super": "\f191",
+    "computer": "\f192",
+    "rocket": "\f193",
+    "shuttle": "\f194",
+    "space-shuttle": "\f195",
+    "cancel": "\f196",
+    "cancel-1": "\f197",
+    "cancel-2": "\f198",
+    "delete-button": "\f199",
+    "check-2": "\f19a",
+    "tick": "\f19b",
+    "tick-1": "\f19c",
+    "basic-tick": "\f19d",
+    "more": "\f19e",
+    "more-1": "\f19f",
+    "list": "\f1a0",
+    "more-2": "\f1a1",
+    "menu": "\f1a2",
+    "list-1": "\f1a3",
+    "list-2": "\f1a4",
+    "menu-1": "\f1a5",
+    "justify": "\f1a6",
+    "search": "\f1a7",
+    "search-1": "\f1a8",
+    "search-2": "\f1a9",
+    "search-3": "\f1aa",
+    "bar-chart": "\f1ab",
+    "bookmark-1": "\f1ac",
+    "levels": "\f1ad",
+    "shield-2": "\f1ae",
+    "renew": "\f1af",
+    "subscribe": "\f1b0",
+    "ring": "\f1b1",
+    "ring-1": "\f1b2",
+    "unlock": "\f1b3",
+    "padlock": "\f1b4",
+    "padlock-1": "\f1b5",
+    "padlock-2": "\f1b6",
+    "box": "\f1b7",
+    "shield-3": "\f1b8",
+    "shield-4": "\f1b9",
+    "garbage": "\f1ba",
+    "trash": "\f1bb",
+    "garbage-bin": "\f1bc",
+    "garbage-bin-1": "\f1bd",
+    "garbage-1": "\f1be",
+    "garbage-2": "\f1bf",
+    "plus-1": "\f1c0",
+    "plus-2": "\f1c1",
+    "menu-2": "\f1c2",
+    "minus-1": "\f1c3",
+    "plus-3": "\f1c4",
+    "plus-4": "\f1c5",
+    "checked": "\f1c6",
+    "checked-1": "\f1c7",
+    "unchecked": "\f1c8",
+    "unchecked-1": "\f1c9",
+    "checked-2": "\f1ca",
+    "checked-3": "\f1cb",
+    "minus-2": "\f1cc",
+    "minus-3": "\f1cd",
+    "plus-5": "\f1ce",
+    "plus-6": "\f1cf",
+    "editing": "\f1d0",
+    "edit-button": "\f1d1",
+    "pencil": "\f1d2",
+    "pencil-1": "\f1d3",
+    "instagram-1": "\f1d4",
+    "facebook-1": "\f1d5",
+    "twitter-1": "\f1d6",
+    "comment": "\f1d7",
+    "comment-1": "\f1d8",
+    "satisfaction": "\f1d9",
+    "satisfaction-1": "\f1da",
+    "validation": "\f1db",
+    "validation-1": "\f1dc",
+    "save-instagram": "\f1dd",
+    "save-instagram-1": "\f1de",
+    "lighting": "\f1df",
+    "lighting-1": "\f1e0",
+    "tongue-out": "\f1e1",
+);
+
+.icon-basic-coffee:before {
+    content: map-get($icon-basic-map, "coffee");
+}
+.icon-basic-coffee-1:before {
+    content: map-get($icon-basic-map, "coffee-1");
+}
+.icon-basic-water-drop:before {
+    content: map-get($icon-basic-map, "water-drop");
+}
+.icon-basic-water-drop-1:before {
+    content: map-get($icon-basic-map, "water-drop-1");
+}
+.icon-basic-heart:before {
+    content: map-get($icon-basic-map, "heart");
+}
+.icon-basic-heart-1:before {
+    content: map-get($icon-basic-map, "heart-1");
+}
+.icon-basic-like:before {
+    content: map-get($icon-basic-map, "like");
+}
+.icon-basic-like-1:before {
+    content: map-get($icon-basic-map, "like-1");
+}
+.icon-basic-heart-2:before {
+    content: map-get($icon-basic-map, "heart-2");
+}
+.icon-basic-heart-3:before {
+    content: map-get($icon-basic-map, "heart-3");
+}
+.icon-basic-heart-4:before {
+    content: map-get($icon-basic-map, "heart-4");
+}
+.icon-basic-heart-5:before {
+    content: map-get($icon-basic-map, "heart-5");
+}
+.icon-basic-favourite:before {
+    content: map-get($icon-basic-map, "favourite");
+}
+.icon-basic-favourite-1:before {
+    content: map-get($icon-basic-map, "favourite-1");
+}
+.icon-basic-star:before {
+    content: map-get($icon-basic-map, "star");
+}
+.icon-basic-star-1:before {
+    content: map-get($icon-basic-map, "star-1");
+}
+.icon-basic-shield:before {
+    content: map-get($icon-basic-map, "shield");
+}
+.icon-basic-shield-1:before {
+    content: map-get($icon-basic-map, "shield-1");
+}
+.icon-basic-coffee-beans:before {
+    content: map-get($icon-basic-map, "coffee-beans");
+}
+.icon-basic-coffee-beans-1:before {
+    content: map-get($icon-basic-map, "coffee-beans-1");
+}
+.icon-basic-coffee-beans-2:before {
+    content: map-get($icon-basic-map, "coffee-beans-2");
+}
+.icon-basic-coffee-beans-3:before {
+    content: map-get($icon-basic-map, "coffee-beans-3");
+}
+.icon-basic-coffee-beans-4:before {
+    content: map-get($icon-basic-map, "coffee-beans-4");
+}
+.icon-basic-coffee-beans-5:before {
+    content: map-get($icon-basic-map, "coffee-beans-5");
+}
+.icon-basic-coffee-bean:before {
+    content: map-get($icon-basic-map, "coffee-bean");
+}
+.icon-basic-coffee-bean-1:before {
+    content: map-get($icon-basic-map, "coffee-bean-1");
+}
+.icon-basic-coffee-cup:before {
+    content: map-get($icon-basic-map, "coffee-cup");
+}
+.icon-basic-coffee-cup-1:before {
+    content: map-get($icon-basic-map, "coffee-cup-1");
+}
+.icon-basic-coffee-cup-2:before {
+    content: map-get($icon-basic-map, "coffee-cup-2");
+}
+.icon-basic-coffee-cup-3:before {
+    content: map-get($icon-basic-map, "coffee-cup-3");
+}
+.icon-basic-coffee-cup-4:before {
+    content: map-get($icon-basic-map, "coffee-cup-4");
+}
+.icon-basic-coffee-cup-5:before {
+    content: map-get($icon-basic-map, "coffee-cup-5");
+}
+.icon-basic-kettle:before {
+    content: map-get($icon-basic-map, "kettle");
+}
+.icon-basic-kettle-1:before {
+    content: map-get($icon-basic-map, "kettle-1");
+}
+.icon-basic-dripper:before {
+    content: map-get($icon-basic-map, "dripper");
+}
+.icon-basic-dripper-1:before {
+    content: map-get($icon-basic-map, "dripper-1");
+}
+.icon-basic-coffee-bag:before {
+    content: map-get($icon-basic-map, "coffee-bag");
+}
+.icon-basic-coffee-bag-1:before {
+    content: map-get($icon-basic-map, "coffee-bag-1");
+}
+.icon-basic-coffee-jar:before {
+    content: map-get($icon-basic-map, "coffee-jar");
+}
+.icon-basic-coffee-jar-1:before {
+    content: map-get($icon-basic-map, "coffee-jar-1");
+}
+.icon-basic-location:before {
+    content: map-get($icon-basic-map, "location");
+}
+.icon-basic-cup:before {
+    content: map-get($icon-basic-map, "cup");
+}
+.icon-basic-coffee-bean-2:before {
+    content: map-get($icon-basic-map, "coffee-bean-2");
+}
+.icon-basic-sprout:before {
+    content: map-get($icon-basic-map, "sprout");
+}
+.icon-basic-coffee-grinder:before {
+    content: map-get($icon-basic-map, "coffee-grinder");
+}
+.icon-basic-dripper-2:before {
+    content: map-get($icon-basic-map, "dripper-2");
+}
+.icon-basic-coffee-machine:before {
+    content: map-get($icon-basic-map, "coffee-machine");
+}
+.icon-basic-harvest:before {
+    content: map-get($icon-basic-map, "harvest");
+}
+.icon-basic-coffee-bag-2:before {
+    content: map-get($icon-basic-map, "coffee-bag-2");
+}
+.icon-basic-french-press:before {
+    content: map-get($icon-basic-map, "french-press");
+}
+.icon-basic-coffee-maker:before {
+    content: map-get($icon-basic-map, "coffee-maker");
+}
+.icon-basic-shelf:before {
+    content: map-get($icon-basic-map, "shelf");
+}
+.icon-basic-shelf-1:before {
+    content: map-get($icon-basic-map, "shelf-1");
+}
+.icon-basic-coffee-bag-3:before {
+    content: map-get($icon-basic-map, "coffee-bag-3");
+}
+.icon-basic-grinder:before {
+    content: map-get($icon-basic-map, "grinder");
+}
+.icon-basic-syphon:before {
+    content: map-get($icon-basic-map, "syphon");
+}
+.icon-basic-coffee-machine-1:before {
+    content: map-get($icon-basic-map, "coffee-machine-1");
+}
+.icon-basic-factory:before {
+    content: map-get($icon-basic-map, "factory");
+}
+.icon-basic-percolator:before {
+    content: map-get($icon-basic-map, "percolator");
+}
+.icon-basic-coffee-bag-4:before {
+    content: map-get($icon-basic-map, "coffee-bag-4");
+}
+.icon-basic-drip-glass:before {
+    content: map-get($icon-basic-map, "drip-glass");
+}
+.icon-basic-email:before {
+    content: map-get($icon-basic-map, "email");
+}
+.icon-basic-email-1:before {
+    content: map-get($icon-basic-map, "email-1");
+}
+.icon-basic-email-2:before {
+    content: map-get($icon-basic-map, "email-2");
+}
+.icon-basic-loading:before {
+    content: map-get($icon-basic-map, "loading");
+}
+.icon-basic-thermometer:before {
+    content: map-get($icon-basic-map, "thermometer");
+}
+.icon-basic-temperature:before {
+    content: map-get($icon-basic-map, "temperature");
+}
+.icon-basic-temperature-1:before {
+    content: map-get($icon-basic-map, "temperature-1");
+}
+.icon-basic-stopwatch:before {
+    content: map-get($icon-basic-map, "stopwatch");
+}
+.icon-basic-timer:before {
+    content: map-get($icon-basic-map, "timer");
+}
+.icon-basic-stopwatch-1:before {
+    content: map-get($icon-basic-map, "stopwatch-1");
+}
+.icon-basic-stop-watch:before {
+    content: map-get($icon-basic-map, "stop-watch");
+}
+.icon-basic-scale:before {
+    content: map-get($icon-basic-map, "scale");
+}
+.icon-basic-balance:before {
+    content: map-get($icon-basic-map, "balance");
+}
+.icon-basic-scale-1:before {
+    content: map-get($icon-basic-map, "scale-1");
+}
+.icon-basic-user:before {
+    content: map-get($icon-basic-map, "user");
+}
+.icon-basic-user-1:before {
+    content: map-get($icon-basic-map, "user-1");
+}
+.icon-basic-user-2:before {
+    content: map-get($icon-basic-map, "user-2");
+}
+.icon-basic-user-3:before {
+    content: map-get($icon-basic-map, "user-3");
+}
+.icon-basic-user-4:before {
+    content: map-get($icon-basic-map, "user-4");
+}
+.icon-basic-user-5:before {
+    content: map-get($icon-basic-map, "user-5");
+}
+.icon-basic-user-6:before {
+    content: map-get($icon-basic-map, "user-6");
+}
+.icon-basic-settings:before {
+    content: map-get($icon-basic-map, "settings");
+}
+.icon-basic-clock:before {
+    content: map-get($icon-basic-map, "clock");
+}
+.icon-basic-clock-1:before {
+    content: map-get($icon-basic-map, "clock-1");
+}
+.icon-basic-settings-1:before {
+    content: map-get($icon-basic-map, "settings-1");
+}
+.icon-basic-settings-2:before {
+    content: map-get($icon-basic-map, "settings-2");
+}
+.icon-basic-bookmark:before {
+    content: map-get($icon-basic-map, "bookmark");
+}
+.icon-basic-up-arrow:before {
+    content: map-get($icon-basic-map, "up-arrow");
+}
+.icon-basic-down-arrow:before {
+    content: map-get($icon-basic-map, "down-arrow");
+}
+.icon-basic-right-arrow:before {
+    content: map-get($icon-basic-map, "right-arrow");
+}
+.icon-basic-left-arrow:before {
+    content: map-get($icon-basic-map, "left-arrow");
+}
+.icon-basic-up-arrow-1:before {
+    content: map-get($icon-basic-map, "up-arrow-1");
+}
+.icon-basic-down-arrow-1:before {
+    content: map-get($icon-basic-map, "down-arrow-1");
+}
+.icon-basic-right-arrow-1:before {
+    content: map-get($icon-basic-map, "right-arrow-1");
+}
+.icon-basic-left-arrow-1:before {
+    content: map-get($icon-basic-map, "left-arrow-1");
+}
+.icon-basic-up-arrow-2:before {
+    content: map-get($icon-basic-map, "up-arrow-2");
+}
+.icon-basic-down-arrow-2:before {
+    content: map-get($icon-basic-map, "down-arrow-2");
+}
+.icon-basic-right-arrow-2:before {
+    content: map-get($icon-basic-map, "right-arrow-2");
+}
+.icon-basic-left-arrow-2:before {
+    content: map-get($icon-basic-map, "left-arrow-2");
+}
+.icon-basic-rotate:before {
+    content: map-get($icon-basic-map, "rotate");
+}
+.icon-basic-rotate-1:before {
+    content: map-get($icon-basic-map, "rotate-1");
+}
+.icon-basic-refresh:before {
+    content: map-get($icon-basic-map, "refresh");
+}
+.icon-basic-refresh-1:before {
+    content: map-get($icon-basic-map, "refresh-1");
+}
+.icon-basic-ruler:before {
+    content: map-get($icon-basic-map, "ruler");
+}
+.icon-basic-details:before {
+    content: map-get($icon-basic-map, "details");
+}
+.icon-basic-magnifying-glass:before {
+    content: map-get($icon-basic-map, "magnifying-glass");
+}
+.icon-basic-refresh-2:before {
+    content: map-get($icon-basic-map, "refresh-2");
+}
+.icon-basic-minimize:before {
+    content: map-get($icon-basic-map, "minimize");
+}
+.icon-basic-minimize-1:before {
+    content: map-get($icon-basic-map, "minimize-1");
+}
+.icon-basic-close:before {
+    content: map-get($icon-basic-map, "close");
+}
+.icon-basic-close-1:before {
+    content: map-get($icon-basic-map, "close-1");
+}
+.icon-basic-check:before {
+    content: map-get($icon-basic-map, "check");
+}
+.icon-basic-play:before {
+    content: map-get($icon-basic-map, "play");
+}
+.icon-basic-check-1:before {
+    content: map-get($icon-basic-map, "check-1");
+}
+.icon-basic-add:before {
+    content: map-get($icon-basic-map, "add");
+}
+.icon-basic-play-1:before {
+    content: map-get($icon-basic-map, "play-1");
+}
+.icon-basic-add-1:before {
+    content: map-get($icon-basic-map, "add-1");
+}
+.icon-basic-plus:before {
+    content: map-get($icon-basic-map, "plus");
+}
+.icon-basic-minus:before {
+    content: map-get($icon-basic-map, "minus");
+}
+.icon-basic-twitter:before {
+    content: map-get($icon-basic-map, "twitter");
+}
+.icon-basic-facebook:before {
+    content: map-get($icon-basic-map, "facebook");
+}
+.icon-basic-instagram:before {
+    content: map-get($icon-basic-map, "instagram");
+}
+.icon-basic-external:before {
+    content: map-get($icon-basic-map, "external");
+}
+.icon-basic-play-button:before {
+    content: map-get($icon-basic-map, "play-button");
+}
+.icon-basic-stop:before {
+    content: map-get($icon-basic-map, "stop");
+}
+.icon-basic-pause:before {
+    content: map-get($icon-basic-map, "pause");
+}
+.icon-basic-play-button-1:before {
+    content: map-get($icon-basic-map, "play-button-1");
+}
+.icon-basic-stop-1:before {
+    content: map-get($icon-basic-map, "stop-1");
+}
+.icon-basic-pause-1:before {
+    content: map-get($icon-basic-map, "pause-1");
+}
+.icon-basic-play-button-2:before {
+    content: map-get($icon-basic-map, "play-button-2");
+}
+.icon-basic-stop-2:before {
+    content: map-get($icon-basic-map, "stop-2");
+}
+.icon-basic-pause-2:before {
+    content: map-get($icon-basic-map, "pause-2");
+}
+.icon-basic-crown:before {
+    content: map-get($icon-basic-map, "crown");
+}
+.icon-basic-location-1:before {
+    content: map-get($icon-basic-map, "location-1");
+}
+.icon-basic-visibility:before {
+    content: map-get($icon-basic-map, "visibility");
+}
+.icon-basic-hide:before {
+    content: map-get($icon-basic-map, "hide");
+}
+.icon-basic-show:before {
+    content: map-get($icon-basic-map, "show");
+}
+.icon-basic-hide-1:before {
+    content: map-get($icon-basic-map, "hide-1");
+}
+.icon-basic-vision:before {
+    content: map-get($icon-basic-map, "vision");
+}
+.icon-basic-vision-1:before {
+    content: map-get($icon-basic-map, "vision-1");
+}
+.icon-basic-eye:before {
+    content: map-get($icon-basic-map, "eye");
+}
+.icon-basic-eye-1:before {
+    content: map-get($icon-basic-map, "eye-1");
+}
+.icon-basic-info:before {
+    content: map-get($icon-basic-map, "info");
+}
+.icon-basic-super:before {
+    content: map-get($icon-basic-map, "super");
+}
+.icon-basic-computer:before {
+    content: map-get($icon-basic-map, "computer");
+}
+.icon-basic-rocket:before {
+    content: map-get($icon-basic-map, "rocket");
+}
+.icon-basic-shuttle:before {
+    content: map-get($icon-basic-map, "shuttle");
+}
+.icon-basic-space-shuttle:before {
+    content: map-get($icon-basic-map, "space-shuttle");
+}
+.icon-basic-cancel:before {
+    content: map-get($icon-basic-map, "cancel");
+}
+.icon-basic-cancel-1:before {
+    content: map-get($icon-basic-map, "cancel-1");
+}
+.icon-basic-cancel-2:before {
+    content: map-get($icon-basic-map, "cancel-2");
+}
+.icon-basic-delete-button:before {
+    content: map-get($icon-basic-map, "delete-button");
+}
+.icon-basic-check-2:before {
+    content: map-get($icon-basic-map, "check-2");
+}
+.icon-basic-tick:before {
+    content: map-get($icon-basic-map, "tick");
+}
+.icon-basic-tick-1:before {
+    content: map-get($icon-basic-map, "tick-1");
+}
+.icon-basic-basic-tick:before {
+    content: map-get($icon-basic-map, "basic-tick");
+}
+.icon-basic-more:before {
+    content: map-get($icon-basic-map, "more");
+}
+.icon-basic-more-1:before {
+    content: map-get($icon-basic-map, "more-1");
+}
+.icon-basic-list:before {
+    content: map-get($icon-basic-map, "list");
+}
+.icon-basic-more-2:before {
+    content: map-get($icon-basic-map, "more-2");
+}
+.icon-basic-menu:before {
+    content: map-get($icon-basic-map, "menu");
+}
+.icon-basic-list-1:before {
+    content: map-get($icon-basic-map, "list-1");
+}
+.icon-basic-list-2:before {
+    content: map-get($icon-basic-map, "list-2");
+}
+.icon-basic-menu-1:before {
+    content: map-get($icon-basic-map, "menu-1");
+}
+.icon-basic-justify:before {
+    content: map-get($icon-basic-map, "justify");
+}
+.icon-basic-search:before {
+    content: map-get($icon-basic-map, "search");
+}
+.icon-basic-search-1:before {
+    content: map-get($icon-basic-map, "search-1");
+}
+.icon-basic-search-2:before {
+    content: map-get($icon-basic-map, "search-2");
+}
+.icon-basic-search-3:before {
+    content: map-get($icon-basic-map, "search-3");
+}
+.icon-basic-bar-chart:before {
+    content: map-get($icon-basic-map, "bar-chart");
+}
+.icon-basic-bookmark-1:before {
+    content: map-get($icon-basic-map, "bookmark-1");
+}
+.icon-basic-levels:before {
+    content: map-get($icon-basic-map, "levels");
+}
+.icon-basic-shield-2:before {
+    content: map-get($icon-basic-map, "shield-2");
+}
+.icon-basic-renew:before {
+    content: map-get($icon-basic-map, "renew");
+}
+.icon-basic-subscribe:before {
+    content: map-get($icon-basic-map, "subscribe");
+}
+.icon-basic-ring:before {
+    content: map-get($icon-basic-map, "ring");
+}
+.icon-basic-ring-1:before {
+    content: map-get($icon-basic-map, "ring-1");
+}
+.icon-basic-unlock:before {
+    content: map-get($icon-basic-map, "unlock");
+}
+.icon-basic-padlock:before {
+    content: map-get($icon-basic-map, "padlock");
+}
+.icon-basic-padlock-1:before {
+    content: map-get($icon-basic-map, "padlock-1");
+}
+.icon-basic-padlock-2:before {
+    content: map-get($icon-basic-map, "padlock-2");
+}
+.icon-basic-box:before {
+    content: map-get($icon-basic-map, "box");
+}
+.icon-basic-shield-3:before {
+    content: map-get($icon-basic-map, "shield-3");
+}
+.icon-basic-shield-4:before {
+    content: map-get($icon-basic-map, "shield-4");
+}
+.icon-basic-garbage:before {
+    content: map-get($icon-basic-map, "garbage");
+}
+.icon-basic-trash:before {
+    content: map-get($icon-basic-map, "trash");
+}
+.icon-basic-garbage-bin:before {
+    content: map-get($icon-basic-map, "garbage-bin");
+}
+.icon-basic-garbage-bin-1:before {
+    content: map-get($icon-basic-map, "garbage-bin-1");
+}
+.icon-basic-garbage-1:before {
+    content: map-get($icon-basic-map, "garbage-1");
+}
+.icon-basic-garbage-2:before {
+    content: map-get($icon-basic-map, "garbage-2");
+}
+.icon-basic-plus-1:before {
+    content: map-get($icon-basic-map, "plus-1");
+}
+.icon-basic-plus-2:before {
+    content: map-get($icon-basic-map, "plus-2");
+}
+.icon-basic-menu-2:before {
+    content: map-get($icon-basic-map, "menu-2");
+}
+.icon-basic-minus-1:before {
+    content: map-get($icon-basic-map, "minus-1");
+}
+.icon-basic-plus-3:before {
+    content: map-get($icon-basic-map, "plus-3");
+}
+.icon-basic-plus-4:before {
+    content: map-get($icon-basic-map, "plus-4");
+}
+.icon-basic-checked:before {
+    content: map-get($icon-basic-map, "checked");
+}
+.icon-basic-checked-1:before {
+    content: map-get($icon-basic-map, "checked-1");
+}
+.icon-basic-unchecked:before {
+    content: map-get($icon-basic-map, "unchecked");
+}
+.icon-basic-unchecked-1:before {
+    content: map-get($icon-basic-map, "unchecked-1");
+}
+.icon-basic-checked-2:before {
+    content: map-get($icon-basic-map, "checked-2");
+}
+.icon-basic-checked-3:before {
+    content: map-get($icon-basic-map, "checked-3");
+}
+.icon-basic-minus-2:before {
+    content: map-get($icon-basic-map, "minus-2");
+}
+.icon-basic-minus-3:before {
+    content: map-get($icon-basic-map, "minus-3");
+}
+.icon-basic-plus-5:before {
+    content: map-get($icon-basic-map, "plus-5");
+}
+.icon-basic-plus-6:before {
+    content: map-get($icon-basic-map, "plus-6");
+}
+.icon-basic-editing:before {
+    content: map-get($icon-basic-map, "editing");
+}
+.icon-basic-edit-button:before {
+    content: map-get($icon-basic-map, "edit-button");
+}
+.icon-basic-pencil:before {
+    content: map-get($icon-basic-map, "pencil");
+}
+.icon-basic-pencil-1:before {
+    content: map-get($icon-basic-map, "pencil-1");
+}
+.icon-basic-instagram-1:before {
+    content: map-get($icon-basic-map, "instagram-1");
+}
+.icon-basic-facebook-1:before {
+    content: map-get($icon-basic-map, "facebook-1");
+}
+.icon-basic-twitter-1:before {
+    content: map-get($icon-basic-map, "twitter-1");
+}
+.icon-basic-comment:before {
+    content: map-get($icon-basic-map, "comment");
+}
+.icon-basic-comment-1:before {
+    content: map-get($icon-basic-map, "comment-1");
+}
+.icon-basic-satisfaction:before {
+    content: map-get($icon-basic-map, "satisfaction");
+}
+.icon-basic-satisfaction-1:before {
+    content: map-get($icon-basic-map, "satisfaction-1");
+}
+.icon-basic-validation:before {
+    content: map-get($icon-basic-map, "validation");
+}
+.icon-basic-validation-1:before {
+    content: map-get($icon-basic-map, "validation-1");
+}
+.icon-basic-save-instagram:before {
+    content: map-get($icon-basic-map, "save-instagram");
+}
+.icon-basic-save-instagram-1:before {
+    content: map-get($icon-basic-map, "save-instagram-1");
+}
+.icon-basic-lighting:before {
+    content: map-get($icon-basic-map, "lighting");
+}
+.icon-basic-lighting-1:before {
+    content: map-get($icon-basic-map, "lighting-1");
+}
+.icon-basic-tongue-out:before {
+    content: map-get($icon-basic-map, "tongue-out");
+}
