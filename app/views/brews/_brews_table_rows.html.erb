@@ -7,11 +7,11 @@
       <p><%= brew.equipment %></p>
     </td>
     <td class="config row">
-      <p class="row"><i class="icon-basic-coffee-beans-1"></i><%= brew.coffee_weight.present? ? "#{brew.coffee_weight}g" : '-' %></p>
+      <p class="row"><i class="icon-basic-coffee-beans-4"></i><%= brew.coffee_weight.present? ? "#{brew.coffee_weight}g" : '-' %></p>
       <p class="row"><i class="icon-basic-water-drop"></i><%= brew.water_weight.present? ? "#{brew.water_weight}g" : '-' %></p>
       <p class="row"><i class="icon-basic-temperature"></i><%= brew.temperature ||= '-' %></p>
-      <p class="row"><i class="icon-basic-timer"></i><%= brew.time != 0 ? brew.formatted_time : '-' %></p>
-      <p class="row"><i class="icon-basic-favourite"></i><%= brew.rating ||= '-' %></p>
+      <p class="row"><i class="icon-basic-stopwatch-1"></i><%= brew.time != 0 ? brew.formatted_time : '-' %></p>
+      <p class="row"><i class="icon-basic-star"></i><%= brew.rating ||= '-' %></p>
     </td>
     <td class="created">
       <p><small><%= brew.created_at > 1.week.ago ? "#{time_ago_in_words(brew.created_at)} ago" : brew.created_at.strftime("%d %b %Y") %></small></p>
