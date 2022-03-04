@@ -10,13 +10,13 @@
       <% unless local_assigns[:shelf_item] %>
         <ul class="details">
           <li class="row tasting-notes">
-            <i class="las la-music"></i> <span><%= coffee.tasting_notes.titleize %></span>
+            <i class="icon-basic-tongue-out"></i> <span><%= coffee.tasting_notes.titleize %></span>
           </li>
           <li class="row country">
-            <i class="las la-map-marker"></i> <span><%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').titleize %></span>
+            <i class="icon-basic-location-1"></i> <span><%= (coffee.country.present? ? coffee.country : coffee.region.present? ? coffee.region : 'Unknown').titleize %></span>
           </li>
           <li class="row process">
-            <i class="las la-industry"></i> <span><%= coffee.process.present? ? coffee.process.titleize : 'Unknown' %></span>
+            <i class="icon-basic-factory"></i> <span><%= coffee.process.present? ? coffee.process.titleize : 'Unknown' %></span>
           </li>
         </ul>
       <% end %>
@@ -32,13 +32,13 @@
     </div>
     <% unless local_assigns[:shelf_item] %>
       <div class="metadata row">
-        <span><i class="las la-mug-hot"></i> <%= coffee.brews_count %></span>
+        <span><i class="icon-basic-coffee-cup"></i> <%= coffee.brews_count %></span>
         <span>&#8226;</span>
-        <span><i class="las la-hand-holding"></i> <%= coffee.shelf_items_count %></span>
+        <span><i class="icon-basic-shelf"></i> <%= coffee.shelf_items_count %></span>
         <span>&#8226;</span>
-        <span><i class="las la-heart"></i> <%= coffee.favourites_count %></span>
+        <span><i class="icon-basic-heart"></i> <%= coffee.favourites_count %></span>
         <span>&#8226;</span>
-        <span><i class="las la-comment"></i> <%= coffee.reviews_count %></span>
+        <span><i class="icon-basic-satisfaction"></i> <%= coffee.reviews_count %></span>
       </div>
     <% end %>
     <% if local_assigns[:shelf_item] %>
