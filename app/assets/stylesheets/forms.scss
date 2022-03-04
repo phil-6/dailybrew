@@ -264,6 +264,7 @@ form.model-form {
     &:target, &:not(:placeholder-shown), &:-webkit-autofill:hover {
       & ~ .form-label {
         background: linear-gradient(to bottom, $color-white, white);
+        white-space: nowrap;
       }
     }
   }
