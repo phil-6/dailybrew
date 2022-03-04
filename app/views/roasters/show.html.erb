@@ -55,7 +55,7 @@
   <% end %>
 
   <% if @unavailable_coffees.present? %>
-    <h4>Unavailable</h4>
+    <h4 class="unavailable">Unavailable</h4>
     <div class="card-collection row">
       <%= render partial: 'coffees/coffee', collection: @unavailable_coffees , as: :coffee %>
     </div>
