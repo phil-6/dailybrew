@@ -34,13 +34,25 @@
     </div>
     <% unless local_assigns[:shelf_item] %>
       <div class="metadata row">
-        <span><i class="icon-basic-coffee-cup"></i> <%= coffee.brews_count %></span>
+        <span class="tooltip-parent">
+          <i class="icon-basic-coffee-cup"></i> <%= coffee.brews_count %>
+          <span class="tooltip-content">Number of Brews</span>
+        </span>
         <span>&#8226;</span>
-        <span><i class="icon-basic-shelf"></i> <%= coffee.shelf_items_count %></span>
+        <span class="tooltip-parent">
+          <i class="icon-basic-shelf"></i> <%= coffee.shelf_items_count %>
+          <span class="tooltip-content">Users with this coffee on their shelf</span>
+        </span>
         <span>&#8226;</span>
-        <span><i class="icon-basic-heart"></i> <%= coffee.favourites_count %></span>
+        <span class="tooltip-parent">
+          <i class="icon-basic-heart"></i> <%= coffee.favourites_count %>
+          <span class="tooltip-content">Users who have this saved as a favourite</span>
+        </span>
         <span>&#8226;</span>
-        <span><i class="icon-basic-satisfaction"></i> <%= coffee.reviews_count %></span>
+        <span class="tooltip-parent">
+          <i class="icon-basic-satisfaction"></i> <%= coffee.reviews_count %>
+          <span class="tooltip-content">Number of Reviews</span>
+        </span>
       </div>
     <% end %>
     <% if local_assigns[:shelf_item] %>
