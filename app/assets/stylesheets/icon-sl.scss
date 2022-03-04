@@ -2,11 +2,11 @@ $icon-sl-font: "icon-sl";
 
 @font-face {
     font-family: $icon-sl-font;
-    src: url("./icon-sl.ttf?e23a5bf5307872bc2f04b0105aaf76ab") format("truetype"),
-url("./icon-sl.woff?e23a5bf5307872bc2f04b0105aaf76ab") format("woff"),
-url("./icon-sl.woff2?e23a5bf5307872bc2f04b0105aaf76ab") format("woff2"),
-url("./icon-sl.eot?e23a5bf5307872bc2f04b0105aaf76ab#iefix") format("embedded-opentype"),
-url("./icon-sl.svg?e23a5bf5307872bc2f04b0105aaf76ab#icon-sl") format("svg");
+    src: url("./icon-sl.ttf?7a9b4bcc388aca1030c30ee078a52ec6") format("truetype"),
+url("./icon-sl.woff?7a9b4bcc388aca1030c30ee078a52ec6") format("woff"),
+url("./icon-sl.woff2?7a9b4bcc388aca1030c30ee078a52ec6") format("woff2"),
+url("./icon-sl.eot?7a9b4bcc388aca1030c30ee078a52ec6#iefix") format("embedded-opentype"),
+url("./icon-sl.svg?7a9b4bcc388aca1030c30ee078a52ec6#icon-sl") format("svg");
 }
 
 i[class^="icon-sl-"]:before, i[class*=" icon-sl-"]:before {
@@ -21,206 +21,266 @@ i[class^="icon-sl-"]:before, i[class*=" icon-sl-"]:before {
 }
 
 $icon-sl-map: (
-    "coffee": "\f101",
-    "coffee-cup-1": "\f102",
-    "coffee-beans": "\f103",
-    "coffee-1": "\f104",
-    "user": "\f105",
-    "placeholder": "\f106",
-    "bin": "\f107",
-    "profile": "\f108",
-    "settings": "\f109",
-    "user-1": "\f10a",
-    "user-2": "\f10b",
-    "user-3": "\f10c",
-    "user-4": "\f10d",
-    "barista": "\f10e",
-    "coffee-2": "\f10f",
-    "pot-1": "\f110",
-    "coffee-3": "\f111",
-    "coffee-beans-1": "\f112",
-    "grinding": "\f113",
-    "roast": "\f114",
-    "brewing": "\f115",
-    "coffee-grinder": "\f116",
-    "tamper": "\f117",
-    "handle": "\f118",
-    "coffee-beans-2": "\f119",
-    "coffee-machine": "\f11a",
-    "vietnam-drip": "\f11b",
-    "syphon": "\f11c",
-    "syphon-1": "\f11d",
-    "aeropress": "\f11e",
-    "moka-pot": "\f11f",
-    "turkish-ibrik": "\f120",
-    "espresso": "\f121",
-    "cold-brew": "\f122",
-    "chemex": "\f123",
-    "french-press": "\f124",
-    "coffee-pack": "\f125",
-    "coffee-4": "\f126",
-    "coffee-pods": "\f127",
-    "aeropress-1": "\f128",
-    "food-scale": "\f129",
-    "coffee-filter": "\f12a",
-    "thermometer": "\f12b",
-    "teapot": "\f12c",
-    "coffee-cup-2": "\f12d",
-    "coffee-pot": "\f12e",
-    "instant-coffee": "\f12f",
-    "portafilter": "\f130",
-    "coffee-6": "\f131",
-    "coffee-maker": "\f132",
-    "coffee-7": "\f133",
-    "syphon-2": "\f134",
-    "harvest": "\f135",
-    "heart": "\f136",
-    "drip": "\f137",
-    "coffee-shop": "\f138",
-    "heart-1": "\f139",
-    "coffee-maker-1": "\f13a",
-    "coffee-bean": "\f13b",
-    "coffee-8": "\f13c",
-    "coffee-bag": "\f13d",
-    "coffee-machine-1": "\f13e",
-    "cup": "\f13f",
-    "coffee-filter-1": "\f140",
-    "french-press-1": "\f141",
-    "geyser": "\f142",
-    "coffee-machine-2": "\f143",
-    "signboard": "\f144",
-    "coffee-pot-1": "\f145",
-    "turkish-coffee": "\f146",
-    "pack": "\f147",
-    "coffee-maker-2": "\f148",
-    "coffee-mill": "\f149",
-    "coffee-machine-3": "\f14a",
-    "drip-1": "\f14b",
-    "pot-2": "\f14c",
-    "medical-care": "\f14d",
-    "group": "\f14e",
-    "add": "\f14f",
-    "check": "\f150",
-    "cross": "\f151",
-    "cancel": "\f152",
-    "pin": "\f153",
-    "link": "\f154",
-    "arrow": "\f155",
-    "arrow-1": "\f156",
-    "info": "\f157",
-    "hand": "\f158",
-    "rubbish": "\f159",
-    "coffee-10": "\f15a",
-    "forbidden": "\f15b",
-    "hospital": "\f15c",
-    "heart-2": "\f15d",
-    "subtraction": "\f15e",
-    "cross-1": "\f15f",
-    "edit": "\f160",
-    "link-1": "\f161",
-    "padlock": "\f162",
-    "unlock": "\f163",
-    "hide": "\f164",
-    "show": "\f165",
-    "switch": "\f166",
-    "facebook": "\f167",
-    "instagram": "\f168",
-    "twitter": "\f169",
-    "youtube": "\f16a",
-    "linkedin": "\f16b",
-    "foreign": "\f16c",
-    "play-button": "\f16d",
-    "pause-button": "\f16e",
-    "stop-button": "\f16f",
-    "star": "\f170",
-    "love": "\f171",
-    "minus": "\f172",
-    "plus": "\f173",
-    "check-1": "\f174",
-    "declined": "\f175",
-    "menu": "\f176",
-    "email": "\f177",
-    "remove": "\f178",
-    "add-1": "\f179",
-    "play": "\f17a",
-    "stop": "\f17b",
-    "link-2": "\f17c",
-    "update": "\f17d",
-    "reload": "\f17e",
-    "refresh": "\f17f",
-    "document": "\f180",
-    "pin-1": "\f181",
-    "profile-1": "\f182",
-    "shelves": "\f183",
-    "shelf": "\f184",
-    "note": "\f185",
-    "magnifiying-glass": "\f186",
-    "settings-1": "\f187",
-    "heart-3": "\f188",
-    "star-1": "\f189",
-    "bookmark": "\f18a",
-    "user-5": "\f18b",
-    "add-2": "\f18c",
-    "search": "\f18d",
-    "user-6": "\f18e",
-    "close": "\f18f",
-    "remove-1": "\f190",
-    "email-1": "\f191",
-    "settings-2": "\f192",
-    "book-mark": "\f193",
-    "next": "\f194",
-    "brightness": "\f195",
-    "night": "\f196",
-    "group-1": "\f197",
-    "user-7": "\f198",
-    "list": "\f199",
-    "stopwatch": "\f19a",
-    "heart-6": "\f19b",
-    "favourite-2": "\f19c",
-    "glass": "\f19d",
-    "pitcher": "\f19e",
-    "coffee-11": "\f19f",
-    "instant-coffee-1": "\f1a0",
-    "measure": "\f1a1",
-    "padlock-1": "\f1a2",
-    "padlock-2": "\f1a3",
-    "padlock-3": "\f1a4",
-    "padlock-4": "\f1a5",
-    "padlock-5": "\f1a6",
-    "coffee-grinder-2": "\f1a7",
-    "water-drop": "\f1a8",
-    "scale": "\f1a9",
-    "balance": "\f1aa",
-    "weight-scale": "\f1ab",
-    "scales": "\f1ac",
+    "drop": "\f101",
+    "water-drop": "\f102",
+    "heart-2": "\f103",
+    "favourite-2": "\f104",
+    "star": "\f105",
+    "heart-3": "\f106",
+    "heart-4": "\f107",
+    "heart-5": "\f108",
+    "heart-6": "\f109",
+    "medical-care": "\f10a",
+    "book-mark": "\f10b",
+    "settings": "\f10c",
+    "settings-1": "\f10d",
+    "night": "\f10e",
+    "brightness": "\f10f",
+    "cup": "\f110",
+    "coffee": "\f111",
+    "coffee-1": "\f112",
+    "coffee-2": "\f113",
+    "coffee-cup-1": "\f114",
+    "coffee-bean": "\f115",
+    "coffee-beans": "\f116",
+    "coffee-3": "\f117",
+    "coffee-bag": "\f118",
+    "pack": "\f119",
+    "placeholder": "\f11a",
+    "pin": "\f11b",
+    "profile": "\f11c",
+    "profile-1": "\f11d",
+    "settings-2": "\f11e",
+    "user": "\f11f",
+    "user-1": "\f120",
+    "user-2": "\f121",
+    "user-3": "\f122",
+    "group": "\f123",
+    "user-4": "\f124",
+    "user-5": "\f125",
+    "user-6": "\f126",
+    "user-7": "\f127",
+    "group-1": "\f128",
+    "barista": "\f129",
+    "coffee-4": "\f12a",
+    "pot": "\f12b",
+    "coffee-5": "\f12c",
+    "coffee-beans-1": "\f12d",
+    "grinding": "\f12e",
+    "roast": "\f12f",
+    "instant-coffee": "\f130",
+    "pitcher": "\f131",
+    "measure": "\f132",
+    "brewing": "\f133",
+    "coffee-grinder": "\f134",
+    "tamper": "\f135",
+    "handle": "\f136",
+    "coffee-beans-2": "\f137",
+    "coffee-machine": "\f138",
+    "vietnam-drip": "\f139",
+    "syphon": "\f13a",
+    "syphon-1": "\f13b",
+    "aeropress": "\f13c",
+    "moka-pot": "\f13d",
+    "turkish-ibrik": "\f13e",
+    "espresso": "\f13f",
+    "cold-brew": "\f140",
+    "chemex": "\f141",
+    "french-press": "\f142",
+    "coffee-pack": "\f143",
+    "coffee-6": "\f144",
+    "coffee-pods": "\f145",
+    "aeropress-1": "\f146",
+    "food-scale": "\f147",
+    "coffee-filter": "\f148",
+    "thermometer": "\f149",
+    "teapot": "\f14a",
+    "coffee-cup-2": "\f14b",
+    "coffee-7": "\f14c",
+    "coffee-pot": "\f14d",
+    "instant-coffee-1": "\f14e",
+    "portafilter": "\f14f",
+    "coffee-8": "\f150",
+    "coffee-maker": "\f151",
+    "coffee-9": "\f152",
+    "syphon-2": "\f153",
+    "harvest": "\f154",
+    "drip": "\f155",
+    "coffee-shop": "\f156",
+    "coffee-maker-1": "\f157",
+    "coffee-machine-1": "\f158",
+    "coffee-filter-1": "\f159",
+    "french-press-1": "\f15a",
+    "geyser": "\f15b",
+    "coffee-machine-2": "\f15c",
+    "signboard": "\f15d",
+    "coffee-pot-1": "\f15e",
+    "turkish-coffee": "\f15f",
+    "coffee-maker-2": "\f160",
+    "coffee-mill": "\f161",
+    "coffee-machine-3": "\f162",
+    "drip-1": "\f163",
+    "pot-1": "\f164",
+    "arrow": "\f165",
+    "arrow-1": "\f166",
+    "hand": "\f167",
+    "bin": "\f168",
+    "rubbish": "\f169",
+    "note": "\f16a",
+    "edit": "\f16b",
+    "hide": "\f16c",
+    "show": "\f16d",
+    "facebook": "\f16e",
+    "instagram": "\f16f",
+    "twitter": "\f170",
+    "youtube": "\f171",
+    "linkedin": "\f172",
+    "shelf": "\f173",
+    "foreign": "\f174",
+    "shelves": "\f175",
+    "link": "\f176",
+    "link-1": "\f177",
+    "link-2": "\f178",
+    "update": "\f179",
+    "refresh": "\f17a",
+    "reload": "\f17b",
+    "magnifiying-glass": "\f17c",
+    "document": "\f17d",
+    "search": "\f17e",
+    "bookmark": "\f17f",
+    "email": "\f180",
+    "email-1": "\f181",
+    "stopwatch": "\f182",
+    "glass": "\f183",
+    "padlock": "\f184",
+    "padlock-1": "\f185",
+    "padlock-2": "\f186",
+    "padlock-3": "\f187",
+    "padlock-4": "\f188",
+    "padlock-5": "\f189",
+    "unlock": "\f18a",
+    "coffee-grinder-2": "\f18b",
+    "scale": "\f18c",
+    "balance": "\f18d",
+    "weight-scale": "\f18e",
+    "scales": "\f18f",
+    "list": "\f190",
+    "menu": "\f191",
+    "check": "\f192",
+    "cross": "\f193",
+    "add": "\f194",
+    "remove": "\f195",
+    "hospital": "\f196",
+    "subtraction": "\f197",
+    "cross-1": "\f198",
+    "add-1": "\f199",
+    "forbidden": "\f19a",
+    "cancel": "\f19b",
+    "info": "\f19c",
+    "add-2": "\f19d",
+    "remove-1": "\f19e",
+    "close": "\f19f",
+    "next": "\f1a0",
+    "play": "\f1a1",
+    "stop": "\f1a2",
+    "chart": "\f1a3",
+    "play-button": "\f1a4",
+    "pause-button": "\f1a5",
+    "refresh-1": "\f1a6",
 );
 
+.icon-sl-drop:before {
+    content: map-get($icon-sl-map, "drop");
+}
+.icon-sl-water-drop:before {
+    content: map-get($icon-sl-map, "water-drop");
+}
+.icon-sl-heart-2:before {
+    content: map-get($icon-sl-map, "heart-2");
+}
+.icon-sl-favourite-2:before {
+    content: map-get($icon-sl-map, "favourite-2");
+}
+.icon-sl-star:before {
+    content: map-get($icon-sl-map, "star");
+}
+.icon-sl-heart-3:before {
+    content: map-get($icon-sl-map, "heart-3");
+}
+.icon-sl-heart-4:before {
+    content: map-get($icon-sl-map, "heart-4");
+}
+.icon-sl-heart-5:before {
+    content: map-get($icon-sl-map, "heart-5");
+}
+.icon-sl-heart-6:before {
+    content: map-get($icon-sl-map, "heart-6");
+}
+.icon-sl-medical-care:before {
+    content: map-get($icon-sl-map, "medical-care");
+}
+.icon-sl-book-mark:before {
+    content: map-get($icon-sl-map, "book-mark");
+}
+.icon-sl-settings:before {
+    content: map-get($icon-sl-map, "settings");
+}
+.icon-sl-settings-1:before {
+    content: map-get($icon-sl-map, "settings-1");
+}
+.icon-sl-night:before {
+    content: map-get($icon-sl-map, "night");
+}
+.icon-sl-brightness:before {
+    content: map-get($icon-sl-map, "brightness");
+}
+.icon-sl-cup:before {
+    content: map-get($icon-sl-map, "cup");
+}
 .icon-sl-coffee:before {
     content: map-get($icon-sl-map, "coffee");
-}
-.icon-sl-coffee-cup-1:before {
-    content: map-get($icon-sl-map, "coffee-cup-1");
-}
-.icon-sl-coffee-beans:before {
-    content: map-get($icon-sl-map, "coffee-beans");
 }
 .icon-sl-coffee-1:before {
     content: map-get($icon-sl-map, "coffee-1");
 }
-.icon-sl-user:before {
-    content: map-get($icon-sl-map, "user");
+.icon-sl-coffee-2:before {
+    content: map-get($icon-sl-map, "coffee-2");
+}
+.icon-sl-coffee-cup-1:before {
+    content: map-get($icon-sl-map, "coffee-cup-1");
+}
+.icon-sl-coffee-bean:before {
+    content: map-get($icon-sl-map, "coffee-bean");
+}
+.icon-sl-coffee-beans:before {
+    content: map-get($icon-sl-map, "coffee-beans");
+}
+.icon-sl-coffee-3:before {
+    content: map-get($icon-sl-map, "coffee-3");
+}
+.icon-sl-coffee-bag:before {
+    content: map-get($icon-sl-map, "coffee-bag");
+}
+.icon-sl-pack:before {
+    content: map-get($icon-sl-map, "pack");
 }
 .icon-sl-placeholder:before {
     content: map-get($icon-sl-map, "placeholder");
 }
-.icon-sl-bin:before {
-    content: map-get($icon-sl-map, "bin");
+.icon-sl-pin:before {
+    content: map-get($icon-sl-map, "pin");
 }
 .icon-sl-profile:before {
     content: map-get($icon-sl-map, "profile");
 }
-.icon-sl-settings:before {
-    content: map-get($icon-sl-map, "settings");
+.icon-sl-profile-1:before {
+    content: map-get($icon-sl-map, "profile-1");
+}
+.icon-sl-settings-2:before {
+    content: map-get($icon-sl-map, "settings-2");
+}
+.icon-sl-user:before {
+    content: map-get($icon-sl-map, "user");
 }
 .icon-sl-user-1:before {
     content: map-get($icon-sl-map, "user-1");
@@ -231,20 +291,35 @@ $icon-sl-map: (
 .icon-sl-user-3:before {
     content: map-get($icon-sl-map, "user-3");
 }
+.icon-sl-group:before {
+    content: map-get($icon-sl-map, "group");
+}
 .icon-sl-user-4:before {
     content: map-get($icon-sl-map, "user-4");
+}
+.icon-sl-user-5:before {
+    content: map-get($icon-sl-map, "user-5");
+}
+.icon-sl-user-6:before {
+    content: map-get($icon-sl-map, "user-6");
+}
+.icon-sl-user-7:before {
+    content: map-get($icon-sl-map, "user-7");
+}
+.icon-sl-group-1:before {
+    content: map-get($icon-sl-map, "group-1");
 }
 .icon-sl-barista:before {
     content: map-get($icon-sl-map, "barista");
 }
-.icon-sl-coffee-2:before {
-    content: map-get($icon-sl-map, "coffee-2");
+.icon-sl-coffee-4:before {
+    content: map-get($icon-sl-map, "coffee-4");
 }
-.icon-sl-pot-1:before {
-    content: map-get($icon-sl-map, "pot-1");
+.icon-sl-pot:before {
+    content: map-get($icon-sl-map, "pot");
 }
-.icon-sl-coffee-3:before {
-    content: map-get($icon-sl-map, "coffee-3");
+.icon-sl-coffee-5:before {
+    content: map-get($icon-sl-map, "coffee-5");
 }
 .icon-sl-coffee-beans-1:before {
     content: map-get($icon-sl-map, "coffee-beans-1");
@@ -254,6 +329,15 @@ $icon-sl-map: (
 }
 .icon-sl-roast:before {
     content: map-get($icon-sl-map, "roast");
+}
+.icon-sl-instant-coffee:before {
+    content: map-get($icon-sl-map, "instant-coffee");
+}
+.icon-sl-pitcher:before {
+    content: map-get($icon-sl-map, "pitcher");
+}
+.icon-sl-measure:before {
+    content: map-get($icon-sl-map, "measure");
 }
 .icon-sl-brewing:before {
     content: map-get($icon-sl-map, "brewing");
@@ -306,8 +390,8 @@ $icon-sl-map: (
 .icon-sl-coffee-pack:before {
     content: map-get($icon-sl-map, "coffee-pack");
 }
-.icon-sl-coffee-4:before {
-    content: map-get($icon-sl-map, "coffee-4");
+.icon-sl-coffee-6:before {
+    content: map-get($icon-sl-map, "coffee-6");
 }
 .icon-sl-coffee-pods:before {
     content: map-get($icon-sl-map, "coffee-pods");
@@ -330,23 +414,26 @@ $icon-sl-map: (
 .icon-sl-coffee-cup-2:before {
     content: map-get($icon-sl-map, "coffee-cup-2");
 }
+.icon-sl-coffee-7:before {
+    content: map-get($icon-sl-map, "coffee-7");
+}
 .icon-sl-coffee-pot:before {
     content: map-get($icon-sl-map, "coffee-pot");
 }
-.icon-sl-instant-coffee:before {
-    content: map-get($icon-sl-map, "instant-coffee");
+.icon-sl-instant-coffee-1:before {
+    content: map-get($icon-sl-map, "instant-coffee-1");
 }
 .icon-sl-portafilter:before {
     content: map-get($icon-sl-map, "portafilter");
 }
-.icon-sl-coffee-6:before {
-    content: map-get($icon-sl-map, "coffee-6");
+.icon-sl-coffee-8:before {
+    content: map-get($icon-sl-map, "coffee-8");
 }
 .icon-sl-coffee-maker:before {
     content: map-get($icon-sl-map, "coffee-maker");
 }
-.icon-sl-coffee-7:before {
-    content: map-get($icon-sl-map, "coffee-7");
+.icon-sl-coffee-9:before {
+    content: map-get($icon-sl-map, "coffee-9");
 }
 .icon-sl-syphon-2:before {
     content: map-get($icon-sl-map, "syphon-2");
@@ -354,35 +441,17 @@ $icon-sl-map: (
 .icon-sl-harvest:before {
     content: map-get($icon-sl-map, "harvest");
 }
-.icon-sl-heart:before {
-    content: map-get($icon-sl-map, "heart");
-}
 .icon-sl-drip:before {
     content: map-get($icon-sl-map, "drip");
 }
 .icon-sl-coffee-shop:before {
     content: map-get($icon-sl-map, "coffee-shop");
 }
-.icon-sl-heart-1:before {
-    content: map-get($icon-sl-map, "heart-1");
-}
 .icon-sl-coffee-maker-1:before {
     content: map-get($icon-sl-map, "coffee-maker-1");
 }
-.icon-sl-coffee-bean:before {
-    content: map-get($icon-sl-map, "coffee-bean");
-}
-.icon-sl-coffee-8:before {
-    content: map-get($icon-sl-map, "coffee-8");
-}
-.icon-sl-coffee-bag:before {
-    content: map-get($icon-sl-map, "coffee-bag");
-}
 .icon-sl-coffee-machine-1:before {
     content: map-get($icon-sl-map, "coffee-machine-1");
-}
-.icon-sl-cup:before {
-    content: map-get($icon-sl-map, "cup");
 }
 .icon-sl-coffee-filter-1:before {
     content: map-get($icon-sl-map, "coffee-filter-1");
@@ -405,9 +474,6 @@ $icon-sl-map: (
 .icon-sl-turkish-coffee:before {
     content: map-get($icon-sl-map, "turkish-coffee");
 }
-.icon-sl-pack:before {
-    content: map-get($icon-sl-map, "pack");
-}
 .icon-sl-coffee-maker-2:before {
     content: map-get($icon-sl-map, "coffee-maker-2");
 }
@@ -420,32 +486,8 @@ $icon-sl-map: (
 .icon-sl-drip-1:before {
     content: map-get($icon-sl-map, "drip-1");
 }
-.icon-sl-pot-2:before {
-    content: map-get($icon-sl-map, "pot-2");
-}
-.icon-sl-medical-care:before {
-    content: map-get($icon-sl-map, "medical-care");
-}
-.icon-sl-group:before {
-    content: map-get($icon-sl-map, "group");
-}
-.icon-sl-add:before {
-    content: map-get($icon-sl-map, "add");
-}
-.icon-sl-check:before {
-    content: map-get($icon-sl-map, "check");
-}
-.icon-sl-cross:before {
-    content: map-get($icon-sl-map, "cross");
-}
-.icon-sl-cancel:before {
-    content: map-get($icon-sl-map, "cancel");
-}
-.icon-sl-pin:before {
-    content: map-get($icon-sl-map, "pin");
-}
-.icon-sl-link:before {
-    content: map-get($icon-sl-map, "link");
+.icon-sl-pot-1:before {
+    content: map-get($icon-sl-map, "pot-1");
 }
 .icon-sl-arrow:before {
     content: map-get($icon-sl-map, "arrow");
@@ -453,53 +495,26 @@ $icon-sl-map: (
 .icon-sl-arrow-1:before {
     content: map-get($icon-sl-map, "arrow-1");
 }
-.icon-sl-info:before {
-    content: map-get($icon-sl-map, "info");
-}
 .icon-sl-hand:before {
     content: map-get($icon-sl-map, "hand");
+}
+.icon-sl-bin:before {
+    content: map-get($icon-sl-map, "bin");
 }
 .icon-sl-rubbish:before {
     content: map-get($icon-sl-map, "rubbish");
 }
-.icon-sl-coffee-10:before {
-    content: map-get($icon-sl-map, "coffee-10");
-}
-.icon-sl-forbidden:before {
-    content: map-get($icon-sl-map, "forbidden");
-}
-.icon-sl-hospital:before {
-    content: map-get($icon-sl-map, "hospital");
-}
-.icon-sl-heart-2:before {
-    content: map-get($icon-sl-map, "heart-2");
-}
-.icon-sl-subtraction:before {
-    content: map-get($icon-sl-map, "subtraction");
-}
-.icon-sl-cross-1:before {
-    content: map-get($icon-sl-map, "cross-1");
+.icon-sl-note:before {
+    content: map-get($icon-sl-map, "note");
 }
 .icon-sl-edit:before {
     content: map-get($icon-sl-map, "edit");
-}
-.icon-sl-link-1:before {
-    content: map-get($icon-sl-map, "link-1");
-}
-.icon-sl-padlock:before {
-    content: map-get($icon-sl-map, "padlock");
-}
-.icon-sl-unlock:before {
-    content: map-get($icon-sl-map, "unlock");
 }
 .icon-sl-hide:before {
     content: map-get($icon-sl-map, "hide");
 }
 .icon-sl-show:before {
     content: map-get($icon-sl-map, "show");
-}
-.icon-sl-switch:before {
-    content: map-get($icon-sl-map, "switch");
 }
 .icon-sl-facebook:before {
     content: map-get($icon-sl-map, "facebook");
@@ -516,53 +531,20 @@ $icon-sl-map: (
 .icon-sl-linkedin:before {
     content: map-get($icon-sl-map, "linkedin");
 }
+.icon-sl-shelf:before {
+    content: map-get($icon-sl-map, "shelf");
+}
 .icon-sl-foreign:before {
     content: map-get($icon-sl-map, "foreign");
 }
-.icon-sl-play-button:before {
-    content: map-get($icon-sl-map, "play-button");
+.icon-sl-shelves:before {
+    content: map-get($icon-sl-map, "shelves");
 }
-.icon-sl-pause-button:before {
-    content: map-get($icon-sl-map, "pause-button");
+.icon-sl-link:before {
+    content: map-get($icon-sl-map, "link");
 }
-.icon-sl-stop-button:before {
-    content: map-get($icon-sl-map, "stop-button");
-}
-.icon-sl-star:before {
-    content: map-get($icon-sl-map, "star");
-}
-.icon-sl-love:before {
-    content: map-get($icon-sl-map, "love");
-}
-.icon-sl-minus:before {
-    content: map-get($icon-sl-map, "minus");
-}
-.icon-sl-plus:before {
-    content: map-get($icon-sl-map, "plus");
-}
-.icon-sl-check-1:before {
-    content: map-get($icon-sl-map, "check-1");
-}
-.icon-sl-declined:before {
-    content: map-get($icon-sl-map, "declined");
-}
-.icon-sl-menu:before {
-    content: map-get($icon-sl-map, "menu");
-}
-.icon-sl-email:before {
-    content: map-get($icon-sl-map, "email");
-}
-.icon-sl-remove:before {
-    content: map-get($icon-sl-map, "remove");
-}
-.icon-sl-add-1:before {
-    content: map-get($icon-sl-map, "add-1");
-}
-.icon-sl-play:before {
-    content: map-get($icon-sl-map, "play");
-}
-.icon-sl-stop:before {
-    content: map-get($icon-sl-map, "stop");
+.icon-sl-link-1:before {
+    content: map-get($icon-sl-map, "link-1");
 }
 .icon-sl-link-2:before {
     content: map-get($icon-sl-map, "link-2");
@@ -570,113 +552,38 @@ $icon-sl-map: (
 .icon-sl-update:before {
     content: map-get($icon-sl-map, "update");
 }
-.icon-sl-reload:before {
-    content: map-get($icon-sl-map, "reload");
-}
 .icon-sl-refresh:before {
     content: map-get($icon-sl-map, "refresh");
 }
-.icon-sl-document:before {
-    content: map-get($icon-sl-map, "document");
-}
-.icon-sl-pin-1:before {
-    content: map-get($icon-sl-map, "pin-1");
-}
-.icon-sl-profile-1:before {
-    content: map-get($icon-sl-map, "profile-1");
-}
-.icon-sl-shelves:before {
-    content: map-get($icon-sl-map, "shelves");
-}
-.icon-sl-shelf:before {
-    content: map-get($icon-sl-map, "shelf");
-}
-.icon-sl-note:before {
-    content: map-get($icon-sl-map, "note");
+.icon-sl-reload:before {
+    content: map-get($icon-sl-map, "reload");
 }
 .icon-sl-magnifiying-glass:before {
     content: map-get($icon-sl-map, "magnifiying-glass");
 }
-.icon-sl-settings-1:before {
-    content: map-get($icon-sl-map, "settings-1");
-}
-.icon-sl-heart-3:before {
-    content: map-get($icon-sl-map, "heart-3");
-}
-.icon-sl-star-1:before {
-    content: map-get($icon-sl-map, "star-1");
-}
-.icon-sl-bookmark:before {
-    content: map-get($icon-sl-map, "bookmark");
-}
-.icon-sl-user-5:before {
-    content: map-get($icon-sl-map, "user-5");
-}
-.icon-sl-add-2:before {
-    content: map-get($icon-sl-map, "add-2");
+.icon-sl-document:before {
+    content: map-get($icon-sl-map, "document");
 }
 .icon-sl-search:before {
     content: map-get($icon-sl-map, "search");
 }
-.icon-sl-user-6:before {
-    content: map-get($icon-sl-map, "user-6");
+.icon-sl-bookmark:before {
+    content: map-get($icon-sl-map, "bookmark");
 }
-.icon-sl-close:before {
-    content: map-get($icon-sl-map, "close");
-}
-.icon-sl-remove-1:before {
-    content: map-get($icon-sl-map, "remove-1");
+.icon-sl-email:before {
+    content: map-get($icon-sl-map, "email");
 }
 .icon-sl-email-1:before {
     content: map-get($icon-sl-map, "email-1");
 }
-.icon-sl-settings-2:before {
-    content: map-get($icon-sl-map, "settings-2");
-}
-.icon-sl-book-mark:before {
-    content: map-get($icon-sl-map, "book-mark");
-}
-.icon-sl-next:before {
-    content: map-get($icon-sl-map, "next");
-}
-.icon-sl-brightness:before {
-    content: map-get($icon-sl-map, "brightness");
-}
-.icon-sl-night:before {
-    content: map-get($icon-sl-map, "night");
-}
-.icon-sl-group-1:before {
-    content: map-get($icon-sl-map, "group-1");
-}
-.icon-sl-user-7:before {
-    content: map-get($icon-sl-map, "user-7");
-}
-.icon-sl-list:before {
-    content: map-get($icon-sl-map, "list");
-}
 .icon-sl-stopwatch:before {
     content: map-get($icon-sl-map, "stopwatch");
-}
-.icon-sl-heart-6:before {
-    content: map-get($icon-sl-map, "heart-6");
-}
-.icon-sl-favourite-2:before {
-    content: map-get($icon-sl-map, "favourite-2");
 }
 .icon-sl-glass:before {
     content: map-get($icon-sl-map, "glass");
 }
-.icon-sl-pitcher:before {
-    content: map-get($icon-sl-map, "pitcher");
-}
-.icon-sl-coffee-11:before {
-    content: map-get($icon-sl-map, "coffee-11");
-}
-.icon-sl-instant-coffee-1:before {
-    content: map-get($icon-sl-map, "instant-coffee-1");
-}
-.icon-sl-measure:before {
-    content: map-get($icon-sl-map, "measure");
+.icon-sl-padlock:before {
+    content: map-get($icon-sl-map, "padlock");
 }
 .icon-sl-padlock-1:before {
     content: map-get($icon-sl-map, "padlock-1");
@@ -693,11 +600,11 @@ $icon-sl-map: (
 .icon-sl-padlock-5:before {
     content: map-get($icon-sl-map, "padlock-5");
 }
+.icon-sl-unlock:before {
+    content: map-get($icon-sl-map, "unlock");
+}
 .icon-sl-coffee-grinder-2:before {
     content: map-get($icon-sl-map, "coffee-grinder-2");
-}
-.icon-sl-water-drop:before {
-    content: map-get($icon-sl-map, "water-drop");
 }
 .icon-sl-scale:before {
     content: map-get($icon-sl-map, "scale");
@@ -710,4 +617,73 @@ $icon-sl-map: (
 }
 .icon-sl-scales:before {
     content: map-get($icon-sl-map, "scales");
+}
+.icon-sl-list:before {
+    content: map-get($icon-sl-map, "list");
+}
+.icon-sl-menu:before {
+    content: map-get($icon-sl-map, "menu");
+}
+.icon-sl-check:before {
+    content: map-get($icon-sl-map, "check");
+}
+.icon-sl-cross:before {
+    content: map-get($icon-sl-map, "cross");
+}
+.icon-sl-add:before {
+    content: map-get($icon-sl-map, "add");
+}
+.icon-sl-remove:before {
+    content: map-get($icon-sl-map, "remove");
+}
+.icon-sl-hospital:before {
+    content: map-get($icon-sl-map, "hospital");
+}
+.icon-sl-subtraction:before {
+    content: map-get($icon-sl-map, "subtraction");
+}
+.icon-sl-cross-1:before {
+    content: map-get($icon-sl-map, "cross-1");
+}
+.icon-sl-add-1:before {
+    content: map-get($icon-sl-map, "add-1");
+}
+.icon-sl-forbidden:before {
+    content: map-get($icon-sl-map, "forbidden");
+}
+.icon-sl-cancel:before {
+    content: map-get($icon-sl-map, "cancel");
+}
+.icon-sl-info:before {
+    content: map-get($icon-sl-map, "info");
+}
+.icon-sl-add-2:before {
+    content: map-get($icon-sl-map, "add-2");
+}
+.icon-sl-remove-1:before {
+    content: map-get($icon-sl-map, "remove-1");
+}
+.icon-sl-close:before {
+    content: map-get($icon-sl-map, "close");
+}
+.icon-sl-next:before {
+    content: map-get($icon-sl-map, "next");
+}
+.icon-sl-play:before {
+    content: map-get($icon-sl-map, "play");
+}
+.icon-sl-stop:before {
+    content: map-get($icon-sl-map, "stop");
+}
+.icon-sl-chart:before {
+    content: map-get($icon-sl-map, "chart");
+}
+.icon-sl-play-button:before {
+    content: map-get($icon-sl-map, "play-button");
+}
+.icon-sl-pause-button:before {
+    content: map-get($icon-sl-map, "pause-button");
+}
+.icon-sl-refresh-1:before {
+    content: map-get($icon-sl-map, "refresh-1");
 }
