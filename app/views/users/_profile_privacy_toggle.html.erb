@@ -1,11 +1,11 @@
 <div id="profile_privacy_toggle">
   <% if current_user&.public_profile %>
     <%= button_to update_profile_privacy_path, method: :patch, params: {user: { public_profile: false }} do %>
-      <i class="las la-eye-slash"></i> Make Private <i class="las la-user-secret"></i> <i class="las la-user-times"></i>
+      <i class="icon-basic-hide"></i> Make Private  <i class="icon-basic-delete-button"></i>
     <% end %>
   <% else %>
     <%= button_to update_profile_privacy_path, method: :patch, params: {user: { public_profile: true }} do %>
-      <i class="las la-eye"></i> Make Public <i class="las la-user-tie"></i> <i class="las la-user-check"></i>
+      <i class="icon-basic-visibility"></i> Make Public  <i class="icon-basic-basic-tick"></i>
     <% end %>
   <% end %>
 </div>
