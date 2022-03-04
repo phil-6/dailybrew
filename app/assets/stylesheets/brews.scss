@@ -128,11 +128,9 @@
   }
 }
 
-.brews-new, .brews-create, .brews-edit, .brews-update {
-  max-width: $container-lg;
+.brews {
   &-new, &-create, &-edit, &-update {
     max-width: $container-lg;
-
     header {
       display: flex;
       justify-content: space-between;
