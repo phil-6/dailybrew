@@ -24,9 +24,15 @@
     .available-coffees {
       width: 20%;
       align-self: center;
-      text-align: right;
       font-size: 1.25rem;
       color: $color-primary-1;
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
+      i {
+        font-size: 2rem;
+
+      }
     }
   }
 
