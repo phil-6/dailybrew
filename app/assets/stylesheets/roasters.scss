@@ -34,7 +34,12 @@
       }
 
       .socials .link {
-        border-color: $color-white;
+        font-size: 2rem;
+        transition: 0.25s;
+        &:hover {
+          font-size: 2.2rem;
+          background-color: unset;
+        }
       }
     }
 
