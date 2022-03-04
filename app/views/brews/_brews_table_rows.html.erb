@@ -6,9 +6,18 @@
     <td class="equipment">
       <p><%= brew.equipment %></p>
     </td>
-    <td class="config row">
-      <p class="row"><i class="icon-basic-coffee-beans-4"></i><%= brew.coffee_weight.present? ? "#{brew.coffee_weight}g" : '-' %></p>
-      <p class="row"><i class="icon-basic-water-drop"></i><%= brew.water_weight.present? ? "#{brew.water_weight}g" : '-' %></p>
+    <td data-controller="brew-ratio" class="config row">
+      <p class="row">
+        <i class="icon-basic-coffee-beans-4"></i>
+        <span data-brew-ratio-target="coffeeWeight"><%= brew.coffee_weight %></span>
+        <%= brew.coffee_weight.present? ? 'g' : '-' %>
+      </p>
+      <p class="row">
+        <i class="icon-basic-water-drop"></i>
+        <span data-brew-ratio-target="waterWeight"><%= brew.water_weight %></span>
+        <%= brew.water_weight.present? ? 'g' : '-' %>
+      </p>
+      <p class="row ratio">1:<span data-brew-ratio-target="ratio">10.0</span></p>
       <p class="row"><i class="icon-basic-temperature"></i><%= brew.temperature ||= '-' %></p>
       <p class="row"><i class="icon-basic-stopwatch-1"></i><%= brew.time != 0 ? brew.formatted_time : '-' %></p>
       <p class="row"><%= brew.rating ||= '-' %>/10</p>
