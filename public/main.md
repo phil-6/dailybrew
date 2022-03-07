@@ -10,6 +10,7 @@ in development we are! If you're here now, that's great. Your feedback can reall
 - **Save your favourite** coffees (I can never remember which ones were the best!)
 - **Discover new Roasters** from our BIG list of UK roasters.
 - **Search for Coffees** by name, region, tasting notes or process.
+- **Add new coffees** Drinking a coffee that's not in our database? Easily add it from the roasters page.
 - **Control the privacy** of your brews and your profile. Want to share? Great! Want to be a stealthy coffee ninja? That's cool too.
 
 ### Just Added
@@ -17,15 +18,19 @@ in development we are! If you're here now, that's great. Your feedback can reall
 - **Dashboard Stats** See some key stats on your dashboard
 - **Coffee Ratio** We do the hard part and calculate the coffee:water ratio for you.
 - **Easier Create Coffee Form** If there's a coffee we're missing, adding it should be easier now.
+- **Brews Index** See a historical list of your brews
 
 ### Features we’re working on.
+- **More Coffees** We're adding more coffees to our database all the time, we're trying to do it in an automated, reusable way, so it's not that quick
+- **Available Coffees** See which coffees a roaster has currently available and see a roasters historic coffees
+- **Improved Brew View** The view which shows you an individual brew is very functional at the moment, we're working on improving this.
 - **Brews on Coffee** See how other people are brewing your favourite coffees
-- **Brews Index** See a historical list of your brews
 - **Review Coffees** Leave reviews on the coffees you've tried and read others reviews. These can be private to you or public to other daily brew members, you decide.
 - **Public Reviews** See what others have to say about the coffees you love
+- **Public Profile** Share your key stats and recent brews and see what other people are drinking too. Of course, you control your privacy on this.
 - **Better Recommendations** Based on the ratings you give to your coffees, we’ll work to recommend what could be a good
 next coffee to try.
-- **Better Filters** - We have a search which works for coffees and roasters at the moment but we're going to add some
+- **Better Filters** - We have a search which works for coffees and roasters at the moment, but we're going to add some
 filters too. If you have any suggestions please let us know.
 - **More tips and pointers**
 - **Dark mode**
@@ -38,3 +43,5 @@ filters too. If you have any suggestions please let us know.
 ### Open and Transparent
 We're building Daily Brew in public. If there is anything that you think we should be sharing, but we're not, then let
 us know, and we'll see what we can do. There's more info about this on the [About Us](/about) page.
+
+---
