@@ -73,13 +73,14 @@
   }
 
   &-new, &-create, &-edit, &-update {
-    header a{
+    header a {
       color: $color-mid-1;
+
       &:hover {
         color: $color-primary-3;
       }
-
     }
+
     form {
       max-width: $container-lg;
       margin: 1rem auto;

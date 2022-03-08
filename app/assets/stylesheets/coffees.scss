@@ -6,6 +6,7 @@
       font-size: 1.1rem;
       text-align: center;
     }
+
     .no-results {
       max-width: $container-lg;
       padding: 0 1rem;
@@ -13,13 +14,14 @@
   }
 
   &-new, &-create, &-edit, &-update {
-    header a{
+    header a {
       color: $color-mid-1;
+
       &:hover {
         color: $color-primary-3;
       }
-
     }
+
     form {
       max-width: $container-lg;
       margin: 1rem auto;
