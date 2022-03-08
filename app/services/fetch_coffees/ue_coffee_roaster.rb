@@ -21,7 +21,7 @@ module FetchCoffees
         next if exclude_types.any? { |s| coffee['url'].include? s }
 
         puts coffee['url']
-        coffee_html = Net::HTTP.get_response(URI.parse(roaster_url_root + coffee['url']))
+        coffee_html = Net::HTTP.get_response(URI.parse(coffee['url']))
         coffee_page = Nokogiri::HTML(coffee_html.body)
 
         coffee['name'] = coffee_page.css('.product-area__details__title').text
