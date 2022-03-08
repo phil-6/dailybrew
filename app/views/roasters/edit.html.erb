@@ -15,5 +15,9 @@
   <div class="form-links">
     <%= link_to "Show this roaster", @roaster %> |
     <%= link_to "Back to roasters", roasters_path %>
+    <%= button_to "Delete Roaster ", @roaster,
+                  method: :delete,
+                  form: { data: { turbo_confirm: "Are you sure you want do delete this roaster?" } },
+                  class: "link-danger"  %>
   </div>
 </main>
