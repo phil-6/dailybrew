@@ -13,16 +13,16 @@
   }
 
   &-new, &-create, &-edit, &-update {
-    max-width: $container-lg;
+    header a{
+      color: $color-mid-1;
+      &:hover {
+        color: $color-primary-3;
+      }
 
-    .title {
-      h1 {
-        text-align: center;
-      }
-      h2 {
-        font-size: 1.2rem;
-        padding: 0 1rem;
-      }
+    }
+    form {
+      max-width: $container-lg;
+      margin: 1rem auto;
     }
   }
 }

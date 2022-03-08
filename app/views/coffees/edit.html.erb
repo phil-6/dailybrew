@@ -1,11 +1,11 @@
 <main class="<%= controller_name %>-<%= action_name %>">
 
-  <header>
-    <div class="title">
-      <h1>
-        Edit <a class="link-primary" href="<%= @coffee.url %>"><%= @coffee.name %></a> from
-        <a class="link-primary" href="<%= @coffee.roaster.website %>"><%= @coffee.roaster.name %></a>
-      </h1>
+  <header class="banner banner-primary-1">
+    <div class="banner-content">
+      <div class="page-title">
+        <h2>Edit <a class="link-primary" href="<%= @coffee.url %>"><%= @coffee.name %></a></h2>
+      </div>
+      <p>from <a class="link-primary" href="<%= @coffee.roaster.website %>"><%= @coffee.roaster.name %></a></p>
     </div>
   </header>
 
