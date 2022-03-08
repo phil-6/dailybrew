@@ -88,7 +88,7 @@ class RoastersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def roaster_params
-    params.require(:roaster).permit(:name, :description, :location, :lat, :lng, :website, :twitter,
+    params.require(:roaster).permit(:name, :reference, :description, :location, :lat, :lng, :website, :twitter,
                                     :instagram, :facebook)
   end
 end
