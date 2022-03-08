@@ -1,10 +1,17 @@
-<h1>Editing roaster</h1>
+<main class="<%= controller_name %>-<%= action_name %>">
 
-<%= render "form", roaster: @roaster %>
+  <header>
+    <div class="title">
+      <h1>
+        Edit <a class="link-primary" href="<%= @roaster.url %>"><%= @roaster.name %></a>
+      </h1>
+    </div>
+  </header>
 
-<br>
+  <%= render "form", roaster: @roaster %>
 
-<div>
-  <%= link_to "Show this roaster", @roaster %> |
-  <%= link_to "Back to roasters", roasters_path %>
-</div>
+  <div class="form-links">
+    <%= link_to "Show this roaster", @roaster %> |
+    <%= link_to "Back to roasters", roasters_path %>
+  </div>
+</main>
