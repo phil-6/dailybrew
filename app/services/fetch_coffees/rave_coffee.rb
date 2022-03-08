@@ -12,7 +12,7 @@ module FetchCoffees
       coffee_css_on_index = '.grid-item .cl-product-card-name a'
       exclude_types = %w[sacks bags]
 
-      coffee_index_html = Net::HTTP.get_response(URI.parse(coffee_index_url))
+      coffee_index_html = Net::HTTP.get_response(URI.parse(roaster_url_root + coffee_index_url))
       coffee_index_page = Nokogiri::HTML(coffee_index_html.body)
 
       coffee_index_page.css(coffee_css_on_index).uniq.each do |coffee_section|
