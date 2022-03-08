@@ -3,7 +3,7 @@
     <div class="left">
       <h3><%= link_to roaster.name, roaster, class: 'link link-primary link-title' %></h3>
       <div class="location">
-        <%= roaster.location.split(',').last(2)[0].titleize %>
+        <%= roaster.location.split(',').last(2)[0]&.titleize %>
       </div>
     </div>
     <div class="available-coffees icon-line-2">

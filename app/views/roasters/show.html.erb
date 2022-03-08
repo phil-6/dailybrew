@@ -4,7 +4,7 @@
       <h2><%= @roaster.name %></h2>
       <div class="location">
         <a href="https://www.google.com/maps/?q=<%= @roaster.name %>, <%= @roaster.location %>" class="link link-primary" target=_blank>
-          <%= @roaster.location.split(',').last(2)[0].titleize %> <i class="icon-basic-location-1"></i>
+          <%= @roaster.location.split(',').last(2)[0]&.titleize %> <i class="icon-basic-location-1"></i>
         </a>
       </div>
       <div class="description">
