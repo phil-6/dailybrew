@@ -1,4 +1,4 @@
-<%= form_with(model: roaster) do |form| %>
+<%= form_with model: roaster, class: "model-form" do |form| %>
   <% if roaster.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(roaster.errors.count, "error") %> prohibited this roaster from being saved:</h2>
@@ -11,57 +11,52 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+  <div class="multi-field row">
+    <div class="field">
+      <%= form.text_field :name, class: 'form-input', required: true, placeholder: 'Name' %>
+      <%= form.label :name, class: 'form-label' %>
+    </div>
+    <div class="field">
+      <%= form.text_field :reference, class: 'form-input', required: true, placeholder: 'Reference' %>
+      <%= form.label :reference, class: 'form-label' %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="field">
+    <%= form.text_area :description, class: 'form-input', placeholder: 'Description' %>
+    <%= form.label :description, class: 'form-label' %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+  <div class="field">
+    <%= form.text_field :location, class: 'form-input', placeholder: 'Location' %>
+    <%= form.label :location, class: 'form-label' %>
   </div>
 
-  <div>
-    <%= form.label :location, style: "display: block" %>
-    <%= form.text_field :location %>
+  <div class="multi-field row">
+    <div class="field">
+      <%= form.text_field :website, class: 'form-input', required: true, placeholder: 'Website' %>
+      <%= form.label :website, class: 'form-label' %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :twitter, class: 'form-input', placeholder: 'Twitter' %>
+      <%= form.label :twitter, class: 'form-label' %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :lat, style: "display: block" %>
-    <%= form.text_field :lat %>
+  <div class="multi-field row">
+    <div class="field">
+      <%= form.text_field :instagram, class: 'form-input', placeholder: 'Insta' %>
+      <%= form.label :instagram, class: 'form-label' %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :facebook, class: 'form-input', placeholder: 'Facebook' %>
+      <%= form.label :facebook, class: 'form-label' %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :lng, style: "display: block" %>
-    <%= form.text_field :lng %>
-  </div>
-
-  <div>
-    <%= form.label :website, style: "display: block" %>
-    <%= form.text_field :website %>
-  </div>
-
-  <div>
-    <%= form.label :twitter, style: "display: block" %>
-    <%= form.text_field :twitter %>
-  </div>
-
-  <div>
-    <%= form.label :instagram, style: "display: block" %>
-    <%= form.text_field :instagram %>
-  </div>
-
-  <div>
-    <%= form.label :facebook, style: "display: block" %>
-    <%= form.text_field :facebook %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="action">
+    <%= form.submit "Save Roaster", class: 'form-submit btn btn-primary' %>
   </div>
 <% end %>

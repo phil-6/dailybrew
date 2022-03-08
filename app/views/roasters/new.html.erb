@@ -1,9 +1,12 @@
-<h1>New roaster</h1>
+<main class="<%= controller_name %>-<%= action_name %>">
 
-<%= render "form", roaster: @roaster %>
+  <header class="banner banner-primary-1">
+    <div class="banner-content">
+      <div class="page-title">
+        <h2>Add a new Roaster</h2>
+      </div>
+    </div>
+  </header>
 
-<br>
-
-<div>
-  <%= link_to "Back to roasters", roasters_path %>
-</div>
+  <%= render "form", roaster: @roaster %>
+</main>

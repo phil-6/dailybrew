@@ -6,6 +6,7 @@
       font-size: 1.1rem;
       text-align: center;
     }
+
     .no-results {
       max-width: $container-lg;
       padding: 0 1rem;
@@ -13,16 +14,17 @@
   }
 
   &-new, &-create, &-edit, &-update {
-    max-width: $container-lg;
+    header a {
+      color: $color-mid-1;
 
-    .title {
-      h1 {
-        text-align: center;
+      &:hover {
+        color: $color-primary-3;
       }
-      h2 {
-        font-size: 1.2rem;
-        padding: 0 1rem;
-      }
+    }
+
+    form {
+      max-width: $container-lg;
+      margin: 1rem auto;
     }
   }
 }
