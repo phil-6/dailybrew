@@ -7,8 +7,8 @@ module FetchCoffees
 
     def scrape
       @coffees = []
-      roaster_url_root = 'https://www.pilgrimscoffee.com/'
-      coffee_index_url = 'collections/frontpage'
+      roaster_url_root = 'https://www.pilgrimscoffee.com'
+      coffee_index_url = '/collections/frontpage'
       coffee_css_on_index = '.prod-caption a'
       exclude_types = %w[tea sample gift]
 
@@ -17,11 +17,11 @@ module FetchCoffees
 
       coffee_index_page.css(coffee_css_on_index).each do |coffee_section|
         coffee = {}
-        coffee['url'] = coffee_section[:href]
+        coffee['url'] = roaster_url_root + coffee_section[:href]
         next if exclude_types.any? { |s| coffee['url'].include? s }
 
         puts coffee['url']
-        coffee_html = Net::HTTP.get_response(URI.parse(roaster_url_root + coffee['url']))
+        coffee_html = Net::HTTP.get_response(URI.parse(coffee['url']))
         coffee_page = Nokogiri::HTML(coffee_html.body)
 
         coffee['name'] = coffee_page.css('h1.product-title').text
