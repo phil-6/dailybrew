@@ -12,13 +12,13 @@
       </div>
       <div class="socials row">
         <a href="<%= @roaster.website %>" class="link link-primary link-icon" target=_blank><i class="icon-sl-link-1"></i></a>
-        <% if @roaster.twitter %>
+        <% unless @roaster.twitter == '' %>
           <a href="https://twitter.com/<%= @roaster.twitter %>" class="link link-primary link-icon" target=_blank><i class="icon-sl-twitter"></i></a>
         <% end %>
-        <% if @roaster.instagram %>
+        <% unless @roaster.instagram == '' %>
           <a href="https://instagram.com/<%= @roaster.instagram %>" class="link link-primary link-icon" target=_blank><i class="icon-sl-instagram"></i></a>
         <% end %>
-        <% if @roaster.facebook %>
+        <% unless @roaster.facebook == '' %>
           <a href="https://facebook.com/<%= @roaster.facebook %>" class="link link-primary link-icon" target=_blank><i class="icon-sl-facebook"></i></a>
         <% end %>
       </div>
