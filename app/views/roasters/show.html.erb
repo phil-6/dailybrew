@@ -7,9 +7,9 @@
           <%= @roaster.location.split(',').last(2)[0].titleize %> <i class="icon-basic-location-1"></i>
         </a>
       </div>
-      <p class="description">
-        <%= @roaster.description %>
-      </p>
+      <div class="description">
+        <%= simple_format(@roaster.description) %>
+      </div>
       <div class="socials row">
         <a href="https://<%= @roaster.website %>" class="link link-primary link-icon"><i class="icon-sl-link-1"></i></a>
         <% if @roaster.twitter %>
