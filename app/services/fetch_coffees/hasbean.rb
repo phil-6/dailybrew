@@ -7,16 +7,17 @@ module FetchCoffees
 
     def scrape
       @coffees = []
-      coffee_index_url = 'https://www.hasbean.co.uk/collections/coffee'
+      roaster_url_root = 'https://www.hasbean.co.uk'
+      coffee_index_url = '/collections/coffee'
       coffee_css_on_index = '.grid-link'
       exclude_types = %w[blend]
 
-      coffee_index_html = Net::HTTP.get_response(URI.parse(coffee_index_url))
+      coffee_index_html = Net::HTTP.get_response(URI.parse(roaster_url_root + coffee_index_url))
       coffee_index_page = Nokogiri::HTML(coffee_index_html.body)
 
       coffee_index_page.css(coffee_css_on_index).each do |coffee_section|
         coffee = {}
-        coffee['url'] = 'https://www.hasbean.co.uk/' + coffee_section[:href]
+        coffee['url'] = roaster_url_root + coffee_section[:href]
         next if exclude_types.any? { |s| coffee['url'].include? s }
 
         puts coffee['url']

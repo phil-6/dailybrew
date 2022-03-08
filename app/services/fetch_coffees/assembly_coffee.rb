@@ -7,8 +7,8 @@ module FetchCoffees
 
     def scrape
       @coffees = []
-      roaster_url_root = 'https://assemblycoffee.co.uk/'
-      coffee_index_url = 'collections/buy-coffee'
+      roaster_url_root = 'https://assemblycoffee.co.uk'
+      coffee_index_url = '/collections/buy-coffee'
       coffee_css_on_index = '.product-card a'
       exclude_types = %w[package]
 
