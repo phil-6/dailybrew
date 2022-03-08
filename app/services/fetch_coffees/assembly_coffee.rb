@@ -17,11 +17,11 @@ module FetchCoffees
 
       coffee_index_page.css(coffee_css_on_index).each do |coffee_section|
         coffee = {}
-        coffee['url'] = coffee_section[:href]
+        coffee['url'] = roaster_url_root + coffee_section[:href]
         next if exclude_types.any? { |s| coffee['url'].include? s }
 
         puts coffee['url']
-        coffee_html = Net::HTTP.get_response(URI.parse(roaster_url_root + coffee['url']))
+        coffee_html = Net::HTTP.get_response(URI.parse(coffee['url']))
         coffee_page = Nokogiri::HTML(coffee_html.body)
 
         coffee['name'] = coffee_page.css('h1.product-single__title').text
@@ -50,6 +50,8 @@ module FetchCoffees
         coffee['altitude'] = altitude
 
         coffee['tasting_notes'] = coffee_page.at_css('.product-single__description h2:contains("Tastes like")')&.next_element&.text
+        coffee['tasting_notes'] = 'Try it and find out!' if coffee['tasting_notes'].nil?
+        coffee['tasting_notes']
 
         coffee['available'] = true
 
