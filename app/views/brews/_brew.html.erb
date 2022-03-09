@@ -49,6 +49,7 @@
     <p><strong>Grinder setting: </strong><%= brew.grinder_setting %></p>
   </div>
 
+  <% if brew.user == current_user %>
   <div class="notes field">
     <%= form_with model: brew, class: "", data: { turbo_frame: "#{dom_id(brew)}_notes" } do |form| %>
       <%= turbo_frame_tag "#{dom_id(brew)}_notes", class: "inline-edit" do %>
@@ -70,6 +71,16 @@
       <% end %>
     <% end %>
   </div>
+  <% else %>
+    <div class="notes field">
+      <div class="form-input"><%= simple_format(brew.notes) %></div>
+      <div class="form-label">Notes</div>
+    </div>
+    <div class="rating field">
+      <div class="form-input"><%= brew.rating || '?' %>/10</div>
+      <div class="form-label">Rating</div>
+    </div>
+  <% end %>
 
   <div class="title">
     <h4><%= time_ago_in_words(brew.created_at) %> ago</h4>
