@@ -6,7 +6,9 @@
       brewed <%= link_to brew.coffee.name, brew.coffee, class: 'link link-primary link-title' %>
     </h3>
     <h3>
-      <%= link_to edit_brew_path(brew), class: 'link link-primary' do %><i class="icon-basic-editing"></i>
+      <% if brew.user == current_user %>
+        <%= link_to edit_brew_path(brew), class: 'link link-primary' do %><i class="icon-basic-editing"></i>
+        <% end %>
       <% end %>
     </h3>
   </div>
@@ -71,11 +73,13 @@
 
   <div class="title">
     <h4><%= time_ago_in_words(brew.created_at) %> ago</h4>
-    <%= button_to brew,
-                  method: :delete,
-                  form: { data: { turbo_confirm: "Are you sure you want do delete this brew?" } },
-                  class: "link-danger" do %>
-      <i class="icon-basic-garbage-2"></i>
+    <% if brew.user == current_user %>
+      <%= button_to brew,
+                    method: :delete,
+                    form: { data: { turbo_confirm: "Are you sure you want do delete this brew?" } },
+                    class: "link-danger" do %>
+        <i class="icon-basic-garbage-2"></i>
+      <% end %>
     <% end %>
   </div>
 </div>
