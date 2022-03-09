@@ -17,6 +17,7 @@ class CoffeesController < ApplicationController
   # GET /coffees/1 or /coffees/1.json
   def show
     @recent_brews = @coffee.brews.visible.includes(:user).sort_by(&:created_at).last(10).reverse
+    @user_brews = @coffee.brews.where(user: current_user).sort_by(&:created_at).reverse
   end
 
   # GET /coffees/new
