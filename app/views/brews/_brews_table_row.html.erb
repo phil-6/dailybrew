@@ -1,6 +1,8 @@
 <tr onclick="location.href='<%= brew_path(brew) %>'" class="brew-row row">
   <td class="coffee-name">
-    <h5><%= controller_name == 'coffees' || '' ? "Brewed by #{brew.user.username}" : brew.coffee.name %></h5>
+    <h5>
+      <%= %w[dashboard brews].include?(controller_name) ? brew.coffee.name : "Brewed by #{brew.user.username}" %>
+    </h5>
   </td>
   <td class="equipment">
     <p><%= brew.equipment %></p>
@@ -22,6 +24,8 @@
     <p class="row"><%= brew.rating ||= '-' %>/10</p>
   </td>
   <td class="created">
-    <p><small><%= brew.created_at > 1.week.ago ? "#{time_ago_in_words(brew.created_at)} ago" : brew.created_at.strftime("%d %b %Y") %></small></p>
+    <p>
+      <small><%= brew.created_at > 1.week.ago ? "#{time_ago_in_words(brew.created_at)} ago" : brew.created_at.strftime("%d %b %Y") %></small>
+    </p>
   </td>
 </tr>
