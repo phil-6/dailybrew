@@ -1,7 +1,7 @@
 <tr onclick="location.href='<%= brew_path(brew) %>'" class="brew-row row">
   <td class="coffee-name">
     <h5>
-      <%= %w[dashboard brews].include?(controller_name) ? brew.coffee.name : "Brewed by #{brew.user.username}" %>
+      <%= @recent_brews.nil? ? brew.coffee.name : "Brewed by #{brew.user.username}" %>
     </h5>
   </td>
   <td class="equipment">

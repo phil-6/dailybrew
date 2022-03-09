@@ -1,5 +1,5 @@
 class CoffeesController < ApplicationController
-  before_action :set_coffee, only: %i[show edit update destroy]
+  before_action :set_coffee, only: %i[show edit update destroy coming_soon]
   before_action :set_roaster, only: %i[index new create update]
 
   # GET /coffees or /coffees.json
@@ -16,8 +16,14 @@ class CoffeesController < ApplicationController
 
   # GET /coffees/1 or /coffees/1.json
   def show
+    # variable for default tab
     @recent_brews = @coffee.brews.visible.includes(:user).sort_by(&:created_at).last(10).reverse
-    @user_brews = @coffee.brews.where(user: current_user).sort_by(&:created_at).reverse
+  end
+
+  def coming_soon
+    respond_to do |format|
+      format.html { render partial: 'coffees/coming_soon_tab', locals: { coffee: @coffee } }
+    end
   end
 
   # GET /coffees/new

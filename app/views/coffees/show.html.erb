@@ -24,42 +24,8 @@
     </div>
   <% end %>
 
-  <section>
-    <h1>Recent Brews</h1>
-    <%= turbo_stream_from "recent_brews" %>
-    <hr>
-    <% if @recent_brews.present? %>
-      <table class="brews-table">
-        <tbody id="recent_brews_<%= dom_id(@coffee) %>">
-        <%= render 'brews/brews_table', brews: @recent_brews %>
-        </tbody>
-      </table>
-    <% else %>
-      <h3>No one has logged brews of this coffee</h3>
-    <% end %>
+  <%# I Feel as though there's a really clever way of making this SUPER DRY. There is very little changing between some of these partials here. Leaving this here as a reminder to investigate at a future date. For now: KISS %>
+  <section class="tabs">
+  <%= render 'coffees/recent_brews', locals: { coffee: @coffee , brews: @recent_brews} %>
   </section>
-
-  <section>
-    <h1>Your Brews</h1>
-    <hr>
-    <% if @user_brews.present? %>
-      <table class="brews-table">
-        <tbody id="user_brews_<%= dom_id(@coffee) %>">
-        <%= render 'brews/brews_table', brews: @user_brews %>
-        </tbody>
-      </table>
-    <% else %>
-      <h3>You haven't logged any brews for this coffee </h3>
-    <% end %>
-  </section>
-
-  <section>
-    <div class="coming-soon">
-      <h1>More Coming Soon</h1>
-      <p>Soon, we're going to be adding a load of extra information here.</p>
-      <p>You'll be able to see your brews of this coffee, all public brews, and all reviews.</p>
-      <p>If you have any suggestions as to what you would like to see, then please let us know</p>
-    </div>
-  </section>
-
 </main>

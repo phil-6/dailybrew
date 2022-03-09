@@ -1,0 +1,14 @@
+<%= turbo_frame_tag "coffee_tab" do %>
+  <div class="links">
+    <h1>Recent Brews</h1>
+    <h2><%= link_to "Your Brews", coffee_user_brews_path(@coffee) %></h2>
+    <h2><%= link_to "Coming Soon", coming_soon_coffee_path(@coffee) %></h2>
+  </div>
+  <hr>
+  <% if @recent_brews.present? %>
+    <%= turbo_stream_from "recent_brews" %>
+    <%= render 'brews/brews_table', brews: @recent_brews %>
+  <% else %>
+    <h3>No one has logged brews of this coffee</h3>
+  <% end %>
+<% end %>

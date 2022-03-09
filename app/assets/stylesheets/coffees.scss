@@ -27,4 +27,21 @@
       margin: 1rem auto;
     }
   }
+
+  &-show {
+    section.tabs {
+      .links {
+        text-align: center;
+
+        h1, h2 {
+          display: inline-block;
+          margin: auto 1rem;
+
+          a {
+            color: $color-complementary-4;
+          }
+        }
+      }
+    }
+  }
 }

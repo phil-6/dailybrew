@@ -15,7 +15,7 @@ class Brew < ApplicationRecord
     if public
       broadcast_prepend_to(
         'recent_brews',
-        target: "recent_brews_coffee_#{coffee.id}",
+        target: 'brews_table',
         locals: { brew: self },
         partial: 'brews/brews_table_row'
       )
