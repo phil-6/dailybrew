@@ -12,7 +12,7 @@
         <%= link_to "Edit this coffee", edit_coffee_path(@coffee), class: "btn link-primary" %>
         <%= button_to "Destroy this coffee", @coffee,
                       method: :delete,
-                      form: { data: { turbo_confirm: "Are you sure you want do delete this coffee?"}},
+                      form: { data: { turbo_confirm: "Are you sure you want do delete this coffee?" } },
                       class: "btn link-danger" %>
 
         <%# This uses deletes with a turbostream request format. Leaving it here because its cool and would be interesting to implement if we want to delete things from the index page. It doesn't work great if we're deleting from a show page. %>
@@ -28,21 +28,29 @@
     <h1>Recent Brews</h1>
     <%= turbo_stream_from "recent_brews" %>
     <hr>
-    <table class="brews-table">
-      <tbody id="recent_brews_<%= dom_id(@coffee) %>">
-      <%= render 'brews/brews_table', brews: @recent_brews %>
-      </tbody>
-    </table>
+    <% if @recent_brews.present? %>
+      <table class="brews-table">
+        <tbody id="recent_brews_<%= dom_id(@coffee) %>">
+        <%= render 'brews/brews_table', brews: @recent_brews %>
+        </tbody>
+      </table>
+    <% else %>
+      <h3>No one has logged brews of this coffee</h3>
+    <% end %>
   </section>
 
   <section>
     <h1>Your Brews</h1>
     <hr>
-    <table class="brews-table">
-      <tbody id="user_brews_<%= dom_id(@coffee) %>">
-      <%= render 'brews/brews_table', brews: @user_brews %>
-      </tbody>
-    </table>
+    <% if @user_brews.present? %>
+      <table class="brews-table">
+        <tbody id="user_brews_<%= dom_id(@coffee) %>">
+        <%= render 'brews/brews_table', brews: @user_brews %>
+        </tbody>
+      </table>
+    <% else %>
+      <h3>You haven't logged any brews for this coffee </h3>
+    <% end %>
   </section>
 
   <section>
