@@ -10,7 +10,7 @@
           <p class="joined">Brewing since <%= current_user.created_at.strftime("%d %b %Y") %></p>
         </div>
 
-        <hr />
+        <hr/>
 
         <div class="row stats">
           <span><span id="shelf_items_count"><%= current_user.shelf_items.count %></span> shelf items</span>
@@ -40,7 +40,11 @@
         <h2><%= link_to 'Your Brews', brews_path, class: 'link-white link-title' %></h2>
         <div class="card">
           <%= turbo_frame_tag 'page_handler' %>
-          <%= render 'brews/brews_table' %>
+          <table class="brews-table">
+            <tbody id="brews_table">
+            <%= render 'brews/brews_table', brews: @brews %>
+            </tbody>
+          </table>
           <%= render 'brews_table_pager', pagy: @pagy %>
         </div>
       </section>

@@ -13,10 +13,11 @@ class Brew < ApplicationRecord
 
   after_create_commit do
     if public
-      broadcast_prepend_later_to(
+      broadcast_prepend_to(
         'recent_brews',
         target: "brews_coffee_#{coffee.id}",
-        locals: { brew: self }
+        locals: { brew: self },
+        partial: 'brews/brews_table_row'
       )
     end
     broadcast_update_later_to(
