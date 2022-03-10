@@ -25,9 +25,10 @@ module FetchCoffees
         next if coffee['tasting_notes'].nil?
 
         puts coffee['url']
-        puts coffee['name'] = coffee_page.css('h1.ProductMeta__Title').text
-        puts coffee['tasting_notes']
-        puts coffee['producer'] = coffee_page.at('h3:contains("producer")')&.text&.gsub(/producer: |producers: /, '')&.strip
+        coffee['name'] = coffee_page.css('h1.ProductMeta__Title').text
+        coffee['tasting_notes']
+        coffee['producer'] = coffee_page.at('h3:contains("producer")')&.text&.gsub(/producer: |producers: /, '')&.strip
+        coffee['available'] = true
 
         @coffees << coffee
       end
