@@ -3,14 +3,14 @@
     <%= button_to delete_favourite_path(coffee), method: :delete, class: 'link link-primary link-icon icon-line-1-4' do %>
       <span class="tooltip-parent">
             <i class="icon-basic-heart-1"></i>
-        <span class="tooltip-content right">Remove from your favourites</span>
+        <span class="tooltip-content right delay-slow">Remove from your favourites</span>
       </span>
     <% end %>
   <% else %>
     <%= button_to create_favourite_path(coffee), method: :post, class: 'link link-primary link-icon icon-line-1-4' do %>
       <span class="tooltip-parent">
             <i class="icon-basic-heart"></i>
-        <span class="tooltip-content right">Add to your favourites</span>
+        <span class="tooltip-content right delay-slow">Add to your favourites</span>
       </span>
     <% end %>
   <% end %>

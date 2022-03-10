@@ -170,14 +170,20 @@ body {
     &.right {
       top: -5px;
       left: 160%;
-      transition-delay: 1s; // This is a poor implementation of the transition delay
     }
 
     &.bottom {
       top: 150%;
       left: 50%;
       margin-left: -60px;
-      transition-delay: 0.5s; // This is a poor implementation of the transition delay
+    }
+
+    &.delay-fast {
+      transition-delay: 0.5s;
+    }
+
+    &.delay-slow {
+      transition-delay: 1s;
     }
   }
 
