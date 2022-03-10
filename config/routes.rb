@@ -35,7 +35,6 @@ Rails.application.routes.draw do
   resources :brews, only: :index
   get 'recent_brews', to: 'brews#recent_brews'
 
-
   get 'shelf_items', to: 'shelf_items#index', as: 'shelf_items'
   post 'shelf_items/:coffee_id', to: 'shelf_items#create', as: 'create_shelf_item'
   delete 'shelf_items/:coffee_id', to: 'shelf_items#destroy', as: 'delete_shelf_item'
