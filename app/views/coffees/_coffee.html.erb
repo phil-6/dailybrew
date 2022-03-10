@@ -2,7 +2,7 @@
   <div class="coffee-card-content row">
     <div class="column">
       <h4 class="name">
-        <% if action_name == 'show' %>
+        <% if controller_name == 'coffees' && action_name == 'show' %>
           <a class="link link-primary link-title" href="<%= coffee.url %>" target="_blank"><%= coffee.name %></a>
         <% else %>
           <%= link_to coffee.name, coffee, class: 'link link-primary link-title' %>
