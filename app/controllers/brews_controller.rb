@@ -1,6 +1,7 @@
 class BrewsController < ApplicationController
   before_action :set_brew, only: %i[show edit update destroy]
   before_action :set_coffee, only: %i[new create update user_brews]
+  before_action :confirm_owner, only: %i[edit update destroy]
 
   # GET /brews or /brews.json
   def index
@@ -93,6 +94,12 @@ class BrewsController < ApplicationController
 
   def set_coffee
     @coffee = params[:coffee_id] ? Coffee.find(params[:coffee_id]) : @brew.coffee
+  end
+
+  def confirm_owner
+    return if @brew.user == current_user
+
+    redirect_back(fallback_location: root_path, flash: { error: "You don't have permission to do that action." })
   end
 
   # Only allow a list of trusted parameters through.
