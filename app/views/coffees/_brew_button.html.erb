@@ -1,0 +1,7 @@
+<div id="brew_btn_<%= dom_id(coffee) %>" class="brew-btn">
+  <% if current_user&.shelf_items.find_by(coffee:) %>
+    <%= link_to new_coffee_brew_path(coffee), class: 'btn btn-primary btn-primary-border' do %>
+      Make a Brew <i class="icon-basic-coffee-cup-3"></i>
+    <% end %>
+  <% end %>
+</div>
