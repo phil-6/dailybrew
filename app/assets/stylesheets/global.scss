@@ -170,14 +170,15 @@ body {
     &.right {
       top: -5px;
       left: 160%;
-      transition-delay: 1s;
+      transition-delay: 1s; // This is a poor implementation of the transition delay
+      opacity: 0.8; // This is a terrible fix for the opacity on the metadata row
     }
 
     &.bottom {
       top: 150%;
       left: 50%;
       margin-left: -60px;
-      transition-delay: 0.5s;
+      transition-delay: 0.5s; // This is a poor implementation of the transition delay
     }
   }
 
