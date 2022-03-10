@@ -23,7 +23,7 @@ class CoffeesController < ApplicationController
 
   def coming_soon
     respond_to do |format|
-      format.html { render partial: 'coffees/coming_soon_tab', locals: { coffee: @coffee } }
+      format.html { render partial: 'coffees/reviews', locals: { coffee: @coffee } }
     end
   end
 
