@@ -8,6 +8,6 @@
   <% if @user_brews.present? %>
     <%= render 'brews/brews_table', brews: @user_brews %>
   <% else %>
-    <h3>You haven't logged any brews for this coffee </h3>
+    <h3 class="no-brews">You haven't logged any brews for this coffee </h3>
   <% end %>
 <% end %>

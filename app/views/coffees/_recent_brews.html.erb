@@ -9,6 +9,6 @@
     <%= turbo_stream_from "recent_brews" %>
     <%= render 'brews/brews_table', brews: @recent_brews %>
   <% else %>
-    <h3>No one has logged brews of this coffee</h3>
+    <h3 class="no-brews">No one has logged brews of this coffee</h3>
   <% end %>
 <% end %>
