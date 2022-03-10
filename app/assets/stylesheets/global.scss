@@ -154,36 +154,60 @@ body {
 
   .tooltip-parent .tooltip-content {
     visibility: hidden;
+    opacity: 0;
     max-width: 220px;
     min-width: 140px;
     background-color: $ink;
     color: white;
     text-align: center;
+    font-size: 0.8rem;
     border-radius: 6px;
     padding: 0.2rem 0.5rem;
     position: absolute;
     z-index: 1;
-    top: 150%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
     transition: opacity 0.5s;
-    transition-delay: 0.5s;
+
+    &.right {
+      top: -5px;
+      left: 160%;
+      transition-delay: 1s;
+    }
+
+    &.bottom {
+      top: 150%;
+      left: 50%;
+      margin-left: -60px;
+      transition-delay: 0.5s;
+    }
   }
 
-  .tooltip-parent .tooltip-content::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -10px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent $ink transparent;
+  /* Directional Arrows */
+  /* Direction class is position of tooltip not direction of arrow*/
+  .tooltip-parent .tooltip-content {
+    &::after {
+      content: "";
+      position: absolute;
+      border-width: 5px;
+      border-style: solid;
+    }
+
+    &.bottom::after {
+      border-color: transparent transparent $ink transparent;
+      margin-left: -10px;
+      bottom: 100%;
+      left: 50%;
+    }
+
+    &.right::after {
+      border-color: transparent $ink transparent transparent;
+      margin-top: -5px;
+      top: 50%;
+      right: 100%;
+    }
   }
 
   .tooltip-parent:hover .tooltip-content {
-      visibility: visible;
-      opacity: 1;
-    }
+    visibility: visible;
+    opacity: 1;
+  }
 }
