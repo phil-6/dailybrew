@@ -18,21 +18,34 @@
 }
 
 .admin-controls-container {
+  @media screen and (max-width: $screen-lg) {
+    display: none;
+  }
+  position: absolute;
+  padding: 1.5rem 3.5rem;
+  right: 0;
+  top: 120px;
   display: flex;
   justify-content: center;
+  border-radius: 1rem;
+  border: 0.2rem dashed #FFB47955;
+  background: repeating-linear-gradient(-40deg, #FE787C25, #FFB47925 10px, #FFB47925 10px, #FE787C25 40px);
 
   .admin-controls {
-    padding: 2rem 4rem;
-    background: repeating-linear-gradient(-40deg, #FE787C25, #FFB47925 10px, #FFB47925 10px, #FE787C25 40px);
-    border: 0.2rem dashed #FFB47955;
     border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: $ink-80;
     text-align: center;
-
 
     h1 {
       font-size: 1.5rem;
       color: $warning-dark;
     }
+
+    p {
+      color: $color-complementary-2
+    }
+
     .btn {
       margin: 0.25rem;
       padding: 0.25rem 0.5rem;

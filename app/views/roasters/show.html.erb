@@ -34,9 +34,9 @@
           <p>Coffees Last Updated: <%= time_ago_in_words(@roaster.last_coffee_fetch) %> ago</p>
         <% end %>
         <% if @roaster.last_coffee_fetch.nil? || @roaster.last_coffee_fetch < 1.week.ago %>
-          <%= button_to "Update Coffees", update_coffees_roaster_path(@roaster), method: :post %>
+          <%= button_to "Update Coffees", update_coffees_roaster_path(@roaster), method: :post, class: "btn link-complementary" %>
         <% end %>
-        <%= link_to "Edit this roaster", edit_roaster_path(@roaster) %>
+        <%= link_to "Edit this roaster", edit_roaster_path(@roaster), class: "btn link-primary" %>
       <% end %>
     </div>
   </div>
