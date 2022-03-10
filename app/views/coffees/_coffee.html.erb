@@ -1,10 +1,17 @@
 <div id="<%= dom_id coffee %>" class="coffee-card card column">
   <div class="coffee-card-content row">
     <div class="column">
-      <h4 class="name"><%= link_to coffee.name, coffee, class: 'link link-primary link-title' %></h4>
+      <h4 class="name">
+        <% if action_name == 'show' %>
+          <a class="link link-primary link-title" href="<%= coffee.url %>" target="_blank"><%= coffee.name %></a>
+        <% else %>
+          <%= link_to coffee.name, coffee, class: 'link link-primary link-title' %>
+        <% end %>
+      </h4>
       <% unless controller_name == 'roasters' %>
         <div class="roaster">
           by <%= link_to coffee.roaster.name, roaster_path(coffee.roaster), class: 'link link-primary' %>
+          <a class="link link-primary" href="<%= coffee.roaster.website %>" target="_blank"><i class="icon-basic-external"></i></a>
         </div>
       <% end %>
       <% unless local_assigns[:shelf_item] %>
