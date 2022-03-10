@@ -24,7 +24,6 @@
     </div>
   <% end %>
 
-  <%# I Feel as though there's a really clever way of making this SUPER DRY. There is very little changing between some of these partials here. Leaving this here as a reminder to investigate at a future date. For now: KISS %>
   <section class="tabs">
   <%= render 'coffees/recent_brews', locals: { coffee: @coffee , brews: @recent_brews} %>
   </section>
