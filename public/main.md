@@ -19,12 +19,12 @@ in development we are! If you're here now, that's great. Your feedback can reall
 - **Coffee Ratio** We do the hard part and calculate the coffee:water ratio for you.
 - **Easier Create Coffee Form** If there's a coffee we're missing, adding it should be easier now.
 - **Brews Index** See a historical list of your brews
+- **Brews on Coffee** See how other people are brewing your favourite coffees, and your brews for a coffee
 
 ### Features we’re working on.
 - **More Coffees** We're adding more coffees to our database all the time, we're trying to do it in an automated, reusable way, so it's not that quick
 - **Available Coffees** See which coffees a roaster has currently available and see a roasters historic coffees
 - **Improved Brew View** The view which shows you an individual brew is very functional at the moment, we're working on improving this.
-- **Brews on Coffee** See how other people are brewing your favourite coffees
 - **Review Coffees** Leave reviews on the coffees you've tried and read others reviews. These can be private to you or public to other daily brew members, you decide.
 - **Public Reviews** See what others have to say about the coffees you love
 - **Public Profile** Share your key stats and recent brews and see what other people are drinking too. Of course, you control your privacy on this.
