@@ -23,7 +23,7 @@ module FetchCoffees
         puts coffee['url']
         coffee['country'] = coffee_section.css('.product-copy p.product--vendor').text
         coffee['name'] = coffee_section.css('.product-copy p.h3').text
-        coffee['tasting_notes'] = coffee_section.css('.product-copy p').text
+        coffee['tasting_notes'] = coffee_section.css('.product-copy p').last.text
 
         coffee_html = Net::HTTP.get_response(URI.parse(coffee['url']))
         coffee_page = Nokogiri::HTML(coffee_html.body)
