@@ -1,5 +1,5 @@
 module FetchCoffees
-  class OriginCoffee
+  class Origin
     require 'open-uri'
     require 'net/http'
     require 'json'
