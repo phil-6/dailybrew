@@ -2,7 +2,8 @@
 
 .admin {
   .row {
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 
     [class$="-table"] {
       border: 1px solid rebeccapurple;

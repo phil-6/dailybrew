@@ -11,15 +11,9 @@
   </head>
 
   <body>
-    <% flash.each do |type, msg| %>
-      <% if type != 'timedout' %>
-        <div data-controller="alerts" class="alert <%= alert_class_for(type) %>" role="alert">
-          <%= msg %>
-          <span data-action="click->alerts#dismiss" class="btn-close"><i class="icon-basic-cancel-1"></i></span>
-        </div>
-      <% end %>
+    <%= turbo_frame_tag "flash" do %>
+      <%= render 'shared/flash' %>
     <% end %>
-
     <%= render 'shared/navbar/navbar' %>
     <%= yield %>
   </body>

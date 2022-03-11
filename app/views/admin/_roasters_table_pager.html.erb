@@ -3,7 +3,7 @@
     <% if pagy_roasters.next %>
       <%= link_to(
             "Load more",
-            admin_dashboard_path(page_roasters: pagy_roasters.next),
+            admin_path(page_roasters: pagy_roasters.next),
             class: "",
             data: {
               turbo_frame: "roasters_handler"

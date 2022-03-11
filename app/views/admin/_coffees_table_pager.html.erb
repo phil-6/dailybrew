@@ -1,0 +1,14 @@
+<div id="coffees_table_pager" class="coffees_table_pager">
+  <div>
+    <% if pagy_coffees.next %>
+      <%= link_to(
+            "Load more",
+            admin_path(page_coffees: pagy_coffees.next),
+            class: "",
+            data: {
+              turbo_frame: "coffees_handler"
+            }
+          ) %>
+    <% end %>
+  </div>
+</div>

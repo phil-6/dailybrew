@@ -25,7 +25,7 @@ module FetchCoffees
         coffee_page = Nokogiri::HTML(coffee_html.body)
 
         coffee['name'] = coffee_page.css('.ProductItem-details-title').first&.text
-        coffee['country'] = coffee['name'].gsub(/ .*/, '') unless coffee['name'].downcase.match? /blend|test/
+        coffee['country'] = coffee['name'].gsub(/ .*/, '') unless coffee['name']&.downcase.match? /blend|test/
 
         coffee_page.css('.ProductItem-details-excerpt p').each do |detail|
           if detail.text.downcase.include? 'notes: '

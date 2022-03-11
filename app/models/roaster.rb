@@ -9,4 +9,17 @@ class Roaster < ApplicationRecord
   def update_coffees
     UpdateCoffeesJob.perform_later(reference)
   end
+
+  def available_coffees
+    coffees.available
+  end
+
+  after_update_commit do
+    broadcast_prepend_later_to(
+      'roaster_updates',
+      target: 'async_output',
+      partial: 'roasters/update_summary',
+      locals: { roaster: self }
+    )
+  end
 end
