@@ -6,16 +6,16 @@
   background-color: $color-primary-1;
 
   .banner-primary-1 .banner-content {
-    max-width: $container-xxl;
-    padding: 2rem 2rem 0 !important;
-
-    @media screen and (max-width: $screen-lg) {
-      padding: 1rem 1rem 0 !important;
-    }
+    padding: 0 !important;
   }
 
   section {
-    padding-bottom: 3rem;
+    max-width: $container-xxl;
+    padding: 2rem;
+
+    @media screen and (max-width: $screen-lg) {
+      padding: 1rem 1rem 2rem;
+    }
 
     h2 {
       margin-bottom: 1.5rem;
@@ -25,7 +25,6 @@
   .header {
     max-width: $container-md;
     margin: auto;
-    padding: 0 2rem 3rem;
 
     @media screen and (max-width: $screen-lg) {
       padding: 0 1rem 3rem;
@@ -54,6 +53,7 @@
   section > .shelf.row {
     gap: 1rem;
     overflow-x: scroll;
+    overflow-y: hidden; // Im not sure about this. Might have unintended side effects.
     padding-bottom: 1rem;
     
     @media screen and (max-width: $screen-lg) {
@@ -84,26 +84,6 @@
       overflow-y: auto;
       display: block;
     }
-
-    .brews-table {
-      .brew-row {
-        p {
-          color: $ink;
-        }
-  
-        &:hover {
-          p {
-            color: $color-white;
-          }
-        }
-
-        .created p {
-          text-align: right;
-        }
-      }
-    }
-
-    
 
     .link {
       display: block;
