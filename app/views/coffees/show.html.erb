@@ -5,30 +5,31 @@
     </div>
   </div>
 
-  <% if current_user&.admin %>
-    <div class="admin-controls-container">
-      <div class="admin-controls">
-        <h1>Admin Controls</h1>
-        <%= link_to "Edit this coffee", edit_coffee_path(@coffee), class: "btn link-primary" %>
-        <%= button_to "Destroy this coffee", @coffee,
-                      method: :delete,
-                      form: { data: { turbo_confirm: "Are you sure you want do delete this coffee?"}},
-                      class: "btn link-danger" %>
 
-        <%# This uses deletes with a turbostream request format. Leaving it here because its cool and would be interesting to implement if we want to delete things from the index page. It doesn't work great if we're deleting from a show page. %>
-        <%#= link_to "Destroy this coffee",
+      <% if current_user&.admin %>
+        <div class="admin-controls-container">
+          <div class="admin-controls">
+            <h1>Admin Controls</h1>
+            <%= link_to "Edit this coffee", edit_coffee_path(@coffee), class: "btn link-primary" %>
+            <%= button_to "Destroy this coffee", @coffee,
+                          method: :delete,
+                          form: { data: { turbo_confirm: "Are you sure you want do delete this coffee?" } },
+                          class: "btn link-danger" %>
+
+            <%# This uses deletes with a turbostream request format. Leaving it here because its cool and would be interesting to implement if we want to delete things from the index page. It doesn't work great if we're deleting from a show page. %>
+            <%#= link_to "Destroy this coffee",
                     coffee_path(@coffee),
                     data: { turbo_method: "delete", turbo_confirm: "Are you sure you want do delete this coffee?" },
                     class: "btn link-danger" %>
-      </div>
-    </div>
-  <% end %>
+          </div>
+        </div>
+      <% end %>
 
-  <div class="coming-soon">
-    <h1>More Coming Soon</h1>
-    <p>Soon, we're going to be adding a load of extra information here.</p>
-    <p>You'll be able to see your brews of this coffee, all public brews, and all reviews.</p>
-    <p>If you have any suggestions as to what you would like to see, then please let us know</p>
-  </div>
+      <section class="tabs">
+        <div class="card">
+        <%= render 'coffees/recent_brews', locals: { coffee: @coffee, brews: @recent_brews } %>
+        </div>
+      </section>
+
 
 </main>

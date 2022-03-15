@@ -27,9 +27,13 @@ Rails.application.routes.draw do
 
   resources :coffees, only: :index do
     resources :brews, shallow: true
+    get 'user_brews', to: 'brews#user_brews'
+    get 'recent_brews', to: 'brews#recent_brews'
+    get 'coming_soon', on: :member
   end
 
   resources :brews, only: :index
+  get 'recent_brews', to: 'brews#recent_brews'
 
   get 'shelf_items', to: 'shelf_items#index', as: 'shelf_items'
   post 'shelf_items/:coffee_id', to: 'shelf_items#create', as: 'create_shelf_item'

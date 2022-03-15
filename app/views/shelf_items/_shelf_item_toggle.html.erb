@@ -1,11 +1,17 @@
 <div id="shelf_item_toggle_<%= dom_id(coffee) %>">
   <% if current_user&.shelf_items.find_by(coffee: coffee) %>
-    <%= button_to delete_shelf_item_path(coffee), method: :delete, class:'link link-primary link-icon icon-line-1-4' do %>
-      <i class="icon-sl-remove"></i>
+    <%= button_to delete_shelf_item_path(coffee), method: :delete, class: 'link link-primary link-icon icon-line-1-4' do %>
+      <span class="tooltip-parent">
+        <i class="icon-sl-remove"></i>
+        <span class="tooltip-content right delay-slow">Remove from your shelf</span>
+      </span>
     <% end %>
   <% else %>
-    <%= button_to create_shelf_item_path(coffee), method: :post, class:'link link-primary link-icon icon-line-1-4' do %>
-      <i class="icon-sl-add"></i>
+    <%= button_to create_shelf_item_path(coffee), method: :post, class: 'link link-primary link-icon icon-line-1-4' do %>
+      <span class="tooltip-parent">
+        <i class="icon-sl-add"></i>
+        <span class="tooltip-content right delay-slow">Add to your shelf</span>
+      </span>
     <% end %>
   <% end %>
 </div>

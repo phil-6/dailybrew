@@ -37,81 +37,79 @@
         h5 {
           color: $color-complementary-0;
         }
-      }
 
-      @media screen and (max-width: $screen-lg) {
-        display: block;
+        .rating {
+          color: inherit;
+        }
       }
 
       td {
         padding: 0 0.5rem;
       }
 
-      @media screen and (min-width: $screen-lg) {
-        .coffee-name {
-          width: 30%;
-        }
-
-        .equipment {
-          width: 17.5%;
-        }
-
-        .config {
-          width: 35%
+      @media screen and (max-width: $screen-lg) {
+        display: block;
+        .desktop {
+          display: none;
         }
       }
 
-      .config {
-        width: 45%;
+      @media screen and (min-width: $screen-lg) {
+        .mobile {
+          display: none;
+        }
+        .coffee-name {
+          width: 40%;
+        }
+        .equipment, .config, .created {
+          width: 15%;
+        }
+        .ratio {
+          width: 20%
+        }
+      }
+
+      .config, .ratio {
         gap: 1rem;
         align-items: flex-start;
+        justify-content: flex-start;
 
         @media screen and (max-width: $screen-lg) {
           width: 100%;
           display: flex;
-          padding: 0.5rem;
+          padding: 0.2rem;
           gap: 0.75rem;
         }
 
         @media screen and (max-width: $screen-md) {
           gap: 0.5rem;
+          .rating, .equipment {
+            margin-left: auto;
+          }
         }
 
-        .row {
+        .data {
+          display: flex;
           flex-wrap: nowrap;
-          align-items: center;
           gap: 0.25rem;
 
-          &.ratio {
+          &.ratio-value {
             opacity: 0.6;
-          }
-
-          @media screen and (min-width: $screen-lg) {
-            width: 20%;
-          }
-
-          i {
-            font-size: 1.2rem;
-
-            @media screen and (max-width: $screen-lg) {
-              font-size: 1.1375rem;
-            }
-
-            @media screen and (max-width: $screen-md) {
-              font-size: 1.075rem;
-            }
-          }
-
-          &:last-child {
-            justify-content: flex-end;
           }
         }
       }
 
-      .created {
-        width: 12.5%;
+      .rating {
+        font-weight: 600;
+        color: $color-primary-0;
         text-align: right;
+        @media screen and (max-width: $screen-lg) {
+          width: 20%;
+        }
+      }
 
+      .created {
+        text-align: right;
         @media screen and (max-width: $screen-lg) {
           display: block;
           width: 100%;
@@ -158,7 +156,6 @@
       .stopwatch {
         align-self: flex-end;
         color: $color-primary-1;
-
 
         .time {
           width: $container-xs;

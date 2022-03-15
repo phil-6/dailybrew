@@ -27,4 +27,54 @@
       margin: 1rem auto;
     }
   }
+
+  &-show {
+    min-height: calc(100vh - #{$nav-height});
+    background-color: $color-primary-1;
+    padding-bottom: 4rem;
+
+      .coffee-card {
+        max-width: $container-md;
+        margin: auto;
+      }
+
+      section.tabs {
+        max-width: $container-xxl;
+        margin: 1rem auto;
+
+        .card {
+          padding: 0.5rem;
+          color: $ink;
+        }
+
+        .links {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+
+          h2 {
+            color: $color-primary-0;
+            flex-basis: 100%
+          }
+
+          h1, h2, h3 {
+            display: inline-block;
+            margin: auto 1rem;
+
+            a {
+              color: $color-complementary-4;
+
+              &:hover {
+                color: $color-complementary-0;
+              }
+            }
+          }
+        }
+
+        .no-brews {
+          text-align: center;
+        }
+      }
+    }
 }

@@ -1,6 +1,11 @@
 <%= turbo_stream.remove("shelf_#{dom_id(@coffee)}") %>
 
 <%= turbo_stream.replace(
+      "brew_btn_#{dom_id(@coffee)}",
+      partial: "coffees/brew_button",
+      locals: { coffee: @coffee }) %>
+
+<%= turbo_stream.replace(
       "shelf_item_toggle_#{dom_id(@coffee)}",
       partial: "shelf_item_toggle",
       locals: { coffee: @coffee }) %>
