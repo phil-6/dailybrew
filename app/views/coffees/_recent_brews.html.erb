@@ -1,8 +1,8 @@
 <%= turbo_frame_tag "coffee_tab" do %>
   <div class="links">
-    <h1>Recent Brews</h1>
-    <h2><%= link_to "Your Brews", coffee_user_brews_path(@coffee) %></h2>
-    <h2><%= link_to "Reviews", coming_soon_coffee_path(@coffee) %></h2>
+    <h2>Recent Brews</h2>
+    <h3><%= link_to "Your Brews", coffee_user_brews_path(@coffee) %></h3>
+    <h3><%= link_to "Reviews", coming_soon_coffee_path(@coffee) %></h3>
   </div>
   <hr>
   <% if @recent_brews.present? %>

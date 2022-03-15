@@ -31,9 +31,17 @@
   &-show {
     section.tabs {
       .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         text-align: center;
+        margin-top: 1rem;
 
-        h1, h2 {
+        h2 {
+          flex-basis: 100%
+        }
+
+        h1, h2, h3 {
           display: inline-block;
           margin: auto 1rem;
 
