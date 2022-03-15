@@ -3,6 +3,9 @@
     <h5>
       <%= @recent_brews.nil? ? brew.coffee.name : "Brewed by #{brew.user.username}" %>
     </h5>
+    <% unless controller_name == "dashboard"  %>
+      <p class="small"><%= brew.notes %></p>
+    <% end %>
   </td>
   <td class="equipment">
     <p><%= brew.equipment %></p>
