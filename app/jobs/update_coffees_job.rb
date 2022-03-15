@@ -9,7 +9,7 @@ class UpdateCoffeesJob < ApplicationJob
     roaster.available_coffees.each { |c| c.update_attribute(:available, false) }
     return unless (scraper = scraper(reference))
 
-    return if roaster.last_coffee_fetch > 6.hours.ago
+    return if (roaster.last_coffee_fetch > 6.hours.ago if roaster.last_coffee_fetch.present?)
 
     coffees = scraper.new.scrape
     coffees.each do |coffee|
