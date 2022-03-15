@@ -22,6 +22,10 @@
           <p>Users With Brews: <%= @stats['user_with_brews'] %></p>
         </div>
       </section>
+      <div class="updates">
+        <%= turbo_stream_from "roaster_updates" %>
+        <div id="async_output"></div>
+      </div>
 
     </div>
   </div>
@@ -52,8 +56,6 @@
 
 
     <section class="roaster-container">
-      <%= turbo_stream_from "roaster_updates" %>
-      <div id="async_output"></div>
       <h2>Roasters</h2>
       <%= turbo_frame_tag "roasters_handler" %>
       <div class="table-container">
