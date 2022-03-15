@@ -29,31 +29,52 @@
   }
 
   &-show {
-    section.tabs {
-      .links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        margin-top: 1rem;
+    min-height: calc(100vh - #{$nav-height});
+    background-color: $color-primary-1;
+    padding-bottom: 4rem;
 
-        h2 {
-          flex-basis: 100%
+      .coffee-card {
+        max-width: $container-md;
+        margin: auto;
+      }
+
+      section.tabs {
+        max-width: $container-xxl;
+        margin: 1rem auto;
+
+        .card {
+          padding: 0.5rem;
+          color: $ink;
         }
 
-        h1, h2, h3 {
-          display: inline-block;
-          margin: auto 1rem;
+        .links {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
 
-          a {
-            color: $color-complementary-4;
+          h2 {
+            color: $color-primary-0;
+            flex-basis: 100%
+          }
+
+          h1, h2, h3 {
+            display: inline-block;
+            margin: auto 1rem;
+
+            a {
+              color: $color-complementary-4;
+
+              &:hover {
+                color: $color-complementary-0;
+              }
+            }
           }
         }
-      }
 
-      .no-brews {
-        text-align: center;
+        .no-brews {
+          text-align: center;
+        }
       }
     }
-  }
 }
