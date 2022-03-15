@@ -9,7 +9,7 @@ class UpdateCoffeesJob < ApplicationJob
     roaster.available_coffees.each { |c| c.update_attribute(:available, false) }
     return unless (scraper = scraper(reference))
 
-    return if roaster.last_coffee_fetch < 6.hours.ago
+    return if roaster.last_coffee_fetch > 6.hours.ago
 
     coffees = scraper.new.scrape
     coffees.each do |coffee|
@@ -33,6 +33,8 @@ class UpdateCoffeesJob < ApplicationJob
     # could be in an after_perform callback and could reach out to a method on the model
     # but its here for now.
     roaster.update!(last_coffee_fetch: DateTime.now)
+
+    Coffee.counter_culture_fix_counts
   end
 
   # rubocop:enable Metrics/MethodLength, Metrics/AbcSize

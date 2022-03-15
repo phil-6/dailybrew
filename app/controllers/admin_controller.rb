@@ -14,10 +14,6 @@ class AdminController < ApplicationController
   def update_all_coffees
     flash.now[:alert] = 'Updating All Coffees'
     Roaster.with_coffees.each(&:update_coffees)
-
-    respond_to do |format|
-      format.turbo_stream
-    end
   end
 
   def icon_sl

@@ -1,7 +1,5 @@
 class Coffee < ApplicationRecord
   belongs_to :roaster
-  counter_culture :roaster
-  counter_culture :roaster, column_name: proc { |model| model.available? ? 'available_coffees_count' : nil }
   has_many :brews
   has_many :brewers, through: :brews, source: :user
   has_many :reviews
@@ -16,6 +14,11 @@ class Coffee < ApplicationRecord
 
   scope :available, -> { where(available: true) }
   scope :unavailable, -> { where(available: false) }
+
+  counter_culture :roaster
+  counter_culture :roaster,
+                  column_name: proc { |model| model.available? ? 'available_coffees_count' : nil },
+                  column_names: -> { { Coffee.available => :available_coffees_count } }
 
   def unique_brewers
     brewers.distinct

@@ -30,9 +30,18 @@
       }
     }
   }
-  .updates{
+
+  .updates {
     color: white;
     font-weight: 500;
+
+    a {
+      color: $color-complementary-0;
+
+      &:hover {
+        color: $color-complementary-4
+      }
+    }
   }
 
   .sections {
@@ -53,9 +62,11 @@
       td {
         padding: 0 0.4rem;
       }
+
       a {
         color: $color-primary-0;
         font-weight: 500;
+
         &:hover {
           color: $color-primary-2;
         }
