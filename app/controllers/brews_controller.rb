@@ -1,10 +1,33 @@
 class BrewsController < ApplicationController
   before_action :set_brew, only: %i[show edit update destroy]
-  before_action :set_coffee, only: %i[new create update]
+  before_action :set_coffee, only: %i[new create update user_brews]
+  before_action :confirm_owner, only: %i[edit update destroy]
 
   # GET /brews or /brews.json
   def index
     @brews = (params[:coffee_id] ? Coffee.find(params[:coffee_id]).brews : current_user.brews.includes(:coffee).all).order(created_at: :desc)
+  end
+
+  def recent_brews
+    @recent_brews =
+      if params[:coffee_id]
+        set_coffee
+        Coffee.find(params[:coffee_id]).brews.visible.includes(:user).sort_by(&:created_at).last(10).reverse
+      else
+        Brew.visible.includes(:user, :coffee).sort_by(&:created_at).last(10).reverse
+      end
+
+    respond_to do |format|
+      format.html { render partial: 'coffees/recent_brews', locals: { brews: @recent_brews } }
+    end
+  end
+
+  def user_brews
+    @user_brews = @coffee.brews.where(user: current_user).sort_by(&:created_at).reverse
+
+    respond_to do |format|
+      format.html { render partial: 'coffees/user_brews', locals: { brews: @user_brews } }
+    end
   end
 
   # GET /brews/1 or /brews/1.json
@@ -71,6 +94,12 @@ class BrewsController < ApplicationController
 
   def set_coffee
     @coffee = params[:coffee_id] ? Coffee.find(params[:coffee_id]) : @brew.coffee
+  end
+
+  def confirm_owner
+    return if @brew.user == current_user
+
+    redirect_back(fallback_location: root_path, flash: { error: "You don't have permission to do that action." })
   end
 
   # Only allow a list of trusted parameters through.

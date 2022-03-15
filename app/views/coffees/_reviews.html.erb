@@ -1,0 +1,15 @@
+<%= turbo_frame_tag "coffee_tab" do %>
+  <div class="links">
+    <h2>Reviews</h2>
+    <h3><%= link_to "Recent Brews", coffee_recent_brews_path(@coffee) %></h3>
+    <h3><%= link_to "Your Brews", coffee_user_brews_path(@coffee) %></h3>
+
+  </div>
+  <hr>
+  <div class="coming-soon">
+    <h2>Coming Soon</h2>
+    <p>Soon, we're going to be adding a load of extra information here.</p>
+    <p>You'll be able to see <s>your brews of this coffee, all public brews, and</s> all reviews.</p>
+    <p>If you have any suggestions as to what you would like to see, then please let us know</p>
+  </div>
+<% end %>

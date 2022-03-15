@@ -1,7 +1,0 @@
-<%= turbo_stream_from "recent_brews" %>
-<hr>
-<div id="brews_<%= dom_id(coffee) %>">
-  <% coffee.brews.visible.last(10).sort_by(&:created_at).reverse.each do |brew| %>
-    <%= render brew %>
-  <% end %>
-</div>
