@@ -9,73 +9,77 @@
                       method: :post,
                       class: 'btn btn-complementary' %>
       <% end %>
+      <section class="stats-container">
+        <div class="stats">
+          <h2>Stats</h2>
+          <p>User Count: <%= @stats['user_count'] %></p>
+          <p>Roaster Count: <%= @stats['roaster_count'] %></p>
+          <p>Roasters with Coffees: <%= @stats['roaster_with_coffees'] %></p>
+          <p>Coffees Count: <%= @stats['coffee_count'] %></p>
+          <p>Coffees With Brews: <%= @stats['coffee_with_brews'] %></p>
+          <p>Total Brews: <%= @stats['brews_count'] %></p>
+          <p>Daily Brews: <%= @stats['daily_brews'] %></p>
+          <p>Users With Brews: <%= @stats['user_with_brews'] %></p>
+        </div>
+      </section>
+
     </div>
   </div>
-  <div class="row">
 
-    <div class="stats-container">
-      <h2>Stats</h2>
-      <p>User Count: <%= @stats['user_count'] %></p>
-      <p>Roaster Count: <%= @stats['roaster_count'] %></p>
-      <p>Roasters with Coffees: <%= @stats['roaster_with_coffees'] %></p>
-      <p>Coffees Count: <%= @stats['coffee_count'] %></p>
-      <p>Coffees With Brews: <%= @stats['coffee_with_brews'] %></p>
-      <p>Total Brews: <%= @stats['brews_count'] %></p>
-      <p>Daily Brews: <%= @stats['daily_brews'] %></p>
-      <p>Users With Brews: <%= @stats['user_with_brews'] %></p>
-    </div>
-
-    <div class="user-container">
+  <div class="sections">
+    <section class="user-container">
       <h2>Users</h2>
       <%= turbo_frame_tag "users_handler" %>
-      <table id="users_table" class="users-table">
-        <tr>
-          <th>Display Name</th>
-          <th><i class="icon-sl-email-1"></i></th>
-          <th><i class="icon-sl-bookmark"></i></th>
-          <th><i class="icon-sl-profile-1"></i></th>
-          <th><i class="icon-basic-super"></i></th>
-          <th><i class="icon-sl-shelf"></i></th>
-          <th><i class="icon-sl-heart-3"></i></th>
-          <th><i class="icon-basic-coffee-cup"></i></th>
-          <th><i class="icon-basic-coffee-cup-1"></i></th>
-          <th>Last Sign In</th>
-        </tr>
-        <%= render "users_table", users: @users %>
-      </table>
+      <div class="table-container">
+        <table id="users_table" class="users-table">
+          <tr>
+            <th>Display Name</th>
+            <th><i class="icon-sl-email-1"></i></th>
+            <th><i class="icon-sl-bookmark"></i></th>
+            <th><i class="icon-sl-profile-1"></i></th>
+            <th><i class="icon-basic-super"></i></th>
+            <th><i class="icon-sl-shelf"></i></th>
+            <th><i class="icon-sl-heart-3"></i></th>
+            <th><i class="icon-basic-coffee-cup"></i></th>
+            <th><i class="icon-basic-coffee-cup-1"></i></th>
+            <th>Last Sign In</th>
+          </tr>
+          <%= render "users_table", users: @users %>
+        </table>
+      </div>
       <%= render "users_table_pager", pagy_users: @pagy_users %>
-    </div>
+    </section>
 
-    <div class="roaster-container">
+
+    <section class="roaster-container">
       <%= turbo_stream_from "roaster_updates" %>
       <div id="async_output"></div>
       <h2>Roasters</h2>
       <%= turbo_frame_tag "roasters_handler" %>
-      <table id="roasters_table" class="roasters-table">
-        <tr>
-          <th>Name</th>
-          <th>Coffees</th>
-          <th>Available</th>
-          <th>Last Coffee Fetch</th>
-        </tr>
-        <%= render "roasters_table", roasters: @roasters %>
-      </table>
+      <div class="table-container">
+        <table id="roasters_table" class="roasters-table">
+          <tr>
+            <th>Name</th>
+            <th>Coffees</th>
+            <th>Available</th>
+            <th>Last Coffee Fetch</th>
+          </tr>
+          <%= render "roasters_table", roasters: @roasters %>
+        </table>
+      </div>
       <%= render "roasters_table_pager", pagy_roasters: @pagy_roasters %>
-    </div>
+    </section>
 
-    <div class="coffees">
+    <section class="coffees">
       <h2>Coffees</h2>
-
-
       <%= turbo_frame_tag "coffees_handler" %>
-
-      <table id="coffees_table" class="coffees-table">
-        <%= render "coffees_table", coffees: @coffees %>
-      </table>
+      <div class="table-container">
+        <table id="coffees_table" class="coffees-table">
+          <%= render "coffees_table", coffees: @coffees %>
+        </table>
+      </div>
       <%= render "coffees_table_pager", pagy_coffees: @pagy_coffees %>
-    </div>
-
-
+    </section>
 
   </div>
 </main>
