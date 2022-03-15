@@ -1,0 +1,7 @@
+<% @coffees.each do |coffee| %>
+  <tr>
+    <td><%= link_to coffee.name, coffee_path(coffee) %></td>
+    <td>by <%= coffee.roaster.name %></td>
+    <td>Updated: <%= coffee.updated_at.to_formatted_s(:short) %></td>
+  </tr>
+<% end %>

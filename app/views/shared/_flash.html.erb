@@ -1,0 +1,8 @@
+<% flash.each do |type, msg| %>
+  <% if type != 'timedout' %>
+    <div data-controller="alerts" class="alert <%= alert_class_for(type) %>" role="alert">
+      <%= msg %>
+      <span data-action="click->alerts#dismiss" class="btn-close"><i class="icon-basic-cancel-1"></i></span>
+    </div>
+  <% end %>
+<% end %>

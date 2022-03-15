@@ -23,3 +23,16 @@
         template: %(#{render "roasters_table_pager", pagy_roasters: @pagy_roasters})
       ) %>
 <% end %>
+
+<%= turbo_frame_tag "coffees_handler" do %>
+  <%= turbo_stream_action_tag(
+        "append",
+        target: "coffees_table",
+        template: %(#{render 'coffees_table', coffees: @coffees})
+      ) %>
+  <%= turbo_stream_action_tag(
+        "replace",
+        target: "coffees_table_pager",
+        template: %(#{render "coffees_table_pager", pagy_coffees: @pagy_coffees})
+      ) %>
+<% end %>

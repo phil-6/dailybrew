@@ -1,17 +1,79 @@
 @import "variables";
 
 .admin {
-  .row {
-    justify-content: space-between;
+  min-height: calc(100vh - #{$nav-height});
+  background-color: $color-primary-1;
 
-    [class$="-table"] {
-      border: 1px solid rebeccapurple;
-      height: 350px;
-      overflow-y: scroll;
+  .banner.banner-primary-1 .banner-content {
+    padding-bottom: 0;
+  }
+
+  section {
+    border-radius: 2rem;
+    margin: 0.5rem;
+    padding: 1.5rem;
+
+    &.stats-container {
+      margin: auto;
+      display: flex;
+      justify-content: center;
+
+      .stats {
+        h2 {
+          color: $color-complementary-0
+        }
+
+        p {
+          color: $color-white;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .updates {
+    color: white;
+    font-weight: 500;
+
+    a {
+      color: $color-complementary-0;
+
+      &:hover {
+        color: $color-complementary-4
+      }
+    }
+  }
+
+  .sections {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    section {
+      background: white;
+      height: 450px;
       display: block;
+
+      .table-container {
+        height: 350px;
+        overflow-y: scroll;
+      }
 
       td {
         padding: 0 0.4rem;
+      }
+
+      a {
+        color: $color-primary-0;
+        font-weight: 500;
+
+        &:hover {
+          color: $color-primary-2;
+        }
+      }
+
+      [class*="pager"] {
+        text-align: center;
       }
     }
   }

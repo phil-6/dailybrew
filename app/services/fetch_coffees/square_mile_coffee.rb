@@ -57,10 +57,10 @@ module FetchCoffees
         end
 
         # I hate this. Square Mile's descriptions have wildly inconsistent HTML
-        coffee['description'] = if coffee_page.css('.sqmile-single-product-description p').text != ''
-                                  coffee_page.at_css('.sqmile-single-product-description center').next
+        coffee['description'] = if coffee_page.css('.sqmile-single-product-description p')&.text != ''
+                                  coffee_page.at_css('.sqmile-single-product-description center')&.text
                                 else
-                                  coffee_page.css('.sqmile-single-product-description p').text
+                                  coffee_page.css('.sqmile-single-product-description p')&.text
                                 end
 
         coffee['available'] = true

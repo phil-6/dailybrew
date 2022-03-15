@@ -82,4 +82,7 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # Run Sidekiq tasks synchronously so that Sidekiq is not required in Development
+  require 'sidekiq/testing/inline'
 end

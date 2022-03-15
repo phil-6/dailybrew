@@ -13,9 +13,10 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    get 'dashboard'
+    get '/', action: :index
     get 'icon-sl'
     get 'icon-basic'
+    post 'update_all_coffees'
   end
 
   get 'dashboard', to: 'dashboard#index'
