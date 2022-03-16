@@ -80,6 +80,7 @@ class BrewsController < ApplicationController
     @brew.destroy
 
     respond_to do |format|
+      format.turbo_stream
       format.html { redirect_to dashboard_path, notice: 'Brew was successfully destroyed.' }
       format.json { head :no_content }
     end

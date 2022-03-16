@@ -1,4 +1,4 @@
-<%= link_to brew_path(brew), data: { turbo_frame: 'modal' } do %>
+<%= link_to brew_path(brew), data: { turbo_frame: 'modal' }, id: "#{dom_id(brew)}_table_row" do %>
   <div class="brew-row row">
     <div class="td coffee-name">
       <h5>
