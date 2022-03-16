@@ -6,11 +6,11 @@
       <div class="title">
         <h3>
           <%= brew.user == current_user ? "You" : brew.user.display_name %>
-          brewed <%= link_to brew.coffee.name, brew.coffee, class: 'link link-primary link-title' %>
+          brewed <%= link_to brew.coffee.name, brew.coffee, class: 'link link-primary link-title', data: { turbo_frame: "_top" } %>
         </h3>
         <h3>
           <% if brew.user == current_user %>
-            <%= link_to edit_brew_path(brew), class: 'link link-primary' do %><i class="icon-basic-editing"></i>
+            <%= link_to edit_brew_path(brew), class: 'link link-primary', data: { turbo_frame: "_top" } do %><i class="icon-basic-editing"></i>
             <% end %>
           <% end %>
         </h3>
