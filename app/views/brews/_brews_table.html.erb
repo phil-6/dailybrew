@@ -1,7 +1,3 @@
-<table class="brews-table">
-  <tbody id="brews_table">
-  <% brews.each do |brew| %>
-    <%= render 'brews/brews_table_row', brew: %>
-  <% end %>
-  </tbody>
-</table>
+<% brews.each do |brew| %>
+  <%= render 'brews/brews_table_row', brew: %>
+<% end %>

@@ -55,7 +55,7 @@
     overflow-x: scroll;
     overflow-y: hidden; // Im not sure about this. Might have unintended side effects.
     padding-bottom: 1rem;
-    
+
     @media screen and (max-width: $screen-lg) {
       margin-left: -1rem;
       margin-right: -1rem;
@@ -78,7 +78,7 @@
   }
 
   .brews {
-    table, tbody {
+    .brews-table {
       width: 100%;
       max-height: 610px;
       overflow-y: auto;

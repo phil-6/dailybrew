@@ -6,7 +6,9 @@
   </div>
   <hr>
   <% if @user_brews.present? %>
-    <%= render 'brews/brews_table', brews: @user_brews %>
+    <div class="brews-table" id="brews_table">
+      <%= render 'brews/brews_table', brews: @user_brews %>
+    </div>
   <% else %>
     <h3 class="no-brews">You haven't logged any brews for this coffee </h3>
   <% end %>

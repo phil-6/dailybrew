@@ -6,8 +6,10 @@
   </div>
   <hr>
   <% if @recent_brews.present? %>
+    <div class="brews-table" id="brews_table">
     <%= turbo_stream_from "recent_brews" %>
     <%= render 'brews/brews_table', brews: @recent_brews %>
+    </div>
   <% else %>
     <h3 class="no-brews">No one has logged brews of this coffee</h3>
   <% end %>

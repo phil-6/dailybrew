@@ -1,96 +1,98 @@
-<div id="<%= dom_id brew %>" class="card column">
+<%= turbo_frame_tag "modal" do %>
+  <div id="<%= dom_id brew %>" class="card column">
 
-  <div class="title">
-    <h3>
-      <%= brew.user == current_user ? "You" : brew.user.display_name %>
-      brewed <%= link_to brew.coffee.name, brew.coffee, class: 'link link-primary link-title' %>
-    </h3>
-    <h3>
-      <% if brew.user == current_user %>
-        <%= link_to edit_brew_path(brew), class: 'link link-primary' do %><i class="icon-basic-editing"></i>
+    <div class="title">
+      <h3>
+        <%= brew.user == current_user ? "You" : brew.user.display_name %>
+        brewed <%= link_to brew.coffee.name, brew.coffee, class: 'link link-primary link-title' %>
+      </h3>
+      <h3>
+        <% if brew.user == current_user %>
+          <%= link_to edit_brew_path(brew), class: 'link link-primary' do %><i class="icon-basic-editing"></i>
+          <% end %>
         <% end %>
-      <% end %>
-    </h3>
-  </div>
-
-  <div class="small">
-    <strong>Tasting Notes: </strong><%= brew.coffee.tasting_notes %>
-  </div>
-
-  <div data-controller="brew-ratio" class="ratio-row row">
-    <div>
-      <span data-brew-ratio-target="coffeeWeight"><%= brew.coffee_weight %></span>g Coffee
+      </h3>
     </div>
-    <div>&#8226;</div>
-    <div>
-      <span data-brew-ratio-target="waterWeight"><%= brew.water_weight %></span>g Water
+
+    <div class="small">
+      <strong>Tasting Notes: </strong><%= brew.coffee.tasting_notes %>
     </div>
-    <div>&#8226;</div>
-    <div>
-      Ratio: 1:<span data-brew-ratio-target="ratio">10.0</span>
+
+    <div data-controller="brew-ratio" class="ratio-row row">
+      <div>
+        <span data-brew-ratio-target="coffeeWeight"><%= brew.coffee_weight %></span>g Coffee
+      </div>
+      <div>&#8226;</div>
+      <div>
+        <span data-brew-ratio-target="waterWeight"><%= brew.water_weight %></span>g Water
+      </div>
+      <div>&#8226;</div>
+      <div>
+        Ratio: 1:<span data-brew-ratio-target="ratio">10.0</span>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <p><strong>Time: </strong><%= brew.formatted_time %></p>
-    <div>&#8226;</div>
-    <p><strong>Temp: </strong><%= brew.temperature %></p>
-  </div>
-
-  <div class="row">
-    <p><strong>Equipment: </strong><%= brew.equipment %></p>
-    <div>&#8226;</div>
-    <p><strong>Method: </strong><%= brew.method %></p>
-  </div>
-
-  <div class="row">
-    <p><strong>Grinder: </strong><%= brew.grinder %></p>
-    <div>&#8226;</div>
-    <p><strong>Grinder setting: </strong><%= brew.grinder_setting %></p>
-  </div>
-
-  <% if brew.user == current_user %>
-  <div class="notes field">
-    <%= form_with model: brew, class: "", data: { turbo_frame: "#{dom_id(brew)}_notes" } do |form| %>
-      <%= turbo_frame_tag "#{dom_id(brew)}_notes", class: "inline-edit" do %>
-        <%= link_to edit_brew_path(brew) do %>
-          <div class="form-input"><%= simple_format(brew.notes) %></div>
-          <div class="form-label">Notes</div>
-        <% end %>
-      <% end %>
-    <% end %>
-  </div>
-
-  <div class="rating field">
-    <%= form_with model: brew, class: "", data: { turbo_frame: "#{dom_id(brew)}_rating" } do |form| %>
-      <%= turbo_frame_tag "#{dom_id(brew)}_rating", class: "inline-edit" do %>
-        <%= link_to edit_brew_path(brew) do %>
-          <div class="form-input"><%= brew.rating || '?' %>/10</div>
-          <div class="form-label">Rating</div>
-        <% end %>
-      <% end %>
-    <% end %>
-  </div>
-  <% else %>
-    <div class="notes field">
-      <div class="form-input"><%= simple_format(brew.notes) %></div>
-      <div class="form-label">Notes</div>
+    <div class="row">
+      <p><strong>Time: </strong><%= brew.formatted_time %></p>
+      <div>&#8226;</div>
+      <p><strong>Temp: </strong><%= brew.temperature %></p>
     </div>
-    <div class="rating field">
-      <div class="form-input"><%= brew.rating || '?' %>/10</div>
-      <div class="form-label">Rating</div>
-    </div>
-  <% end %>
 
-  <div class="title">
-    <h4><%= time_ago_in_words(brew.created_at) %> ago</h4>
+    <div class="row">
+      <p><strong>Equipment: </strong><%= brew.equipment %></p>
+      <div>&#8226;</div>
+      <p><strong>Method: </strong><%= brew.method %></p>
+    </div>
+
+    <div class="row">
+      <p><strong>Grinder: </strong><%= brew.grinder %></p>
+      <div>&#8226;</div>
+      <p><strong>Grinder setting: </strong><%= brew.grinder_setting %></p>
+    </div>
+
     <% if brew.user == current_user %>
-      <%= button_to brew,
-                    method: :delete,
-                    form: { data: { turbo_confirm: "Are you sure you want do delete this brew?" } },
-                    class: "link-danger" do %>
-        <i class="icon-basic-garbage-2"></i>
-      <% end %>
+      <div class="notes field">
+        <%= form_with model: brew, class: "", data: { turbo_frame: "#{dom_id(brew)}_notes" } do |form| %>
+          <%= turbo_frame_tag "#{dom_id(brew)}_notes", class: "inline-edit" do %>
+            <%= link_to edit_brew_path(brew) do %>
+              <div class="form-input"><%= simple_format(brew.notes) %></div>
+              <div class="form-label">Notes</div>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="rating field">
+        <%= form_with model: brew, class: "", data: { turbo_frame: "#{dom_id(brew)}_rating" } do |form| %>
+          <%= turbo_frame_tag "#{dom_id(brew)}_rating", class: "inline-edit" do %>
+            <%= link_to edit_brew_path(brew) do %>
+              <div class="form-input"><%= brew.rating || '?' %>/10</div>
+              <div class="form-label">Rating</div>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="notes field">
+        <div class="form-input"><%= simple_format(brew.notes) %></div>
+        <div class="form-label">Notes</div>
+      </div>
+      <div class="rating field">
+        <div class="form-input"><%= brew.rating || '?' %>/10</div>
+        <div class="form-label">Rating</div>
+      </div>
     <% end %>
+
+    <div class="title">
+      <h4><%= time_ago_in_words(brew.created_at) %> ago</h4>
+      <% if brew.user == current_user %>
+        <%= button_to brew,
+                      method: :delete,
+                      form: { data: { turbo_confirm: "Are you sure you want do delete this brew?" } },
+                      class: "link-danger" do %>
+          <i class="icon-basic-garbage-2"></i>
+        <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
+<% end %>

@@ -24,6 +24,10 @@
   &-table {
     width: 100%;
 
+    a {
+      color: inherit;
+    }
+
     .brew-row {
       position: relative;
       padding: 1rem 0.5rem;
@@ -43,7 +47,7 @@
         }
       }
 
-      td {
+      .td {
         padding: 0 0.5rem;
       }
 
@@ -114,17 +118,6 @@
           display: block;
           width: 100%;
         }
-      }
-
-      &:not(:last-child)::after {
-        content: "";
-        position: absolute;
-        left: 1.5rem;
-        bottom: 0;
-        width: calc(100% - 3rem);
-        height: 1px;
-        background-color: $color-primary-0;
-        opacity: 0.25;
       }
     }
   }
