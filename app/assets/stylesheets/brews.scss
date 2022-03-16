@@ -215,55 +215,52 @@
       }
     }
   }
+}
 
-  &-show {
-    .banner {
-      height: calc(100vh - #{$nav-height});
+#modal [id^="brew_"] {
+  .card a div p, .form-input {
+    color: $ink;
+  }
 
-      .banner-content .card div p {
-        color: $ink;
-      }
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+    font-variant-numeric: tabular-nums;
+  }
 
-      .row {
-        display: flex;
-        justify-content: space-evenly;
-        font-variant-numeric: tabular-nums;
-      }
+  .title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.25rem;
 
-      .title {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0.25rem;
-
-        .link-danger {
-          font-size: 1.5rem;
-          border-radius: 2rem;
-        }
-      }
-
-      .ratio-row {
-        padding: 0.5rem 0;
-      }
-
-      .field .link {
-        font-size: 1rem;
-      }
-
-      .notes {
-        margin: 0.5rem -1rem;
-
-        .form-input {
-          height: fit-content;
-        }
-
-        textarea {
-          min-height: 10rem;
-        }
-      }
-
-      .rating {
-        margin: 0.5rem auto 0.5rem -1rem;
-      }
+    .link-danger {
+      font-size: 1.5rem;
+      border-radius: 2rem;
     }
   }
+
+  .ratio-row {
+    padding: 0.5rem 0;
+  }
+
+  .field .link {
+    font-size: 1rem;
+  }
+
+  .notes {
+    margin: 0.5rem -1rem;
+
+    .form-input {
+      height: fit-content;
+    }
+
+    textarea {
+      min-height: 10rem;
+    }
+  }
+
+  .rating {
+    margin: 0.5rem auto 0.5rem -1rem;
+  }
 }
+
