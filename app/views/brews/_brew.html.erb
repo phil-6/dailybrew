@@ -1,7 +1,7 @@
 <%= turbo_frame_tag "modal" do %>
-  <div data-controller="modal" data-action="keyup@window->modal#closeWithKeyboard">
+  <div id="<%= dom_id brew %>" data-controller="modal" data-action="keyup@window->modal#closeWithKeyboard">
     <div data-action="click->modal#close" class="modal-background"></div>
-    <div id="<%= dom_id brew %>" class="card column">
+    <div class="card column">
 
       <div class="title">
         <h3>

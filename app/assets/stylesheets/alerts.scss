@@ -9,7 +9,7 @@ $width: calc(100% - 2rem);
   left: 1rem;
   padding: 2rem 3rem;
   border-radius: 0.25rem;
-  z-index: 2;
+  z-index: 100;
   max-width: $width;
 
   @media screen and (max-width: $screen-sm) {
