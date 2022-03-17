@@ -30,32 +30,34 @@
     </div>
   </div>
 
-      <section class="shelf-items">
-        <h2><%= link_to 'Your Shelf', shelf_items_path, class: 'link link-white link-title' %></h2>
-        <div id="dashboard_shelf" class="shelf row">
-          <% @shelf_coffees.reverse.each do |coffee| %>
-            <%= render 'shelf_items/shelf_item', coffee: coffee %>
-          <% end %>
-        </div>
-      </section>
+  <section class="shelf-items">
+    <h2><%= link_to 'Your Shelf', shelf_items_path, class: 'link link-white link-title' %></h2>
+    <div id="dashboard_shelf" class="shelf row">
+      <% @shelf_coffees.reverse.each do |coffee| %>
+        <%= render 'shelf_items/shelf_item', coffee: coffee %>
+      <% end %>
+    </div>
+  </section>
 
-      <section class="brews">
-        <h2><%= link_to 'Your Brews', brews_path, class: 'link-white link-title' %></h2>
-        <div class="card">
-          <%= turbo_frame_tag 'page_handler' %>
-          <%= render 'brews/brews_table', brews: @brews %>
-          <%= render 'brews_table_pager', pagy: @pagy %>
-        </div>
-      </section>
+  <section class="brews">
+    <h2><%= link_to 'Your Brews', brews_path, class: 'link-white link-title' %></h2>
+    <div class="card">
+      <%= turbo_frame_tag 'page_handler' %>
+      <div class="brews-table" id="brews_table">
+        <%= render 'brews/brews_table', brews: @brews %>
+      </div>
+      <%= render 'brews_table_pager', pagy: @pagy %>
+    </div>
+  </section>
 
-      <section class="favourites">
-        <h2><%= link_to 'Your Favourites', favourites_path, class: 'link link-white link-title' %></h2>
-        <div id="dashboard_favourites" class="shelf row">
-          <% @favourites.each do |coffee| %>
-            <%= render 'favourites/favourite', coffee: coffee %>
-          <% end %>
-        </div>
-      </section>
+  <section class="favourites">
+    <h2><%= link_to 'Your Favourites', favourites_path, class: 'link link-white link-title' %></h2>
+    <div id="dashboard_favourites" class="shelf row">
+      <% @favourites.each do |coffee| %>
+        <%= render 'favourites/favourite', coffee: coffee %>
+      <% end %>
+    </div>
+  </section>
 
 
 </main>

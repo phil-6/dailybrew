@@ -80,14 +80,15 @@ class BrewsController < ApplicationController
     @brew.destroy
 
     respond_to do |format|
-      format.html { redirect_to dashboard_path, notice: 'Brew was successfully destroyed.' }
+      flash.now[:alert] = 'Brew was successfully destroyed.'
+      format.turbo_stream
+      format.html { redirect_to dashboard_path }
       format.json { head :no_content }
     end
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_brew
     @brew = Brew.find(params[:id])
   end

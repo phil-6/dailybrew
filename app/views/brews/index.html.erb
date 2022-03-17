@@ -16,7 +16,9 @@
 
   <div class="brews-container">
     <div class="card">
-      <%= render 'brews_table', brews: @brews %>
+      <div class="brews-table" id="brews_table">
+        <%= render 'brews_table', brews: @brews %>
+      </div>
     </div>
   </div>
 </main>

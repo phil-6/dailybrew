@@ -1,0 +1,7 @@
+<%= turbo_stream.remove("#{dom_id(@brew)}_table_row") %>
+<%= turbo_stream.remove("#{dom_id(@brew)}") %>
+
+<%= turbo_stream.append(
+      'flash',
+      partial: 'shared/flash',
+      locals: { flash: flash })%>

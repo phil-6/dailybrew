@@ -1,51 +1,54 @@
-<tr onclick="location.href='<%= brew_path(brew) %>'" class="brew-row row">
-  <td class="coffee-name">
-    <h5>
-      <%= @recent_brews.nil? ? brew.coffee.name : "Brewed by #{brew.user.username}" %>
-    </h5>
-    <% unless controller_name == "dashboard" %>
-      <p class="small"><%= brew.notes %></p>
-    <% end %>
-  </td>
-
-  <td class="equipment desktop"><%= brew.equipment %></td>
-
-  <td data-controller="brew-ratio" class="row ratio">
-    <div class="data">
-      <i class="icon-basic-coffee-beans-4"></i>
-      <span data-brew-ratio-target="coffeeWeight"><%= brew.coffee_weight %></span>
-      <%= brew.coffee_weight.present? ? 'g' : '-' %>
+<%= link_to brew_path(brew), data: { turbo_frame: 'modal' }, id: "#{dom_id(brew)}_table_row" do %>
+  <div class="brew-row row">
+    <div class="td coffee-name">
+      <h5>
+        <%= @recent_brews.nil? ? brew.coffee.name : "Brewed by #{brew.user.username}" %>
+      </h5>
+      <% unless controller_name == "dashboard" %>
+        <p class="small"><%= brew.notes %></p>
+      <% end %>
     </div>
 
-    <div class="data">
-      <i class="icon-basic-water-drop"></i>
-      <span data-brew-ratio-target="waterWeight"><%= brew.water_weight %></span>
-      <%= brew.water_weight.present? ? 'g' : '-' %>
+    <div class="td equipment desktop"><%= brew.equipment %></div>
+
+    <div data-controller="brew-ratio" class="td row ratio">
+      <div class="data">
+        <i class="icon-basic-coffee-beans-4"></i>
+        <span data-brew-ratio-target="coffeeWeight"><%= brew.coffee_weight %></span>
+        <%= brew.coffee_weight.present? ? 'g' : '-' %>
+      </div>
+
+      <div class="data">
+        <i class="icon-basic-water-drop"></i>
+        <span data-brew-ratio-target="waterWeight"><%= brew.water_weight %></span>
+        <%= brew.water_weight.present? ? 'g' : '-' %>
+      </div>
+
+      <div class="data ratio-value">1:<span data-brew-ratio-target="ratio">10.0</span></div>
+
+      <div class="equipment mobile"><%= brew.equipment %></div>
     </div>
 
-    <div class="data ratio-value">1:<span data-brew-ratio-target="ratio">10.0</span></div>
+    <div class="td row config">
+      <div class="data">
+        <i class="icon-basic-stopwatch-1"></i><%= brew.time != 0 ? brew.formatted_time : '-' %>
+      </div>
 
-    <div class="equipment mobile"><%= brew.equipment %></div>
-  </td>
+      <div class="data">
+        <i class="icon-basic-temperature"></i><%= brew.temperature ||= '-' %>
+      </div>
 
-  <td class="row config">
-    <div class="data">
-      <i class="icon-basic-stopwatch-1"></i><%= brew.time != 0 ? brew.formatted_time : '-' %>
+      <div class="rating mobile"><%= brew.rating ||= '-' %>/10</div>
     </div>
 
-    <div class="data">
-      <i class="icon-basic-temperature"></i><%= brew.temperature ||= '-' %>
+    <div class="td rating desktop"><%= brew.rating ||= '-' %>/10</div>
+
+    <div class="td created">
+      <p>
+        <small><%= brew.created_at > 1.week.ago ? "#{time_ago_in_words(brew.created_at)} ago" : brew.created_at.strftime("%d %b %Y") %></small>
+      </p>
     </div>
 
-    <div class="rating mobile"><%= brew.rating ||= '-' %>/10</div>
-  </td>
-
-  <td class="rating desktop"><%= brew.rating ||= '-' %>/10</td>
-
-  <td class="created">
-    <p>
-      <small><%= brew.created_at > 1.week.ago ? "#{time_ago_in_words(brew.created_at)} ago" : brew.created_at.strftime("%d %b %Y") %></small>
-    </p>
-  </td>
-
-</tr>
+  </div>
+  <hr>
+<% end %>
