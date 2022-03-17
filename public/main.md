@@ -4,6 +4,10 @@
 We're still hard at work on Daily Brew. To say that there are going to be rough edges would be understating how far along
 in development we are! If you're here now, that's great. Your feedback can really help shape what we're building.
 
+### Open and Transparent
+We're building Daily Brew in public. If there is anything that you think we should be sharing, but we're not, then let
+us know, and we'll see what we can do. There's more info about this on the [About Us](/about) page.
+
 ### Key Features
 - **Keep track of the coffees you have on your shelf**
 - **Record your brews** and rate them, hopefully make each one a little better.
@@ -21,10 +25,10 @@ in development we are! If you're here now, that's great. Your feedback can reall
 - **Brews Index** See a historical list of your brews (03/03)
 - **Brews on Coffee** See how other people are brewing your favourite coffees, and your brews for a coffee (15/03)
 - **Available Coffees** See which coffees a roaster has currently available and see a roasters historic coffees (15/03)
+- **Improved Brew View** The view which shows you an individual brew is very functional at the moment, we're working on improving this. (18/03)
 
 ### Features we’re working on.
 - **More Coffees** We're adding more coffees to our database all the time, we're trying to do it in an automated, reusable way, so it's not that quick
-- **Improved Brew View** The view which shows you an individual brew is very functional at the moment, we're working on improving this.
 - **Review Coffees** Leave reviews on the coffees you've tried and read others reviews. These can be private to you or public to other daily brew members, you decide.
 - **Public Reviews** See what others have to say about the coffees you love
 - **Public Profile** Share your key stats and recent brews and see what other people are drinking too. Of course, you control your privacy on this.
@@ -40,8 +44,5 @@ filters too. If you have any suggestions please let us know.
 - **Loads more coffees!** (Hint: you can help with this!)
 - **Live Brew Map** A map which shows approximate locations for public brews
 
-### Open and Transparent
-We're building Daily Brew in public. If there is anything that you think we should be sharing, but we're not, then let
-us know, and we'll see what we can do. There's more info about this on the [About Us](/about) page.
 
 ---
