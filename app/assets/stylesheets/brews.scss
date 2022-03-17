@@ -226,6 +226,17 @@
     display: flex;
     justify-content: space-evenly;
     font-variant-numeric: tabular-nums;
+    text-align: center;
+    .data {
+      width: 45%;
+      display: flex;
+      strong {
+        width: 65%
+      }
+    }
+    .spacer {
+      width: 10%;
+    }
   }
 
   .title {
@@ -261,6 +272,20 @@
 
   .rating {
     margin: 0.5rem auto 0.5rem -1rem;
+    div.form-input {
+      font-weight: 500;
+      color: $color-primary-0
+    }
+    .form-input {
+      max-width: 10rem;
+    }
+  }
+  button.inline-action {
+    margin-left: 2rem
+  }
+  .inline-action {
+    font-weight: 500;
+    &:hover {color: $color-primary-4}
   }
 }
 

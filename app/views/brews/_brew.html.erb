@@ -35,21 +35,21 @@
       </div>
 
       <div class="row">
-        <p><strong>Time: </strong><%= brew.formatted_time %></p>
-        <div>&#8226;</div>
-        <p><strong>Temp: </strong><%= brew.temperature %></p>
+        <p class="data"><strong>Time: </strong><%= brew.formatted_time %></p>
+        <div class="spacer">&#8226;</div>
+        <p class="data"><strong>Temp: </strong><%= brew.temperature %></p>
       </div>
 
       <div class="row">
-        <p><strong>Equipment: </strong><%= brew.equipment %></p>
-        <div>&#8226;</div>
-        <p><strong>Method: </strong><%= brew.method %></p>
+        <p class="data"><strong>Equipment: </strong><%= brew.equipment %></p>
+        <div class="spacer">&#8226;</div>
+        <p class="data"><strong>Method: </strong><%= brew.method %></p>
       </div>
 
       <div class="row">
-        <p><strong>Grinder: </strong><%= brew.grinder %></p>
-        <div>&#8226;</div>
-        <p><strong>Grinder setting: </strong><%= brew.grinder_setting %></p>
+        <p class="data"><strong>Grinder: </strong><%= brew.grinder %></p>
+        <div class="spacer">&#8226;</div>
+        <p class="data"><strong>Grinder setting: </strong><%= brew.grinder_setting %></p>
       </div>
 
       <% if brew.user == current_user %>

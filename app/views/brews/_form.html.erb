@@ -19,7 +19,8 @@
                             step: '0.1',
                             min: '0',
                             value: (@last_brew ? @last_brew.coffee_weight : @brew.coffee_weight),
-                            data: { target: "brew-ratio.coffeeWeight", action: "brew-ratio#connect" } %>
+                            data: { target: "brew-ratio.coffeeWeight", action: "brew-ratio#connect",
+                            autofocus: true } %>
       <%= form.label :coffee_weight, class: 'form-label' %>
     </div>
 
@@ -81,7 +82,7 @@
 
   <div class="field">
     <%= turbo_frame_tag "#{dom_id(brew)}_notes" do %>
-      <%= form.text_area :notes, class: 'form-input', placeholder: 'Notes' %>
+      <%= form.text_area :notes, class: 'form-input', placeholder: 'Notes', autofocus: true %>
       <%= form.label :notes, class: 'form-label' %>
       <% if action_name == "edit" %>
         <%= form.button "Update Note", class: "inline-action link link-primary" %>
@@ -94,7 +95,7 @@
   <div class="multi-field row">
     <div class="field">
       <%= turbo_frame_tag "#{dom_id(brew)}_rating" do %>
-        <%= form.number_field :rating, class: 'form-input', min: '0', max: '11', placeholder: 'Rating' %>
+        <%= form.number_field :rating, class: 'form-input', min: '0', max: '11', placeholder: 'Rating', autofocus: true %>
         <%= form.label :rating, class: 'form-label' %>
         <% if action_name == "edit" %>
           <%= form.button "Update Rating", class: "inline-action link link-primary" %>
