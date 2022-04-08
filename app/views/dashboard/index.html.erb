@@ -36,6 +36,16 @@
       <% @shelf_coffees.reverse.each do |coffee| %>
         <%= render 'shelf_items/shelf_item', coffee: coffee %>
       <% end %>
+
+      <div class="shelf-item">
+        <div class="coffee-card card column">
+          <h4 class="name"><%= link_to "Add New Coffee", coffees_path, class: 'link link-primary link-title' %></h4>
+          <p>Add a new coffee to your shelf by searching for it from the coffees page and clicking the <i class="icon-sl-add"></i> icon.</p>
+          <%#= link_to coffees_path, class: 'btn btn-primary btn-primary-border' do %>
+<!--            Find a Coffee <i class="icon-basic-coffee-bag"></i>-->
+          <%# end %>
+        </div>
+      </div>
     </div>
   </section>
 
