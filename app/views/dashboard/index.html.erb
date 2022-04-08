@@ -36,14 +36,59 @@
       <% @shelf_coffees.reverse.each do |coffee| %>
         <%= render 'shelf_items/shelf_item', coffee: coffee %>
       <% end %>
+      <% unless @shelf_coffees.present? %>
+        <% if current_user.sign_in_count < 5 %>
+          <div class="shelf-item">
+            <div class="coffee-card card column">
+              <h4>This is your Coffee Shelf</h4>
+              <p>Your shelf is where we put the coffees you currently own to keep track of what you have available.</p>
+              <p>A coffee needs to be on your shelf for you to log a brew with it.</p>
+            </div>
+          </div>
 
+          <div id="example_coffee" class="shelf-item">
+            <div class="coffee-card card column">
+              <div class="coffee-card-content row">
+                <div class="column">
+                  <h4 class="name"><a class="link link-primary link-title" href="#">Example Coffee</a></h4>
+                  <div class="roaster">
+                    by <a href="#" class="link link-primary">This Roaster</a>
+                    <a class="link link-primary" href="#"><i class="icon-basic-external"></i></a>
+                  </div>
+                </div>
+                <div class="controls column">
+                  <%= render 'shelf_items/shelf_item_toggle', coffee: Coffee.available.first %>
+                  <%= render 'favourites/favourite_toggle', coffee: Coffee.available.first %>
+                </div>
+              </div>
+              <div class="footer column">
+                <div class="metadata row">
+                  16 brews logged
+                </div>
+                <div class="brew-btn">
+                  <a href="#" class="btn btn-primary btn-primary-border">Make a Brew
+                    <i class="icon-basic-coffee-cup-3"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <div class="shelf-item">
+          <div class="coffee-card card column">
+            <h2>Your Coffee Shelf is Empty</h2>
+            <p>Add a new coffee to your shelf to start logging your brews</p>
+          </div>
+        </div>
+      <% end %>
       <div class="shelf-item">
         <div class="coffee-card card column">
           <h4 class="name"><%= link_to "Add New Coffee", coffees_path, class: 'link link-primary link-title' %></h4>
-          <p>Add a new coffee to your shelf by searching for it from the coffees page and clicking the <i class="icon-sl-add"></i> icon.</p>
-          <%#= link_to coffees_path, class: 'btn btn-primary btn-primary-border' do %>
-<!--            Find a Coffee <i class="icon-basic-coffee-bag"></i>-->
-          <%# end %>
+          <p>Add a new coffee to your shelf by searching for it from the coffees page and clicking the
+            <i class="icon-sl-add"></i> icon.</p>
+          <%= link_to coffees_path, class: 'btn btn-primary btn-primary-border' do %>
+            Find a Coffee <i class="icon-basic-coffee-bag"></i>
+          <% end %>
         </div>
       </div>
     </div>
@@ -68,6 +113,5 @@
       <% end %>
     </div>
   </section>
-
 
 </main>
