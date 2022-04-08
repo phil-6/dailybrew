@@ -4,7 +4,7 @@
       <div class="page-title">
         <h2>Your Shelf</h2>
       </div>
-      <% if params["brew_now"] %>
+      <% if params["brew_now"] && @shelf_coffees.present? %>
         <h4 class="title-white">Which coffee are you brewing?</h4>
       <% else %>
         <p>This is where you can keep track of the coffees you currently own. Use the button below to find your coffees,
@@ -21,9 +21,13 @@
       <%= render 'shelf_item', coffee: coffee %>
     <% end %>
 
-    <% if @shelf_coffees.count == 0 %>
+    <% unless @shelf_coffees.present? %>
       <div class="no-coffees">
         <h3>Your Coffee Shelf is Empty</h3>
+        <% if current_user.sign_in_count < 5 %>
+          <p>A coffee needs to be on your shelf for you to log a brew with it.</p>
+          <p>As you're fairly new here, you might want to check out your <%= link_to "dashboard", dashboard_path %>.</p>
+        <% end %>
         <p>Try searching for a <%= link_to "roaster", roasters_path %> or a <%= link_to "coffee", coffees_path %> and
           add it to your shelf</p>
       </div>
