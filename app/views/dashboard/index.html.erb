@@ -72,6 +72,19 @@
       <% @favourites.each do |coffee| %>
         <%= render 'favourites/favourite', coffee: coffee %>
       <% end %>
+      <% unless @favourites.present? %>
+        <%= render 'no_favourites' %>
+      <% end %>
+      <div class="shelf-item">
+        <div class="coffee-card card column">
+          <h4 class="name"><%= link_to "Add New Favourite", coffees_path, class: 'link link-primary link-title' %></h4>
+          <p>Add a new favourite coffee by clicking the
+            <i class="icon-basic-heart-1"></i> icon on the coffee card.</p>
+          <%= link_to coffees_path, class: 'btn btn-primary btn-primary-border' do %>
+            Find Your Favourite <i class="icon-sl-coffee"></i>
+          <% end %>
+        </div>
+      </div>
     </div>
   </section>
 
