@@ -1,0 +1,74 @@
+<% if current_user.sign_in_count < 5 %>
+  <div class="shelf-item">
+    <div class="coffee-card card column">
+      <h4>This is your Favourites Shelf</h4>
+      <p>The coffees shown here are the ones you have saved as your favourites.</p>
+      <p>Saving favourites is cool. We're planning to do more with favourites later, such as allowing email alerts when one of your favourites becomes available again and recommending new coffees based on your favourites.</p>
+    </div>
+  </div>
+
+  <div id="example_coffee" class="shelf-item">
+    <div class="coffee-card card column">
+      <div class="coffee-card-content row">
+        <div class="column">
+          <h4 class="name"><a class="link link-primary link-title" href="#">Example Coffee</a></h4>
+          <div class="roaster">
+            by <a href="#" class="link link-primary">This Roaster</a>
+            <a class="link link-primary" href="#"><i class="icon-basic-external"></i></a>
+          </div>
+          <ul class="details">
+            <li class="row tasting-notes">
+              <i class="icon-basic-tongue-out"></i> <span>Hazelnut. Black Tea. Red Apple. Dark Chocolate. Raisin Hell. </span>
+            </li>
+            <li class="row country">
+              <i class="icon-basic-location-1"></i>
+              <span>Ethiopia</span>
+            </li>
+            <li class="row process">
+              <i class="icon-basic-factory"></i>
+              <span>Washed</span>
+            </li>
+          </ul>
+        </div>
+        <div class="controls column">
+          <%= render 'shelf_items/shelf_item_toggle', coffee: Coffee.available.first %>
+          <%= render 'favourites/favourite_toggle', coffee: Coffee.available.first %>
+        </div>
+      </div>
+      <div class="footer column">
+        <div class="metadata row">
+          16 brews logged
+        </div>
+        <div class="metadata row">
+        <span class="tooltip-parent">
+          <i class="icon-basic-coffee-cup"></i> 27
+          <span class="tooltip-content bottom delay-fast">Number of Brews</span>
+        </span>
+          <span>&#8226;</span>
+          <span class="tooltip-parent">
+          <i class="icon-basic-shelf"></i> 8
+            <span class="tooltip-content bottom delay-fast">Users with this coffee on their shelf</span>
+        </span>
+          <span>&#8226;</span>
+          <span class="tooltip-parent">
+          <i class="icon-basic-heart"></i> 3
+            <span class="tooltip-content bottom delay-fast">Users who have this saved as a favourite</span>
+        </span>
+          <span>&#8226;</span>
+          <span class="tooltip-parent">
+          <i class="icon-basic-satisfaction"></i> 10
+            <span class="tooltip-content bottom delay-fast">Number of Reviews</span>
+        </span>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="shelf-item">
+  <div class="coffee-card card column">
+    <h3>You don't have any favourite coffees saved yet.</h3>
+    <p>Add a coffee as a favourite to save it here.</p>
+    <h2 class="center"><i class="icon-sl-coffee"></i></h2>
+  </div>
+</div>

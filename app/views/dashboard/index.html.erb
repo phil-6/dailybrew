@@ -36,6 +36,19 @@
       <% @shelf_coffees.reverse.each do |coffee| %>
         <%= render 'shelf_items/shelf_item', coffee: coffee %>
       <% end %>
+      <% unless @shelf_coffees.present? %>
+        <%= render 'no_shelf_items' %>
+      <% end %>
+      <div class="shelf-item">
+        <div class="coffee-card card column">
+          <h4 class="name"><%= link_to "Add New Coffee", coffees_path, class: 'link link-primary link-title' %></h4>
+          <p>Add a new coffee to your shelf by searching for it from the coffees page and clicking the
+            <i class="icon-sl-add"></i> icon.</p>
+          <%= link_to coffees_path, class: 'btn btn-primary btn-primary-border' do %>
+            Find a Coffee <i class="icon-basic-coffee-bag"></i>
+          <% end %>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -45,6 +58,9 @@
       <%= turbo_frame_tag 'page_handler' %>
       <div class="brews-table" id="brews_table">
         <%= render 'brews/brews_table', brews: @brews %>
+        <% unless @brews.present? %>
+          <%= render 'no_brews' %>
+        <% end %>
       </div>
       <%= render 'brews_table_pager', pagy: @pagy %>
     </div>
@@ -56,8 +72,20 @@
       <% @favourites.each do |coffee| %>
         <%= render 'favourites/favourite', coffee: coffee %>
       <% end %>
+      <% unless @favourites.present? %>
+        <%= render 'no_favourites' %>
+      <% end %>
+      <div class="shelf-item">
+        <div class="coffee-card card column">
+          <h4 class="name"><%= link_to "Add New Favourite", coffees_path, class: 'link link-primary link-title' %></h4>
+          <p>Add a new favourite coffee by clicking the
+            <i class="icon-basic-heart-1"></i> icon on the coffee card.</p>
+          <%= link_to coffees_path, class: 'btn btn-primary btn-primary-border' do %>
+            Find Your Favourite <i class="icon-sl-coffee"></i>
+          <% end %>
+        </div>
+      </div>
     </div>
   </section>
-
 
 </main>

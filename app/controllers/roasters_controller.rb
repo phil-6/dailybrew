@@ -72,7 +72,7 @@ class RoastersController < ApplicationController
   private
 
   def search
-    pagy(Roaster.where('name ILIKE :search', search: "%#{params[:query].downcase}%"), items: 10)
+    pagy(Roaster.where('name ILIKE :search', search: "%#{params[:query].downcase.strip}%"), items: 10)
   end
 
   # Use callbacks to share common setup or constraints between actions.
