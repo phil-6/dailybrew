@@ -78,7 +78,7 @@ class CoffeesController < ApplicationController
 
   def search
     Coffee.where('name ILIKE :search OR tasting_notes ILIKE :search OR country ILIKE :search OR process ILIKE :search',
-                 search: "%#{params[:query].downcase}%")
+                 search: "%#{params[:query].downcase.strip}%")
   end
 
   # Use callbacks to share common setup or constraints between actions.
